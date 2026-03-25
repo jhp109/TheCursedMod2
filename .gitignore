@@ -1,0 +1,17 @@
+# Godot auto-generated
+.godot/
+
+# NuGet packages
+packages/
+
+# Build output
+bin/
+obj/
+
+# IDE
+.idea/
+.vs/
+*.user
+
+# Claude memory
+.claude/

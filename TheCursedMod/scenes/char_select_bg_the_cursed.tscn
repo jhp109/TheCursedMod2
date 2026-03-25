@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cts2bgcursed1"]
+
+[ext_resource type="Texture2D" uid="uid://clw2firwfqbji" path="res://TheCursedMod/images/charui/char_select_bg_the_cursed.png" id="1_bg"]
+
+[node name="CharSelectBg" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 357.8
+offset_top = 98.6
+offset_right = 2218.1
+offset_bottom = 1261.3
+texture = ExtResource("1_bg")

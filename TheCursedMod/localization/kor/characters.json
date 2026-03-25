@@ -1,0 +1,16 @@
+{
+  "THECURSEDMOD-THE_CURSED_MOD.title": "커스드",
+  "THECURSEDMOD-THE_CURSED_MOD.titleObject": "커스드",
+  "THECURSEDMOD-THE_CURSED_MOD.description": "어둠의 힘을 갈망하다 타락해버린 방랑자입니다.",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounObject": "그를",
+  "THECURSEDMOD-THE_CURSED_MOD.possessiveAdjective": "그의",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounPossessive": "그의 것",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounSubject": "그",
+  "THECURSEDMOD-THE_CURSED_MOD.goldMonologue": "[sine]모든 것엔 지불해야할 대가가 있지.[/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.eventDeathPrevention": "아직은 저주가 날 세상에서 놓아주지 않는구나.",
+  "THECURSEDMOD-THE_CURSED_MOD.aromaPrinciple": "[sine][purple]타인이 당신을 대하는 방식은 그들의 업보이고, 당신이 그에 반응하는 방식은 당신의 업보다.[/purple][/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.cardsModifierTitle": "커스드",
+  "THECURSEDMOD-THE_CURSED_MOD.cardsModifierDescription": "이제 커스드 카드가 보상과 상점에 등장합니다.",
+  "THECURSEDMOD-THE_CURSED_MOD.banter.alive.endTurnPing": "[sine]의례가 끝난다...[/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.banter.dead.endTurnPing": "..."
+}

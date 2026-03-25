@@ -1,0 +1,16 @@
+{
+  "THECURSEDMOD-THE_CURSED_MOD.title": "The Cursed",
+  "THECURSEDMOD-THE_CURSED_MOD.titleObject": "the Cursed",
+  "THECURSEDMOD-THE_CURSED_MOD.description": "A wanderer corrupted by darkness.",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounObject": "him",
+  "THECURSEDMOD-THE_CURSED_MOD.possessiveAdjective": "his",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounPossessive": "his",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounSubject": "he",
+  "THECURSEDMOD-THE_CURSED_MOD.goldMonologue": "[sine]Every coin carries a price.[/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.eventDeathPrevention": "The curse won't let me die just yet.",
+  "THECURSEDMOD-THE_CURSED_MOD.aromaPrinciple": "[sine][purple]How people treat you is their karma, how you react is yours.[/purple][/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.cardsModifierTitle": "Cursed Cards",
+  "THECURSEDMOD-THE_CURSED_MOD.cardsModifierDescription": "Cursed cards will now appear in rewards and shops.",
+  "THECURSEDMOD-THE_CURSED_MOD.banter.alive.endTurnPing": "[sine]The rite is complete...[/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.banter.dead.endTurnPing": "..."
+}

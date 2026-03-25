@@ -1,0 +1,21 @@
+{
+  "THECURSEDMOD-RITE.selectPrompt": "소멸. 저주 선택 시 의례 효과 발동",
+  "THECURSEDMOD-DREGS.title": "찌꺼기",
+  "THECURSEDMOD-DREGS.description": "사용불가",
+  "THECURSEDMOD-STRIKE_THE_CURSED.title": "타격",
+  "THECURSEDMOD-STRIKE_THE_CURSED.description": "피해를 {Damage:diff()} 줍니다.",
+  "THECURSEDMOD-DEFEND_THE_CURSED.title": "수비",
+  "THECURSEDMOD-DEFEND_THE_CURSED.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
+  "THECURSEDMOD-CURSED_WAND.title": "저주받은 마법봉",
+  "THECURSEDMOD-CURSED_WAND.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
+  "THECURSEDMOD-CLEAN_UP_WORKSHOP.title": "공방 청소",
+  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]의례[/gold]: [gold]방어도[/gold]를 {Block:diff()} 얻고 카드를 [blue]1[/blue] 장 뽑습니다.",
+  "THECURSEDMOD-CURSED_MACE.title": "저주받은 철퇴",
+  "THECURSEDMOD-CURSED_MACE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]취약[/gold]을 {VulnerablePower:diff()} 부여합니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
+  "THECURSEDMOD-OBSCURATION.title": "엄폐",
+  "THECURSEDMOD-OBSCURATION.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold]: 다시 한번 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
+  "THECURSEDMOD-ASHES_TO_ASHES.title": "재에서 재로",
+  "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]의례[/gold]: 카드를 {Cards:diff()} 장 뽑습니다.",
+  "THECURSEDMOD-ANTI_AGING.title": "회춘",
+  "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold]: 최대 체력을 {MaxHp:diff()} 얻습니다.\n[gold]소멸[/gold]"
+}
