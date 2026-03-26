@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5e3maqn8vbcd"
-path="res://.godot/imported/card.png-1aca66c2bcacb814572b9ede06475bbc.ctex"
+uid="uid://dr0sn088ycabe"
+path="res://.godot/imported/cursed_shiv.png-a5a8dd5cda2f2b68ea849d8f4f8abafa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TheCursedMod/images/card_portraits/card.png"
-dest_files=["res://.godot/imported/card.png-1aca66c2bcacb814572b9ede06475bbc.ctex"]
+source_file="res://TheCursedMod/images/card_portraits/big/cursed_shiv.png"
+dest_files=["res://.godot/imported/cursed_shiv.png-a5a8dd5cda2f2b68ea849d8f4f8abafa.ctex"]
 
 [params]
 

@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://tcursedvisual"]
+
+[ext_resource type="Script" uid="uid://claogp36kh2hu" path="res://Code/Nodes/SNCreatureVisuals.cs" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c8jeb54kgvv1h" path="res://TheCursedMod/images/thecursed/TheCursed.png" id="2_tc"]
+
+[node name="TheCursed" type="Node2D"]
+script = ExtResource("1_script")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="Visuals" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, -150)
+texture = ExtResource("2_tc")
+
+[node name="Bounds" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -150.0
+offset_top = -300.0
+offset_right = 150.0
+offset_bottom = 0.0
+mouse_filter = 2
+
+[node name="CenterPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -150)
+
+[node name="IntentPos" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -330)

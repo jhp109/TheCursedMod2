@@ -45,6 +45,7 @@ public class TheCursedMod : PlaceholderCharacterModel
         override all the other methods that define those assets. 
         These are just some of the simplest assets, given some placeholders to differentiate your character with. 
         You don't have to, but you're suggested to rename these images. */
+    public override string CustomVisualPath => "res://TheCursedMod/scenes/the_cursed_visual.tscn";
     public override string CustomCharacterSelectBg => "char_select_bg_the_cursed.tscn".ScenePath();
     public override string CustomIconTexturePath => "character_icon_the_cursed.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "char_select_the_cursed.png".CharacterUiPath();

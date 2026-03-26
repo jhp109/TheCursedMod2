@@ -1,21 +1,39 @@
 {
   "THECURSEDMOD-RITE.selectPrompt": "Exhaust. Choosing a Curse Activates the Rite's Effect.",
+
   "THECURSEDMOD-DREGS.title": "Dregs",
-  "THECURSEDMOD-DREGS.description": "Unplayable.",
+  "THECURSEDMOD-DREGS.description": "[gold]Unplayable[/gold].",
+
   "THECURSEDMOD-STRIKE_THE_CURSED.title": "Strike",
   "THECURSEDMOD-STRIKE_THE_CURSED.description": "Deal {Damage:diff()} damage.",
+
   "THECURSEDMOD-DEFEND_THE_CURSED.title": "Defend",
   "THECURSEDMOD-DEFEND_THE_CURSED.description": "Gain {Block:diff()} [gold]Block[/gold].",
+
   "THECURSEDMOD-CURSED_WAND.title": "Cursed Wand",
   "THECURSEDMOD-CURSED_WAND.description": "Gain {Block:diff()} [gold]Block[/gold].\nDeal {Damage:diff()} damage.\nAdd a [gold]Dregs[/gold] card into your hand.",
+
   "THECURSEDMOD-CLEAN_UP_WORKSHOP.title": "Clean up Workshop",
   "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]Rite[/gold] : Gain {Block:diff()} [gold]Block[/gold]. Draw [blue]1[/blue] card.",
+
   "THECURSEDMOD-CURSED_MACE.title": "Cursed Mace",
-  "THECURSEDMOD-CURSED_MACE.description": "Deal {Damage:diff()} damage\n Apply {Vulnerable:diff()} Vulnerable.\nAdd a [gold]Dregs[/gold] card into your hand.",
+  "THECURSEDMOD-CURSED_MACE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nAdd a [gold]Dregs[/gold] card into your hand.",
+
+  "THECURSEDMOD-CURSED_SHIV.title": "Cursed Shiv",
+  "THECURSEDMOD-CURSED_SHIV.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Dregs[/gold] card into your hand.",
+
+  "THECURSEDMOD-CURSED_STAFF.title": "Cursed Staff",
+  "THECURSEDMOD-CURSED_STAFF.description": "Deal {Damage:diff()} damage.\nAdd [blue]2[/blue] [gold]Dregs[/gold] cards into your hand.",
+
+  "THECURSEDMOD-SPITEFUL_STRIKE.title": "Spiteful Strike",
+  "THECURSEDMOD-SPITEFUL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you [gold]Exhausted[/gold] a Curse via [gold]Rite[/gold] this turn, gain {Energy:energyIcons()}.",
+
   "THECURSEDMOD-OBSCURATION.title": "Obscuration",
   "THECURSEDMOD-OBSCURATION.description": "Gain {Block:diff()} [gold]Block[/gold].\nRite: Gain {Block:diff()} [gold]Block[/gold] again.",
+
   "THECURSEDMOD-ASHES_TO_ASHES.title": "Ashes to Ashes",
   "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]Rite[/gold] : Draw {Cards:diff()} cards.",
+
   "THECURSEDMOD-ANTI_AGING.title": "AntiAging",
   "THECURSEDMOD-ANTI_AGING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Raise your max HP by {MaxHp:diff()}.\n[gold]Exhaust[/gold]."
 }

@@ -1,6 +1,7 @@
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
+using MegaCrit.Sts2.Core.Models;
 
 namespace TheCursedMod;
 
@@ -16,5 +17,21 @@ public partial class MainFile : Node
         Harmony harmony = new(ModId);
 
         harmony.PatchAll();
+
+        // STS2 v0.99.1: MockCardPool.GenerateAllCards() throws in production.
+        // Patch it to return [] so CardModel.get_Pool() can continue searching.
+        var mockPoolType = AccessTools.TypeByName("MegaCrit.Sts2.Core.Models.CardPools.MockCardPool");
+        if (mockPoolType != null)
+        {
+            var method = AccessTools.Method(mockPoolType, "GenerateAllCards");
+            if (method != null)
+                harmony.Patch(method, prefix: new HarmonyMethod(typeof(MainFile), nameof(MockCardPoolFix)));
+        }
+    }
+
+    static bool MockCardPoolFix(ref CardModel[] __result)
+    {
+        __result = [];
+        return false;
     }
 }

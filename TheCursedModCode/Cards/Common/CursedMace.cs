@@ -2,10 +2,10 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.ValueProps;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -14,9 +14,15 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class CursedMace() : TheCursedModCard(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromCard<Dregs>(false),
+        HoverTipFactory.FromPower<VulnerablePower>()
+    ];
+
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(12, ValueProp.Move),
-        new PowerVar<VulnerablePower>("Vulnerable", 2)
+        new PowerVar<VulnerablePower>("VulnerablePower", 2)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

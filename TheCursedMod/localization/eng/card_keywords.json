@@ -2,5 +2,7 @@
   "THECURSEDMOD-RITE.title": "Rite",
   "THECURSEDMOD-RITE.description": "When using, choose 1 card to [gold]Exhaust[/gold]. Selecting a Curse card will activate the Rite's effect.",
   "THECURSEDMOD-DREGS.title": "Dregs",
-  "THECURSEDMOD-DREGS.description": "Dregs are unplayable Curse cards."
+  "THECURSEDMOD-DREGS.description": "Dregs are unplayable Curse cards.",
+  "THECURSEDMOD-VULNERABLE.title": "Vulnerable",
+  "THECURSEDMOD-VULNERABLE.description": "Target takes 50% more damage."
 }
