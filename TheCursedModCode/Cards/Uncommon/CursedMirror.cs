@@ -22,7 +22,7 @@ public sealed class CursedMirror() : TheCursedModCard(0, CardType.Attack, CardRa
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(14, ValueProp.Move)
     ];
-
+ 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);

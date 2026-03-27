@@ -15,6 +15,10 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class BlessingInDisguise() : TheCursedModCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.None)
 {
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromKeyword(CardKeyword.Exhaust)
+    ];
     public override bool GainsBlock => true;
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(6, ValueProp.Move)];

@@ -41,6 +41,21 @@
   "THECURSEDMOD-OBSCURATION.title": "엄폐",
   "THECURSEDMOD-OBSCURATION.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 다시 한번 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
 
+  "THECURSEDMOD-RAPID_MOVEMENT.title": "재빠른 몸놀림",
+  "THECURSEDMOD-RAPID_MOVEMENT.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 카드를 [blue]2[/blue]장 뽑습니다.",
+
+  "THECURSEDMOD-WEAR_CLOAK.title": "망토 두르기",
+  "THECURSEDMOD-WEAR_CLOAK.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]손[/gold]에 [gold]사용불가[/gold] 카드가 있다면, {Energy:energyIcons()}를 얻습니다.",
+
+  "THECURSEDMOD-DOUBLE_SHIELD.title": "이중 방벽",
+  "THECURSEDMOD-DOUBLE_SHIELD.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 다음 턴에 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
+
+  "THECURSEDMOD-CURSED_AMULET.title": "저주받은 목걸이",
+  "THECURSEDMOD-CURSED_AMULET.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n카드를 [blue]1[/blue]장 뽑습니다.\n무작위 [gold]저주[/gold] 카드를 [gold]뽑을 카드 더미[/gold]에 섞습니다.",
+
+  "THECURSEDMOD-SMOKESCREEN.title": "연막",
+  "THECURSEDMOD-SMOKESCREEN.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 모든 적에게 [gold]약화[/gold]를 {WeakPower:diff()} 부여합니다.",
+
   "THECURSEDMOD-ASHES_TO_ASHES.title": "재에서 재로",
   "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]의례[/gold] : 카드를 {Cards:diff()} 장 뽑습니다.",
 
@@ -61,6 +76,16 @@
 
   "THECURSEDMOD-MALEVOLENCE.title": "악의",
   "THECURSEDMOD-MALEVOLENCE.description": "무작위 [gold]의례[/gold] 카드를 1장 [gold]손[/gold]으로 가져옵니다.\n이번 턴 동안 그 카드를 비용 없이 사용할 수 있습니다.",
+
+  "THECURSEDMOD-PREPARE_RITE.title": "의례 준비",
+  "THECURSEDMOD-PREPARE_RITE.description": "[gold]뽑을 카드 더미[/gold]의 카드를 1장 [gold]찌꺼기[/gold]로 변화시킵니다.",
+  "THECURSEDMOD-PREPARE_RITE.selectPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
+
+  "THECURSEDMOD-TROUBLOUS_MINION.title": "골칫덩이 사역마",
+  "THECURSEDMOD-TROUBLOUS_MINION.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n무작위 [gold]저주[/gold] 카드를 얻습니다.\n이 카드를 [gold]뽑을 카드 더미[/gold]에 섞어넣습니다.",
+
+  "THECURSEDMOD-DARK_BARRIER.title": "어둠의 결계",
+  "THECURSEDMOD-DARK_BARRIER.description": "[gold]의례[/gold] : [gold]불가침[/gold]을 {IntangiblePower:diff()} 얻습니다.",
 
   "THECURSEDMOD-ANTI_AGING.title": "회춘",
   "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 최대 체력을 {MaxHp:diff()} 얻습니다.",

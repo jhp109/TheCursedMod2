@@ -6,20 +6,24 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 저주받은 주문서(Cursed Spellbook) - 카드를 2장 뽑습니다. 무작위 저주 카드 1장을 뽑을 카드 더미에 섞습니다.
-/// (강화 시 카드 3장 뽑음)
+/// 골칫덩이 사역마(Troublous Minion) - 방어도를 6 얻습니다. 무작위 저주 카드를 얻습니다.
+/// 이 카드를 뽑을 카드 더미에 섞어넣습니다.
+/// (강화 시 방어도 9)
 /// </summary>
-public sealed class CursedSpellbook() : TheCursedModCard(0, CardType.Skill, CardRarity.Uncommon, TargetType.None)
+public sealed class TroublousMinion() : TheCursedModCard(0, CardType.Skill, CardRarity.Uncommon, TargetType.None)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];
+    public override bool GainsBlock => true;
+
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(6, ValueProp.Move)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.Draw(this, choiceContext);
+        await CommonActions.CardBlock(this, play);
 
         var curseCandidates = ModelDb.CardPool<CurseCardPool>()
             .GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint)
@@ -30,15 +34,14 @@ public sealed class CursedSpellbook() : TheCursedModCard(0, CardType.Skill, Card
         {
             var randomCurse = Owner.RunState.Rng.Niche.NextItem(curseCandidates)!;
             var curseCard = CombatState!.CreateCard(randomCurse, Owner);
-            CardCmd.PreviewCardPileAdd(
-                await CardPileCmd.AddGeneratedCardToCombat(
-                    curseCard, PileType.Draw, addedByPlayer: false, position: CardPilePosition.Random));
-            await Cmd.Wait(0.5f);
+            await CardPileCmd.AddGeneratedCardToCombat(curseCard, PileType.Hand, addedByPlayer: false);
         }
+
+        await CardPileCmd.Add(this, PileType.Draw, CardPilePosition.Random);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Cards.UpgradeValueBy(1m);
+        DynamicVars.Block.UpgradeValueBy(3m);
     }
 }

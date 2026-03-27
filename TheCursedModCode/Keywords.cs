@@ -12,4 +12,5 @@ public static class Keywords
     [CustomEnum("Rite")]
     [KeywordProperties(AutoKeywordPosition.Before)]
     public static CardKeyword Rite;
+
 }
