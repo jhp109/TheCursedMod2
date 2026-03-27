@@ -11,22 +11,32 @@
   "THECURSEDMOD-DEFEND_THE_CURSED.description": "Gain {Block:diff()} [gold]Block[/gold].",
 
   "THECURSEDMOD-CURSED_WAND.title": "Cursed Wand",
-  "THECURSEDMOD-CURSED_WAND.description": "Gain {Block:diff()} [gold]Block[/gold].\nDeal {Damage:diff()} damage.\nAdd a [gold]Dregs[/gold] card into your hand.",
+  "THECURSEDMOD-CURSED_WAND.description": "Gain {Block:diff()} [gold]Block[/gold].\nDeal {Damage:diff()} damage.\nAdd a [gold]Dregs[/gold] card into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-CLEAN_UP_WORKSHOP.title": "Clean up Workshop",
   "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]Rite[/gold] : Gain {Block:diff()} [gold]Block[/gold]. Draw [blue]1[/blue] card.",
 
   "THECURSEDMOD-CURSED_MACE.title": "Cursed Mace",
-  "THECURSEDMOD-CURSED_MACE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nAdd a [gold]Dregs[/gold] card into your hand.",
+  "THECURSEDMOD-CURSED_MACE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nAdd a [gold]Dregs[/gold] card into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-CURSED_SHIV.title": "Cursed Shiv",
-  "THECURSEDMOD-CURSED_SHIV.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Dregs[/gold] card into your hand.",
+  "THECURSEDMOD-CURSED_SHIV.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Dregs[/gold] card into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-CURSED_STAFF.title": "Cursed Staff",
-  "THECURSEDMOD-CURSED_STAFF.description": "Deal {Damage:diff()} damage.\nAdd [blue]2[/blue] [gold]Dregs[/gold] cards into your hand.",
+  "THECURSEDMOD-CURSED_STAFF.description": "Deal {Damage:diff()} damage.\nAdd [blue]2[/blue] [gold]Dregs[/gold] cards into your [gold]Hand[/gold].",
+
+  "THECURSEDMOD-CURSED_BOOMERANG.title": "Cursed Boomerang",
+  "THECURSEDMOD-CURSED_BOOMERANG.description": "Deal {Damage:diff()} damage to a random enemy {Repeat:diff()} times.\nAdd a [gold]Dregs[/gold] card into your [gold]Hand[/gold].",
+
+  "THECURSEDMOD-CURSED_BLADE.title": "Cursed Blade",
+  "THECURSEDMOD-CURSED_BLADE.description": "Deal {Damage:diff()} damage to ALL enemies.\nAdd a [gold]Dregs[/gold] card into your [gold]Hand[/gold].",
+
+  "THECURSEDMOD-SCINTILLA.selectPrompt": "Choose a card to transform into Dregs.",
+  "THECURSEDMOD-SCINTILLA.title": "Scintilla",
+  "THECURSEDMOD-SCINTILLA.description": "Deal {Damage:diff()} damage.\nTransform a card in your [gold]Discard pile[/gold] into [gold]Dregs[/gold].",
 
   "THECURSEDMOD-SPITEFUL_STRIKE.title": "Spiteful Strike",
-  "THECURSEDMOD-SPITEFUL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you [gold]Exhausted[/gold] a Curse via [gold]Rite[/gold] this turn, gain {Energy:energyIcons()}.",
+  "THECURSEDMOD-SPITEFUL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you [gold]Exhausted[/gold] a [gold]Curse[/gold] via [gold]Rite[/gold] this turn, gain {Energy:energyIcons()}.",
 
   "THECURSEDMOD-OBSCURATION.title": "Obscuration",
   "THECURSEDMOD-OBSCURATION.description": "Gain {Block:diff()} [gold]Block[/gold].\nRite: Gain {Block:diff()} [gold]Block[/gold] again.",
@@ -34,6 +44,27 @@
   "THECURSEDMOD-ASHES_TO_ASHES.title": "Ashes to Ashes",
   "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]Rite[/gold] : Draw {Cards:diff()} cards.",
 
+  "THECURSEDMOD-CURSED_MIRROR.title": "Cursed Mirror",
+  "THECURSEDMOD-CURSED_MIRROR.description": "Deal {Damage:diff()} damage.\nAdd an [gold]Enthralled[/gold] into your [gold]Hand[/gold].",
+
+  "THECURSEDMOD-ANGER_CONTROL.title": "Anger Control",
+  "THECURSEDMOD-ANGER_CONTROL.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\nAdd a [gold]Normality[/gold] into your [gold]Hand[/gold].",
+
+  "THECURSEDMOD-BLESSING_IN_DISGUISE.title": "Blessing in Disguise",
+  "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "Exhaust all [gold]Curse[/gold] cards in your [gold]Hand[/gold].\nGain {Block:diff()} [gold]Block[/gold] for each card [gold]Exhausted[/gold].",
+
+  "THECURSEDMOD-CURSED_SPELLBOOK.title": "Cursed Spellbook",
+  "THECURSEDMOD-CURSED_SPELLBOOK.description": "Draw {Cards:diff()} cards.\nShuffle a random [gold]Curse[/gold] into your [gold]Draw pile[/gold].",
+
+  "THECURSEDMOD-FLESH_FROM_BONE.title": "Flesh from Bone",
+  "THECURSEDMOD-FLESH_FROM_BONE.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Gain {PlatingPower:diff()} [gold]Plating[/gold].",
+
+  "THECURSEDMOD-MALEVOLENCE.title": "Malevolence",
+  "THECURSEDMOD-MALEVOLENCE.description": "Add a random [gold]Rite[/gold] card to your hand.\nIt costs [blue]0[/blue] this turn.",
+
   "THECURSEDMOD-ANTI_AGING.title": "AntiAging",
-  "THECURSEDMOD-ANTI_AGING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Raise your max HP by {MaxHp:diff()}.\n[gold]Exhaust[/gold]."
+  "THECURSEDMOD-ANTI_AGING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Raise your max HP by {MaxHp:diff()}.",
+
+  "THECURSEDMOD-DEMONIC_BLADE.title": "Demonic Blade",
+  "THECURSEDMOD-DEMONIC_BLADE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each Curse exhausted via [gold]Rite[/gold] this combat."
 }

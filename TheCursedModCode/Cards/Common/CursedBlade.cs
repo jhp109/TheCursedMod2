@@ -1,21 +1,18 @@
 using BaseLib.Utils;
-using Godot;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Nodes.Vfx;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using TheCursedMod.TheCursedModCode;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 저주받은 단검(Cursed Shiv) - 피해를 7 줍니다. 찌꺼기를 얻습니다. (강화 시 피해 10)
+/// 저주받은 칼날(Cursed Blade) - 적 전체에게 피해를 9 줍니다. 찌꺼기를 얻습니다. (강화 시 피해 12)
 /// </summary>
-public sealed class CursedShiv() : TheCursedModCard(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+public sealed class CursedBlade() : TheCursedModCard(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
@@ -23,17 +20,18 @@ public sealed class CursedShiv() : TheCursedModCard(0, CardType.Attack, CardRari
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(7, ValueProp.Move)
+        new DamageVar(9, ValueProp.Move)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play)
-            .WithHitVfxNode((Creature t) => NShivThrowVfx.Create(base.Owner.Creature, t, new Color("5757d4")))
+        await CommonActions.CardAttack(this, play, vfx: "vfx/vfx_giant_horizontal_slash", tmpSfx: "slash_attack.mp3")
             .Execute(choiceContext);
-        if (base.CombatState != null) {
-            Dregs dregs = base.CombatState.CreateCard<Dregs>(base.Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(dregs, PileType.Hand, addedByPlayer:true);
+
+        if (CombatState != null)
+        {
+            var dregs = CombatState.CreateCard<Dregs>(Owner);
+            await CardPileCmd.AddGeneratedCardToCombat(dregs, PileType.Hand, addedByPlayer: true);
         }
     }
 

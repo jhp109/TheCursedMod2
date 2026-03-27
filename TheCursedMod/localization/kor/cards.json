@@ -8,32 +8,63 @@
   "THECURSEDMOD-STRIKE_THE_CURSED.description": "피해를 {Damage:diff()} 줍니다.",
  
   "THECURSEDMOD-DEFEND_THE_CURSED.title": "수비",
-  "THECURSEDMOD-DEFEND_THE_CURSED.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.",
+  "THECURSEDMOD-DEFEND_THE_CURSED.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
 
   "THECURSEDMOD-CURSED_WAND.title": "저주받은 마법봉",
-  "THECURSEDMOD-CURSED_WAND.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.\n피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold] 를 얻습니다.",
+  "THECURSEDMOD-CURSED_WAND.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
   "THECURSEDMOD-CLEAN_UP_WORKSHOP.title": "공방 청소",
-  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]의례[/gold] : [gold]방어도[/gold] 를 {Block:diff()} 얻고 카드를 {Cards:diff()} 장 뽑습니다.",
+  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]의례[/gold] : [gold]방어도[/gold]를 {Block:diff()} 얻고 카드를 {Cards:diff()} 장 뽑습니다.",
 
   "THECURSEDMOD-CURSED_MACE.title": "저주받은 철퇴",
-  "THECURSEDMOD-CURSED_MACE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]취약[/gold] 을 {VulnerablePower:diff()} 부여합니다.\n[gold]찌꺼기[/gold] 를 얻습니다.",
+  "THECURSEDMOD-CURSED_MACE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]취약[/gold]을 {VulnerablePower:diff()} 부여합니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
   "THECURSEDMOD-CURSED_SHIV.title": "저주받은 단검",
-  "THECURSEDMOD-CURSED_SHIV.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold] 를 얻습니다.",
+  "THECURSEDMOD-CURSED_SHIV.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
   "THECURSEDMOD-CURSED_STAFF.title": "저주받은 지팡이",
-  "THECURSEDMOD-CURSED_STAFF.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold] 를 [blue]2[/blue] 장 얻습니다.",
+  "THECURSEDMOD-CURSED_STAFF.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 [blue]2[/blue] 장 얻습니다.",
+
+  "THECURSEDMOD-CURSED_BOOMERANG.title": "저주받은 부메랑",
+  "THECURSEDMOD-CURSED_BOOMERANG.description": "무작위 적에게 피해를 {Damage:diff()} 만큼 {Repeat:diff()} 번 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
+
+  "THECURSEDMOD-CURSED_BLADE.title": "저주받은 칼날",
+  "THECURSEDMOD-CURSED_BLADE.description": "모든 적 에게 피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
+
+  "THECURSEDMOD-SCINTILLA.selectPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
+  "THECURSEDMOD-SCINTILLA.title": "불똥",
+  "THECURSEDMOD-SCINTILLA.description": "피해를 {Damage:diff()} 줍니다.\n[gold]버린 카드 더미[/gold]의 카드를 [blue]1[/blue]장 선택하여 [gold]찌꺼기[/gold]로 변화시킵니다.",
 
   "THECURSEDMOD-SPITEFUL_STRIKE.title": "원한 맺힌 타격",
-  "THECURSEDMOD-SPITEFUL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]의례[/gold] 로 저주를 [gold]소멸[/gold] 시켰다면, {Energy:energyIcons()} 를 얻습니다.",
+  "THECURSEDMOD-SPITEFUL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]의례[/gold]로 [gold]저주[/gold]를 [gold]소멸[/gold]시켰다면, {Energy:energyIcons()} 를 얻습니다.",
 
   "THECURSEDMOD-OBSCURATION.title": "엄폐",
-  "THECURSEDMOD-OBSCURATION.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 다시 한번 [gold]방어도[/gold] 를 {Block:diff()} 얻습니다.",
+  "THECURSEDMOD-OBSCURATION.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 다시 한번 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
 
   "THECURSEDMOD-ASHES_TO_ASHES.title": "재에서 재로",
   "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]의례[/gold] : 카드를 {Cards:diff()} 장 뽑습니다.",
 
+  "THECURSEDMOD-CURSED_MIRROR.title": "저주받은 거울",
+  "THECURSEDMOD-CURSED_MIRROR.description": "피해를 {Damage:diff()} 줍니다.\n[gold]매료됨[/gold]을 얻습니다.",
+  
+  "THECURSEDMOD-ANGER_CONTROL.title": "분노 조절",
+  "THECURSEDMOD-ANGER_CONTROL.description": "피해를 {Damage:diff()} 씩 {Repeat:diff()} 번 줍니다.\n[gold]규칙 준수[/gold]를 얻습니다.",
+
+  "THECURSEDMOD-BLESSING_IN_DISGUISE.title": "전화위복",
+  "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "[gold]손[/gold]에 있는 [gold]저주[/gold] 카드를 전부 [gold]소멸[/gold]시킵니다. [gold]소멸[/gold]시킨 카드 1장당 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
+
+  "THECURSEDMOD-CURSED_SPELLBOOK.title": "저주받은 주문서",
+  "THECURSEDMOD-CURSED_SPELLBOOK.description": "카드를 {Cards:diff()} 장 뽑습니다.\n무작위 [gold]저주[/gold] 카드를 [gold]뽑을 카드 더미[/gold]에 섞습니다.",
+
+  "THECURSEDMOD-FLESH_FROM_BONE.title": "뼈에서 살을",
+  "THECURSEDMOD-FLESH_FROM_BONE.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : [gold]판금[/gold]을 {PlatingPower:diff()} 얻습니다.",
+
+  "THECURSEDMOD-MALEVOLENCE.title": "악의",
+  "THECURSEDMOD-MALEVOLENCE.description": "무작위 [gold]의례[/gold] 카드를 1장 [gold]손[/gold]으로 가져옵니다.\n이번 턴 동안 그 카드를 비용 없이 사용할 수 있습니다.",
+
   "THECURSEDMOD-ANTI_AGING.title": "회춘",
-  "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 최대 체력을 {MaxHp:diff()} 얻습니다.\n[gold]소멸[/gold]"
+  "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 최대 체력을 {MaxHp:diff()} 얻습니다.",
+
+  "THECURSEDMOD-DEMONIC_BLADE.title": "악마군주의 칼날",
+  "THECURSEDMOD-DEMONIC_BLADE.description": "피해를 {CalculatedDamage:diff()} 줍니다.\n이번 전투에서 [gold]의례[/gold]로 소멸시킨 [gold]저주[/gold] 하나당 피해량이 {ExtraDamage:diff()} 증가합니다."
 }

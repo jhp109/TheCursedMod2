@@ -2,10 +2,10 @@ using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
-using TheCursedMod.TheCursedModCode;
+using MegaCrit.Sts2.Core.Models;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -13,17 +13,30 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// 의례(Rite) 메카닉의 베이스 클래스.
 /// 카드를 사용하면 손에 있는 카드를 한 장 선택하여 소멸시킨다.
 /// 소멸된 카드가 저주 카드라면 OnRiteEffect가 발동된다.
+/// 이 클래스를 상속할 시 ExtraHoverTips에 Rite keyword를 넣어줘야 함.
 /// </summary>
 public abstract class RiteCard(
-    int cost, CardType type, CardRarity rarity, TargetType target, IEnumerable<IHoverTip>? extraTips = null)
-    : TheCursedModCard(cost, type, rarity, target)
+    int cost, CardType type, CardRarity rarity, TargetType target) : TheCursedModCard(cost, type, rarity, target)
 { 
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-        (extraTips ?? []).Append(HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite));
+    // 의례 카드 풀 캐시 (최초 1회만 계산)
+    private static IReadOnlyList<CardModel>? _riteCardPool;
+
+    /// <summary>
+    /// 이 캐릭터의 카드 풀에서 RiteCard를 상속한 카드 목록을 반환합니다. 최초 1회만 계산됩니다.
+    /// </summary>
+    public static IReadOnlyList<CardModel> GetRiteCardPool(Player owner)
+        => _riteCardPool ??= owner.Character.CardPool
+            .GetUnlockedCards(owner.UnlockState, owner.RunState.CardMultiplayerConstraint)
+            .Where(c => c is RiteCard)
+            .ToList();
 
     // 이번 턴에 의례로 저주를 소멸시켰는지 추적
     private static int _riteCurseExhaustedRound = -1;
     private static CombatState? _riteCurseExhaustedCombat;
+
+    // 이번 전투에서 의례로 소멸시킨 저주 총 횟수 추적
+    private static int _riteCombatCurseCount = 0;
+    private static CombatState? _riteCombatCountCombat;
 
     /// <summary>
     /// 이번 턴(현재 CombatState 기준)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
@@ -32,6 +45,14 @@ public abstract class RiteCard(
         => combat != null
            && ReferenceEquals(_riteCurseExhaustedCombat, combat)
            && _riteCurseExhaustedRound == combat.RoundNumber;
+
+    /// <summary>
+    /// 이번 전투에서 의례로 소멸시킨 저주의 총 횟수를 반환합니다.
+    /// </summary>
+    public static int GetRiteCurseExhaustedCount(CombatState? combat)
+        => combat != null && ReferenceEquals(_riteCombatCountCombat, combat)
+           ? _riteCombatCurseCount
+           : 0;
 
     private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectPrompt");
 
@@ -54,10 +75,19 @@ public abstract class RiteCard(
                 {
                     _riteCurseExhaustedRound = CombatState!.RoundNumber;
                     _riteCurseExhaustedCombat = CombatState;
+
+                    if (!ReferenceEquals(_riteCombatCountCombat, CombatState))
+                    {
+                        _riteCombatCurseCount = 0;
+                        _riteCombatCountCombat = CombatState;
+                    }
+                    _riteCombatCurseCount++;
+
                     await OnRiteEffect(choiceContext, play);
                 }
             }
         }
+
     }
 
     /// <summary>

@@ -19,4 +19,5 @@ public sealed class Dregs() : CustomCardModel(-1, CardType.Curse, CardRarity.Cur
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override string BetaPortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     protected override bool IsPlayable => false;
+    public override bool CanBeGeneratedByModifiers => false;
 }

@@ -12,8 +12,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class Obscuration() : RiteCard(1, CardType.Skill, CardRarity.Common, TargetType.None)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite)
     ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(7, ValueProp.Move)];

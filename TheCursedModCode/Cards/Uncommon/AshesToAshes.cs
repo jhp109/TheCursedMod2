@@ -1,6 +1,7 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
@@ -10,6 +11,9 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class AshesToAshes() : RiteCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.None)
 {
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite)
+    ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(4)];
 
     protected override async Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
