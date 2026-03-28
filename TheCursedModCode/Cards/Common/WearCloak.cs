@@ -14,11 +14,13 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class WearCloak() : TheCursedModCard(1, CardType.Skill, CardRarity.Common, TargetType.None)
 {
-    public override bool GainsBlock => true;
-
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(6, ValueProp.Move),
         new EnergyVar(1)
+    ];
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromKeyword(CardKeyword.Unplayable),
     ];
 
     protected override bool ShouldGlowGoldInternal => HasUnplayableInHand();

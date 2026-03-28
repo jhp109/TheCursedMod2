@@ -10,7 +10,7 @@ using TheCursedMod.TheCursedModCode;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 저주받은 마법봉(Cursed Wand) - 방어도를 6 얻습니다. 피해를 8 줍니다. 찌꺼기를 얻습니다. (강화 시 방어도 8, 피해 10)
+/// 저주받은 마법봉(Cursed Wand) - 방어도를 5 얻습니다. 피해를 7 줍니다. 찌꺼기를 얻습니다. (강화 시 방어도 7, 피해 9)
 /// </summary>
 public sealed class CursedWand() : TheCursedModCard(1, CardType.Skill, CardRarity.Basic, TargetType.AnyEnemy)
 {
@@ -20,8 +20,8 @@ public sealed class CursedWand() : TheCursedModCard(1, CardType.Skill, CardRarit
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(6, ValueProp.Move),
-        new DamageVar(8, ValueProp.Move)
+        new BlockVar(5, ValueProp.Move),
+        new DamageVar(7, ValueProp.Move)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

@@ -1,3 +1,5 @@
 {
-  
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.title": "Call of the Ancient",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.description": "This turn, next [gold]Rite[/gold] card(s) activate their [gold]Rite[/gold] effect an extra time.",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.smartDescription": "This turn, the next {Amount} [gold]Rite[/gold] {Amount:plural:card activates its|cards activate their} [gold]Rite[/gold] effect an extra time."
 }

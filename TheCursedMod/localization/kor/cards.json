@@ -23,7 +23,7 @@
   "THECURSEDMOD-CURSED_SHIV.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
   "THECURSEDMOD-CURSED_STAFF.title": "저주받은 지팡이",
-  "THECURSEDMOD-CURSED_STAFF.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 [blue]2[/blue] 장 얻습니다.",
+  "THECURSEDMOD-CURSED_STAFF.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 2 장 얻습니다.",
 
   "THECURSEDMOD-CURSED_BOOMERANG.title": "저주받은 부메랑",
   "THECURSEDMOD-CURSED_BOOMERANG.description": "무작위 적에게 피해를 {Damage:diff()} 만큼 {Repeat:diff()} 번 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
@@ -33,7 +33,7 @@
 
   "THECURSEDMOD-SCINTILLA.selectPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
   "THECURSEDMOD-SCINTILLA.title": "불똥",
-  "THECURSEDMOD-SCINTILLA.description": "피해를 {Damage:diff()} 줍니다.\n[gold]버린 카드 더미[/gold]의 카드를 [blue]1[/blue]장 선택하여 [gold]찌꺼기[/gold]로 변화시킵니다.",
+  "THECURSEDMOD-SCINTILLA.description": "피해를 {Damage:diff()} 줍니다.\n[gold]버린 카드 더미[/gold]의 카드를 1장 선택하여 [gold]찌꺼기[/gold]로 변화시킵니다.",
 
   "THECURSEDMOD-SPITEFUL_STRIKE.title": "원한 맺힌 타격",
   "THECURSEDMOD-SPITEFUL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]의례[/gold]로 [gold]저주[/gold]를 [gold]소멸[/gold]시켰다면, {Energy:energyIcons()} 를 얻습니다.",
@@ -42,16 +42,19 @@
   "THECURSEDMOD-OBSCURATION.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 다시 한번 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
 
   "THECURSEDMOD-RAPID_MOVEMENT.title": "재빠른 몸놀림",
-  "THECURSEDMOD-RAPID_MOVEMENT.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 카드를 [blue]2[/blue]장 뽑습니다.",
+  "THECURSEDMOD-RAPID_MOVEMENT.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 카드를 2장 뽑습니다.",
 
   "THECURSEDMOD-WEAR_CLOAK.title": "망토 두르기",
   "THECURSEDMOD-WEAR_CLOAK.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]손[/gold]에 [gold]사용불가[/gold] 카드가 있다면, {Energy:energyIcons()}를 얻습니다.",
+
+  "THECURSEDMOD-CURSED_ARMOUR.title": "저주받은 갑옷",
+  "THECURSEDMOD-CURSED_ARMOUR.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n무작위 [gold]저주[/gold] 카드 2장을 [gold]뽑을 카드 더미[/gold]에 섞습니다.",
 
   "THECURSEDMOD-DOUBLE_SHIELD.title": "이중 방벽",
   "THECURSEDMOD-DOUBLE_SHIELD.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 다음 턴에 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
 
   "THECURSEDMOD-CURSED_AMULET.title": "저주받은 목걸이",
-  "THECURSEDMOD-CURSED_AMULET.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n카드를 [blue]1[/blue]장 뽑습니다.\n무작위 [gold]저주[/gold] 카드를 [gold]뽑을 카드 더미[/gold]에 섞습니다.",
+  "THECURSEDMOD-CURSED_AMULET.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n카드를 1장 뽑습니다.\n무작위 [gold]저주[/gold] 카드를 [gold]뽑을 카드 더미[/gold]에 섞습니다.",
 
   "THECURSEDMOD-SMOKESCREEN.title": "연막",
   "THECURSEDMOD-SMOKESCREEN.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 모든 적에게 [gold]약화[/gold]를 {WeakPower:diff()} 부여합니다.",
@@ -87,9 +90,19 @@
   "THECURSEDMOD-DARK_BARRIER.title": "어둠의 결계",
   "THECURSEDMOD-DARK_BARRIER.description": "[gold]의례[/gold] : [gold]불가침[/gold]을 {IntangiblePower:diff()} 얻습니다.",
 
+  "THECURSEDMOD-MIRACLE_ALCHEMY.title": "기적의 연금술",
+  "THECURSEDMOD-MIRACLE_ALCHEMY.description": "[gold]의례[/gold] : [gold]엔트로피의 영액[/gold] 포션을 얻습니다.",
+
   "THECURSEDMOD-ANTI_AGING.title": "회춘",
   "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 최대 체력을 {MaxHp:diff()} 얻습니다.",
 
   "THECURSEDMOD-DEMONIC_BLADE.title": "악마군주의 칼날",
-  "THECURSEDMOD-DEMONIC_BLADE.description": "피해를 {CalculatedDamage:diff()} 줍니다.\n이번 전투에서 [gold]의례[/gold]로 소멸시킨 [gold]저주[/gold] 하나당 피해량이 {ExtraDamage:diff()} 증가합니다."
+  "THECURSEDMOD-DEMONIC_BLADE.description": "피해를 {CalculatedDamage:diff()} 줍니다.\n이번 전투에서 [gold]의례[/gold]로 소멸시킨 [gold]저주[/gold] 하나당 피해량이 {ExtraDamage:diff()} 증가합니다.",
+
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT.title": "고대신의 부름",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT.description": "이번 턴에, 다음에 사용하는 [gold]의례[/gold] 카드 {CallOfTheAncientPower:diff()}장의 의례 효과가 1번 추가로 발동합니다.",
+
+  "THECURSEDMOD-FOCUS_MAGIC.title": "마력 집중",
+  "THECURSEDMOD-FOCUS_MAGIC.description": "[gold]의례[/gold] : [gold]손[/gold]에 있는 카드 1장에 [gold]재사용[/gold]을 1 추가합니다.",
+  "THECURSEDMOD-FOCUS_MAGIC.selectPrompt": "재사용을 추가할 카드를 선택하세요."
 }

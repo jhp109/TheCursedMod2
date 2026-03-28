@@ -14,7 +14,7 @@
   "THECURSEDMOD-CURSED_WAND.description": "Gain {Block:diff()} [gold]Block[/gold].\nDeal {Damage:diff()} damage.\nAdd a [gold]Dregs[/gold] into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-CLEAN_UP_WORKSHOP.title": "Clean up Workshop",
-  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]Rite[/gold] : Gain {Block:diff()} [gold]Block[/gold]. Draw [blue]1[/blue] card.",
+  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]Rite[/gold] : Gain {Block:diff()} [gold]Block[/gold]. Draw 1 card.",
 
   "THECURSEDMOD-CURSED_MACE.title": "Cursed Mace",
   "THECURSEDMOD-CURSED_MACE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\nAdd a [gold]Dregs[/gold] into your [gold]Hand[/gold].",
@@ -23,7 +23,7 @@
   "THECURSEDMOD-CURSED_SHIV.description": "Deal {Damage:diff()} damage.\nAdd a [gold]Dregs[/gold] into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-CURSED_STAFF.title": "Cursed Staff",
-  "THECURSEDMOD-CURSED_STAFF.description": "Deal {Damage:diff()} damage.\nAdd [blue]2[/blue] [gold]Dregs[/gold] into your [gold]Hand[/gold].",
+  "THECURSEDMOD-CURSED_STAFF.description": "Deal {Damage:diff()} damage.\nAdd 2 [gold]Dregs[/gold] into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-CURSED_BOOMERANG.title": "Cursed Boomerang",
   "THECURSEDMOD-CURSED_BOOMERANG.description": "Deal {Damage:diff()} damage to a random enemy {Repeat:diff()} times.\nAdd a [gold]Dregs[/gold] into your [gold]Hand[/gold].",
@@ -42,16 +42,19 @@
   "THECURSEDMOD-OBSCURATION.description": "Gain {Block:diff()} [gold]Block[/gold].\nRite: Gain {Block:diff()} [gold]Block[/gold] again.",
 
   "THECURSEDMOD-RAPID_MOVEMENT.title": "Rapid Movement",
-  "THECURSEDMOD-RAPID_MOVEMENT.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Draw [blue]2[/blue] cards.",
+  "THECURSEDMOD-RAPID_MOVEMENT.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Draw 2 cards.",
 
   "THECURSEDMOD-WEAR_CLOAK.title": "Wear Cloak",
   "THECURSEDMOD-WEAR_CLOAK.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf you have an [gold]Unplayable[/gold] card in your [gold]Hand[/gold], gain {Energy:energyIcons()}.",
+
+  "THECURSEDMOD-CURSED_ARMOUR.title": "Cursed Armour",
+  "THECURSEDMOD-CURSED_ARMOUR.description": "Gain {Block:diff()} [gold]Block[/gold].\nShuffle 2 random [gold]Curse[/gold] cards into your [gold]Draw pile[/gold].",
 
   "THECURSEDMOD-DOUBLE_SHIELD.title": "Double Shield",
   "THECURSEDMOD-DOUBLE_SHIELD.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Gain {Block:diff()} [gold]Block[/gold] next turn.",
 
   "THECURSEDMOD-CURSED_AMULET.title": "Cursed Amulet",
-  "THECURSEDMOD-CURSED_AMULET.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw [blue]1[/blue] card.\nShuffle a random [gold]Curse[/gold] into your [gold]Draw pile[/gold].",
+  "THECURSEDMOD-CURSED_AMULET.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw 1 card.\nShuffle a random [gold]Curse[/gold] into your [gold]Draw pile[/gold].",
 
   "THECURSEDMOD-SMOKESCREEN.title": "Smokescreen",
   "THECURSEDMOD-SMOKESCREEN.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Apply {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies.",
@@ -81,15 +84,25 @@
   "THECURSEDMOD-PREPARE_RITE.description": "Transform 1 card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].",
   "THECURSEDMOD-PREPARE_RITE.selectPrompt": "Choose a card to transform into Dregs.",
 
-  "THECURSEDMOD-TROUBLOUS_MINION.title": "Troublous Minions",
+  "THECURSEDMOD-TROUBLOUS_MINION.title": "Troublous Minion",
   "THECURSEDMOD-TROUBLOUS_MINION.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd a random [gold]Curse[/gold] card into your [gold]Hand[/gold].\nShuffle this card into your [gold]Draw pile[/gold].",
 
   "THECURSEDMOD-DARK_BARRIER.title": "Dark Barrier",
   "THECURSEDMOD-DARK_BARRIER.description": "[gold]Rite[/gold] : Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
 
-  "THECURSEDMOD-ANTI_AGING.title": "AntiAging",
+  "THECURSEDMOD-MIRACLE_ALCHEMY.title": "Miracle Alchemy",
+  "THECURSEDMOD-MIRACLE_ALCHEMY.description": "[gold]Rite[/gold] : Obtain an [gold]Entropic Brew[/gold].",
+
+  "THECURSEDMOD-ANTI_AGING.title": "Anti Aging",
   "THECURSEDMOD-ANTI_AGING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Raise your max HP by {MaxHp:diff()}.",
 
   "THECURSEDMOD-DEMONIC_BLADE.title": "Demonic Blade",
-  "THECURSEDMOD-DEMONIC_BLADE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each Curse exhausted via [gold]Rite[/gold] this combat."
+  "THECURSEDMOD-DEMONIC_BLADE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each [gold]Curse[/gold] exhausted via [gold]Rite[/gold] this combat.",
+
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT.title": "Call of the Ancient",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT.description": "This turn, the next {CallOfTheAncientPower:diff()} [gold]Rite[/gold] {CallOfTheAncientPower:plural:card activates its|cards activate their} [gold]Rite[/gold] effect an extra time.",
+
+  "THECURSEDMOD-FOCUS_MAGIC.title": "Focus Magic",
+  "THECURSEDMOD-FOCUS_MAGIC.description": "[gold]Rite[/gold] : Add 1 [gold]Replay[/gold] to a card in your [gold]Hand[/gold].",
+  "THECURSEDMOD-FOCUS_MAGIC.selectPrompt": "Choose a card to add Replay to."
 }
