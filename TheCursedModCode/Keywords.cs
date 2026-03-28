@@ -13,4 +13,8 @@ public static class Keywords
     [KeywordProperties(AutoKeywordPosition.Before)]
     public static CardKeyword Rite;
 
+    [CustomEnum("Karma")]
+    [KeywordProperties(AutoKeywordPosition.Before)]
+    public static CardKeyword Karma;
+
 }

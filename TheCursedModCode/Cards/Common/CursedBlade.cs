@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -28,11 +27,7 @@ public sealed class CursedBlade() : TheCursedModCard(1, CardType.Attack, CardRar
         await CommonActions.CardAttack(this, play, vfx: "vfx/vfx_giant_horizontal_slash", tmpSfx: "slash_attack.mp3")
             .Execute(choiceContext);
 
-        if (CombatState != null)
-        {
-            var dregs = CombatState.CreateCard<Dregs>(Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(dregs, PileType.Hand, addedByPlayer: true);
-        }
+        await Dregs.CreateAndAddToHand(Owner, 1);
     }
 
     protected override void OnUpgrade()

@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -28,10 +27,7 @@ public sealed class CursedWand() : TheCursedModCard(1, CardType.Skill, CardRarit
     {
         await CommonActions.CardBlock(this, play);
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        if (base.CombatState != null) {
-            Dregs dregs = base.CombatState.CreateCard<Dregs>(base.Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(dregs, PileType.Hand, addedByPlayer:true);
-        }
+        await Dregs.CreateAndAddToHand(Owner, 1);
     }
 
     protected override void OnUpgrade()

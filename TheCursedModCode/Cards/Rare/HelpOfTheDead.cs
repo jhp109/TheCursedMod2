@@ -7,10 +7,10 @@ using MegaCrit.Sts2.Core.HoverTips;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 마력 집중(Focus Magic) - 의례 : 손에 있는 카드 1장에 재사용을 1 추가합니다.
+/// 망자의 도움(Help of the Dead) - 의례 : 손에 있는 카드 1장에 재사용을 1 추가합니다.
 /// (강화 시 비용 2)
 /// </summary>
-public sealed class FocusMagic() : RiteCard(3, CardType.Skill, CardRarity.Rare, TargetType.None)
+public sealed class HelpOfTheDead() : RiteCard(3, CardType.Skill, CardRarity.Rare, TargetType.None)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),

@@ -19,6 +19,7 @@ public sealed class SpitefulStrike() : TheCursedModCard(2, CardType.Attack, Card
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
         HoverTipFactory.FromKeyword(CardKeyword.Exhaust)
     ];
+    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(12, ValueProp.Move),
         new EnergyVar(2),

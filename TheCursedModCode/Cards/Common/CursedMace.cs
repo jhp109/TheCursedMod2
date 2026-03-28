@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -32,10 +31,7 @@ public sealed class CursedMace() : TheCursedModCard(2, CardType.Attack, CardRari
         if (play.Target != null)
             await CommonActions.Apply<VulnerablePower>(play.Target, this, DynamicVars.Vulnerable.BaseValue);
 
-        if (base.CombatState != null) {
-            Dregs dregs = base.CombatState.CreateCard<Dregs>(base.Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(dregs, PileType.Hand, addedByPlayer:true);
-        }
+        await Dregs.CreateAndAddToHand(Owner, 1);
     }
 
     protected override void OnUpgrade()

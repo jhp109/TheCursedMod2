@@ -1,6 +1,5 @@
 using BaseLib.Utils;
 using Godot;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -8,7 +7,6 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
-using TheCursedMod.TheCursedModCode;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -31,10 +29,7 @@ public sealed class CursedShiv() : TheCursedModCard(0, CardType.Attack, CardRari
         await CommonActions.CardAttack(this, play)
             .WithHitVfxNode((Creature t) => NShivThrowVfx.Create(base.Owner.Creature, t, new Color("5757d4")))
             .Execute(choiceContext);
-        if (base.CombatState != null) {
-            Dregs dregs = base.CombatState.CreateCard<Dregs>(base.Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(dregs, PileType.Hand, addedByPlayer:true);
-        }
+        await Dregs.CreateAndAddToHand(Owner, 1);
     }
 
     protected override void OnUpgrade()

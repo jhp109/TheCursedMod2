@@ -1,8 +1,8 @@
 {
-  "THECURSEDMOD-RITE.selectPrompt": "소멸. 저주 선택 시 의례 효과 발동",
+  "THECURSEDMOD-RITE.selectionScreenPrompt": "소멸. 저주 선택 시 의례 효과 발동",
 
   "THECURSEDMOD-DREGS.title": "찌꺼기",
-  "THECURSEDMOD-DREGS.description": "[gold]사용불가[/gold].",
+  "THECURSEDMOD-DREGS.description": "",
 
   "THECURSEDMOD-STRIKE_THE_CURSED.title": "타격",
   "THECURSEDMOD-STRIKE_THE_CURSED.description": "피해를 {Damage:diff()} 줍니다.",
@@ -14,7 +14,7 @@
   "THECURSEDMOD-CURSED_WAND.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
   "THECURSEDMOD-CLEAN_UP_WORKSHOP.title": "공방 청소",
-  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]의례[/gold] : [gold]방어도[/gold]를 {Block:diff()} 얻고 카드를 {Cards:diff()} 장 뽑습니다.",
+  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]의례[/gold] : [gold]방어도[/gold]를 {Block:diff()} 얻고 카드를 {Cards:diff()}장 뽑습니다.",
 
   "THECURSEDMOD-CURSED_MACE.title": "저주받은 철퇴",
   "THECURSEDMOD-CURSED_MACE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]취약[/gold]을 {VulnerablePower:diff()} 부여합니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
@@ -23,7 +23,7 @@
   "THECURSEDMOD-CURSED_SHIV.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
   "THECURSEDMOD-CURSED_STAFF.title": "저주받은 지팡이",
-  "THECURSEDMOD-CURSED_STAFF.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 2 장 얻습니다.",
+  "THECURSEDMOD-CURSED_STAFF.description": "피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 2장 얻습니다.",
 
   "THECURSEDMOD-CURSED_BOOMERANG.title": "저주받은 부메랑",
   "THECURSEDMOD-CURSED_BOOMERANG.description": "무작위 적에게 피해를 {Damage:diff()} 만큼 {Repeat:diff()} 번 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
@@ -31,12 +31,24 @@
   "THECURSEDMOD-CURSED_BLADE.title": "저주받은 칼날",
   "THECURSEDMOD-CURSED_BLADE.description": "모든 적 에게 피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
-  "THECURSEDMOD-SCINTILLA.selectPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
+  "THECURSEDMOD-SCINTILLA.selectionScreenPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
   "THECURSEDMOD-SCINTILLA.title": "불똥",
   "THECURSEDMOD-SCINTILLA.description": "피해를 {Damage:diff()} 줍니다.\n[gold]버린 카드 더미[/gold]의 카드를 1장 선택하여 [gold]찌꺼기[/gold]로 변화시킵니다.",
 
   "THECURSEDMOD-SPITEFUL_STRIKE.title": "원한 맺힌 타격",
-  "THECURSEDMOD-SPITEFUL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]의례[/gold]로 [gold]저주[/gold]를 [gold]소멸[/gold]시켰다면, {Energy:energyIcons()} 를 얻습니다.",
+  "THECURSEDMOD-SPITEFUL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시켰다면, {Energy:energyIcons()}를 얻습니다.",
+
+  "THECURSEDMOD-VITAL_STRIKE.title": "급소 타격",
+  "THECURSEDMOD-VITAL_STRIKE.description": "피해를 {Damage:diff()} 줍니다. [gold]취약[/gold]을 {VulnerablePower:diff()} 부여합니다.\n[gold]업보[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-REAR_STRIKE.title": "뒤통수 타격",
+  "THECURSEDMOD-REAR_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-RAVING_STAFF.title": "날뛰는 지팡이",
+  "THECURSEDMOD-RAVING_STAFF.description": "무작위 적에게 피해를 {Damage:diff()}만큼 X번 줍니다. \nX번 [gold]업보[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-WIELD.title": "휘두르기",
+  "THECURSEDMOD-WIELD.description": "피해를 {Damage:diff()} 줍니다. [gold]손[/gold]에 있는 [gold]사용불가[/gold] 카드의 수 만큼 카드를 뽑습니다.",
 
   "THECURSEDMOD-OBSCURATION.title": "엄폐",
   "THECURSEDMOD-OBSCURATION.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 다시 한번 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
@@ -60,7 +72,7 @@
   "THECURSEDMOD-SMOKESCREEN.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 모든 적에게 [gold]약화[/gold]를 {WeakPower:diff()} 부여합니다.",
 
   "THECURSEDMOD-ASHES_TO_ASHES.title": "재에서 재로",
-  "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]의례[/gold] : 카드를 {Cards:diff()} 장 뽑습니다.",
+  "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]의례[/gold] : 카드를 {Cards:diff()}장 뽑습니다.",
 
   "THECURSEDMOD-CURSED_MIRROR.title": "저주받은 거울",
   "THECURSEDMOD-CURSED_MIRROR.description": "피해를 {Damage:diff()} 줍니다.\n[gold]매료됨[/gold]을 얻습니다.",
@@ -72,7 +84,7 @@
   "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "[gold]손[/gold]에 있는 [gold]저주[/gold] 카드를 전부 [gold]소멸[/gold]시킵니다. [gold]소멸[/gold]시킨 카드 1장당 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
 
   "THECURSEDMOD-CURSED_SPELLBOOK.title": "저주받은 주문서",
-  "THECURSEDMOD-CURSED_SPELLBOOK.description": "카드를 {Cards:diff()} 장 뽑습니다.\n무작위 [gold]저주[/gold] 카드를 [gold]뽑을 카드 더미[/gold]에 섞습니다.",
+  "THECURSEDMOD-CURSED_SPELLBOOK.description": "카드를 {Cards:diff()}장 뽑습니다.\n무작위 [gold]저주[/gold] 카드를 [gold]뽑을 카드 더미[/gold]에 섞습니다.",
 
   "THECURSEDMOD-FLESH_FROM_BONE.title": "뼈에서 살을",
   "THECURSEDMOD-FLESH_FROM_BONE.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : [gold]판금[/gold]을 {PlatingPower:diff()} 얻습니다.",
@@ -82,10 +94,34 @@
 
   "THECURSEDMOD-PREPARE_RITE.title": "의례 준비",
   "THECURSEDMOD-PREPARE_RITE.description": "[gold]뽑을 카드 더미[/gold]의 카드를 1장 [gold]찌꺼기[/gold]로 변화시킵니다.",
-  "THECURSEDMOD-PREPARE_RITE.selectPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
+  "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
 
   "THECURSEDMOD-TROUBLOUS_MINION.title": "골칫덩이 사역마",
   "THECURSEDMOD-TROUBLOUS_MINION.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n무작위 [gold]저주[/gold] 카드를 얻습니다.\n이 카드를 [gold]뽑을 카드 더미[/gold]에 섞어넣습니다.",
+
+  "THECURSEDMOD-RECYCLABLE_WASTE.title": "재활용 쓰레기",
+  "THECURSEDMOD-RECYCLABLE_WASTE.description": "이번 전투 동안 모든 [gold]찌꺼기[/gold]가 [gold]보존[/gold]을 얻습니다.\n[gold]찌꺼기[/gold]를 2장 얻습니다.",
+
+  "THECURSEDMOD-LUCKY_CHARM.title": "액땜 부적",
+  "THECURSEDMOD-LUCKY_CHARM.description": "[gold]저주[/gold] 카드가 소멸될 때 마다, [gold]방어도[/gold]를 {LuckyCharmPower:diff()} 얻습니다.",
+
+  "THECURSEDMOD-MANA_CIRCULATION.title": "마나 순환",
+  "THECURSEDMOD-MANA_CIRCULATION.description": "매 턴마다 처음으로 [gold]저주[/gold] 카드가 [gold]소멸[/gold]될 경우, {Energy:energyIcons()}를 얻습니다.",
+
+  "THECURSEDMOD-HELLFIRE_BREATHING.title": "지옥불 뿜기",
+  "THECURSEDMOD-HELLFIRE_BREATHING.description": "[gold]사용불가[/gold] 카드를 뽑을 때마다 적 전체에게 {HellfireBreathingPower:diff()} 피해를 줍니다.",
+
+  "THECURSEDMOD-FORBIDDEN_FLAME.title": "금단의 화염",
+  "THECURSEDMOD-FORBIDDEN_FLAME.description": "적 전체에게 피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-FORBIDDEN_COMBO.title": "금단의 연격",
+  "THECURSEDMOD-FORBIDDEN_COMBO.description": "피해를 {Damage:diff()}만큼 {Repeat:diff()}번 줍니다.\n[gold]업보[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-FORBIDDEN_WALLOP.title": "금단의 맹공",
+  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "피해를 {Damage:diff()} 줍니다. 막히지 않은 피해량만큼 [gold]방어도[/gold]를 얻습니다.\n[gold]업보[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "금단의 몽둥이질",
+  "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaTurn2Power:diff()}.",
 
   "THECURSEDMOD-DARK_BARRIER.title": "어둠의 결계",
   "THECURSEDMOD-DARK_BARRIER.description": "[gold]의례[/gold] : [gold]불가침[/gold]을 {IntangiblePower:diff()} 얻습니다.",
@@ -97,12 +133,15 @@
   "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 최대 체력을 {MaxHp:diff()} 얻습니다.",
 
   "THECURSEDMOD-DEMONIC_BLADE.title": "악마군주의 칼날",
-  "THECURSEDMOD-DEMONIC_BLADE.description": "피해를 {CalculatedDamage:diff()} 줍니다.\n이번 전투에서 [gold]의례[/gold]로 소멸시킨 [gold]저주[/gold] 하나당 피해량이 {ExtraDamage:diff()} 증가합니다.",
+  "THECURSEDMOD-DEMONIC_BLADE.description": "피해를 {CalculatedDamage:diff()} 줍니다.\n이번 전투에서 [gold]의례[/gold]로 [gold]소멸[/gold]시킨 [gold]저주[/gold] 카드 하나당 피해량이 {ExtraDamage:diff()} 증가합니다.",
 
   "THECURSEDMOD-CALL_OF_THE_ANCIENT.title": "고대신의 부름",
   "THECURSEDMOD-CALL_OF_THE_ANCIENT.description": "이번 턴에, 다음에 사용하는 [gold]의례[/gold] 카드 {CallOfTheAncientPower:diff()}장의 의례 효과가 1번 추가로 발동합니다.",
 
-  "THECURSEDMOD-FOCUS_MAGIC.title": "마력 집중",
-  "THECURSEDMOD-FOCUS_MAGIC.description": "[gold]의례[/gold] : [gold]손[/gold]에 있는 카드 1장에 [gold]재사용[/gold]을 1 추가합니다.",
-  "THECURSEDMOD-FOCUS_MAGIC.selectPrompt": "재사용을 추가할 카드를 선택하세요."
+  "THECURSEDMOD-HELP_OF_THE_DEAD.title": "망자의 도움",
+  "THECURSEDMOD-HELP_OF_THE_DEAD.description": "[gold]의례[/gold] : [gold]손[/gold]에 있는 카드 1장에 [gold]재사용[/gold]을 1 추가합니다.",
+  "THECURSEDMOD-HELP_OF_THE_DEAD.selectionScreenPrompt": "재사용을 추가할 카드를 선택하세요.",
+
+  "THECURSEDMOD-DUBIOUS_CONTRACT.title": "미심쩍은 계약",
+  "THECURSEDMOD-DUBIOUS_CONTRACT.description": "내 턴 시작 시, 무작위 [gold]의례[/gold] 카드와 [gold]찌꺼기[/gold]를 얻습니다."
 }

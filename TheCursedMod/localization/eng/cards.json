@@ -1,8 +1,8 @@
 {
-  "THECURSEDMOD-RITE.selectPrompt": "Exhaust. Choosing a Curse Activates the Rite's Effect.",
+  "THECURSEDMOD-RITE.selectionScreenPrompt": "Exhaust. Choosing a Curse Activates the Rite's Effect.",
 
   "THECURSEDMOD-DREGS.title": "Dregs",
-  "THECURSEDMOD-DREGS.description": "[gold]Unplayable[/gold].",
+  "THECURSEDMOD-DREGS.description": "",
 
   "THECURSEDMOD-STRIKE_THE_CURSED.title": "Strike",
   "THECURSEDMOD-STRIKE_THE_CURSED.description": "Deal {Damage:diff()} damage.",
@@ -31,12 +31,24 @@
   "THECURSEDMOD-CURSED_BLADE.title": "Cursed Blade",
   "THECURSEDMOD-CURSED_BLADE.description": "Deal {Damage:diff()} damage to ALL enemies.\nAdd a [gold]Dregs[/gold] into your [gold]Hand[/gold].",
 
-  "THECURSEDMOD-SCINTILLA.selectPrompt": "Choose a card to transform into Dregs.",
+  "THECURSEDMOD-SCINTILLA.selectionScreenPrompt": "Choose a card to transform into Dregs.",
   "THECURSEDMOD-SCINTILLA.title": "Scintilla",
   "THECURSEDMOD-SCINTILLA.description": "Deal {Damage:diff()} damage.\nTransform a card in your [gold]Discard pile[/gold] into [gold]Dregs[/gold].",
 
   "THECURSEDMOD-SPITEFUL_STRIKE.title": "Spiteful Strike",
-  "THECURSEDMOD-SPITEFUL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you [gold]Exhausted[/gold] a [gold]Curse[/gold] via [gold]Rite[/gold] this turn, gain {Energy:energyIcons()}.",
+  "THECURSEDMOD-SPITEFUL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you [gold]Exhausted[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] this turn, gain {Energy:energyIcons()}.",
+
+  "THECURSEDMOD-VITAL_STRIKE.title": "Vital Strike",
+  "THECURSEDMOD-VITAL_STRIKE.description": "Deal {Damage:diff()} damage. Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-REAR_STRIKE.title": "Rear Strike",
+  "THECURSEDMOD-REAR_STRIKE.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-RAVING_STAFF.title": "Raving Staff",
+  "THECURSEDMOD-RAVING_STAFF.description": "Deal {Damage:diff()} damage to a random enemy X times.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()} X times.",
+
+  "THECURSEDMOD-WIELD.title": "Wield",
+  "THECURSEDMOD-WIELD.description": "Deal {Damage:diff()} damage. Draw cards equal to the number of [gold]Unplayable[/gold] cards in your [gold]Hand[/gold].",
 
   "THECURSEDMOD-OBSCURATION.title": "Obscuration",
   "THECURSEDMOD-OBSCURATION.description": "Gain {Block:diff()} [gold]Block[/gold].\nRite: Gain {Block:diff()} [gold]Block[/gold] again.",
@@ -54,7 +66,7 @@
   "THECURSEDMOD-DOUBLE_SHIELD.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Gain {Block:diff()} [gold]Block[/gold] next turn.",
 
   "THECURSEDMOD-CURSED_AMULET.title": "Cursed Amulet",
-  "THECURSEDMOD-CURSED_AMULET.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw 1 card.\nShuffle a random [gold]Curse[/gold] into your [gold]Draw pile[/gold].",
+  "THECURSEDMOD-CURSED_AMULET.description": "Gain {Block:diff()} [gold]Block[/gold].\nDraw 1 card.\nShuffle a random [gold]Curse[/gold] card into your [gold]Draw pile[/gold].",
 
   "THECURSEDMOD-SMOKESCREEN.title": "Smokescreen",
   "THECURSEDMOD-SMOKESCREEN.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Apply {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies.",
@@ -82,10 +94,34 @@
 
   "THECURSEDMOD-PREPARE_RITE.title": "Prepare Rite",
   "THECURSEDMOD-PREPARE_RITE.description": "Transform 1 card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].",
-  "THECURSEDMOD-PREPARE_RITE.selectPrompt": "Choose a card to transform into Dregs.",
+  "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt": "Choose a card to transform into Dregs.",
 
   "THECURSEDMOD-TROUBLOUS_MINION.title": "Troublous Minion",
   "THECURSEDMOD-TROUBLOUS_MINION.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd a random [gold]Curse[/gold] card into your [gold]Hand[/gold].\nShuffle this card into your [gold]Draw pile[/gold].",
+
+  "THECURSEDMOD-RECYCLABLE_WASTE.title": "Recyclable Waste",
+  "THECURSEDMOD-RECYCLABLE_WASTE.description": "All [gold]Dregs[/gold] have [gold]Retain[/gold] for this combat.\nGain 2 [gold]Dregs[/gold].",
+
+  "THECURSEDMOD-LUCKY_CHARM.title": "Lucky Charm",
+  "THECURSEDMOD-LUCKY_CHARM.description": "Whenever a [gold]Curse[/gold] card is [gold]Exhausted[/gold], gain {LuckyCharmPower:diff()} [gold]Block[/gold].",
+
+  "THECURSEDMOD-MANA_CIRCULATION.title": "Mana Circulation",
+  "THECURSEDMOD-MANA_CIRCULATION.description": "The first time a [gold]Curse[/gold] card is [gold]Exhausted[/gold] each turn, gain {Energy:energyIcons()}.",
+
+  "THECURSEDMOD-HELLFIRE_BREATHING.title": "Hellfire Breathing",
+  "THECURSEDMOD-HELLFIRE_BREATHING.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {HellfireBreathingPower:diff()} damage to ALL enemies.",
+
+  "THECURSEDMOD-FORBIDDEN_FLAME.title": "Forbidden Flame",
+  "THECURSEDMOD-FORBIDDEN_FLAME.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-FORBIDDEN_COMBO.title": "Forbidden Combo",
+  "THECURSEDMOD-FORBIDDEN_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-FORBIDDEN_WALLOP.title": "Forbidden Wallop",
+  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Deal {Damage:diff()} damage. Gain [gold]Block[/gold] equal to unblocked damage.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "Forbidden Bludgeon",
+  "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
 
   "THECURSEDMOD-DARK_BARRIER.title": "Dark Barrier",
   "THECURSEDMOD-DARK_BARRIER.description": "[gold]Rite[/gold] : Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
@@ -97,12 +133,15 @@
   "THECURSEDMOD-ANTI_AGING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Raise your max HP by {MaxHp:diff()}.",
 
   "THECURSEDMOD-DEMONIC_BLADE.title": "Demonic Blade",
-  "THECURSEDMOD-DEMONIC_BLADE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each [gold]Curse[/gold] exhausted via [gold]Rite[/gold] this combat.",
+  "THECURSEDMOD-DEMONIC_BLADE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each [gold]Curse[/gold] card [gold]Exhausted[/gold] via [gold]Rite[/gold] this combat.",
 
   "THECURSEDMOD-CALL_OF_THE_ANCIENT.title": "Call of the Ancient",
   "THECURSEDMOD-CALL_OF_THE_ANCIENT.description": "This turn, the next {CallOfTheAncientPower:diff()} [gold]Rite[/gold] {CallOfTheAncientPower:plural:card activates its|cards activate their} [gold]Rite[/gold] effect an extra time.",
 
-  "THECURSEDMOD-FOCUS_MAGIC.title": "Focus Magic",
-  "THECURSEDMOD-FOCUS_MAGIC.description": "[gold]Rite[/gold] : Add 1 [gold]Replay[/gold] to a card in your [gold]Hand[/gold].",
-  "THECURSEDMOD-FOCUS_MAGIC.selectPrompt": "Choose a card to add Replay to."
+  "THECURSEDMOD-HELP_OF_THE_DEAD.title": "Help of the Dead",
+  "THECURSEDMOD-HELP_OF_THE_DEAD.description": "[gold]Rite[/gold] : Add 1 [gold]Replay[/gold] to a card in your [gold]Hand[/gold].",
+  "THECURSEDMOD-HELP_OF_THE_DEAD.selectionScreenPrompt": "Choose a card to add Replay to.",
+
+  "THECURSEDMOD-DUBIOUS_CONTRACT.title": "Dubious Contract",
+  "THECURSEDMOD-DUBIOUS_CONTRACT.description": "At the start of your turn, gain a random [gold]Rite[/gold] card and a [gold]Dregs[/gold]."
 }

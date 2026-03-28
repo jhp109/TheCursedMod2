@@ -55,7 +55,7 @@ public abstract class RiteCard(
            ? _riteCombatCurseCount
            : 0;
 
-    private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectPrompt");
+    private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectionScreenPrompt");
 
     protected sealed override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {

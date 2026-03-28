@@ -1,5 +1,33 @@
 {
   "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.title": "Call of the Ancient",
   "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.description": "This turn, next [gold]Rite[/gold] card(s) activate their [gold]Rite[/gold] effect an extra time.",
-  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.smartDescription": "This turn, the next {Amount} [gold]Rite[/gold] {Amount:plural:card activates its|cards activate their} [gold]Rite[/gold] effect an extra time."
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.smartDescription": "This turn, the next {Amount} [gold]Rite[/gold] {Amount:plural:card activates its|cards activate their} [gold]Rite[/gold] effect an extra time.",
+
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.title": "Dubious Contract",
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.description": "At the start of your turn, gain a random [gold]Rite[/gold] card and a [gold]Dregs[/gold].",
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.smartDescription": "At the start of your turn, gain {Amount} random [gold]Rite[/gold] {Amount:plural:card|cards} and {Amount} [gold]Dregs[/gold].",
+
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.title": "Recyclable Waste",
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.description": "All [gold]Dregs[/gold] have [gold]Retain[/gold] for this combat.",
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.smartDescription": "All [gold]Dregs[/gold] have [gold]Retain[/gold] for this combat.",
+
+  "THECURSEDMOD-LUCKY_CHARM_POWER.title": "Lucky Charm",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.description": "Whenever a [gold]Curse[/gold] card is [gold]Exhausted[/gold], gain [gold]Block[/gold].",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.smartDescription": "Whenever a [gold]Curse[/gold] card is [gold]Exhausted[/gold], gain {Amount} [gold]Block[/gold].",
+
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.title": "Mana Circulation",
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.description": "The first time a [gold]Curse[/gold] is [gold]Exhausted[/gold] each turn, gain {energyPrefix}.",
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.smartDescription": "The first time a [gold]Curse[/gold] is [gold]Exhausted[/gold] each turn, gain {Amount:energyIcons()}.",
+
+  "THECURSEDMOD-KARMA_TURN1_POWER.title": "Karma",
+  "THECURSEDMOD-KARMA_TURN1_POWER.description": "At the end of this turn, take damage.",
+  "THECURSEDMOD-KARMA_TURN1_POWER.smartDescription": "At the end of this turn, take {Amount} damage.",
+
+  "THECURSEDMOD-KARMA_TURN2_POWER.title": "Karma",
+  "THECURSEDMOD-KARMA_TURN2_POWER.description": "At the end of your next turn, take damage.",
+  "THECURSEDMOD-KARMA_TURN2_POWER.smartDescription": "At the end of your next turn, take {Amount} damage.",
+
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.title": "Hellfire Breathing",
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies.",
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.smartDescription": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies."
 }

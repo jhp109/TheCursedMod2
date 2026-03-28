@@ -13,6 +13,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// 회춘(AntiAging) - 방어도를 4 얻습니다. 의례 : 최대 체력이 4 증가합니다. 소멸. (강화 시 방어도 6, 최대 체력 6)
 /// </summary>
 public sealed class AntiAging() : RiteCard(1, CardType.Skill, CardRarity.Rare, TargetType.None) {
+    public override bool GainsBlock => true;
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

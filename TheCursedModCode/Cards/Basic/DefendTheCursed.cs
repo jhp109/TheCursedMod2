@@ -11,6 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class DefendTheCursed() : TheCursedModCard(1, CardType.Skill, CardRarity.Basic, TargetType.None)
 {
+    public override bool GainsBlock => true;
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Defend];
     protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5, ValueProp.Move)];
 
