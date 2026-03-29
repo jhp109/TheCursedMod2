@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -28,9 +27,9 @@ public sealed class ForbiddenRelic() : TheCursedModCard(2, CardType.Attack, Card
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        int relicCount = Owner!.Relics.Count;
+        int relicCount = Owner.Relics.Count;
         if (relicCount > 0)
-            await PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, relicCount, Owner.Creature, this);
+            await ApplyKarma(choiceContext, relicCount);
     }
 
     protected override void OnUpgrade()

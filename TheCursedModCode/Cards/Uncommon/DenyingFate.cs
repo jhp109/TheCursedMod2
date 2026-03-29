@@ -21,8 +21,7 @@ public sealed class DenyingFate() : TheCursedModCard(1, CardType.Attack, CardRar
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma),
-        HoverTipFactory.FromKeyword(CardKeyword.Exhaust)
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma)
     ];
 
     protected override bool ShouldGlowGoldInternal =>
@@ -37,7 +36,8 @@ public sealed class DenyingFate() : TheCursedModCard(1, CardType.Attack, CardRar
         {
             int k1Amount = k1.Amount;
             await PowerCmd.Remove(k1);
-            await PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, k1Amount, Owner.Creature, this);
+            // Set null to CardModel because it's just delaying the Karma, not applying the new Karma.
+            await PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, k1Amount, Owner.Creature, null);
         }
     }
 

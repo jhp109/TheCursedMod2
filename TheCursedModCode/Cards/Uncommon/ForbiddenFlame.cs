@@ -21,7 +21,7 @@ public sealed class ForbiddenFlame() : TheCursedModCard(2, CardType.Attack, Card
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(24, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>(14m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 14m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -38,7 +38,7 @@ public sealed class ForbiddenFlame() : TheCursedModCard(2, CardType.Attack, Card
             .WithHitFx("vfx/vfx_attack_blunt", null, "heavy_attack.mp3")
             .Execute(choiceContext);
 
-        await PowerCmd.Apply<KarmaTurn2Power>(Owner!.Creature, DynamicVars["KarmaTurn2Power"].IntValue, Owner.Creature, this);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

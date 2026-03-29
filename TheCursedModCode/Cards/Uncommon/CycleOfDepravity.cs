@@ -1,22 +1,20 @@
-using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.ValueProps;
 using TheCursedMod.TheCursedModCode.Powers;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 뒤통수 타격(Rear Strike) - 피해를 13 줍니다. 업보 8. (강화 시 피해 17)
+/// 타락의 굴레(Cycle of Depravity) - 업보를 얻을 때마다 카드를 1장 뽑습니다. (중첩 가능)
+/// 강화 시 비용 0.
 /// </summary>
-public sealed class RearStrike() : TheCursedModCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+public sealed class CycleOfDepravity() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.None)
 {
-    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(13, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 8m)
+        new PowerVar<CycleOfDepravityPower>(1m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -25,12 +23,12 @@ public sealed class RearStrike() : TheCursedModCard(1, CardType.Attack, CardRari
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
+        await CreatureCmd.TriggerAnim(Owner!.Creature, "Cast", Owner.Character.CastAnimDelay);
+        await PowerCmd.Apply<CycleOfDepravityPower>(Owner.Creature, DynamicVars["CycleOfDepravityPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(4m);
+        EnergyCost.UpgradeBy(-1);
     }
 }

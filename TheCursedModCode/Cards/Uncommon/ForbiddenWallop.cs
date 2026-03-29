@@ -20,7 +20,7 @@ public sealed class ForbiddenWallop() : TheCursedModCard(3, CardType.Attack, Car
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(23, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>(16m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 16m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -31,7 +31,7 @@ public sealed class ForbiddenWallop() : TheCursedModCard(3, CardType.Attack, Car
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await PowerCmd.Apply<KarmaTurn2Power>(Owner!.Creature, DynamicVars["KarmaTurn2Power"].IntValue, Owner.Creature, this);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     public override async Task AfterDamageGiven(

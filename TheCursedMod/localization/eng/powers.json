@@ -27,9 +27,25 @@
   "THECURSEDMOD-KARMA_TURN2_POWER.description": "At the end of your next turn, take damage.",
   "THECURSEDMOD-KARMA_TURN2_POWER.smartDescription": "At the end of your next turn, take {Amount} damage.",
 
+  "THECURSEDMOD-KARMA_TURN3_POWER.title": "Karma",
+  "THECURSEDMOD-KARMA_TURN3_POWER.description": "At the end of your next next turn, take damage.",
+  "THECURSEDMOD-KARMA_TURN3_POWER.smartDescription": "At the end of your next next turn, take {Amount} damage.",
+
+  "THECURSEDMOD-GRACE_POWER.title": "Grace",
+  "THECURSEDMOD-GRACE_POWER.description": "Karma damage is delayed by an extra turn (cannot be stacked).",
+  "THECURSEDMOD-GRACE_POWER.smartDescription": "Karma damage is delayed by an extra turn (cannot be stacked).",
+
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.title": "Hellfire Breathing",
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies.",
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.smartDescription": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies.",
+
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.title": "Rolling over Debt",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.description": "Whenever you are about to take [gold]Karma[/gold] damage, gain [gold]Block[/gold].",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.smartDescription": "Whenever you are about to take [gold]Karma[/gold] damage, gain {Amount} [gold]Block[/gold].",
+
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.title": "Cycle of Depravity",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.description": "Whenever you gain [gold]Karma[/gold], draw {Amount} {Amount:plural:card|cards}.",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.smartDescription": "Whenever you gain [gold]Karma[/gold], draw {Amount} {Amount:plural:card|cards}.",
 
   "THECURSEDMOD-IGNORE_PAIN_POWER.title": "Ignore Pain",
   "THECURSEDMOD-IGNORE_PAIN_POWER.description": "You receive less damage from [gold]Karma[/gold] this turn.",

@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -17,7 +16,7 @@ public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, Card
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(9, ValueProp.Move),
         new RepeatVar(2),
-        new PowerVar<KarmaTurn2Power>(12m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 12m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -27,7 +26,7 @@ public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, Card
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play, DynamicVars.Repeat.IntValue).Execute(choiceContext);
-        await PowerCmd.Apply<KarmaTurn2Power>(Owner!.Creature, DynamicVars["KarmaTurn2Power"].IntValue, Owner.Creature, this);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

@@ -37,6 +37,7 @@ public class KarmaTurn1Power : TheCursedModPower
             SfxCmd.Play("event:/sfx/characters/attack_fire");
 
             base.Owner.GetPower<IgnorePainPower>()?.TriggerFlash();
+            await (Owner.GetPower<RollingOverDebtPower>()?.TriggerBlock() ?? Task.CompletedTask);
             await CreatureCmd.Damage(choiceContext, base.Owner, Amount, ValueProp.Unpowered, base.Owner, null);
             await PowerCmd.Remove(this);
         }

@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -18,7 +17,7 @@ public sealed class RavingStaff() : TheCursedModCard(0, CardType.Attack, CardRar
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(11, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>(5m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 5m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -30,7 +29,7 @@ public sealed class RavingStaff() : TheCursedModCard(0, CardType.Attack, CardRar
         int xValue = ResolveEnergyXValue();
         await CommonActions.CardAttack(this, play, xValue).Execute(choiceContext);
         if (xValue > 0)
-            await PowerCmd.Apply<KarmaTurn2Power>(Owner!.Creature, xValue * DynamicVars["KarmaTurn2Power"].IntValue, Owner.Creature, this);
+            await ApplyKarma(choiceContext, xValue * DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

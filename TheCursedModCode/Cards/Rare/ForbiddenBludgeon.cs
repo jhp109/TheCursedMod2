@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -16,7 +15,7 @@ public sealed class ForbiddenBludgeon() : TheCursedModCard(3, CardType.Attack, C
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(60, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>(30m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 30m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -26,19 +25,7 @@ public sealed class ForbiddenBludgeon() : TheCursedModCard(3, CardType.Attack, C
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-
-        var k1 = Owner.Creature.GetPower<KarmaTurn1Power>();
-        if (k1 != null && !Owner.Creature.HasPower<KarmaTurn2Power>())
-        {
-            int k1Amount = k1.Amount;
-            await PowerCmd.Remove(k1);
-            await PowerCmd.Apply<KarmaTurn1Power>(Owner.Creature, k1Amount, Owner.Creature, this);
-            await PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, DynamicVars["KarmaTurn2Power"].IntValue, Owner.Creature, this);
-        }
-        else
-        {
-            await PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, DynamicVars["KarmaTurn2Power"].IntValue, Owner.Creature, this);
-        }
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

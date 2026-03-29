@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -19,7 +18,7 @@ public sealed class VitalStrike() : TheCursedModCard(0, CardType.Attack, CardRar
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(6, ValueProp.Move),
         new PowerVar<VulnerablePower>("VulnerablePower", 2),
-        new PowerVar<KarmaTurn2Power>(6m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 6m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -32,7 +31,7 @@ public sealed class VitalStrike() : TheCursedModCard(0, CardType.Attack, CardRar
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
         if (play.Target != null)
             await CommonActions.Apply<VulnerablePower>(play.Target, this, DynamicVars.Vulnerable.BaseValue);
-        await PowerCmd.Apply<KarmaTurn2Power>(Owner!.Creature, DynamicVars["KarmaTurn2Power"].IntValue, Owner.Creature, this);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

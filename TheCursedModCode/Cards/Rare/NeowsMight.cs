@@ -1,22 +1,21 @@
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.ValueProps;
 using TheCursedMod.TheCursedModCode.Powers;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 뒤통수 타격(Rear Strike) - 피해를 13 줍니다. 업보 8. (강화 시 피해 17)
+/// 니오우의 권능(Neow's Might) - 손에 있는 다른 모든 카드의 비용을 이번 턴 동안 1 줄입니다. 업보를 22 얻습니다.
+/// 강화 시 Retain 추가.
 /// </summary>
-public sealed class RearStrike() : TheCursedModCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+public sealed class NeowsMight() : TheCursedModCard(1, CardType.Skill, CardRarity.Rare, TargetType.None)
 {
-    protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(13, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 8m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 22m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -25,12 +24,18 @@ public sealed class RearStrike() : TheCursedModCard(1, CardType.Attack, CardRari
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await CommonActions.CardAttack(this, play).Execute(choiceContext);
+        await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
+        foreach (var card in PileType.Hand.GetPile(Owner).Cards)
+        {
+            if (card == this) continue;
+            if (card.EnergyCost.CostsX) continue;
+            card.EnergyCost.AddThisTurnOrUntilPlayed(-1);
+        }
         await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(4m);
+        AddKeyword(CardKeyword.Retain);
     }
 }

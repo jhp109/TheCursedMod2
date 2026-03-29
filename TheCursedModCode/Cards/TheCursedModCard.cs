@@ -1,9 +1,12 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using TheCursedMod.TheCursedModCode.Character;
 using TheCursedMod.TheCursedModCode.Extensions;
-using MegaCrit.Sts2.Core.Entities.Cards;
+using TheCursedMod.TheCursedModCode.Powers;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -25,4 +28,20 @@ public abstract class TheCursedModCard(
     //Smaller variants: fullart 250x350, normalart 250x190
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override string BetaPortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+
+    /// <summary>
+    /// GracePower가 활성화된 경우 KarmaTurn3Power를, 그렇지 않으면 KarmaTurn2Power를 적용합니다.
+    /// CycleOfDepravityPower가 활성화된 경우 카드를 1장 뽑습니다.
+    /// </summary>
+    protected async Task ApplyKarma(PlayerChoiceContext choiceContext, decimal amount)
+    {
+        if (Owner!.Creature.HasPower<GracePower>())
+            await PowerCmd.Apply<KarmaTurn3Power>(Owner.Creature, amount, Owner.Creature, this);
+        else
+            await PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, amount, Owner.Creature, this);
+
+        var cycleOfDepravity = Owner.Creature.GetPower<CycleOfDepravityPower>();
+        if (cycleOfDepravity != null)
+            await CardPileCmd.Draw(choiceContext, cycleOfDepravity.Amount, Owner);
+    }
 }

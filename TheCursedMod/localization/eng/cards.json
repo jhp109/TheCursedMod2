@@ -39,13 +39,13 @@
   "THECURSEDMOD-SPITEFUL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you [gold]Exhausted[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] this turn, gain {Energy:energyIcons()}.",
 
   "THECURSEDMOD-VITAL_STRIKE.title": "Vital Strike",
-  "THECURSEDMOD-VITAL_STRIKE.description": "Deal {Damage:diff()} damage. Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+  "THECURSEDMOD-VITAL_STRIKE.description": "Deal {Damage:diff()} damage. Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-REAR_STRIKE.title": "Rear Strike",
-  "THECURSEDMOD-REAR_STRIKE.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+  "THECURSEDMOD-REAR_STRIKE.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-RAVING_STAFF.title": "Raving Staff",
-  "THECURSEDMOD-RAVING_STAFF.description": "Deal {Damage:diff()} damage to a random enemy X times.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()} X times.",
+  "THECURSEDMOD-RAVING_STAFF.description": "Deal {Damage:diff()} damage to a random enemy X times.\n[gold]Karma[/gold] {KarmaPower:diff()} X times.",
 
   "THECURSEDMOD-WIELD.title": "Wield",
   "THECURSEDMOD-WIELD.description": "Deal {Damage:diff()} damage.\nDraw cards equal to the number of [gold]Unplayable[/gold] cards in your [gold]Hand[/gold].",
@@ -75,7 +75,7 @@
   "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]Rite[/gold] : Draw {Cards:diff()} cards.",
 
   "THECURSEDMOD-REPENTANCE.title": "Repentance",
-  "THECURSEDMOD-REPENTANCE.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf [gold]Karma[/gold] damage is scheduled this turn, gain {KarmaBlock:diff()} instead.",
+  "THECURSEDMOD-REPENTANCE.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf [gold]Karma[/gold] damage is scheduled this turn, gain {KarmaBlock:diff()} [gold]Block[/gold] instead.",
 
   "THECURSEDMOD-CURSED_MIRROR.title": "Cursed Mirror",
   "THECURSEDMOD-CURSED_MIRROR.description": "Deal {Damage:diff()} damage.\nAdd an [gold]Enthralled[/gold] into your [gold]Hand[/gold].",
@@ -121,19 +121,28 @@
   "THECURSEDMOD-FATAL_LEAP.description": "Deal {Damage:diff()} damage.\nIf [gold]Karma[/gold] damage is scheduled this turn, gain {Energy:energyIcons()} and draw 1 card.",
 
   "THECURSEDMOD-FORBIDDEN_FLAME.title": "Forbidden Flame",
-  "THECURSEDMOD-FORBIDDEN_FLAME.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_FLAME.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_COMBO.title": "Forbidden Combo",
-  "THECURSEDMOD-FORBIDDEN_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_WALLOP.title": "Forbidden Wallop",
-  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Deal {Damage:diff()} damage. Gain [gold]Block[/gold] equal to unblocked damage.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Deal {Damage:diff()} damage. Gain [gold]Block[/gold] equal to unblocked damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-IGNORE_PAIN.title": "Ignore Pain",
   "THECURSEDMOD-IGNORE_PAIN.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : You receive 50% less damage from [gold]Karma[/gold] this turn.",
 
+  "THECURSEDMOD-GRACE.title": "Grace",
+  "THECURSEDMOD-GRACE.description": "[gold]Karma[/gold] damage is dealt at the end of your turn after next, instead of next turn.",
+
+  "THECURSEDMOD-ROLLING_OVER_DEBT.title": "Rolling over Debt",
+  "THECURSEDMOD-ROLLING_OVER_DEBT.description": "Whenever you are about to take [gold]Karma[/gold] damage, gain {RollingOverDebtPower:diff()} [gold]Block[/gold].",
+
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY.title": "Cycle of Depravity",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "Whenever you gain [gold]Karma[/gold], draw {CycleOfDepravityPower:diff()} {CycleOfDepravityPower:plural:card|cards}.",
+
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "Forbidden Bludgeon",
-  "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-DARK_BARRIER.title": "Dark Barrier",
   "THECURSEDMOD-DARK_BARRIER.description": "[gold]Rite[/gold] : Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
@@ -157,6 +166,9 @@
   "THECURSEDMOD-DUBIOUS_CONTRACT.title": "Dubious Contract",
   "THECURSEDMOD-DUBIOUS_CONTRACT.description": "At the start of your turn, gain a random [gold]Rite[/gold] card and a [gold]Dregs[/gold].",
 
+  "THECURSEDMOD-NEOWS_MIGHT.title": "Neow's Might",
+  "THECURSEDMOD-NEOWS_MIGHT.description": "Reduce the cost of ALL cards in your [gold]Hand[/gold] by 1 this turn.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+
   "THECURSEDMOD-FORBIDDEN_RELIC.title": "Forbidden Relic",
-  "THECURSEDMOD-FORBIDDEN_RELIC.description": "Deal {ExtraDamage:diff()} damage per relic.\n[gold]Karma[/gold] equal to your relic count.{InCombat:cond:\n(Deals {CalculatedDamage:diff()} damage.)|}"
+  "THECURSEDMOD-FORBIDDEN_RELIC.description": "Deal {ExtraDamage:diff()} damage per [gold]Relic[/gold].\n[gold]Karma[/gold] equal to your [gold]Relic[/gold] count.{InCombat:cond:\n(Deals {CalculatedDamage:diff()} damage.)|}"
 }
