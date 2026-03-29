@@ -23,6 +23,7 @@ public sealed class Dregs() : CustomCardModel(-1, CardType.Curse, CardRarity.Cur
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override string BetaPortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override bool CanBeGeneratedByModifiers => false;
+    public override int MaxUpgradeLevel => 0;
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Unplayable];
 

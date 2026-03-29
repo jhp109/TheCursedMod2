@@ -29,5 +29,9 @@
 
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.title": "Hellfire Breathing",
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies.",
-  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.smartDescription": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies."
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.smartDescription": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies.",
+
+  "THECURSEDMOD-IGNORE_PAIN_POWER.title": "Ignore Pain",
+  "THECURSEDMOD-IGNORE_PAIN_POWER.description": "You receive less damage from [gold]Karma[/gold] this turn.",
+  "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "You receive {Amount}% less damage from [gold]Karma[/gold] this turn."
 }

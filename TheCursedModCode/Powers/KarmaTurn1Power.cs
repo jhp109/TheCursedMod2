@@ -36,6 +36,7 @@ public class KarmaTurn1Power : TheCursedModPower
             if (vfx != null) NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(vfx);
             SfxCmd.Play("event:/sfx/characters/attack_fire");
 
+            base.Owner.GetPower<IgnorePainPower>()?.TriggerFlash();
             await CreatureCmd.Damage(choiceContext, base.Owner, Amount, ValueProp.Unpowered, base.Owner, null);
             await PowerCmd.Remove(this);
         }

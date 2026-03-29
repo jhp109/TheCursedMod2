@@ -48,7 +48,7 @@
   "THECURSEDMOD-RAVING_STAFF.description": "Deal {Damage:diff()} damage to a random enemy X times.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()} X times.",
 
   "THECURSEDMOD-WIELD.title": "Wield",
-  "THECURSEDMOD-WIELD.description": "Deal {Damage:diff()} damage. Draw cards equal to the number of [gold]Unplayable[/gold] cards in your [gold]Hand[/gold].",
+  "THECURSEDMOD-WIELD.description": "Deal {Damage:diff()} damage.\nDraw cards equal to the number of [gold]Unplayable[/gold] cards in your [gold]Hand[/gold].",
 
   "THECURSEDMOD-OBSCURATION.title": "Obscuration",
   "THECURSEDMOD-OBSCURATION.description": "Gain {Block:diff()} [gold]Block[/gold].\nRite: Gain {Block:diff()} [gold]Block[/gold] again.",
@@ -73,6 +73,9 @@
 
   "THECURSEDMOD-ASHES_TO_ASHES.title": "Ashes to Ashes",
   "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]Rite[/gold] : Draw {Cards:diff()} cards.",
+
+  "THECURSEDMOD-REPENTANCE.title": "Repentance",
+  "THECURSEDMOD-REPENTANCE.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf [gold]Karma[/gold] damage is scheduled this turn, gain {KarmaBlock:diff()} instead.",
 
   "THECURSEDMOD-CURSED_MIRROR.title": "Cursed Mirror",
   "THECURSEDMOD-CURSED_MIRROR.description": "Deal {Damage:diff()} damage.\nAdd an [gold]Enthralled[/gold] into your [gold]Hand[/gold].",
@@ -111,6 +114,12 @@
   "THECURSEDMOD-HELLFIRE_BREATHING.title": "Hellfire Breathing",
   "THECURSEDMOD-HELLFIRE_BREATHING.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {HellfireBreathingPower:diff()} damage to ALL enemies.",
 
+  "THECURSEDMOD-DENYING_FATE.title": "Denying Fate",
+  "THECURSEDMOD-DENYING_FATE.description": "Deal {Damage:diff()} damage.\nDelay [gold]Karma[/gold] damage scheduled this turn to the next turn.",
+
+  "THECURSEDMOD-FATAL_LEAP.title": "Fatal Leap",
+  "THECURSEDMOD-FATAL_LEAP.description": "Deal {Damage:diff()} damage.\nIf [gold]Karma[/gold] damage is scheduled this turn, gain {Energy:energyIcons()} and draw 1 card.",
+
   "THECURSEDMOD-FORBIDDEN_FLAME.title": "Forbidden Flame",
   "THECURSEDMOD-FORBIDDEN_FLAME.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
 
@@ -119,6 +128,9 @@
 
   "THECURSEDMOD-FORBIDDEN_WALLOP.title": "Forbidden Wallop",
   "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Deal {Damage:diff()} damage. Gain [gold]Block[/gold] equal to unblocked damage.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
+
+  "THECURSEDMOD-IGNORE_PAIN.title": "Ignore Pain",
+  "THECURSEDMOD-IGNORE_PAIN.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : You receive 50% less damage from [gold]Karma[/gold] this turn.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "Forbidden Bludgeon",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaTurn2Power:diff()}.",
@@ -143,5 +155,8 @@
   "THECURSEDMOD-HELP_OF_THE_DEAD.selectionScreenPrompt": "Choose a card to add Replay to.",
 
   "THECURSEDMOD-DUBIOUS_CONTRACT.title": "Dubious Contract",
-  "THECURSEDMOD-DUBIOUS_CONTRACT.description": "At the start of your turn, gain a random [gold]Rite[/gold] card and a [gold]Dregs[/gold]."
+  "THECURSEDMOD-DUBIOUS_CONTRACT.description": "At the start of your turn, gain a random [gold]Rite[/gold] card and a [gold]Dregs[/gold].",
+
+  "THECURSEDMOD-FORBIDDEN_RELIC.title": "Forbidden Relic",
+  "THECURSEDMOD-FORBIDDEN_RELIC.description": "Deal {ExtraDamage:diff()} damage per relic.\n[gold]Karma[/gold] equal to your relic count.{InCombat:cond:\n(Deals {CalculatedDamage:diff()} damage.)|}"
 }
