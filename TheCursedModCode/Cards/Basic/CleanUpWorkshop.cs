@@ -13,6 +13,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class CleanUpWorkshop() : RiteCard(0, CardType.Skill, CardRarity.Basic, TargetType.None)
 {
+    public override bool GainsBlock => true;
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
         HoverTipFactory.FromKeyword(CardKeyword.Exhaust)

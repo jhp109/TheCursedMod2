@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -14,7 +13,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class Scintilla() : TheCursedModCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
-    private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-SCINTILLA.selectPrompt");
+    private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-SCINTILLA.selectionScreenPrompt");
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
@@ -30,7 +29,7 @@ public sealed class Scintilla() : TheCursedModCard(1, CardType.Attack, CardRarit
         var target = await CommonActions.SelectSingleCard(this, SelectPrompt, choiceContext, PileType.Discard);
         if (target != null)
         {
-            await CardCmd.TransformTo<Dregs>(target);
+            await Dregs.TransformToDregs(this, target);
         }
     }
 

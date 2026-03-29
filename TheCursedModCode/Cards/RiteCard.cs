@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
+using TheCursedMod.TheCursedModCode.Powers;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -54,7 +55,7 @@ public abstract class RiteCard(
            ? _riteCombatCurseCount
            : 0;
 
-    private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectPrompt");
+    private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectionScreenPrompt");
 
     protected sealed override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
@@ -84,6 +85,21 @@ public abstract class RiteCard(
                     _riteCombatCurseCount++;
 
                     await OnRiteEffect(choiceContext, play);
+
+                    var ancientPower = Owner?.Creature.GetPower<CallOfTheAncientPower>();
+                    if (ancientPower != null)
+                    {
+                        await PowerCmd.Decrement(ancientPower);
+                        await OnRiteEffect(choiceContext, play);
+                    }
+                } else
+                {
+                    // Decrease the power anyway. it's "The next N Rite cards activate its Rite effect an extra time".
+                    var ancientPower = Owner?.Creature.GetPower<CallOfTheAncientPower>();
+                    if (ancientPower != null)
+                    {
+                        await PowerCmd.Decrement(ancientPower);
+                    }
                 }
             }
         }

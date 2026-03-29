@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -26,14 +25,9 @@ public sealed class CursedBoomerang() : TheCursedModCard(1, CardType.Attack, Car
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        if (CombatState != null)
-        {
-            await CommonActions.CardAttack(this, play, DynamicVars.Repeat.IntValue, "vfx/vfx_attack_slash", "", "")
-                .Execute(choiceContext);
-
-            var dregs = CombatState.CreateCard<Dregs>(Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(dregs, PileType.Hand, addedByPlayer: true);
-        }
+        await CommonActions.CardAttack(this, play, DynamicVars.Repeat.IntValue, "vfx/vfx_attack_slash", "", "")
+            .Execute(choiceContext);
+        await Dregs.CreateAndAddToHand(Owner, 1);
     }
 
     protected override void OnUpgrade()

@@ -1,11 +1,11 @@
-﻿using BaseLib.Abstracts;
+using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using TheCursedMod.TheCursedModCode.Extensions;
 using Godot;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
 
-public abstract class CharModPower : CustomPowerModel
+public abstract class TheCursedModPower : CustomPowerModel
 {
     //Loads from TheCursedMod/images/powers/your_power.png
     public override string CustomPackedIconPath

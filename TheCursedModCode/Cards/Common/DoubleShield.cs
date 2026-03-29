@@ -18,8 +18,7 @@ public sealed class DoubleShield() : RiteCard(2, CardType.Skill, CardRarity.Comm
     public override bool GainsBlock => true;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
-        HoverTipFactory.FromPower<BlockNextTurnPower>()
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite)
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
