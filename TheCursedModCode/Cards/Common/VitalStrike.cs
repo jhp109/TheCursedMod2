@@ -31,7 +31,7 @@ public sealed class VitalStrike() : TheCursedModCard(0, CardType.Attack, CardRar
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
         if (play.Target != null)
             await CommonActions.Apply<VulnerablePower>(play.Target, this, DynamicVars.Vulnerable.BaseValue);
-        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

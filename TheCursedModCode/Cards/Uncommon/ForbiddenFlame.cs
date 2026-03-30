@@ -13,7 +13,7 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 금단의 화염(Forbidden Flame) - 적 전체에게 피해를 24 줍니다. 업보 14. (강화 시 피해 32)
+/// 금단의 화염(Forbidden Flame) - 적 전체에게 피해를 23 줍니다. 업보 14. (강화 시 피해 31)
 /// </summary>
 public sealed class ForbiddenFlame() : TheCursedModCard(2, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
 {
@@ -38,7 +38,7 @@ public sealed class ForbiddenFlame() : TheCursedModCard(2, CardType.Attack, Card
             .WithHitFx("vfx/vfx_attack_blunt", null, "heavy_attack.mp3")
             .Execute(choiceContext);
 
-        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

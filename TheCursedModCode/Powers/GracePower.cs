@@ -18,6 +18,8 @@ public class GracePower : TheCursedModPower
 
     public override PowerStackType StackType => PowerStackType.Single;
 
+    public void TriggerFlash() => Flash();
+
     public override async Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
         var k1 = base.Owner.GetPower<KarmaTurn1Power>();

@@ -26,7 +26,7 @@ public sealed class RearStrike() : TheCursedModCard(1, CardType.Attack, CardRari
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

@@ -39,13 +39,13 @@
   "THECURSEDMOD-SPITEFUL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시켰다면, {Energy:energyIcons()}를 얻습니다.",
 
   "THECURSEDMOD-VITAL_STRIKE.title": "급소 타격",
-  "THECURSEDMOD-VITAL_STRIKE.description": "피해를 {Damage:diff()} 줍니다. [gold]취약[/gold]을 {VulnerablePower:diff()} 부여합니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-VITAL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]취약[/gold]을 {VulnerablePower:diff()} 부여합니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-REAR_STRIKE.title": "뒤통수 타격",
   "THECURSEDMOD-REAR_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-RAVING_STAFF.title": "날뛰는 지팡이",
-  "THECURSEDMOD-RAVING_STAFF.description": "무작위 적에게 피해를 {Damage:diff()}만큼 X번 줍니다. \nX번 [gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-RAVING_STAFF.description": "무작위 적에게 피해를 {Damage:diff()}만큼 X번 줍니다.\nX번 [gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-WIELD.title": "휘두르기",
   "THECURSEDMOD-WIELD.description": "피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 있는 [gold]사용불가[/gold] 카드의 수 만큼 카드를 뽑습니다.",
@@ -81,7 +81,7 @@
   "THECURSEDMOD-CURSED_MIRROR.description": "피해를 {Damage:diff()} 줍니다.\n[gold]매료됨[/gold]을 얻습니다.",
   
   "THECURSEDMOD-ANGER_CONTROL.title": "분노 조절",
-  "THECURSEDMOD-ANGER_CONTROL.description": "피해를 {Damage:diff()} 씩 {Repeat:diff()} 번 줍니다.\n[gold]규칙 준수[/gold]를 얻습니다.",
+  "THECURSEDMOD-ANGER_CONTROL.description": "피해를 {Damage:diff()}씩 {Repeat:diff()}번 줍니다.\n이번 전투동안 이 카드의 피해 횟수가 1 늘어납니다.\n[gold]규칙 준수[/gold]를 얻습니다.",
 
   "THECURSEDMOD-BLESSING_IN_DISGUISE.title": "전화위복",
   "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "[gold]손[/gold]에 있는 [gold]저주[/gold] 카드를 전부 [gold]소멸[/gold]시킵니다. [gold]소멸[/gold]시킨 카드 1장당 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
@@ -112,7 +112,7 @@
   "THECURSEDMOD-MANA_CIRCULATION.description": "매 턴마다 처음으로 [gold]저주[/gold] 카드가 [gold]소멸[/gold]될 경우, {Energy:energyIcons()}를 얻습니다.",
 
   "THECURSEDMOD-HELLFIRE_BREATHING.title": "지옥불 뿜기",
-  "THECURSEDMOD-HELLFIRE_BREATHING.description": "[gold]사용불가[/gold] 카드를 뽑을 때마다 적 전체에게 {HellfireBreathingPower:diff()} 피해를 줍니다.",
+  "THECURSEDMOD-HELLFIRE_BREATHING.description": "[gold]사용불가[/gold] 카드를 뽑을 때마다 모든 적에게 {HellfireBreathingPower:diff()} 피해를 줍니다.",
 
   "THECURSEDMOD-DENYING_FATE.title": "운명 거부",
   "THECURSEDMOD-DENYING_FATE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 피해를 받도록 예정된 [gold]업보[/gold]를 1턴 뒤로 미룹니다.",
@@ -121,13 +121,13 @@
   "THECURSEDMOD-FATAL_LEAP.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]업보[/gold]로 피해를 받을 예정이라면, {Energy:energyIcons()}를 얻고 카드를 1장 뽑습니다.",
 
   "THECURSEDMOD-FORBIDDEN_FLAME.title": "금단의 화염",
-  "THECURSEDMOD-FORBIDDEN_FLAME.description": "적 전체에게 피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_FLAME.description": "모든 적에게 피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_COMBO.title": "금단의 연격",
   "THECURSEDMOD-FORBIDDEN_COMBO.description": "피해를 {Damage:diff()}만큼 {Repeat:diff()}번 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_WALLOP.title": "금단의 맹공",
-  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "피해를 {Damage:diff()} 줍니다. 막히지 않은 피해량만큼 [gold]방어도[/gold]를 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "피해를 {Damage:diff()} 줍니다.\n막히지 않은 피해량만큼 [gold]방어도[/gold]를 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-IGNORE_PAIN.title": "고통 감내",
   "THECURSEDMOD-IGNORE_PAIN.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 이번 턴에 [gold]업보[/gold]로 받는 피해량이 50% 감소합니다.",
@@ -139,10 +139,25 @@
   "THECURSEDMOD-ROLLING_OVER_DEBT.description": "[gold]업보[/gold]로 인한 피해를 받기 직전마다 [gold]방어도[/gold]를 {RollingOverDebtPower:diff()} 얻습니다.",
 
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.title": "타락의 굴레",
-  "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "[gold]업보[/gold]를 얻을 때마다 카드를 {CycleOfDepravityPower:diff()}장 뽑습니다.",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "내 턴 시작 시, 이번 턴에 [gold]업보[/gold]로 피해를 받을 예정이라면 카드를 2장 뽑습니다.",
+
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.title": "금단의 영약",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "내 턴 시작 시, {Energy:energyIcons()}를 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-TEAR_GRIMOIRE.title": "마도서 찢기",
+  "THECURSEDMOD-TEAR_GRIMOIRE.description": "비용이 2 이상인 [gold]공격[/gold] 카드들이 한번 더 사용됩니다.\n내 턴 시작 시, [gold]업보[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-DIE_TOGETHER.title": "함께 폭사하자",
+  "THECURSEDMOD-DIE_TOGETHER.description": "이번 전투 동안 [gold]업보[/gold]로 인한 피해를 모든 적도 같이 받습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-FORBIDDEN_FORM.title": "금단의 형상",
+  "THECURSEDMOD-FORBIDDEN_FORM.description": "무작위 [gold]저주[/gold] 카드 3장을 뽑을 카드 더미에 섞습니다.\n[gold]저주[/gold] 카드를 뽑을 때 마다, [gold]힘[/gold]을 {StrengthPower:diff()} 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "금단의 몽둥이질",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-ESSENCE_DRAIN.title": "정수 흡수",
+  "THECURSEDMOD-ESSENCE_DRAIN.description": "피해를 {Damage:diff()} 줍니다.\n막히지 않은 피해만큼 체력을 회복합니다.",
 
   "THECURSEDMOD-DARK_BARRIER.title": "어둠의 결계",
   "THECURSEDMOD-DARK_BARRIER.description": "[gold]의례[/gold] : [gold]불가침[/gold]을 {IntangiblePower:diff()} 얻습니다.",
@@ -151,7 +166,7 @@
   "THECURSEDMOD-MIRACLE_ALCHEMY.description": "[gold]의례[/gold] : [gold]엔트로피의 영액[/gold] 포션을 얻습니다.",
 
   "THECURSEDMOD-ANTI_AGING.title": "회춘",
-  "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold] 를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 최대 체력을 {MaxHp:diff()} 얻습니다.",
+  "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 최대 체력을 {MaxHp:diff()} 얻습니다.",
 
   "THECURSEDMOD-DEMONIC_BLADE.title": "악마군주의 칼날",
   "THECURSEDMOD-DEMONIC_BLADE.description": "피해를 {CalculatedDamage:diff()} 줍니다.\n이번 전투에서 [gold]의례[/gold]로 [gold]소멸[/gold]시킨 [gold]저주[/gold] 카드 하나당 피해량이 {ExtraDamage:diff()} 증가합니다.",
@@ -164,7 +179,7 @@
   "THECURSEDMOD-HELP_OF_THE_DEAD.selectionScreenPrompt": "재사용을 추가할 카드를 선택하세요.",
 
   "THECURSEDMOD-DUBIOUS_CONTRACT.title": "미심쩍은 계약",
-  "THECURSEDMOD-DUBIOUS_CONTRACT.description": "내 턴 시작 시, 무작위 [gold]의례[/gold] 카드와 [gold]찌꺼기[/gold]를 얻습니다.",
+  "THECURSEDMOD-DUBIOUS_CONTRACT.description": "내 턴 시작 시, 무작위 [gold]의례[/gold] 카드와 무작위 [gold]저주[/gold] 카드를 얻습니다.",
 
   "THECURSEDMOD-NEOWS_MIGHT.title": "니오우의 권능",
   "THECURSEDMOD-NEOWS_MIGHT.description": "[gold]손[/gold]에 있는 모든 카드의 비용을 이번 턴 동안 1 줄입니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",

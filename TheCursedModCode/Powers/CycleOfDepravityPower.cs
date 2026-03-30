@@ -1,14 +1,23 @@
+using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
 
 /// <summary>
-/// 타락의 굴레 - 카드 사용으로 업보를 얻을 때마다 카드를 1장 뽑습니다.
-/// (드로우 로직은 TheCursedModCard.ApplyKarma에서 처리)
+/// 타락의 굴레 - 내 턴 시작 시, KarmaTurn1Power가 활성화된 경우 카드를 Amount장 뽑습니다.
 /// </summary>
 public class CycleOfDepravityPower : TheCursedModPower
 {
     public override PowerType Type => PowerType.Buff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
+
+    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    {
+        if (!base.Owner.HasPower<KarmaTurn1Power>()) return;
+        Flash();
+        await CardPileCmd.Draw(choiceContext, Amount, player);
+    }
 }

@@ -39,7 +39,7 @@
   "THECURSEDMOD-SPITEFUL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you [gold]Exhausted[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] this turn, gain {Energy:energyIcons()}.",
 
   "THECURSEDMOD-VITAL_STRIKE.title": "Vital Strike",
-  "THECURSEDMOD-VITAL_STRIKE.description": "Deal {Damage:diff()} damage. Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-VITAL_STRIKE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-REAR_STRIKE.title": "Rear Strike",
   "THECURSEDMOD-REAR_STRIKE.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
@@ -81,7 +81,7 @@
   "THECURSEDMOD-CURSED_MIRROR.description": "Deal {Damage:diff()} damage.\nAdd an [gold]Enthralled[/gold] into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-ANGER_CONTROL.title": "Anger Control",
-  "THECURSEDMOD-ANGER_CONTROL.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\nAdd a [gold]Normality[/gold] into your [gold]Hand[/gold].",
+  "THECURSEDMOD-ANGER_CONTROL.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\nIncreases this card's hit count by 1 this combat.\nAdd a [gold]Normality[/gold] into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-BLESSING_IN_DISGUISE.title": "Blessing in Disguise",
   "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "Exhaust all [gold]Curse[/gold] cards in your [gold]Hand[/gold].\nGain {Block:diff()} [gold]Block[/gold] for each card [gold]Exhausted[/gold].",
@@ -103,7 +103,7 @@
   "THECURSEDMOD-TROUBLOUS_MINION.description": "Gain {Block:diff()} [gold]Block[/gold].\nAdd a random [gold]Curse[/gold] card into your [gold]Hand[/gold].\nShuffle this card into your [gold]Draw pile[/gold].",
 
   "THECURSEDMOD-RECYCLABLE_WASTE.title": "Recyclable Waste",
-  "THECURSEDMOD-RECYCLABLE_WASTE.description": "All [gold]Dregs[/gold] have [gold]Retain[/gold] for this combat.\nGain 2 [gold]Dregs[/gold].",
+  "THECURSEDMOD-RECYCLABLE_WASTE.description": "All [gold]Dregs[/gold] have [gold]Retain[/gold] for this combat.\nAdd 2 [gold]Dregs[/gold] into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-LUCKY_CHARM.title": "Lucky Charm",
   "THECURSEDMOD-LUCKY_CHARM.description": "Whenever a [gold]Curse[/gold] card is [gold]Exhausted[/gold], gain {LuckyCharmPower:diff()} [gold]Block[/gold].",
@@ -127,7 +127,7 @@
   "THECURSEDMOD-FORBIDDEN_COMBO.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_WALLOP.title": "Forbidden Wallop",
-  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Deal {Damage:diff()} damage. Gain [gold]Block[/gold] equal to unblocked damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Deal {Damage:diff()} damage.\nGain [gold]Block[/gold] equal to unblocked damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-IGNORE_PAIN.title": "Ignore Pain",
   "THECURSEDMOD-IGNORE_PAIN.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : You receive 50% less damage from [gold]Karma[/gold] this turn.",
@@ -139,10 +139,25 @@
   "THECURSEDMOD-ROLLING_OVER_DEBT.description": "Whenever you are about to take [gold]Karma[/gold] damage, gain {RollingOverDebtPower:diff()} [gold]Block[/gold].",
 
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.title": "Cycle of Depravity",
-  "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "Whenever you gain [gold]Karma[/gold], draw {CycleOfDepravityPower:diff()} {CycleOfDepravityPower:plural:card|cards}.",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "At the start of your turn, draw 2 cards if [gold]Karma[/gold] damage is scheduled this turn.",
+
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.title": "Forbidden Elixir",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "At the start of your turn, gain {Energy:energyIcons()}.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-TEAR_GRIMOIRE.title": "Tear Grimoire",
+  "THECURSEDMOD-TEAR_GRIMOIRE.description": "Attacks that cost 2 or more are played an extra time.\nAt the start of your turn, [gold]Karma[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-DIE_TOGETHER.title": "Die Together",
+  "THECURSEDMOD-DIE_TOGETHER.description": "[gold]Karma[/gold] damage is also dealt to ALL enemies this combat.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-FORBIDDEN_FORM.title": "Forbidden Form",
+  "THECURSEDMOD-FORBIDDEN_FORM.description": "Shuffle 3 random [gold]Curse[/gold] cards into your [gold]draw pile[/gold].\nWhenever you draw a [gold]Curse[/gold] card, gain {StrengthPower:diff()} [gold]Strength[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "Forbidden Bludgeon",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-ESSENCE_DRAIN.title": "Essence Drain",
+  "THECURSEDMOD-ESSENCE_DRAIN.description": "Deal {Damage:diff()} damage.\nHeal HP equal to unblocked damage.",
 
   "THECURSEDMOD-DARK_BARRIER.title": "Dark Barrier",
   "THECURSEDMOD-DARK_BARRIER.description": "[gold]Rite[/gold] : Gain {IntangiblePower:diff()} [gold]Intangible[/gold].",
@@ -164,7 +179,7 @@
   "THECURSEDMOD-HELP_OF_THE_DEAD.selectionScreenPrompt": "Choose a card to add Replay to.",
 
   "THECURSEDMOD-DUBIOUS_CONTRACT.title": "Dubious Contract",
-  "THECURSEDMOD-DUBIOUS_CONTRACT.description": "At the start of your turn, gain a random [gold]Rite[/gold] card and a [gold]Dregs[/gold].",
+  "THECURSEDMOD-DUBIOUS_CONTRACT.description": "At the start of your turn, add a random [gold]Rite[/gold] card and a random [gold]Curse[/gold] card into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-NEOWS_MIGHT.title": "Neow's Might",
   "THECURSEDMOD-NEOWS_MIGHT.description": "Reduce the cost of ALL cards in your [gold]Hand[/gold] by 1 this turn.\n[gold]Karma[/gold] {KarmaPower:diff()}.",

@@ -11,7 +11,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 저주받은 단검(Cursed Shiv) - 피해를 7 줍니다. 찌꺼기를 얻습니다. (강화 시 피해 10)
+/// 저주받은 단검(Cursed Shiv) - 피해를 6 줍니다. 찌꺼기를 얻습니다. (강화 시 피해 9)
 /// </summary>
 public sealed class CursedShiv() : TheCursedModCard(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
@@ -21,7 +21,7 @@ public sealed class CursedShiv() : TheCursedModCard(0, CardType.Attack, CardRari
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(7, ValueProp.Move)
+        new DamageVar(6, ValueProp.Move)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

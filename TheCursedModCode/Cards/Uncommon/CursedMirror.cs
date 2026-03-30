@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 저주받은 거울(Cursed Mirror) - 피해를 14 줍니다. 매료됨을 얻습니다. (강화 시 피해 18)
+/// 저주받은 거울(Cursed Mirror) - 피해를 16 줍니다. 매료됨을 얻습니다. (강화 시 피해 21)
 /// </summary>
 public sealed class CursedMirror() : TheCursedModCard(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
@@ -20,7 +20,7 @@ public sealed class CursedMirror() : TheCursedModCard(0, CardType.Attack, CardRa
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(14, ValueProp.Move)
+        new DamageVar(16, ValueProp.Move)
     ];
  
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -36,6 +36,6 @@ public sealed class CursedMirror() : TheCursedModCard(0, CardType.Attack, CardRa
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(4m);
+        DynamicVars.Damage.UpgradeValueBy(5m);
     }
 }

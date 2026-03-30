@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// 돌려 막기(Rolling over Debt) - 업보로 인한 피해를 받기 직전마다 방어도를 10 얻습니다.
 /// 강화 시 방어도 14.
 /// </summary>
-public sealed class RollingOverDebt() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.None)
+public sealed class RollingOverDebt() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new PowerVar<RollingOverDebtPower>(10m)
