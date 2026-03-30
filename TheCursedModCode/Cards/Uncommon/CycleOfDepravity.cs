@@ -8,13 +8,13 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 타락의 굴레(Cycle of Depravity) - 업보를 얻을 때마다 카드를 1장 뽑습니다. (중첩 가능)
+/// 타락의 굴레(Cycle of Depravity) - 내 턴 시작 시, 업보로 피해를 받을 예정이라면 카드를 2장 뽑습니다.
 /// 강화 시 비용 0.
 /// </summary>
-public sealed class CycleOfDepravity() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.None)
+public sealed class CycleOfDepravity() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<CycleOfDepravityPower>(1m)
+        new PowerVar<CycleOfDepravityPower>(2m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

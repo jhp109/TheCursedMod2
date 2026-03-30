@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// <summary>
 /// 지옥불 뿜기(Hellfire Breathing) - 사용불가 카드를 뽑을 경우 적 전체에게 피해를 8 줍니다. (강화 시 피해 12)
 /// </summary>
-public sealed class HellfireBreathing() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.None)
+public sealed class HellfireBreathing() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<string> ExtraRunAssetPaths => NGroundFireVfx.AssetPaths;
 

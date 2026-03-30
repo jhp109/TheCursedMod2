@@ -29,7 +29,7 @@ public sealed class RavingStaff() : TheCursedModCard(0, CardType.Attack, CardRar
         int xValue = ResolveEnergyXValue();
         await CommonActions.CardAttack(this, play, xValue).Execute(choiceContext);
         if (xValue > 0)
-            await ApplyKarma(choiceContext, xValue * DynamicVars["KarmaPower"].IntValue);
+            await ApplyKarma(xValue * DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

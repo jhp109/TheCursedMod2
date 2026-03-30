@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 분노 조절(Anger Control) - 피해를 8씩 3번 줍니다. 규칙 준수를 얻습니다. (강화 시 피해 10)
+/// 분노 조절(Anger Control) - 피해를 6씩 3번 줍니다. 사용할 때마다 공격 횟수가 1 늘어납니다. 규칙 준수를 얻습니다. (강화 시 피해 8)
 /// </summary>
 public sealed class AngerControl() : TheCursedModCard(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
@@ -20,7 +20,7 @@ public sealed class AngerControl() : TheCursedModCard(2, CardType.Attack, CardRa
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(8, ValueProp.Move),
+        new DamageVar(6, ValueProp.Move),
         new RepeatVar(3)
     ];
 
@@ -28,6 +28,8 @@ public sealed class AngerControl() : TheCursedModCard(2, CardType.Attack, CardRa
     {
         await CommonActions.CardAttack(this, play, DynamicVars.Repeat.IntValue, vfx: "vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
+
+        DynamicVars.Repeat.UpgradeValueBy(1m);
 
         if (CombatState != null)
         {

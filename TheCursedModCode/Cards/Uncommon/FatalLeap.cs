@@ -20,7 +20,8 @@ public sealed class FatalLeap() : TheCursedModCard(1, CardType.Attack, CardRarit
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma)
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma),
+        EnergyHoverTip
     ];
 
     protected override bool ShouldGlowGoldInternal => HasKarma();

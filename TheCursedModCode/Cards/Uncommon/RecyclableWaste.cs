@@ -10,7 +10,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// 재활용 쓰레기(Recyclable Waste) - 이번 전투 동안 찌꺼기가 보존을 얻습니다. 찌꺼기를 2장 얻습니다.
 /// (강화 시 선천성 추가)
 /// </summary>
-public sealed class RecyclableWaste() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.None)
+public sealed class RecyclableWaste() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromCard<Dregs>(false),

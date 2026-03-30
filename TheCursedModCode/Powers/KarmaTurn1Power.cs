@@ -1,3 +1,4 @@
+using System.Linq;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Players;
@@ -37,8 +38,23 @@ public class KarmaTurn1Power : TheCursedModPower
             SfxCmd.Play("event:/sfx/characters/attack_fire");
 
             base.Owner.GetPower<IgnorePainPower>()?.TriggerFlash();
-            await (Owner.GetPower<RollingOverDebtPower>()?.TriggerBlock() ?? Task.CompletedTask);
-            await CreatureCmd.Damage(choiceContext, base.Owner, Amount, ValueProp.Unpowered, base.Owner, null);
+            await (base.Owner.GetPower<RollingOverDebtPower>()?.TriggerBlock() ?? Task.CompletedTask);
+
+            var dieTogether = base.Owner.GetPower<DieTogetherPower>();
+            if (dieTogether != null)
+            {
+                dieTogether.TriggerFlash();
+                foreach (var enemy in base.CombatState.HittableEnemies)
+                {
+                    var enemyVfx = NGroundFireVfx.Create(enemy);
+                    if (enemyVfx != null) NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(enemyVfx);
+                }
+                await CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies.Append(base.Owner), Amount, ValueProp.Unpowered, base.Owner, null);
+            }
+            else
+            {
+                await CreatureCmd.Damage(choiceContext, base.Owner, Amount, ValueProp.Unpowered, base.Owner, null);
+            }
             await PowerCmd.Remove(this);
         }
     }

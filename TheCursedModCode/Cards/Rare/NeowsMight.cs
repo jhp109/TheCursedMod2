@@ -1,4 +1,3 @@
-using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -31,7 +30,7 @@ public sealed class NeowsMight() : TheCursedModCard(1, CardType.Skill, CardRarit
             if (card.EnergyCost.CostsX) continue;
             card.EnergyCost.AddThisTurnOrUntilPlayed(-1);
         }
-        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

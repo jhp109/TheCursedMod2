@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// 유예(Grace) - 업보로 인한 피해를 2턴 후가 아닌 3턴 후에 받습니다.
 /// 강화 시 비용 0.
 /// </summary>
-public sealed class Grace() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.None)
+public sealed class Grace() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [];
 

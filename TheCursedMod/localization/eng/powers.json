@@ -4,8 +4,8 @@
   "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.smartDescription": "This turn, the next {Amount} [gold]Rite[/gold] {Amount:plural:card activates its|cards activate their} [gold]Rite[/gold] effect an extra time.",
 
   "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.title": "Dubious Contract",
-  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.description": "At the start of your turn, gain a random [gold]Rite[/gold] card and a [gold]Dregs[/gold].",
-  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.smartDescription": "At the start of your turn, gain {Amount} random [gold]Rite[/gold] {Amount:plural:card|cards} and {Amount} [gold]Dregs[/gold].",
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.description": "At the start of your turn, add a random [gold]Rite[/gold] card and a random [gold]Curse[/gold] card into your [gold]Hand[/gold].",
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.smartDescription": "At the start of your turn, add {Amount} random [gold]Rite[/gold] {Amount:plural:card|cards} and {Amount} random [gold]Curse[/gold] {Amount:plural:card|cards} into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-RECYCLABLE_WASTE_POWER.title": "Recyclable Waste",
   "THECURSEDMOD-RECYCLABLE_WASTE_POWER.description": "All [gold]Dregs[/gold] have [gold]Retain[/gold] for this combat.",
@@ -44,10 +44,26 @@
   "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.smartDescription": "Whenever you are about to take [gold]Karma[/gold] damage, gain {Amount} [gold]Block[/gold].",
 
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.title": "Cycle of Depravity",
-  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.description": "Whenever you gain [gold]Karma[/gold], draw {Amount} {Amount:plural:card|cards}.",
-  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.smartDescription": "Whenever you gain [gold]Karma[/gold], draw {Amount} {Amount:plural:card|cards}.",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.description": "At the start of your turn, draw cards if [gold]Karma[/gold] damage is scheduled this turn.",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.smartDescription": "At the start of your turn, draw {Amount} cards if [gold]Karma[/gold] damage is scheduled this turn.",
+
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.title": "Forbidden Elixir",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.description": "At the start of your turn, gain {energyPrefix}.",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.smartDescription": "At the start of your turn, gain {Amount:energyIcons()}.",
+
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.title": "Tear Grimoire",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.description": "Attacks that cost 2 or more are played an extra time. At the start of your turn, [gold]Karma[/gold].",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.smartDescription": "Attacks that cost 2 or more are played an extra time. At the start of your turn, [gold]Karma[/gold] {Amount}.",
+
+  "THECURSEDMOD-DIE_TOGETHER_POWER.title": "Die Together",
+  "THECURSEDMOD-DIE_TOGETHER_POWER.description": "[gold]Karma[/gold] damage is also dealt to ALL enemies this combat.",
+  "THECURSEDMOD-DIE_TOGETHER_POWER.smartDescription": "[gold]Karma[/gold] damage is also dealt to ALL enemies this combat.",
 
   "THECURSEDMOD-IGNORE_PAIN_POWER.title": "Ignore Pain",
   "THECURSEDMOD-IGNORE_PAIN_POWER.description": "You receive less damage from [gold]Karma[/gold] this turn.",
-  "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "You receive {Amount}% less damage from [gold]Karma[/gold] this turn."
+  "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "You receive {Amount}% less damage from [gold]Karma[/gold] this turn.",
+
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "Forbidden Form",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "Whenever you draw a [gold]Curse[/gold] card, gain [gold]Strength[/gold].",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "Whenever you draw a [gold]Curse[/gold] card, gain {Amount} [gold]Strength[/gold]."
 }
