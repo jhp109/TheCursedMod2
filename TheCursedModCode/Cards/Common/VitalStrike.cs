@@ -10,7 +10,7 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 급소 타격(Vital Strike) - 피해를 6 줍니다. 취약을 2 부여합니다. 업보 6. (강화 시 피해 8, 취약 3)
+/// 급소 타격(Vital Strike) - 피해를 6 줍니다. 취약을 2 부여합니다. 업보 5. (강화 시 피해 8, 취약 3)
 /// </summary>
 public sealed class VitalStrike() : TheCursedModCard(0, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
@@ -18,7 +18,7 @@ public sealed class VitalStrike() : TheCursedModCard(0, CardType.Attack, CardRar
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(6, ValueProp.Move),
         new PowerVar<VulnerablePower>("VulnerablePower", 2),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 6m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 5m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

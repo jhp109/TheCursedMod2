@@ -12,7 +12,7 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 금단의 맹공(Forbidden Wallop) - 피해를 23 줍니다. 막히지 않은 피해량만큼 방어도를 얻습니다. 업보 16. (강화 시 피해 30)
+/// 금단의 맹공(Forbidden Wallop) - 피해를 23 줍니다. 막히지 않은 피해량만큼 방어도를 얻습니다. 업보 14. (강화 시 피해 30)
 /// </summary>
 public sealed class ForbiddenWallop() : TheCursedModCard(3, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
@@ -20,7 +20,7 @@ public sealed class ForbiddenWallop() : TheCursedModCard(3, CardType.Attack, Car
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(23, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 16m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 14m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

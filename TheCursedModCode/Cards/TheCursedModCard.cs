@@ -1,4 +1,4 @@
-using BaseLib.Abstracts;
+﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
@@ -33,8 +33,10 @@ public abstract class TheCursedModCard(
     /// </summary>
     protected Task ApplyKarma(decimal amount)
     {
-        if (Owner.Creature.HasPower<GracePower>())
+        if (Owner.Creature.HasPower<GracePower>()) {
+            Owner.Creature.GetPower<GracePower>()!.TriggerFlash();
             return PowerCmd.Apply<KarmaTurn3Power>(Owner.Creature, amount, Owner.Creature, this);
+        }
         return PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, amount, Owner.Creature, this);
     }
 }

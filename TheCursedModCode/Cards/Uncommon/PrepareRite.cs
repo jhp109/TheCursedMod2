@@ -1,8 +1,10 @@
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
+using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -25,9 +27,8 @@ public sealed class PrepareRite() : TheCursedModCard(1, CardType.Skill, CardRari
     {
         var target = await CommonActions.SelectSingleCard(this, SelectPrompt, choiceContext, PileType.Draw);
         if (target != null)
-        {
             await Dregs.TransformToDregs(this, target);
-        }
+        await PowerCmd.Apply<DrawCardsNextTurnPower>(Owner.Creature, 2m, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

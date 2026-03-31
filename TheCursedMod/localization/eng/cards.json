@@ -57,7 +57,8 @@
   "THECURSEDMOD-RAPID_MOVEMENT.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Draw 2 cards.",
 
   "THECURSEDMOD-WEAR_CLOAK.title": "Wear Cloak",
-  "THECURSEDMOD-WEAR_CLOAK.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf you have an [gold]Unplayable[/gold] card in your [gold]Hand[/gold], gain {Energy:energyIcons()}.",
+  "THECURSEDMOD-WEAR_CLOAK.description": "Gain {Block:diff()} [gold]Block[/gold].\nIf you have any [gold]Circle[/gold] card in your [gold]Hand[/gold], put a card from your [gold]Discard Pile[/gold] into your [gold]Hand[/gold].",
+  "THECURSEDMOD-WEAR_CLOAK.selectionScreenPrompt": "Choose a card to return to your Hand.",
 
   "THECURSEDMOD-CURSED_ARMOUR.title": "Cursed Armour",
   "THECURSEDMOD-CURSED_ARMOUR.description": "Gain {Block:diff()} [gold]Block[/gold].\nShuffle 2 random [gold]Curse[/gold] cards into your [gold]Draw pile[/gold].",
@@ -92,11 +93,17 @@
   "THECURSEDMOD-FLESH_FROM_BONE.title": "Flesh from Bone",
   "THECURSEDMOD-FLESH_FROM_BONE.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Gain {PlatingPower:diff()} [gold]Plating[/gold].",
 
+  "THECURSEDMOD-CIRCLE_OF_FLAME.title": "Circle of Flame",
+  "THECURSEDMOD-CIRCLE_OF_FLAME.description": "[gold]Circle[/gold] : Whenever you play an Attack card, deal {Damage:diff()} damage to ALL enemies.",
+
+  "THECURSEDMOD-CIRCLE_OF_WARD.title": "Circle of Ward",
+  "THECURSEDMOD-CIRCLE_OF_WARD.description": "[gold]Circle[/gold] : Whenever you play a Skill card, gain {Block:diff()} [gold]Block[/gold].",
+
   "THECURSEDMOD-MALEVOLENCE.title": "Malevolence",
   "THECURSEDMOD-MALEVOLENCE.description": "Add a random [gold]Rite[/gold] card into your [gold]Hand[/gold].\nIt's free to play this turn.",
 
   "THECURSEDMOD-PREPARE_RITE.title": "Prepare Rite",
-  "THECURSEDMOD-PREPARE_RITE.description": "Transform 1 card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].",
+  "THECURSEDMOD-PREPARE_RITE.description": "Transform 1 card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].\nNext turn, draw 2 cards.",
   "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt": "Choose a card to transform into Dregs.",
 
   "THECURSEDMOD-TROUBLOUS_MINION.title": "Troublous Minion",

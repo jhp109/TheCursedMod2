@@ -8,14 +8,14 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 금단의 영약(Forbidden Elixir) - 내 턴 시작 시, 에너지를 1 얻습니다. 업보 15.
+/// 금단의 영약(Forbidden Elixir) - 내 턴 시작 시, 에너지를 1 얻습니다. 업보 8.
 /// 강화 시 선천성 추가.
 /// </summary>
 public sealed class ForbiddenElixir() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new EnergyVar(1),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 15m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 8m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

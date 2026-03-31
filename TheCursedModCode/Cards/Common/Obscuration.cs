@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 엄폐(Obscuration) - 방어도를 5 얻습니다. 의례 : 한번 더 방어도를 5 얻습니다. (강화 시 7)
+/// 엄폐(Obscuration) - 방어도를 6 얻습니다. 의례 : 한번 더 방어도를 6 얻습니다. (강화 시 8)
 /// </summary>
 public sealed class Obscuration() : RiteCard(1, CardType.Skill, CardRarity.Common, TargetType.None)
 {
@@ -16,7 +16,7 @@ public sealed class Obscuration() : RiteCard(1, CardType.Skill, CardRarity.Commo
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite)
     ];
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(5, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(6, ValueProp.Move)];
 
     protected override async Task OnBaseEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {

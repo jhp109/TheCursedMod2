@@ -9,14 +9,14 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 뒤통수 타격(Rear Strike) - 피해를 13 줍니다. 업보 8. (강화 시 피해 17)
+/// 뒤통수 타격(Rear Strike) - 피해를 13 줍니다. 업보 6. (강화 시 피해 17)
 /// </summary>
 public sealed class RearStrike() : TheCursedModCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(13, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 8m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 6m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

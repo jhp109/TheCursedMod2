@@ -1,6 +1,6 @@
 {
   "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.title": "고대신의 부름",
-  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.description": "이번 턴에, 다음에 사용하는 [gold]의례[/gold] 카드(들)의 의례 효과가 1번 추가로 발동합니다.",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.description": "이번 턴에, 다음에 사용하는 [gold]의례[/gold] 카드(들)의 [gold]의례[/gold] 효과가 1번 추가로 발동합니다.",
   "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.smartDescription": "이번 턴에, 다음에 사용하는 [gold]의례[/gold] 카드 {Amount}장의 [gold]의례[/gold] 효과가 1번 추가로 발동합니다.",
 
   "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.title": "미심쩍은 계약",

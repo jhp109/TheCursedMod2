@@ -14,14 +14,14 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
 /// 금단의 형상(Forbidden Form) - 무작위 저주 카드 3장을 뽑을 카드 더미에 섞습니다.
-/// 저주 카드를 뽑을 때 마다, 힘을 1 얻습니다. 업보 20.
+/// 저주 카드를 뽑을 때 마다, 힘을 1 얻습니다. 업보 18.
 /// 강화 시 힘 2.
 /// </summary>
 public sealed class ForbiddenForm() : TheCursedModCard(3, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new PowerVar<ForbiddenFormPower>("StrengthPower", 1m),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 20m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 18m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
