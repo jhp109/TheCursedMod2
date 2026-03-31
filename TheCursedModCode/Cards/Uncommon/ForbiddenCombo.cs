@@ -9,14 +9,14 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 금단의 연격(Forbidden Combo) - 피해를 8만큼 2번 줍니다. 업보 8. (강화 시 피해 10)
+/// 금단의 연격(Forbidden Combo) - 피해를 9만큼 2번 줍니다. 업보 8. (강화 시 피해 12)
 /// </summary>
 public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(8, ValueProp.Move),
         new RepeatVar(2),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 8m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 9m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -31,6 +31,6 @@ public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, Card
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(2m);
+        DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }

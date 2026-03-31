@@ -8,30 +8,27 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 금단의 영약(Forbidden Elixir) - 내 턴 시작 시, 에너지를 1 얻습니다. 업보 8.
-/// 강화 시 선천성 추가.
+/// 마나 요새(Mana Bastion) - 마법진의 효과가 발동될 때 마다, 방어도를 2 얻습니다.
+/// 강화 시 방어도 2.
 /// </summary>
-public sealed class ForbiddenElixir() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
+public sealed class ManaBastion() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new EnergyVar(1),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 8m)
+        new PowerVar<ManaBastionPower>("ManaBastionPower", 2m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        EnergyHoverTip,
-        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma)
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Circle)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<ForbiddenElixirPower>(Owner.Creature, 1, Owner.Creature, this);
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await PowerCmd.Apply<ManaBastionPower>(Owner.Creature, DynamicVars["ManaBastionPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        AddKeyword(CardKeyword.Innate);
+        DynamicVars["ManaBastionPower"].UpgradeValueBy(1m);
     }
 }

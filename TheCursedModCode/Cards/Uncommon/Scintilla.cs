@@ -9,9 +9,9 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 불똥(Scintilla) - 피해를 8 줍니다. 버린 카드 더미의 카드를 1장 선택하여 찌꺼기로 변화시킵니다. (강화 시 피해 11)
+/// 불똥(Scintilla) - 피해를 9 줍니다. 버린 카드 더미의 카드를 1장 선택하여 찌꺼기로 변화시킵니다. (강화 시 피해 12)
 /// </summary>
-public sealed class Scintilla() : TheCursedModCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
+public sealed class Scintilla() : TheCursedModCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-SCINTILLA.selectionScreenPrompt");
 
@@ -20,7 +20,7 @@ public sealed class Scintilla() : TheCursedModCard(1, CardType.Attack, CardRarit
         HoverTipFactory.FromCard<Dregs>(false)
     ];
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(8, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9, ValueProp.Move)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {

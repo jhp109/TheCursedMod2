@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// <summary>
 /// 저주받은 마법봉(Cursed Wand) - 방어도를 5 얻습니다. 피해를 7 줍니다. 찌꺼기를 얻습니다. (강화 시 방어도 7, 피해 9)
 /// </summary>
-public sealed class CursedWand() : TheCursedModCard(1, CardType.Skill, CardRarity.Basic, TargetType.AnyEnemy)
+public sealed class CursedWand() : TheCursedModCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [

@@ -9,7 +9,7 @@ using TheCursedMod.TheCursedModCode;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 저주받은 칼날(Cursed Blade) - 적 전체에게 피해를 9 줍니다. 찌꺼기를 얻습니다. (강화 시 피해 12)
+/// 저주받은 칼날(Cursed Blade) - 적 전체에게 피해를 8 줍니다. 찌꺼기를 얻습니다. (강화 시 피해 11)
 /// </summary>
 public sealed class CursedBlade() : TheCursedModCard(1, CardType.Attack, CardRarity.Common, TargetType.AllEnemies)
 {
@@ -19,7 +19,7 @@ public sealed class CursedBlade() : TheCursedModCard(1, CardType.Attack, CardRar
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(9, ValueProp.Move)
+        new DamageVar(8, ValueProp.Move)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

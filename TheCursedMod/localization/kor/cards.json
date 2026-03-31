@@ -31,10 +31,6 @@
   "THECURSEDMOD-CURSED_BLADE.title": "저주받은 칼날",
   "THECURSEDMOD-CURSED_BLADE.description": "모든 적 에게 피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
-  "THECURSEDMOD-SCINTILLA.selectionScreenPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
-  "THECURSEDMOD-SCINTILLA.title": "불똥",
-  "THECURSEDMOD-SCINTILLA.description": "피해를 {Damage:diff()} 줍니다.\n[gold]버린 카드 더미[/gold]의 카드를 1장 선택하여 [gold]찌꺼기[/gold]로 변화시킵니다.",
-
   "THECURSEDMOD-SPITEFUL_STRIKE.title": "원한 맺힌 타격",
   "THECURSEDMOD-SPITEFUL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시켰다면, {Energy:energyIcons()}를 얻습니다.",
 
@@ -48,7 +44,7 @@
   "THECURSEDMOD-RAVING_STAFF.description": "무작위 적에게 피해를 {Damage:diff()}만큼 X번 줍니다.\nX번 [gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-WIELD.title": "휘두르기",
-  "THECURSEDMOD-WIELD.description": "피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 있는 [gold]사용불가[/gold] 카드의 수 만큼 카드를 뽑습니다.",
+  "THECURSEDMOD-WIELD.description": "피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 있는 [gold]사용불가[/gold] 카드의 수 만큼 카드를 뽑습니다.{InCombat:cond:\n(카드를 {CalculatedCards}장 뽑습니다.)|}",
 
   "THECURSEDMOD-OBSCURATION.title": "엄폐",
   "THECURSEDMOD-OBSCURATION.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 다시 한번 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
@@ -57,7 +53,7 @@
   "THECURSEDMOD-RAPID_MOVEMENT.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 카드를 2장 뽑습니다.",
 
   "THECURSEDMOD-WEAR_CLOAK.title": "망토 두르기",
-  "THECURSEDMOD-WEAR_CLOAK.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n손에 [gold]마법진[/gold] 카드가 있다면, [gold]버린 카드 더미[/gold]에서 카드를 1장 [gold]손[/gold]으로 가져옵니다.",
+  "THECURSEDMOD-WEAR_CLOAK.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n손에 [gold]마법진[/gold]이 있다면, [gold]버린 카드 더미[/gold]에서 카드를 1장 [gold]손[/gold]으로 가져옵니다.",
   "THECURSEDMOD-WEAR_CLOAK.selectionScreenPrompt": "손으로 가져올 카드를 선택하세요.",
 
   "THECURSEDMOD-CURSED_ARMOUR.title": "저주받은 갑옷",
@@ -81,8 +77,9 @@
   "THECURSEDMOD-CURSED_MIRROR.title": "저주받은 거울",
   "THECURSEDMOD-CURSED_MIRROR.description": "피해를 {Damage:diff()} 줍니다.\n[gold]매료됨[/gold]을 얻습니다.",
   
-  "THECURSEDMOD-ANGER_CONTROL.title": "분노 조절",
-  "THECURSEDMOD-ANGER_CONTROL.description": "피해를 {Damage:diff()}씩 {Repeat:diff()}번 줍니다.\n이번 전투동안 이 카드의 피해 횟수가 1 늘어납니다.\n[gold]규칙 준수[/gold]를 얻습니다.",
+  "THECURSEDMOD-SCINTILLA.selectionScreenPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
+  "THECURSEDMOD-SCINTILLA.title": "불똥",
+  "THECURSEDMOD-SCINTILLA.description": "피해를 {Damage:diff()} 줍니다.\n[gold]버린 카드 더미[/gold]의 카드를 1장 선택하여 [gold]찌꺼기[/gold]로 변화시킵니다.",
 
   "THECURSEDMOD-BLESSING_IN_DISGUISE.title": "전화위복",
   "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "[gold]손[/gold]에 있는 [gold]저주[/gold] 카드를 전부 [gold]소멸[/gold]시킵니다. [gold]소멸[/gold]시킨 카드 1장당 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
@@ -93,11 +90,29 @@
   "THECURSEDMOD-FLESH_FROM_BONE.title": "뼈에서 살을",
   "THECURSEDMOD-FLESH_FROM_BONE.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : [gold]판금[/gold]을 {PlatingPower:diff()} 얻습니다.",
 
+  "THECURSEDMOD-ARCANE_SWEEP.title": "비전 휩쓸기",
+  "THECURSEDMOD-ARCANE_SWEEP.description": "모든 적에게 피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 [gold]마법진[/gold]이 있다면, 한번 더 모든 적에게 피해를 {Damage:diff()} 줍니다.",
+
   "THECURSEDMOD-CIRCLE_OF_FLAME.title": "불 뿜는 마법진",
   "THECURSEDMOD-CIRCLE_OF_FLAME.description": "[gold]마법진[/gold] : 공격 카드를 사용할 때 마다 모든 적에게 피해를 {Damage:diff()} 줍니다.",
 
   "THECURSEDMOD-CIRCLE_OF_WARD.title": "수호의 마법진",
   "THECURSEDMOD-CIRCLE_OF_WARD.description": "[gold]마법진[/gold] : 스킬 카드를 사용할 때 마다 [gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
+
+  "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.title": "증폭의 마법진",
+  "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.description": "[gold]마법진[/gold] : 파워 카드를 사용할 때 마다 {Energy:energyIcons()}를 얻습니다.",
+
+  "THECURSEDMOD-CIRCLE_OF_RITUAL.title": "의식의 마법진",
+  "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]마법진[/gold] : [gold]의례[/gold] 카드를 사용할 때 마다 카드를 {Cards:diff()}장 뽑습니다.",
+
+  "THECURSEDMOD-CIRCLE_OF_FOCUS.title": "집중의 마법진",
+  "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]마법진[/gold] : 비용이 {CostThreshold:diff()} 이상인 카드를 사용할 때 마다 {Energy:energyIcons()}를 얻습니다.",
+
+  "THECURSEDMOD-ARCANE_TRIGGER.title": "비전 방아쇠",
+  "THECURSEDMOD-ARCANE_TRIGGER.description": "피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 있는 모든 [gold]마법진[/gold]의 효과를 조건을 무시하고 강제로 발동시킵니다.",
+
+  "THECURSEDMOD-MANA_BULLET.title": "마력탄",
+  "THECURSEDMOD-MANA_BULLET.description": "피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 있는 [gold]마법진[/gold]의 수 만큼 반복합니다.{InCombat:cond:\n({CalculatedRepeat}번 반복합니다.)|}",
 
   "THECURSEDMOD-MALEVOLENCE.title": "악의",
   "THECURSEDMOD-MALEVOLENCE.description": "무작위 [gold]의례[/gold] 카드를 1장 [gold]손[/gold]으로 가져옵니다.\n이번 턴 동안 그 카드를 비용 없이 사용할 수 있습니다.",
@@ -136,11 +151,11 @@
   "THECURSEDMOD-FORBIDDEN_WALLOP.title": "금단의 맹공",
   "THECURSEDMOD-FORBIDDEN_WALLOP.description": "피해를 {Damage:diff()} 줍니다.\n막히지 않은 피해량만큼 [gold]방어도[/gold]를 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
+  "THECURSEDMOD-FORBIDDEN_RAID.title": "금단의 급습",
+  "THECURSEDMOD-FORBIDDEN_RAID.description": "피해를 {Damage:diff()} 줍니다.\n카드를 1장 뽑습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+
   "THECURSEDMOD-IGNORE_PAIN.title": "고통 감내",
   "THECURSEDMOD-IGNORE_PAIN.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 이번 턴에 [gold]업보[/gold]로 받는 피해량이 50% 감소합니다.",
-
-  "THECURSEDMOD-GRACE.title": "유예",
-  "THECURSEDMOD-GRACE.description": "[gold]업보[/gold]로 인한 피해를 다음 턴이 아닌 다다음 턴 종료 시에 받습니다.",
 
   "THECURSEDMOD-ROLLING_OVER_DEBT.title": "돌려 막기",
   "THECURSEDMOD-ROLLING_OVER_DEBT.description": "[gold]업보[/gold]로 인한 피해를 받기 직전마다 [gold]방어도[/gold]를 {RollingOverDebtPower:diff()} 얻습니다.",
@@ -148,11 +163,26 @@
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.title": "타락의 굴레",
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "내 턴 시작 시, 이번 턴에 [gold]업보[/gold]로 피해를 받을 예정이라면 카드를 2장 뽑습니다.",
 
-  "THECURSEDMOD-FORBIDDEN_ELIXIR.title": "금단의 영약",
-  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "내 턴 시작 시, {Energy:energyIcons()}를 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
-
   "THECURSEDMOD-TEAR_GRIMOIRE.title": "마도서 찢기",
   "THECURSEDMOD-TEAR_GRIMOIRE.description": "비용이 2 이상인 [gold]공격[/gold] 카드들이 한번 더 사용됩니다.\n내 턴 시작 시, [gold]업보[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.title": "과전류의 마법진",
+  "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.description": "[gold]마법진[/gold] : 스킬 카드를 사용할 때 마다 무작위 적에게 피해를 {Damage:diff()} 주고, 이번 전투 동안 이 카드의 피해량이 {DamageIncrement:diff()} 증가합니다.",
+
+  "THECURSEDMOD-CIRCLE_OF_WINDFURY.title": "질풍의 마법진",
+  "THECURSEDMOD-CIRCLE_OF_WINDFURY.description": "[gold]마법진[/gold] : 비용이 0인 카드를 사용할 때 마다 카드를 {Cards:diff()}장 뽑습니다.",
+
+  "THECURSEDMOD-ARCANE_DISCHARGE.title": "비전 방출",
+  "THECURSEDMOD-ARCANE_DISCHARGE.description": "이번 전투에서 [gold]마법진[/gold]의 효과가 발동된 횟수의 {ExtraDamage:diff()}배만큼 모든 적에게 피해를 줍니다.{InCombat:cond:\n(피해를 {CalculatedDamage:diff()} 줍니다.)|}",
+
+  "THECURSEDMOD-DOMAIN_EXPANSION.title": "영역 전개",
+  "THECURSEDMOD-DOMAIN_EXPANSION.description": "손에 있는 모든 [gold]마법진[/gold]의 효과를 조건을 무시하고 강제로 {IfUpgraded:show:X+1|X}번 발동시킵니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-GRACE.title": "유예",
+  "THECURSEDMOD-GRACE.description": "[gold]업보[/gold]로 인한 피해를 다음 턴이 아닌 다다음 턴 종료 시에 받습니다.",
+
+  "THECURSEDMOD-ANGER_CONTROL.title": "분노 조절",
+  "THECURSEDMOD-ANGER_CONTROL.description": "피해를 {Damage:diff()}씩 {Repeat:diff()}번 줍니다.\n이번 전투동안 이 카드의 피해 횟수가 1 늘어납니다.\n[gold]규칙 준수[/gold]를 얻습니다.",
 
   "THECURSEDMOD-DIE_TOGETHER.title": "함께 폭사하자",
   "THECURSEDMOD-DIE_TOGETHER.description": "이번 전투 동안 [gold]업보[/gold]로 인한 피해를 모든 적도 같이 받습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
@@ -192,5 +222,17 @@
   "THECURSEDMOD-NEOWS_MIGHT.description": "[gold]손[/gold]에 있는 모든 카드의 비용을 이번 턴 동안 1 줄입니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_RELIC.title": "금단의 유물",
-  "THECURSEDMOD-FORBIDDEN_RELIC.description": "[gold]유물[/gold] 수의 {ExtraDamage:diff()}배만큼 피해를 줍니다.\n[gold]유물[/gold] 수 만큼 [gold]업보[/gold].{InCombat:cond:\n(피해를 {CalculatedDamage:diff()} 줍니다.)|}"
+  "THECURSEDMOD-FORBIDDEN_RELIC.description": "[gold]유물[/gold] 수의 {ExtraDamage:diff()}배만큼 피해를 줍니다.\n[gold]유물[/gold] 수 만큼 [gold]업보[/gold].{InCombat:cond:\n(피해를 {CalculatedDamage:diff()} 줍니다.)|}",
+
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.title": "금단의 영약",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "내 턴 시작 시, {Energy:energyIcons()}를 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-MANA_BASTION.title": "마나 요새",
+  "THECURSEDMOD-MANA_BASTION.description": "[gold]마법진[/gold]의 효과가 발동될 때 마다, [gold]방어도[/gold]를 {ManaBastionPower:diff()} 얻습니다.",
+
+  "THECURSEDMOD-BATTLEMAGE.title": "전투마법사",
+  "THECURSEDMOD-BATTLEMAGE.description": "[gold]마법진[/gold]의 효과가 발동될 때 마다, [gold]활력[/gold]을 {BattlemagePower:diff()} 얻습니다.",
+
+  "THECURSEDMOD-EXODIA_BEAM.title": "엑조디아 빔",
+  "THECURSEDMOD-EXODIA_BEAM.description": "[gold]손[/gold]에 서로 다른 종류의 [gold]마법진[/gold]이 5장 이상 있을때만 사용 가능합니다.\n모든 적에게 피해를 {Damage:diff()} 줍니다."
 }

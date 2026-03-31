@@ -31,10 +31,6 @@
   "THECURSEDMOD-CURSED_BLADE.title": "Cursed Blade",
   "THECURSEDMOD-CURSED_BLADE.description": "Deal {Damage:diff()} damage to ALL enemies.\nAdd a [gold]Dregs[/gold] into your [gold]Hand[/gold].",
 
-  "THECURSEDMOD-SCINTILLA.selectionScreenPrompt": "Choose a card to transform into Dregs.",
-  "THECURSEDMOD-SCINTILLA.title": "Scintilla",
-  "THECURSEDMOD-SCINTILLA.description": "Deal {Damage:diff()} damage.\nTransform a card in your [gold]Discard pile[/gold] into [gold]Dregs[/gold].",
-
   "THECURSEDMOD-SPITEFUL_STRIKE.title": "Spiteful Strike",
   "THECURSEDMOD-SPITEFUL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you [gold]Exhausted[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] this turn, gain {Energy:energyIcons()}.",
 
@@ -48,7 +44,7 @@
   "THECURSEDMOD-RAVING_STAFF.description": "Deal {Damage:diff()} damage to a random enemy X times.\n[gold]Karma[/gold] {KarmaPower:diff()} X times.",
 
   "THECURSEDMOD-WIELD.title": "Wield",
-  "THECURSEDMOD-WIELD.description": "Deal {Damage:diff()} damage.\nDraw cards equal to the number of [gold]Unplayable[/gold] cards in your [gold]Hand[/gold].",
+  "THECURSEDMOD-WIELD.description": "Deal {Damage:diff()} damage.\nDraw cards equal to the number of [gold]Unplayable[/gold] cards in your [gold]Hand[/gold].{InCombat:cond:\n(Draw {CalculatedCards} cards.)|}",
 
   "THECURSEDMOD-OBSCURATION.title": "Obscuration",
   "THECURSEDMOD-OBSCURATION.description": "Gain {Block:diff()} [gold]Block[/gold].\nRite: Gain {Block:diff()} [gold]Block[/gold] again.",
@@ -81,8 +77,9 @@
   "THECURSEDMOD-CURSED_MIRROR.title": "Cursed Mirror",
   "THECURSEDMOD-CURSED_MIRROR.description": "Deal {Damage:diff()} damage.\nAdd an [gold]Enthralled[/gold] into your [gold]Hand[/gold].",
 
-  "THECURSEDMOD-ANGER_CONTROL.title": "Anger Control",
-  "THECURSEDMOD-ANGER_CONTROL.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\nIncreases this card's hit count by 1 this combat.\nAdd a [gold]Normality[/gold] into your [gold]Hand[/gold].",
+  "THECURSEDMOD-SCINTILLA.selectionScreenPrompt": "Choose a card to transform into Dregs.",
+  "THECURSEDMOD-SCINTILLA.title": "Scintilla",
+  "THECURSEDMOD-SCINTILLA.description": "Deal {Damage:diff()} damage.\nTransform a card in your [gold]Discard pile[/gold] into [gold]Dregs[/gold].",
 
   "THECURSEDMOD-BLESSING_IN_DISGUISE.title": "Blessing in Disguise",
   "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "Exhaust all [gold]Curse[/gold] cards in your [gold]Hand[/gold].\nGain {Block:diff()} [gold]Block[/gold] for each card [gold]Exhausted[/gold].",
@@ -93,11 +90,29 @@
   "THECURSEDMOD-FLESH_FROM_BONE.title": "Flesh from Bone",
   "THECURSEDMOD-FLESH_FROM_BONE.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Gain {PlatingPower:diff()} [gold]Plating[/gold].",
 
+  "THECURSEDMOD-ARCANE_SWEEP.title": "Arcane Sweep",
+  "THECURSEDMOD-ARCANE_SWEEP.description": "Deal {Damage:diff()} damage to ALL enemies.\nIf you have a [gold]Circle[/gold] card in your [gold]Hand[/gold], deal {Damage:diff()} damage to ALL enemies again.",
+
   "THECURSEDMOD-CIRCLE_OF_FLAME.title": "Circle of Flame",
   "THECURSEDMOD-CIRCLE_OF_FLAME.description": "[gold]Circle[/gold] : Whenever you play an Attack card, deal {Damage:diff()} damage to ALL enemies.",
 
   "THECURSEDMOD-CIRCLE_OF_WARD.title": "Circle of Ward",
   "THECURSEDMOD-CIRCLE_OF_WARD.description": "[gold]Circle[/gold] : Whenever you play a Skill card, gain {Block:diff()} [gold]Block[/gold].",
+
+  "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.title": "Circle of Amplification",
+  "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.description": "[gold]Circle[/gold] : Whenever you play a Power card, gain {Energy:energyIcons()}.",
+
+  "THECURSEDMOD-CIRCLE_OF_RITUAL.title": "Circle of Ritual",
+  "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]Circle[/gold] : Whenever you play a [gold]Rite[/gold] card, draw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "THECURSEDMOD-CIRCLE_OF_FOCUS.title": "Circle of Focus",
+  "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]Circle[/gold] : Whenever you play a card that costs {CostThreshold:diff()} or more, gain {Energy:energyIcons()}.",
+
+  "THECURSEDMOD-ARCANE_TRIGGER.title": "Arcane Trigger",
+  "THECURSEDMOD-ARCANE_TRIGGER.description": "Deal {Damage:diff()} damage.\nForce all [gold]Circle[/gold] cards in your [gold]Hand[/gold] to trigger, ignoring their conditions.",
+
+  "THECURSEDMOD-MANA_BULLET.title": "Mana Bullet",
+  "THECURSEDMOD-MANA_BULLET.description": "Deal {Damage:diff()} damage.\nRepeat for each [gold]Circle[/gold] card in your [gold]Hand[/gold].{InCombat:cond:\n(Repeats {CalculatedRepeat} time(s).)|}",
 
   "THECURSEDMOD-MALEVOLENCE.title": "Malevolence",
   "THECURSEDMOD-MALEVOLENCE.description": "Add a random [gold]Rite[/gold] card into your [gold]Hand[/gold].\nIt's free to play this turn.",
@@ -136,11 +151,11 @@
   "THECURSEDMOD-FORBIDDEN_WALLOP.title": "Forbidden Wallop",
   "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Deal {Damage:diff()} damage.\nGain [gold]Block[/gold] equal to unblocked damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
+  "THECURSEDMOD-FORBIDDEN_RAID.title": "Forbidden Raid",
+  "THECURSEDMOD-FORBIDDEN_RAID.description": "Deal {Damage:diff()} damage.\nDraw 1 card.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+
   "THECURSEDMOD-IGNORE_PAIN.title": "Ignore Pain",
   "THECURSEDMOD-IGNORE_PAIN.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : You receive 50% less damage from [gold]Karma[/gold] this turn.",
-
-  "THECURSEDMOD-GRACE.title": "Grace",
-  "THECURSEDMOD-GRACE.description": "[gold]Karma[/gold] damage is dealt at the end of your turn after next, instead of next turn.",
 
   "THECURSEDMOD-ROLLING_OVER_DEBT.title": "Rolling over Debt",
   "THECURSEDMOD-ROLLING_OVER_DEBT.description": "Whenever you are about to take [gold]Karma[/gold] damage, gain {RollingOverDebtPower:diff()} [gold]Block[/gold].",
@@ -148,11 +163,26 @@
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.title": "Cycle of Depravity",
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "At the start of your turn, draw 2 cards if [gold]Karma[/gold] damage is scheduled this turn.",
 
-  "THECURSEDMOD-FORBIDDEN_ELIXIR.title": "Forbidden Elixir",
-  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "At the start of your turn, gain {Energy:energyIcons()}.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
-
   "THECURSEDMOD-TEAR_GRIMOIRE.title": "Tear Grimoire",
   "THECURSEDMOD-TEAR_GRIMOIRE.description": "Attacks that cost 2 or more are played an extra time.\nAt the start of your turn, [gold]Karma[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.title": "Circle of Overcurrent",
+  "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.description": "[gold]Circle[/gold] : Whenever you play a Skill card, deal {Damage:diff()} damage to a random enemy. Increases this card's damage by {DamageIncrement:diff()} this combat.",
+
+  "THECURSEDMOD-CIRCLE_OF_WINDFURY.title": "Circle of Windfury",
+  "THECURSEDMOD-CIRCLE_OF_WINDFURY.description": "[gold]Circle[/gold] : Whenever you play a 0-cost card, draw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "THECURSEDMOD-ARCANE_DISCHARGE.title": "Arcane Discharge",
+  "THECURSEDMOD-ARCANE_DISCHARGE.description": "Deal damage to ALL enemies equal to {ExtraDamage:diff()} times the number of [gold]Circle[/gold] effects triggered this combat.{InCombat:cond:\n(Deals {CalculatedDamage:diff()} damage.)|}",
+
+  "THECURSEDMOD-DOMAIN_EXPANSION.title": "Domain Expansion",
+  "THECURSEDMOD-DOMAIN_EXPANSION.description": "Force all [gold]Circle[/gold] cards in your [gold]Hand[/gold] to trigger {IfUpgraded:show:X+1|X} times, ignoring their conditions.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-GRACE.title": "Grace",
+  "THECURSEDMOD-GRACE.description": "[gold]Karma[/gold] damage is dealt at the end of your turn after next, instead of next turn.",
+
+  "THECURSEDMOD-ANGER_CONTROL.title": "Anger Control",
+  "THECURSEDMOD-ANGER_CONTROL.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\nIncreases this card's hit count by 1 this combat.\nAdd a [gold]Normality[/gold] into your [gold]Hand[/gold].",
 
   "THECURSEDMOD-DIE_TOGETHER.title": "Die Together",
   "THECURSEDMOD-DIE_TOGETHER.description": "[gold]Karma[/gold] damage is also dealt to ALL enemies this combat.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
@@ -192,5 +222,17 @@
   "THECURSEDMOD-NEOWS_MIGHT.description": "Reduce the cost of ALL cards in your [gold]Hand[/gold] by 1 this turn.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_RELIC.title": "Forbidden Relic",
-  "THECURSEDMOD-FORBIDDEN_RELIC.description": "Deal {ExtraDamage:diff()} damage per [gold]Relic[/gold].\n[gold]Karma[/gold] equal to your [gold]Relic[/gold] count.{InCombat:cond:\n(Deals {CalculatedDamage:diff()} damage.)|}"
+  "THECURSEDMOD-FORBIDDEN_RELIC.description": "Deal {ExtraDamage:diff()} damage per [gold]Relic[/gold].\n[gold]Karma[/gold] equal to your [gold]Relic[/gold] count.{InCombat:cond:\n(Deals {CalculatedDamage:diff()} damage.)|}",
+
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.title": "Forbidden Elixir",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "At the start of your turn, gain {Energy:energyIcons()}.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-MANA_BASTION.title": "Mana Bastion",
+  "THECURSEDMOD-MANA_BASTION.description": "Whenever a [gold]Circle[/gold] effect triggers, gain {ManaBastionPower:diff()} [gold]Block[/gold].",
+
+  "THECURSEDMOD-BATTLEMAGE.title": "Battlemage",
+  "THECURSEDMOD-BATTLEMAGE.description": "Whenever you activates an effect of [gold]Circle[/gold], gain {BattlemagePower:diff()} [gold]Vigor[/gold].",
+
+  "THECURSEDMOD-EXODIA_BEAM.title": "Exodia Beam",
+  "THECURSEDMOD-EXODIA_BEAM.description": "Can only be played if there are 5+ distinct [gold]Circle[/gold] cards in your [gold]Hand[/gold].\nDeal {Damage:diff()} damage to ALL enemies."
 }

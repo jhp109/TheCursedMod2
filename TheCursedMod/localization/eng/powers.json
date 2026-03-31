@@ -65,5 +65,13 @@
 
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "Forbidden Form",
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "Whenever you draw a [gold]Curse[/gold] card, gain [gold]Strength[/gold].",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "Whenever you draw a [gold]Curse[/gold] card, gain {Amount} [gold]Strength[/gold]."
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "Whenever you draw a [gold]Curse[/gold] card, gain {Amount} [gold]Strength[/gold].",
+
+  "THECURSEDMOD-BATTLEMAGE_POWER.title": "Battlemage",
+  "THECURSEDMOD-BATTLEMAGE_POWER.description": "Whenever you activates an effect of [gold]Circle[/gold], gain [gold]Vigor[/gold].",
+  "THECURSEDMOD-BATTLEMAGE_POWER.smartDescription": "Whenever you activates an effect of [gold]Circle[/gold], gain {Amount} [gold]Vigor[/gold].",
+
+  "THECURSEDMOD-MANA_BASTION_POWER.title": "Mana Bastion",
+  "THECURSEDMOD-MANA_BASTION_POWER.description": "Whenever a [gold]Circle[/gold] effect triggers, gain [gold]Block[/gold].",
+  "THECURSEDMOD-MANA_BASTION_POWER.smartDescription": "Whenever a [gold]Circle[/gold] effect triggers, gain {Amount} [gold]Block[/gold]."
 }

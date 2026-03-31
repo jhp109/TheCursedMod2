@@ -10,17 +10,19 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 분노 조절(Anger Control) - 피해를 6씩 3번 줍니다. 사용할 때마다 공격 횟수가 1 늘어납니다. 규칙 준수를 얻습니다. (강화 시 피해 8)
+/// 분노 조절(Anger Control) - 피해를 8씩 3번 줍니다. 사용할 때마다 공격 횟수가 1 늘어납니다. 규칙 준수를 얻습니다. (강화 시 피해 10)
 /// </summary>
-public sealed class AngerControl() : TheCursedModCard(2, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
+public sealed class AngerControl() : TheCursedModCard(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
 {
+    private decimal _extraRepeatsFromPlays;
+
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromCard<Normality>(false)
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(6, ValueProp.Move),
+        new DamageVar(8, ValueProp.Move),
         new RepeatVar(3)
     ];
 
@@ -29,13 +31,20 @@ public sealed class AngerControl() : TheCursedModCard(2, CardType.Attack, CardRa
         await CommonActions.CardAttack(this, play, DynamicVars.Repeat.IntValue, vfx: "vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
 
-        DynamicVars.Repeat.UpgradeValueBy(1m);
+        DynamicVars.Repeat.BaseValue += 1m;
+        _extraRepeatsFromPlays += 1m;
 
         if (CombatState != null)
         {
             var normality = CombatState.CreateCard<Normality>(Owner);
             await CardPileCmd.AddGeneratedCardToCombat(normality, PileType.Hand, addedByPlayer: true);
         }
+    }
+
+    protected override void AfterDowngraded()
+    {
+        base.AfterDowngraded();
+        DynamicVars.Repeat.BaseValue += _extraRepeatsFromPlays;
     }
 
     protected override void OnUpgrade()
