@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// <summary>
 /// 날뛰는 지팡이(Raving Staff) - 무작위 적에게 피해를 11만큼 X번 줍니다. X번 업보 5. (강화 시 피해 14)
 /// </summary>
-public sealed class RavingStaff() : TheCursedModCard(0, CardType.Attack, CardRarity.Common, TargetType.RandomEnemy)
+public sealed class RavingStaff() : TheCursedModCard(0, CardType.Attack, CardRarity.Common, TargetType.RandomEnemy), IKarmaAttack
 {
     protected override bool HasEnergyCostX => true;
 

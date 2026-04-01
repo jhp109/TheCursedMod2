@@ -29,7 +29,7 @@
   "THECURSEDMOD-CURSED_BOOMERANG.description": "무작위 적에게 피해를 {Damage:diff()} 만큼 {Repeat:diff()} 번 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
   "THECURSEDMOD-CURSED_BLADE.title": "저주받은 칼날",
-  "THECURSEDMOD-CURSED_BLADE.description": "모든 적 에게 피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
+  "THECURSEDMOD-CURSED_BLADE.description": "모든 적에게 피해를 {Damage:diff()} 줍니다.\n[gold]찌꺼기[/gold]를 얻습니다.",
 
   "THECURSEDMOD-SPITEFUL_STRIKE.title": "원한 맺힌 타격",
   "THECURSEDMOD-SPITEFUL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n이번 턴에 [gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시켰다면, {Energy:energyIcons()}를 얻습니다.",
@@ -91,7 +91,7 @@
   "THECURSEDMOD-FLESH_FROM_BONE.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : [gold]판금[/gold]을 {PlatingPower:diff()} 얻습니다.",
 
   "THECURSEDMOD-ARCANE_SWEEP.title": "비전 휩쓸기",
-  "THECURSEDMOD-ARCANE_SWEEP.description": "모든 적에게 피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 [gold]마법진[/gold]이 있다면, 한번 더 모든 적에게 피해를 {Damage:diff()} 줍니다.",
+  "THECURSEDMOD-ARCANE_SWEEP.description": "모든 적에게 피해를 {Damage:diff()} 줍니다. [gold]손[/gold]에 [gold]마법진[/gold]이 있다면, 한번 더 모든 적에게 피해를 {Damage:diff()} 줍니다.",
 
   "THECURSEDMOD-CIRCLE_OF_FLAME.title": "불 뿜는 마법진",
   "THECURSEDMOD-CIRCLE_OF_FLAME.description": "[gold]마법진[/gold] : 공격 카드를 사용할 때 마다 모든 적에게 피해를 {Damage:diff()} 줍니다.",
@@ -116,6 +116,12 @@
 
   "THECURSEDMOD-MALEVOLENCE.title": "악의",
   "THECURSEDMOD-MALEVOLENCE.description": "무작위 [gold]의례[/gold] 카드를 1장 [gold]손[/gold]으로 가져옵니다.\n이번 턴 동안 그 카드를 비용 없이 사용할 수 있습니다.",
+
+  "THECURSEDMOD-CELERITY.title": "축지법",
+  "THECURSEDMOD-CELERITY.description": "[gold]의례[/gold] : [gold]민첩[/gold]을 {CalculatedDexterity:diff()} 얻습니다. 이 수치는 [gold]손[/gold]에 있는 [gold]마법진[/gold] 하나당 1 증가합니다.",
+
+  "THECURSEDMOD-ARCANE_BINDING.title": "비전 속박",
+  "THECURSEDMOD-ARCANE_BINDING.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 이번 턴에 [gold]손[/gold]에 있는 [gold]마법진[/gold] 카드들을 [gold]보존[/gold]합니다.",
 
   "THECURSEDMOD-PREPARE_RITE.title": "의례 준비",
   "THECURSEDMOD-PREPARE_RITE.description": "[gold]뽑을 카드 더미[/gold]의 카드를 1장 [gold]찌꺼기[/gold]로 변화시킵니다.\n다음 턴에, 카드를 2장 더 뽑습니다.",
@@ -154,6 +160,12 @@
   "THECURSEDMOD-FORBIDDEN_RAID.title": "금단의 급습",
   "THECURSEDMOD-FORBIDDEN_RAID.description": "피해를 {Damage:diff()} 줍니다.\n카드를 1장 뽑습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
+  "THECURSEDMOD-FORBIDDEN_STRENGTH.title": "금단의 힘",
+  "THECURSEDMOD-FORBIDDEN_STRENGTH.description": "[gold]힘[/gold]을 {CalculatedStrength:diff()} 얻습니다. 이 수치는 [gold]손[/gold]에 있는 [gold]마법진[/gold] 하나당 1 증가합니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-WICKED_TEMPERING.title": "사악한 담금질",
+  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]업보[/gold] {KarmaPower:diff()}.\n[gold]의례[/gold] : [gold]업보[/gold]를 부여하는 다음 공격 카드의 피해량이 {BonusDamage:diff()}% 증가합니다.",
+
   "THECURSEDMOD-IGNORE_PAIN.title": "고통 감내",
   "THECURSEDMOD-IGNORE_PAIN.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 이번 턴에 [gold]업보[/gold]로 받는 피해량이 50% 감소합니다.",
 
@@ -164,7 +176,7 @@
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "내 턴 시작 시, 이번 턴에 [gold]업보[/gold]로 피해를 받을 예정이라면 카드를 2장 뽑습니다.",
 
   "THECURSEDMOD-TEAR_GRIMOIRE.title": "마도서 찢기",
-  "THECURSEDMOD-TEAR_GRIMOIRE.description": "비용이 2 이상인 [gold]공격[/gold] 카드들이 한번 더 사용됩니다.\n내 턴 시작 시, [gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-TEAR_GRIMOIRE.description": "비용이 2 이상인 공격 카드들이 한번 더 사용됩니다.\n내 턴 시작 시, [gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.title": "과전류의 마법진",
   "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.description": "[gold]마법진[/gold] : 스킬 카드를 사용할 때 마다 무작위 적에게 피해를 {Damage:diff()} 주고, 이번 전투 동안 이 카드의 피해량이 {DamageIncrement:diff()} 증가합니다.",
@@ -188,7 +200,7 @@
   "THECURSEDMOD-DIE_TOGETHER.description": "이번 전투 동안 [gold]업보[/gold]로 인한 피해를 모든 적도 같이 받습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_FORM.title": "금단의 형상",
-  "THECURSEDMOD-FORBIDDEN_FORM.description": "무작위 [gold]저주[/gold] 카드 3장을 뽑을 카드 더미에 섞습니다.\n[gold]저주[/gold] 카드를 뽑을 때 마다, [gold]힘[/gold]을 {StrengthPower:diff()} 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_FORM.description": "[gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시킬 때 마다, [gold]업보[/gold]를 부여하는 다음 공격 카드의 피해량이 {BonusPercent:diff()}% 증가합니다.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "금단의 몽둥이질",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",

@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// <summary>
 /// 금단의 연격(Forbidden Combo) - 피해를 9만큼 2번 줍니다. 업보 8. (강화 시 피해 12)
 /// </summary>
-public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
+public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy), IKarmaAttack
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(8, ValueProp.Move),

@@ -17,6 +17,9 @@ public sealed class ArcaneSweep() : TheCursedModCard(1, CardType.Attack, CardRar
         new DamageVar(6, ValueProp.Move)
     ];
 
+    protected override bool ShouldGlowGoldInternal =>
+        PileType.Hand.GetPile(Owner).Cards.Any(c => c is CircleCard);
+
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Circle)
     ];

@@ -46,6 +46,6 @@ public sealed class ArcaneDischarge() : TheCursedModCard(3, CardType.Attack, Car
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Multiplier"].UpgradeValueBy(1m);
+        DynamicVars.ExtraDamage.UpgradeValueBy(1m);
     }
 }

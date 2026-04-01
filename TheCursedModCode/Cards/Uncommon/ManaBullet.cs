@@ -15,6 +15,7 @@ public sealed class ManaBullet() : TheCursedModCard(1, CardType.Attack, CardRari
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(5, ValueProp.Move),
         new CalculationBaseVar(0m),
+        new CalculationExtraVar(1m),
         new CalculatedVar("CalculatedRepeat").WithMultiplier((card, _) =>
             PileType.Hand.GetPile(card.Owner).Cards.Count(c => c is CircleCard))
     ];

@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// <summary>
 /// 금단의 유물(Forbidden Relic) - 유물 수의 2배만큼 피해를 줍니다. 유물 수 만큼 업보. (강화 시 비용 1)
 /// </summary>
-public sealed class ForbiddenRelic() : TheCursedModCard(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
+public sealed class ForbiddenRelic() : TheCursedModCard(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy), IKarmaAttack
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0),

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0wnocqy6o3nr"
-path="res://.godot/imported/mod_image.png-da0adbbf4b2bc1bd58cc79b106cb97aa.ctex"
+uid="uid://i5wumayhhuj4"
+path="res://.godot/imported/arcane_binding.png-9bf32610f555b54066961414c5f0bdd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TheCursedMod/mod_image.png"
-dest_files=["res://.godot/imported/mod_image.png-da0adbbf4b2bc1bd58cc79b106cb97aa.ctex"]
+source_file="res://TheCursedMod/images/card_portraits/big/arcane_binding.png"
+dest_files=["res://.godot/imported/arcane_binding.png-9bf32610f555b54066961414c5f0bdd6.ctex"]
 
 [params]
 

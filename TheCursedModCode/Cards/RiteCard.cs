@@ -84,8 +84,15 @@ public abstract class RiteCard(
                     }
                     _riteCombatCurseCount++;
 
+                    // 금단의 형상으로 다음 업보 공격 강화
+                    var forbiddenForm = Owner?.Creature.GetPower<ForbiddenFormPower>();
+                    if (forbiddenForm != null)
+                        await PowerCmd.Apply<MultiplyNextKarmaAttackPower>(
+                            Owner!.Creature, forbiddenForm.Amount, Owner.Creature, null);
+
                     await OnRiteEffect(choiceContext, play);
 
+                    // 고대신의 부름으로 의례 효과 한번 더 발동
                     var ancientPower = Owner?.Creature.GetPower<CallOfTheAncientPower>();
                     if (ancientPower != null)
                     {
@@ -94,6 +101,7 @@ public abstract class RiteCard(
                     }
                 } else
                 {
+                    // 저주가 아니었더라도 고대신의 부름 효과는 제거해야 함.
                     // Decrease the power anyway. it's "The next N Rite cards activate its Rite effect an extra time".
                     var ancientPower = Owner?.Creature.GetPower<CallOfTheAncientPower>();
                     if (ancientPower != null)

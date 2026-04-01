@@ -82,7 +82,7 @@
   "THECURSEDMOD-SCINTILLA.description": "Deal {Damage:diff()} damage.\nTransform a card in your [gold]Discard pile[/gold] into [gold]Dregs[/gold].",
 
   "THECURSEDMOD-BLESSING_IN_DISGUISE.title": "Blessing in Disguise",
-  "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "Exhaust all [gold]Curse[/gold] cards in your [gold]Hand[/gold].\nGain {Block:diff()} [gold]Block[/gold] for each card [gold]Exhausted[/gold].",
+  "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "[gold]Exhaust[/gold] all [gold]Curse[/gold] cards in your [gold]Hand[/gold].\nGain {Block:diff()} [gold]Block[/gold] for each card [gold]Exhausted[/gold].",
 
   "THECURSEDMOD-CURSED_SPELLBOOK.title": "Cursed Spellbook",
   "THECURSEDMOD-CURSED_SPELLBOOK.description": "Draw {Cards:diff()} cards.\nShuffle a random [gold]Curse[/gold] card into your [gold]Draw pile[/gold].",
@@ -116,6 +116,12 @@
 
   "THECURSEDMOD-MALEVOLENCE.title": "Malevolence",
   "THECURSEDMOD-MALEVOLENCE.description": "Add a random [gold]Rite[/gold] card into your [gold]Hand[/gold].\nIt's free to play this turn.",
+
+  "THECURSEDMOD-CELERITY.title": "Celerity",
+  "THECURSEDMOD-CELERITY.description": "[gold]Rite[/gold] : Gain {CalculatedDexterity:diff()} [gold]Dexterity[/gold]. Increases by 1 for each [gold]Circle[/gold] card in [gold]Hand[/gold].",
+
+  "THECURSEDMOD-ARCANE_BINDING.title": "Arcane Binding",
+  "THECURSEDMOD-ARCANE_BINDING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : [gold]Retain[/gold] [gold]Circle[/gold] cards in your [gold]Hand[/gold] this turn.",
 
   "THECURSEDMOD-PREPARE_RITE.title": "Prepare Rite",
   "THECURSEDMOD-PREPARE_RITE.description": "Transform 1 card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].\nNext turn, draw 2 cards.",
@@ -154,6 +160,12 @@
   "THECURSEDMOD-FORBIDDEN_RAID.title": "Forbidden Raid",
   "THECURSEDMOD-FORBIDDEN_RAID.description": "Deal {Damage:diff()} damage.\nDraw 1 card.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
+  "THECURSEDMOD-FORBIDDEN_STRENGTH.title": "Forbidden Strength",
+  "THECURSEDMOD-FORBIDDEN_STRENGTH.description": "Gain {CalculatedStrength:diff()} [gold]Strength[/gold]. Increases by 1 for each [gold]Circle[/gold] card in [gold]Hand[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+
+  "THECURSEDMOD-WICKED_TEMPERING.title": "Wicked Tempering",
+  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]Karma[/gold] {KarmaPower:diff()}.\n[gold]Rite[/gold] : Next Attack that gains [gold]Karma[/gold] deals {BonusDamage:diff()}% additional damage.",
+
   "THECURSEDMOD-IGNORE_PAIN.title": "Ignore Pain",
   "THECURSEDMOD-IGNORE_PAIN.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : You receive 50% less damage from [gold]Karma[/gold] this turn.",
 
@@ -188,7 +200,7 @@
   "THECURSEDMOD-DIE_TOGETHER.description": "[gold]Karma[/gold] damage is also dealt to ALL enemies this combat.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_FORM.title": "Forbidden Form",
-  "THECURSEDMOD-FORBIDDEN_FORM.description": "Shuffle 3 random [gold]Curse[/gold] cards into your [gold]draw pile[/gold].\nWhenever you draw a [gold]Curse[/gold] card, gain {StrengthPower:diff()} [gold]Strength[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_FORM.description": "Whenever you [gold]Exhaust[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold], next Attack that gains [gold]Karma[/gold] deals {BonusPercent:diff()}% additional damage.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "Forbidden Bludgeon",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",

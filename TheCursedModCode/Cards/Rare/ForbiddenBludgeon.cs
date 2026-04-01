@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// <summary>
 /// 금단의 몽둥이질(Forbidden Bludgeon) - 피해를 60 줍니다. 업보 30. (강화 시 피해 80)
 /// </summary>
-public sealed class ForbiddenBludgeon() : TheCursedModCard(3, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
+public sealed class ForbiddenBludgeon() : TheCursedModCard(3, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy), IKarmaAttack
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(60, ValueProp.Move),

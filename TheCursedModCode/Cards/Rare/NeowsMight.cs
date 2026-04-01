@@ -8,13 +8,13 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 니오우의 권능(Neow's Might) - 손에 있는 다른 모든 카드의 비용을 이번 턴 동안 1 줄입니다. 업보를 22 얻습니다.
+/// 니오우의 권능(Neow's Might) - 손에 있는 다른 모든 카드의 비용을 이번 턴 동안 1 줄입니다. 업보를 11 얻습니다.
 /// 강화 시 Retain 추가.
 /// </summary>
 public sealed class NeowsMight() : TheCursedModCard(1, CardType.Skill, CardRarity.Rare, TargetType.None)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 22m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 11m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
