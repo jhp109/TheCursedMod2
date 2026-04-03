@@ -182,7 +182,7 @@
   "THECURSEDMOD-ROLLING_OVER_DEBT.description": "If you have [gold]Karma[/gold], gain {RollingOverDebtPower:diff()} [gold]Block[/gold] at the end of your turn.",
 
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.title": "Cycle of Depravity",
-  "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "At the start of your turn, draw 2 cards if you have [gold]Karma[/gold].",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "At the start of your turn, draw {CycleOfDepravityPower:diff()} cards if you have [gold]Karma[/gold].",
 
   "THECURSEDMOD-TEAR_GRIMOIRE.title": "Tear Grimoire",
   "THECURSEDMOD-TEAR_GRIMOIRE.description": "Attacks that cost 2 or more are played an extra time.\nAt the start of your turn, [gold]Karma[/gold] {KarmaPower:diff()}.",

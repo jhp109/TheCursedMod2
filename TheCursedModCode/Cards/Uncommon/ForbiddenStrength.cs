@@ -13,7 +13,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// 금단의 힘(Forbidden Strength) - 손에 있는 마법진 카드 하나당 힘을 2 얻습니다.
 /// 업보 10. 소멸. 강화 시 힘 증가량 3.
 /// </summary>
-public sealed class ForbiddenStrength() : TheCursedModCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
+public sealed class ForbiddenStrength() : TheCursedModCard(0, CardType.Skill, CardRarity.Uncommon, TargetType.Self)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
