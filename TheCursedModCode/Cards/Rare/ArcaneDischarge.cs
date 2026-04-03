@@ -10,15 +10,15 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 비전 방출(Arcane Discharge) - 이번 전투에서 마법진의 효과가 발동된 횟수의 2배만큼 모든 적에게 피해를 줍니다.
-/// 강화 시 3배.
+/// 비전 방출(Arcane Discharge) - 이번 전투에서 마법진의 효과가 발동된 횟수의 3배만큼 모든 적에게 피해를 줍니다.
+/// 강화 시 4배.
 /// </summary>
 public sealed class ArcaneDischarge() : TheCursedModCard(3, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0m),
-        new ExtraDamageVar(2),
-        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? _) =>
+        new ExtraDamageVar(3),
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier(static (CardModel card, Creature? _) =>
         {
             var piles = new[] { PileType.Hand, PileType.Draw, PileType.Discard };
             int triggers = piles.Sum(pt => pt.GetPile(card.Owner).Cards.OfType<CircleCard>().Sum(c => c.TriggerCount));

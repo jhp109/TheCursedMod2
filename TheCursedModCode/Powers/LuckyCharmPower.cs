@@ -19,12 +19,21 @@ public class LuckyCharmPower : TheCursedModPower
         HoverTipFactory.Static(StaticHoverTip.Block)
     ];
 
+    public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
+    {
+        if (card.Owner == base.Owner.Player && card.Type == CardType.Curse)
+        {
+            Flash();
+            await CreatureCmd.GainBlock(base.Owner, Amount, ValueProp.Unpowered, null);
+        }
+    }
+
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
         if (card.Owner == base.Owner.Player && card.Type == CardType.Curse)
         {
             Flash();
-            await CreatureCmd.GainBlock(base.Owner, Amount, ValueProp.Move, null);
+            await CreatureCmd.GainBlock(base.Owner, Amount, ValueProp.Unpowered, null);
         }
     }
 }

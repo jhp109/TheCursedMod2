@@ -14,6 +14,10 @@ public partial class MainFile : Node
 
     public static void Initialize()
     {
+        // Register mod C# types with Godot so .tscn scripts can find them
+        var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+        Godot.Bridge.ScriptManagerBridge.LookupScriptsInAssembly(assembly);
+
         Harmony harmony = new(ModId);
 
         harmony.PatchAll();

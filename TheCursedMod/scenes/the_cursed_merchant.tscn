@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://the_cursed_merchant"]
+
+[ext_resource type="Script" path="res://TheCursedModCode/Nodes/SNMerchantCharacter.cs" id="1_script"]
+[ext_resource type="Texture2D" path="res://TheCursedMod/images/thecursed/TheCursed.png" id="2_texture"]
+
+[node name="TheCursedMerchant" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="SpineSprite" type="TextureRect" parent="."]
+offset_left = -150.0
+offset_top = -300.0
+offset_right = 150.0
+offset_bottom = 0.0
+texture = ExtResource("2_texture")

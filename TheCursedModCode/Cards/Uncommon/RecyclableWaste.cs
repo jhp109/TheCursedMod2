@@ -8,7 +8,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
 /// 재활용 쓰레기(Recyclable Waste) - 이번 전투 동안 찌꺼기가 보존을 얻습니다. 찌꺼기를 2장 얻습니다.
-/// (강화 시 선천성 추가)
+/// 강화 시 비용 0.
 /// </summary>
 public sealed class RecyclableWaste() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
@@ -26,6 +26,6 @@ public sealed class RecyclableWaste() : TheCursedModCard(1, CardType.Power, Card
 
     protected override void OnUpgrade()
     {
-        AddKeyword(CardKeyword.Innate);
+        EnergyCost.UpgradeBy(-1);
     }
 }

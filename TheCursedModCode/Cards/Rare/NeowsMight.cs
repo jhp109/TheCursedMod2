@@ -8,13 +8,14 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 니오우의 권능(Neow's Might) - 손에 있는 다른 모든 카드의 비용을 이번 턴 동안 1 줄입니다. 업보를 11 얻습니다.
-/// 강화 시 Retain 추가.
+/// 니오우의 권능(Neow's Might) - 카드를 2장 뽑습니다. 손에 있는 모든 카드의 비용을 이번 턴 동안 1 줄입니다. 업보 13.
+/// 강화 시 비용 0.
 /// </summary>
 public sealed class NeowsMight() : TheCursedModCard(1, CardType.Skill, CardRarity.Rare, TargetType.None)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 11m)
+        new CardsVar(2),
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 13m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -24,6 +25,7 @@ public sealed class NeowsMight() : TheCursedModCard(1, CardType.Skill, CardRarit
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
+        await CardPileCmd.Draw(choiceContext, DynamicVars.Cards.IntValue, Owner);
         foreach (var card in PileType.Hand.GetPile(Owner).Cards)
         {
             if (card == this) continue;
@@ -35,6 +37,6 @@ public sealed class NeowsMight() : TheCursedModCard(1, CardType.Skill, CardRarit
 
     protected override void OnUpgrade()
     {
-        AddKeyword(CardKeyword.Retain);
+        EnergyCost.UpgradeBy(-1);
     }
 }

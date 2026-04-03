@@ -9,12 +9,12 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
 /// 금단의 형상(Forbidden Form) - 의례로 저주 카드를 소멸시킬 때 마다,
-/// 업보를 부여하는 내 다음 공격의 피해량이 25% (강화: 50%) 증가합니다.
+/// 업보를 부여하는 내 다음 공격의 피해량이 50% (강화: 75%) 증가합니다.
 /// </summary>
 public sealed class ForbiddenForm() : TheCursedModCard(3, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<ForbiddenFormPower>("BonusPercent", 25m)
+        new PowerVar<ForbiddenFormPower>("BonusPercent", 50m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

@@ -9,12 +9,12 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 사악한 담금질(Wicked Tempering) - 업보 13. 의례 : 내 다음 업보 공격의 피해량이 50% (강화: 75%) 증가합니다.
+/// 사악한 담금질(Wicked Tempering) - 업보 7. 의례 : 내 다음 업보 공격의 피해량이 50% (강화: 75%) 증가합니다.
 /// </summary>
 public sealed class WickedTempering() : RiteCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.None)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 13m),
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 7m),
         new PowerVar<MultiplyNextKarmaAttackPower>("BonusDamage", 50m)
     ];
 

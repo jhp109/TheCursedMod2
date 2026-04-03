@@ -12,7 +12,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
 /// 엑조디아 빔(Exodia Beam) - 손에 서로 다른 종류의 마법진이 5장 이상 있을때만 사용 가능합니다.
-/// 모든 적에게 피해를 50 줍니다. 강화 시 피해 60.
+/// 모든 적에게 피해를 100 줍니다. 강화 시 피해 125.
 /// </summary>
 public sealed class ExodiaBeam() : TheCursedModCard(0, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
 {
@@ -28,7 +28,7 @@ public sealed class ExodiaBeam() : TheCursedModCard(0, CardType.Attack, CardRari
             .Count() >= RequiredCircleTypes;
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(50m, ValueProp.Move)
+        new DamageVar(100m, ValueProp.Move)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -62,6 +62,6 @@ public sealed class ExodiaBeam() : TheCursedModCard(0, CardType.Attack, CardRari
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(10m);
+        DynamicVars.Damage.UpgradeValueBy(25m);
     }
 }

@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 망토 두르기(Wear Cloak) - 방어도를 6 얻습니다. 손에 마법진 카드가 있다면, 버린 카드 더미에서 카드 1장을 골라 손으로 가져옵니다.
+/// 망토 두르기(Wear Cloak) - 방어도를 6 얻습니다. 손에 사용불가 카드가 있다면, 버린 카드 더미에서 카드 1장을 골라 손으로 가져옵니다.
 /// 강화 시 방어도 9.
 /// </summary>
 public sealed class WearCloak() : TheCursedModCard(1, CardType.Skill, CardRarity.Common, TargetType.None)
@@ -21,15 +21,15 @@ public sealed class WearCloak() : TheCursedModCard(1, CardType.Skill, CardRarity
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Circle),
+        HoverTipFactory.FromKeyword(CardKeyword.Unplayable),
     ];
 
-    protected override bool ShouldGlowGoldInternal => HasCircleInHand();
+    protected override bool ShouldGlowGoldInternal => HasUnplayableInHand();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.GainBlock(Owner.Creature, DynamicVars.Block, play);
-        if (!HasCircleInHand()) return;
+        if (!HasUnplayableInHand()) return;
 
         var pile = PileType.Discard.GetPile(Owner);
         if (pile.Cards.Count == 0) return;
@@ -43,10 +43,5 @@ public sealed class WearCloak() : TheCursedModCard(1, CardType.Skill, CardRarity
     protected override void OnUpgrade()
     {
         DynamicVars.Block.UpgradeValueBy(3m);
-    }
-
-    private bool HasCircleInHand()
-    {
-        return PileType.Hand.GetPile(Owner).Cards.Any(c => c is CircleCard);
     }
 }

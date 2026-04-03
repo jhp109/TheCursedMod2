@@ -12,12 +12,16 @@
   "THECURSEDMOD-RECYCLABLE_WASTE_POWER.smartDescription": "All [gold]Dregs[/gold] have [gold]Retain[/gold] for this combat.",
 
   "THECURSEDMOD-LUCKY_CHARM_POWER.title": "Lucky Charm",
-  "THECURSEDMOD-LUCKY_CHARM_POWER.description": "Whenever a [gold]Curse[/gold] card is [gold]Exhausted[/gold], gain [gold]Block[/gold].",
-  "THECURSEDMOD-LUCKY_CHARM_POWER.smartDescription": "Whenever a [gold]Curse[/gold] card is [gold]Exhausted[/gold], gain {Amount} [gold]Block[/gold].",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.description": "Whenever a [gold]Curse[/gold] card is drawn or [gold]Exhausted[/gold], gain [gold]Block[/gold].",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.smartDescription": "Whenever a [gold]Curse[/gold] card is drawn or [gold]Exhausted[/gold], gain {Amount} [gold]Block[/gold].",
 
   "THECURSEDMOD-MANA_CIRCULATION_POWER.title": "Mana Circulation",
   "THECURSEDMOD-MANA_CIRCULATION_POWER.description": "The first time a [gold]Curse[/gold] is [gold]Exhausted[/gold] each turn, gain {energyPrefix}.",
   "THECURSEDMOD-MANA_CIRCULATION_POWER.smartDescription": "The first time a [gold]Curse[/gold] is [gold]Exhausted[/gold] each turn, gain {Amount:energyIcons()}.",
+
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.title": "Arcane Matrix",
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.description": "Whenever you draw a [gold]Circle[/gold] card, gain {energyPrefix} and draw 1 card.",
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.smartDescription": "Whenever you draw a [gold]Circle[/gold] card, gain {Amount:energyIcons()} and draw {Amount} {Amount:plural:card|cards}.",
 
   "THECURSEDMOD-KARMA_TURN1_POWER.title": "Karma",
   "THECURSEDMOD-KARMA_TURN1_POWER.description": "At the end of this turn, take damage.",
@@ -32,28 +36,32 @@
   "THECURSEDMOD-KARMA_TURN3_POWER.smartDescription": "At the end of your next next turn, take {Amount} damage.",
 
   "THECURSEDMOD-GRACE_POWER.title": "Grace",
-  "THECURSEDMOD-GRACE_POWER.description": "Karma damage is delayed by an extra turn (cannot be stacked).",
-  "THECURSEDMOD-GRACE_POWER.smartDescription": "Karma damage is delayed by an extra turn (cannot be stacked).",
+  "THECURSEDMOD-GRACE_POWER.description": "[gold]Karma[/gold] damage is delayed by an extra turn (cannot be stacked).",
+  "THECURSEDMOD-GRACE_POWER.smartDescription": "[gold]Karma[/gold] damage is delayed by an extra turn (cannot be stacked).",
 
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.title": "Hellfire Breathing",
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies.",
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.smartDescription": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies.",
 
   "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.title": "Rolling over Debt",
-  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.description": "Whenever you are about to take [gold]Karma[/gold] damage, gain [gold]Block[/gold].",
-  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.smartDescription": "Whenever you are about to take [gold]Karma[/gold] damage, gain {Amount} [gold]Block[/gold].",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.description": "If you have [gold]Karma[/gold], gain [gold]Block[/gold] at the end of your turn.",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.smartDescription": "If you have [gold]Karma[/gold], gain {Amount} [gold]Block[/gold] at the end of your turn.",
 
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.title": "Cycle of Depravity",
-  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.description": "At the start of your turn, draw cards if [gold]Karma[/gold] damage is scheduled this turn.",
-  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.smartDescription": "At the start of your turn, draw {Amount} cards if [gold]Karma[/gold] damage is scheduled this turn.",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.description": "At the start of your turn, draw cards if you have [gold]Karma[/gold].",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.smartDescription": "At the start of your turn, draw {Amount} cards if you have [gold]Karma[/gold].",
 
   "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.title": "Forbidden Elixir",
   "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.description": "At the start of your turn, gain {energyPrefix}.",
   "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.smartDescription": "At the start of your turn, gain {Amount:energyIcons()}.",
 
   "THECURSEDMOD-TEAR_GRIMOIRE_POWER.title": "Tear Grimoire",
-  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.description": "Attacks that cost 2 or more are played an extra time. At the start of your turn, [gold]Karma[/gold].",
-  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.smartDescription": "Attacks that cost 2 or more are played an extra time. At the start of your turn, [gold]Karma[/gold] {Amount}.",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.description": "Attacks that cost 2 or more are played extra times.",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.smartDescription": "Attacks that cost 2 or more are played {Amount} extra {Amount:plural:time|times}.",
+
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.title": "Recurring Karma",
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.description": "At the start of your turn, [gold]Karma[/gold].",
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.smartDescription": "At the start of your turn, [gold]Karma[/gold] {Amount}.",
 
   "THECURSEDMOD-DIE_TOGETHER_POWER.title": "Die Together",
   "THECURSEDMOD-DIE_TOGETHER_POWER.description": "[gold]Karma[/gold] damage is also dealt to ALL enemies this combat.",
@@ -62,6 +70,10 @@
   "THECURSEDMOD-IGNORE_PAIN_POWER.title": "Ignore Pain",
   "THECURSEDMOD-IGNORE_PAIN_POWER.description": "You receive less damage from [gold]Karma[/gold] this turn.",
   "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "You receive {Amount}% less damage from [gold]Karma[/gold] this turn.",
+
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.title": "Spirit Offering",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "The first time you [gold]Exhaust[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] each turn, gain [gold]Strength[/gold].",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "The first time you [gold]Exhaust[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] each turn, gain {Amount} [gold]Strength[/gold].",
 
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "Forbidden Form",
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "Whenever you exhaust a [gold]Curse[/gold] via [gold]Rite[/gold], next Attack that gains [gold]Karma[/gold] deals additional damage.",
@@ -81,5 +93,9 @@
 
   "THECURSEDMOD-MANA_BASTION_POWER.title": "Mana Bastion",
   "THECURSEDMOD-MANA_BASTION_POWER.description": "Whenever a [gold]Circle[/gold] effect triggers, gain [gold]Block[/gold].",
-  "THECURSEDMOD-MANA_BASTION_POWER.smartDescription": "Whenever a [gold]Circle[/gold] effect triggers, gain {Amount} [gold]Block[/gold]."
+  "THECURSEDMOD-MANA_BASTION_POWER.smartDescription": "Whenever a [gold]Circle[/gold] effect triggers, gain {Amount} [gold]Block[/gold].",
+
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.title": "Worldline Twist",
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.description": "Take no damage from [gold]Karma[/gold] this turn.",
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.smartDescription": "Take no damage from [gold]Karma[/gold] this turn."
 }

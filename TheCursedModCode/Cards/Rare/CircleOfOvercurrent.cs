@@ -9,8 +9,8 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 과전류의 마법진(Circle of Overcurrent) - 마법진 : 스킬 카드를 사용할 때 마다 무작위 적에게 피해를 8 주고, 이번 전투 동안 피해량이 {DamageIncrement} 증가합니다.
-/// 강화 시 피해 증가량 2.
+/// 과전류의 마법진(Circle of Overcurrent) - 마법진 : 스킬 카드를 사용할 때 마다 무작위 적에게 피해를 8 주고, 이번 전투 동안 피해량이 2 증가합니다.
+/// 강화 시 피해 증가량 3.
 /// </summary>
 public sealed class CircleOfOvercurrent() : CircleCard(CardRarity.Rare)
 {
@@ -18,7 +18,7 @@ public sealed class CircleOfOvercurrent() : CircleCard(CardRarity.Rare)
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(8, ValueProp.Unpowered),
-        new DynamicVar("DamageIncrement", 1m)
+        new DynamicVar("DamageIncrement", 2m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

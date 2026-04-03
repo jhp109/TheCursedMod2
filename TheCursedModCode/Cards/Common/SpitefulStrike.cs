@@ -10,14 +10,13 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
 /// 원한 맺힌 타격(Spiteful Strike) - 피해를 12 줍니다.
-/// 이번 턴에 의례로 저주를 소멸시켰다면, 에너지를 2 얻습니다. (강화 시 피해 16)
+/// 손에 사용불가 카드가 있다면, 에너지를 2 얻습니다. (강화 시 피해 16)
 /// </summary>
 public sealed class SpitefulStrike() : TheCursedModCard(2, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
-        HoverTipFactory.FromKeyword(CardKeyword.Exhaust),
+        HoverTipFactory.FromKeyword(CardKeyword.Unplayable),
         EnergyHoverTip
     ];
     protected override HashSet<CardTag> CanonicalTags => [CardTag.Strike];
@@ -26,12 +25,12 @@ public sealed class SpitefulStrike() : TheCursedModCard(2, CardType.Attack, Card
         new EnergyVar(2),
     ];
     
-    protected override bool ShouldGlowGoldInternal => RiteCard.WasRiteCurseExhaustedThisTurn(CombatState);
+    protected override bool ShouldGlowGoldInternal => HasUnplayableInHand();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        if (RiteCard.WasRiteCurseExhaustedThisTurn(CombatState) && Owner != null)
+        if (HasUnplayableInHand())
             await PlayerCmd.GainEnergy(base.DynamicVars.Energy.IntValue, Owner);
     }
 

@@ -1,6 +1,7 @@
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -22,11 +23,18 @@ public class ManaCirculationPower : TheCursedModPower
 
     private bool _triggeredThisTurn;
 
+    public override Task AfterApplied(Creature? applier, CardModel? cardSource)
+    {
+        StartPulsing();
+        return Task.CompletedTask;
+    }
+
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
         if (card.Owner == base.Owner.Player && card.Type == CardType.Curse && !_triggeredThisTurn)
         {
             _triggeredThisTurn = true;
+            StopPulsing();
             Flash();
             await PlayerCmd.GainEnergy(Amount, base.Owner.Player!);
         }
@@ -35,7 +43,10 @@ public class ManaCirculationPower : TheCursedModPower
     public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
     {
         if (player == base.Owner.Player)
+        {
             _triggeredThisTurn = false;
+            StartPulsing();
+        }
         return Task.CompletedTask;
     }
 }

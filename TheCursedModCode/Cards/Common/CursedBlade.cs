@@ -19,7 +19,7 @@ public sealed class CursedBlade() : TheCursedModCard(1, CardType.Attack, CardRar
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(8, ValueProp.Move)
+        new DamageVar(9, ValueProp.Move)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

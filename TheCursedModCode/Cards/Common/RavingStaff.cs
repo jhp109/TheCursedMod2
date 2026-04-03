@@ -9,7 +9,7 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 날뛰는 지팡이(Raving Staff) - 무작위 적에게 피해를 11만큼 X번 줍니다. X번 업보 5. (강화 시 피해 14)
+/// 날뛰는 지팡이(Raving Staff) - 무작위 적에게 피해를 11만큼 X번 줍니다. X번 업보 4. (강화 시 피해 14)
 /// </summary>
 public sealed class RavingStaff() : TheCursedModCard(0, CardType.Attack, CardRarity.Common, TargetType.RandomEnemy), IKarmaAttack
 {
@@ -17,7 +17,7 @@ public sealed class RavingStaff() : TheCursedModCard(0, CardType.Attack, CardRar
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(11, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 5m)
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 4m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

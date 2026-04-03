@@ -11,8 +11,8 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 악마군주의 칼날(Demonic Blade) - 피해를 10 줍니다. 이번 전투에서 의례로 소멸시킨 저주 하나당 피해량이 5 증가합니다. 보존.
-/// (강화 시 피해 증가량 8)
+/// 악마군주의 칼날(Demonic Blade) - 피해를 14 줍니다. 이번 전투에서 의례로 소멸시킨 저주 하나당 피해량이 6 증가합니다. 보존.
+/// (강화 시 피해 증가량 10)
 /// </summary>
 public sealed class DemonicBlade() : TheCursedModCard(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
 {
@@ -25,10 +25,10 @@ public sealed class DemonicBlade() : TheCursedModCard(2, CardType.Attack, CardRa
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new CalculationBaseVar(10),
-        new ExtraDamageVar(5),
+        new CalculationBaseVar(14),
+        new ExtraDamageVar(6),
         new CalculatedDamageVar(ValueProp.Move)
-            .WithMultiplier((card, _) => RiteCard.GetRiteCurseExhaustedCount(card.CombatState))
+            .WithMultiplier(static (card, _) => RiteCard.GetRiteCurseExhaustedCount(card.CombatState))
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -42,6 +42,6 @@ public sealed class DemonicBlade() : TheCursedModCard(2, CardType.Attack, CardRa
 
     protected override void OnUpgrade()
     {
-        DynamicVars.ExtraDamage.UpgradeValueBy(3m);
+        DynamicVars.ExtraDamage.UpgradeValueBy(4m);
     }
 }

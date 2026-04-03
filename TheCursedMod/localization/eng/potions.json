@@ -1,0 +1,10 @@
+{
+  "THECURSEDMOD-RITE_POTION.title": "Rite Potion",
+  "THECURSEDMOD-RITE_POTION.description": "Choose 1 of 3 random [gold]Rite[/gold] cards to add to your hand. It costs [blue]0[/blue] this turn. Also gain [gold]Dregs[/gold].",
+
+  "THECURSEDMOD-MERCY_POTION.title": "Mercy Potion",
+  "THECURSEDMOD-MERCY_POTION.description": "[gold]Karma[/gold] damage you receive this turn is reduced by 100%.",
+
+  "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.title": "Circles in a Bottle",
+  "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.description": "Add 3 random [gold]Upgraded[/gold] [gold]Circle[/gold] cards with [purple]Steady[/purple] [gold]Enchantment[/gold] into your [gold]Hand[/gold]."
+}

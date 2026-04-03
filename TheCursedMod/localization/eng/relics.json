@@ -1,3 +1,37 @@
 {
-  
+  "THECURSEDMOD-BLACK_MAGIC101_RELIC.title": "Dark Magic 101",
+  "THECURSEDMOD-BLACK_MAGIC101_RELIC.description": "At the start of your turn, draw [blue]1[/blue] additional card if your [gold]Draw pile[/gold] has any [gold]Curse[/gold] card.",
+  "THECURSEDMOD-BLACK_MAGIC101_RELIC.flavor": "Learn about black magic now!!!  (5th Edition)",
+
+  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.title": "Dark Magic Advanced",
+  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.description": "At the start of your turn, draw [blue]2[/blue] additional cards if your [gold]Draw pile[/gold] has any [gold]Curse[/gold] card.",
+  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.flavor": "All about Forbidden power and its Karma.  (First Edition)",
+
+  "THECURSEDMOD-SPIRIT_FUEL_RELIC.title": "Spirit Fuel",
+  "THECURSEDMOD-SPIRIT_FUEL_RELIC.description": "If you [gold]Exhausted[/gold] a [gold]Curse[/gold] via [gold]Rite[/gold] during your turn, draw [blue]1[/blue] additional card next turn.",
+  "THECURSEDMOD-SPIRIT_FUEL_RELIC.flavor": "The soul burns bright — if only for a moment.",
+
+  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.title": "Four-Leaf Clover Charm",
+  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.description": "Whenever you get a random [gold]Curse[/gold] card by [gold]The Cursed[/gold]'s card during combat, get [gold]Dregs[/gold] instead.",
+  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.flavor": "Good luck and happiness come from gratitude.",
+
+  "THECURSEDMOD-PURPLE_CANDLE_RELIC.title": "Purple Candle",
+  "THECURSEDMOD-PURPLE_CANDLE_RELIC.description": "Every [blue]10[/blue] time an effect of [gold]Circle[/gold] is triggered, draw [blue]1[/blue] card.",
+  "THECURSEDMOD-PURPLE_CANDLE_RELIC.flavor": "Its flame dims with each echo, and brightens with each reward.",
+
+  "THECURSEDMOD-WRAITH_BEADS_RELIC.title": "Wraith Beads",
+  "THECURSEDMOD-WRAITH_BEADS_RELIC.description": "If you lost HP from [gold]Karma[/gold] this turn, gain [blue]1[/blue] Energy and draw [blue]3[/blue] additional cards next turn.",
+  "THECURSEDMOD-WRAITH_BEADS_RELIC.flavor": "Each bead holds the memory of a wound endured.",
+
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.title": "Ritualist's Ring",
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "The first time each turn you [gold]Exhaust[/gold] a [gold]Curse[/gold] via a [gold]Rite[/gold], gain [blue]1[/blue] Energy.",
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.flavor": "Need... More... Offerings...",
+
+  "THECURSEDMOD-DEMONIC_MARK_RELIC.title": "Demonic Mark",
+  "THECURSEDMOD-DEMONIC_MARK_RELIC.description": "Every [blue]4[/blue] times a [gold]Circle[/gold] activates in a single turn, gain [blue]1[/blue] Strength.",
+  "THECURSEDMOD-DEMONIC_MARK_RELIC.flavor": "It looks different this time, doesn't it?",
+
+  "THECURSEDMOD-SOUL_VESSEL_RELIC.title": "Soul Vessel",
+  "THECURSEDMOD-SOUL_VESSEL_RELIC.description": "At the end of each combat, heal 2 HP per [gold]Curse[/gold] card [gold]Exhausted[/gold] this combat. (Max [blue]10[/blue] HP.)",
+  "THECURSEDMOD-SOUL_VESSEL_RELIC.flavor": "The vessel remembers every soul it has consumed."
 }

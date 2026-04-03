@@ -14,7 +14,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 public sealed class TearGrimoire() : TheCursedModCard(3, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<TearGrimoirePower>("KarmaPower", 13m)
+        new PowerVar<KarmaEveryTurnPower>("KarmaPower", 13m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -24,7 +24,8 @@ public sealed class TearGrimoire() : TheCursedModCard(3, CardType.Power, CardRar
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<TearGrimoirePower>(Owner.Creature, DynamicVars["KarmaPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<TearGrimoirePower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<KarmaEveryTurnPower>(Owner.Creature, DynamicVars["KarmaPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

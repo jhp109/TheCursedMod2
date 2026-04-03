@@ -42,5 +42,7 @@ public sealed class FatalLeap() : TheCursedModCard(1, CardType.Attack, CardRarit
     }
 
     private bool HasKarma() =>
-        Owner?.Creature.HasPower<KarmaTurn1Power>() == true;
+        Owner?.Creature.HasPower<KarmaTurn1Power>() == true ||
+        Owner?.Creature.HasPower<KarmaTurn2Power>() == true ||
+        Owner?.Creature.HasPower<KarmaTurn3Power>() == true;
 }

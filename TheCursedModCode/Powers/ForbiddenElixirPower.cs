@@ -2,6 +2,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
 
@@ -12,11 +13,18 @@ public class ForbiddenElixirPower : TheCursedModPower
 {
     public override PowerType Type => PowerType.Buff;
 
-    public override PowerStackType StackType => PowerStackType.Single;
+    public override PowerStackType StackType => PowerStackType.Counter;
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.ForEnergy(this)
+    ];
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-        Flash();
-        await PlayerCmd.GainEnergy(1, player);
+        if (player == base.Owner.Player)
+        {
+            Flash();
+            await PlayerCmd.GainEnergy(Amount, player);
+        }
     }
 }

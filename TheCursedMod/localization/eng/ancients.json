@@ -1,6 +1,13 @@
 {
-  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-0r.char": "These ruins hold old power. Power that does not discriminate.",
-  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-0r.next": "0-1r",
-  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-1r.ancient": "Indeed. The curse recognizes no master.",
-  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-attack": "You seek strength through suffering. Curious."
+  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-0r.char": "Countless vengeful spirits are lingering here...",
+  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-0r.next": "Continue",
+  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-1r.ancient": "The Cursed, you too shall sleep here.",
+  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-attack": "Die.",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-0r.next": "Continue",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-0r.char": "[sine]I will curse you painfully...[/sine]",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-1r.ancient": "[jitter]Try your best.[/jitter]",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-1r.next": "Continue",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-2r.char": "[sine]Become the sacrifice for my rite![/sine]",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-2r.next": "Continue",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-3r.ancient": "[jitter]Be stronger and come back again...[/jitter]"
 }

@@ -1,9 +1,11 @@
 using System.Linq;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
@@ -17,6 +19,17 @@ namespace TheCursedMod.TheCursedModCode.Powers;
 /// </summary>
 public class KarmaTurn1Power : TheCursedModPower
 {
+    private static CombatState? _karmaDamageCombat;
+    private static int _karmaDamageRound;
+
+    /// <summary>
+    /// 지난 턴에 업보 피해가 발생했는지 여부를 반환합니다.
+    /// </summary>
+    public static bool WasKarmaHitLastTurn(CombatState? combat)
+        => combat != null
+           && ReferenceEquals(_karmaDamageCombat, combat)
+           && _karmaDamageRound == combat.RoundNumber - 1;
+
     public override PowerType Type => PowerType.Debuff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
@@ -38,7 +51,7 @@ public class KarmaTurn1Power : TheCursedModPower
             SfxCmd.Play("event:/sfx/characters/attack_fire");
 
             base.Owner.GetPower<IgnorePainPower>()?.TriggerFlash();
-            await (base.Owner.GetPower<RollingOverDebtPower>()?.TriggerBlock() ?? Task.CompletedTask);
+            base.Owner.GetPower<WorldlineTwistPower>()?.TriggerFlash();
 
             var dieTogether = base.Owner.GetPower<DieTogetherPower>();
             if (dieTogether != null)
@@ -55,7 +68,24 @@ public class KarmaTurn1Power : TheCursedModPower
             {
                 await CreatureCmd.Damage(choiceContext, base.Owner, Amount, ValueProp.Unpowered, base.Owner, null);
             }
+
             await PowerCmd.Remove(this);
         }
+    }
+
+    public override Task AfterDamageReceived(
+        PlayerChoiceContext choiceContext,
+        Creature target,
+        DamageResult result,
+        ValueProp props,
+        Creature? dealer,
+        CardModel? cardSource)
+    {
+        if (target == Owner && dealer == Owner && result.UnblockedDamage > 0)
+        {
+            _karmaDamageCombat = CombatState;
+            _karmaDamageRound = CombatState.RoundNumber;
+        }
+        return Task.CompletedTask;
     }
 }

@@ -1,11 +1,7 @@
-using System.Linq;
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.CardPools;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -21,20 +17,7 @@ public sealed class CursedSpellbook() : TheCursedModCard(0, CardType.Skill, Card
     {
         await CommonActions.Draw(this, choiceContext);
 
-        var curseCandidates = ModelDb.CardPool<CurseCardPool>()
-            .GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint)
-            .Where(c => c.CanBeGeneratedByModifiers)
-            .ToList();
-
-        if (curseCandidates.Count > 0)
-        {
-            var randomCurse = Owner.RunState.Rng.Niche.NextItem(curseCandidates)!;
-            var curseCard = CombatState!.CreateCard(randomCurse, Owner);
-            CardCmd.PreviewCardPileAdd(
-                await CardPileCmd.AddGeneratedCardToCombat(
-                    curseCard, PileType.Draw, addedByPlayer: false, position: CardPilePosition.Random));
-            await Cmd.Wait(0.5f);
-        }
+        await GainRandomCurse(PileType.Draw);
     }
 
     protected override void OnUpgrade()

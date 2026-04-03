@@ -48,6 +48,14 @@ public abstract class RiteCard(
            && _riteCurseExhaustedRound == combat.RoundNumber;
 
     /// <summary>
+    /// 지난 턴(현재 RoundNumber - 1)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
+    /// </summary>
+    public static bool WasRiteCurseExhaustedLastTurn(CombatState? combat)
+        => combat != null
+           && ReferenceEquals(_riteCurseExhaustedCombat, combat)
+           && _riteCurseExhaustedRound == combat.RoundNumber - 1;
+
+    /// <summary>
     /// 이번 전투에서 의례로 소멸시킨 저주의 총 횟수를 반환합니다.
     /// </summary>
     public static int GetRiteCurseExhaustedCount(CombatState? combat)
@@ -74,8 +82,14 @@ public abstract class RiteCard(
 
                 if (wasCurse)
                 {
+                    bool isFirstRiteThisTurn = !WasRiteCurseExhaustedThisTurn(CombatState);
+
                     _riteCurseExhaustedRound = CombatState!.RoundNumber;
                     _riteCurseExhaustedCombat = CombatState;
+
+                    var ritualistsRing = Owner?.Relics.OfType<Relics.RitualistsRingRelic>().FirstOrDefault();
+                    if (ritualistsRing != null && isFirstRiteThisTurn)
+                        await ritualistsRing.OnFirstRiteCurseThisTurn(choiceContext);
 
                     if (!ReferenceEquals(_riteCombatCountCombat, CombatState))
                     {
@@ -89,6 +103,11 @@ public abstract class RiteCard(
                     if (forbiddenForm != null)
                         await PowerCmd.Apply<MultiplyNextKarmaAttackPower>(
                             Owner!.Creature, forbiddenForm.Amount, Owner.Creature, null);
+
+                    // 영혼 공물 - 매 턴 처음으로 저주 소멸 시 힘 획득
+                    var spiritOffering = Owner?.Creature.GetPower<SpiritOfferingPower>();
+                    if (spiritOffering != null)
+                        await spiritOffering.TriggerOnRiteCurse(choiceContext);
 
                     await OnRiteEffect(choiceContext, play);
 

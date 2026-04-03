@@ -16,7 +16,12 @@ public class CycleOfDepravityPower : TheCursedModPower
 
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-        if (!base.Owner.HasPower<KarmaTurn1Power>()) return;
+        if (!base.Owner.HasPower<KarmaTurn1Power>()
+            && !base.Owner.HasPower<KarmaTurn2Power>()
+            && !base.Owner.HasPower<KarmaTurn3Power>())
+        {
+            return;
+        }
         Flash();
         await CardPileCmd.Draw(choiceContext, Amount, player);
     }

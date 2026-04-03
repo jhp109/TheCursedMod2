@@ -8,17 +8,18 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 마나 요새(Mana Bastion) - 마법진의 효과가 발동될 때 마다, 방어도를 2 얻습니다.
+/// 마나 요새(Mana Bastion) - 마법진의 효과가 발동될 때 마다, 방어도를 3 얻습니다.
 /// 강화 시 방어도 2.
 /// </summary>
 public sealed class ManaBastion() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<ManaBastionPower>("ManaBastionPower", 2m)
+        new PowerVar<ManaBastionPower>("ManaBastionPower", 3m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Circle)
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Circle),
+        HoverTipFactory.Static(StaticHoverTip.Block)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

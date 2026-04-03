@@ -11,16 +11,16 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 금단의 급습(Forbidden Raid) - 피해를 15 주고 카드를 1장 뽑습니다. 업보 7. 선천성. 소멸.
-/// 강화 시 피해 20.
+/// 금단의 급습(Forbidden Raid) - 피해를 14 주고 카드를 1장 뽑습니다. 업보 4. 선천성. 소멸.
+/// 강화 시 피해 18.
 /// </summary>
 public sealed class ForbiddenRaid() : TheCursedModCard(0, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy), IKarmaAttack
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Innate, CardKeyword.Exhaust];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(15, ValueProp.Move),
-        new PowerVar<KarmaTurn2Power>("KarmaPower", 7m)
+        new DamageVar(14, ValueProp.Move),
+        new PowerVar<KarmaTurn2Power>("KarmaPower", 4m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -36,6 +36,6 @@ public sealed class ForbiddenRaid() : TheCursedModCard(0, CardType.Attack, CardR
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(5m);
+        DynamicVars.Damage.UpgradeValueBy(4m);
     }
 }

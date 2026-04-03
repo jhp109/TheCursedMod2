@@ -10,13 +10,13 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 비전 방아쇠(Arcane Trigger) - 피해를 6 줍니다. 손에 있는 모든 마법진의 효과를 조건을 무시하고 강제로 발동시킵니다.
+/// 비전 방아쇠(Arcane Trigger) - 피해를 8 줍니다. 손에 있는 모든 마법진의 효과를 조건을 무시하고 강제로 발동시킵니다.
 /// 강화 시 피해 9.
 /// </summary>
 public sealed class ArcaneTrigger() : TheCursedModCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(6, ValueProp.Move)
+        new DamageVar(8, ValueProp.Move)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

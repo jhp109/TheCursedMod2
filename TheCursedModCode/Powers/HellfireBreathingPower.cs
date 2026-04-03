@@ -3,11 +3,12 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
-using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
+using TheCursedMod.TheCursedModCode.Cards;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
 
@@ -23,10 +24,8 @@ public class HellfireBreathingPower : TheCursedModPower
 
     public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
     {
-        card.CanPlay(out var reason, out _);
-        if (card.Owner != null
-            && card.Owner.Creature == Owner
-            && reason.HasFlag(UnplayableReason.HasUnplayableKeyword))
+        if (card.Owner == null || card.Owner.Creature != Owner) return;
+        if (TheCursedModCard.IsUnplayableCard(card))
         {
             Flash();
             foreach (var enemy in base.CombatState.HittableEnemies)

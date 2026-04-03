@@ -10,16 +10,16 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 뉘우침(Repentance) - 방어도를 6 얻습니다.
-/// 이번 턴에 업보로 피해를 받을 예정이라면, 대신 13 얻습니다.
-/// 강화 시 6→9 / 13→17
+/// 뉘우침(Repentance) - 방어도를 5 얻습니다.
+/// 업보가 있다면, 대신 13 얻습니다.
+/// 강화 시 5→8 / 13→17
 /// </summary>
 public sealed class Repentance() : TheCursedModCard(1, CardType.Skill, CardRarity.Common, TargetType.None)
 {
     public override bool GainsBlock => true;
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(6, ValueProp.Move),
+        new BlockVar(5, ValueProp.Move),
         new BlockVar("KarmaBlock", 13, ValueProp.Move)
     ];
 
@@ -27,13 +27,12 @@ public sealed class Repentance() : TheCursedModCard(1, CardType.Skill, CardRarit
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma)
     ];
 
-    protected override bool ShouldGlowGoldInternal => Owner?.Creature.HasPower<KarmaTurn1Power>() == true;
+    protected override bool ShouldGlowGoldInternal => HasKarma();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner!.Creature, "Cast", Owner.Character.CastAnimDelay);
-        bool hasKarma = Owner.Creature.HasPower<KarmaTurn1Power>();
-        decimal blockAmount = hasKarma ? DynamicVars["KarmaBlock"].PreviewValue : DynamicVars.Block.PreviewValue;
+        decimal blockAmount = HasKarma() ? DynamicVars["KarmaBlock"].PreviewValue : DynamicVars.Block.PreviewValue;
         await CreatureCmd.GainBlock(Owner.Creature, blockAmount, ValueProp.Move, play);
     }
 
@@ -42,4 +41,9 @@ public sealed class Repentance() : TheCursedModCard(1, CardType.Skill, CardRarit
         DynamicVars.Block.UpgradeValueBy(3m);
         DynamicVars["KarmaBlock"].UpgradeValueBy(4m);
     }
+
+    private bool HasKarma() =>
+        Owner?.Creature.HasPower<KarmaTurn1Power>() == true ||
+        Owner?.Creature.HasPower<KarmaTurn2Power>() == true ||
+        Owner?.Creature.HasPower<KarmaTurn3Power>() == true;
 }

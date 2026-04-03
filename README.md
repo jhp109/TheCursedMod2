@@ -6,8 +6,8 @@ Adds a new character "The Cursed" to Slay the Spire 2 game.
 A wanderer corrupted by darkness. Uses curse, magic circle, and sometimes powerful weapons with karma.
 
 ## Character Mechanism
-### Ritual
-When using a Ritual card, choose 1 card to Exhaust. Selecting a Curse card will activate the Ritual's effect.
+### Rite
+When using a Rite card, choose 1 card to Exhaust. Selecting a Curse card will activate the Rite's effect.
 ### Circle
 An unplayable card that can be activated by using other cards while in hand.
 ### Karma

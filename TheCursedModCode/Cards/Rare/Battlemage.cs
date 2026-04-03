@@ -9,13 +9,13 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 전투마법사(Battlemage) - 마법진의 효과가 발동될 때 마다, 활력을 3 얻습니다.
-/// 강화 시 활력 4.
+/// 전투마법사(Battlemage) - 마법진의 효과가 발동될 때 마다, 활력을 4 얻습니다.
+/// 강화 시 활력 6.
 /// </summary>
 public sealed class Battlemage() : TheCursedModCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<BattlemagePower>("BattlemagePower", 3m)
+        new PowerVar<BattlemagePower>("BattlemagePower", 4m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -31,6 +31,6 @@ public sealed class Battlemage() : TheCursedModCard(2, CardType.Power, CardRarit
 
     protected override void OnUpgrade()
     {
-        DynamicVars["BattlemagePower"].UpgradeValueBy(1m);
+        DynamicVars["BattlemagePower"].UpgradeValueBy(2m);
     }
 }

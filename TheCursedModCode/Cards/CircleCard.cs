@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Nodes.Cards;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 using TheCursedMod.TheCursedModCode.Powers;
+using TheCursedMod.TheCursedModCode.Relics;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -81,8 +82,25 @@ public abstract class CircleCard(CardRarity rarity)
         if (manaBastion != null)
         {
             manaBastion.TriggerFlash();
-            await CreatureCmd.GainBlock(Owner.Creature, manaBastion.Amount, ValueProp.Move, null);
+            await CreatureCmd.GainBlock(Owner.Creature, manaBastion.Amount, ValueProp.Unpowered, null);
         }
+
+        var allPiles = new[] { PileType.Hand, PileType.Draw, PileType.Discard };
+        foreach (var pile in allPiles)
+        {
+            foreach (var card in pile.GetPile(Owner).Cards.OfType<ResonatingShield>())
+                card.OnCircleTrigger();
+            foreach (var card in pile.GetPile(Owner).Cards.OfType<WorldlineTwist>())
+                card.OnCircleTrigger();
+        }
+
+        var purpleCandle = Owner.Relics.OfType<PurpleCandleRelic>().FirstOrDefault();
+        if (purpleCandle != null)
+            await purpleCandle.OnCircleTrigger(context);
+
+        var demonicMark = Owner.Relics.OfType<DemonicMarkRelic>().FirstOrDefault();
+        if (demonicMark != null)
+            await demonicMark.OnCircleTrigger(context);
     }
 
     /// <summary>

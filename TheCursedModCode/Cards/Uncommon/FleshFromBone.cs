@@ -10,8 +10,8 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 뼈에서 살을(Flesh from Bone) - 방어도를 8 얻습니다. 의례 : 판금을 4 얻습니다.
-/// (강화 시 방어도 10, 판금 5)
+/// 뼈에서 살을(Flesh from Bone) - 방어도를 7 얻습니다. 의례 : 판금을 5 얻습니다.
+/// (강화 시 방어도 10, 판금 7)
 /// </summary>
 public sealed class FleshFromBone() : RiteCard(2, CardType.Skill, CardRarity.Uncommon, TargetType.None)
 {
@@ -23,8 +23,8 @@ public sealed class FleshFromBone() : RiteCard(2, CardType.Skill, CardRarity.Unc
     ];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(8, ValueProp.Move),
-        new PowerVar<PlatingPower>(4m)
+        new BlockVar(7, ValueProp.Move),
+        new PowerVar<PlatingPower>(5m)
     ];
 
     protected override async Task OnBaseEffect(PlayerChoiceContext choiceContext, CardPlay play)
@@ -39,7 +39,7 @@ public sealed class FleshFromBone() : RiteCard(2, CardType.Skill, CardRarity.Unc
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(2m);
-        DynamicVars["PlatingPower"].UpgradeValueBy(1m);
+        DynamicVars.Block.UpgradeValueBy(3m);
+        DynamicVars["PlatingPower"].UpgradeValueBy(2m);
     }
 }

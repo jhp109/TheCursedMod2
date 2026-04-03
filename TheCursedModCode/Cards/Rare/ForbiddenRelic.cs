@@ -9,7 +9,7 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 금단의 유물(Forbidden Relic) - 유물 수의 2배만큼 피해를 줍니다. 유물 수 만큼 업보. (강화 시 비용 1)
+/// 금단의 유물(Forbidden Relic) - 유물 수의 2배만큼 피해를 줍니다. 유물 수 만큼 업보. (강화 시 3배)
 /// </summary>
 public sealed class ForbiddenRelic() : TheCursedModCard(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy), IKarmaAttack
 {
@@ -17,7 +17,7 @@ public sealed class ForbiddenRelic() : TheCursedModCard(2, CardType.Attack, Card
         new CalculationBaseVar(0),
         new ExtraDamageVar(2),
         new CalculatedDamageVar(ValueProp.Move)
-            .WithMultiplier((card, _) => card.Owner?.Relics.Count ?? 0)
+            .WithMultiplier(static (card, _) => card.Owner?.Relics.Count ?? 0)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -34,6 +34,6 @@ public sealed class ForbiddenRelic() : TheCursedModCard(2, CardType.Attack, Card
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        DynamicVars["ExtraDamage"].UpgradeValueBy(1);
     }
 }

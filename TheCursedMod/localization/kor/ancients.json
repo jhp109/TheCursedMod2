@@ -1,6 +1,13 @@
 {
-  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-0r.char": "These ruins hold old power. Power that does not discriminate.",
-  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-0r.next": "0-1r",
-  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-1r.ancient": "Indeed. The curse recognizes no master.",
-  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-attack": "You seek strength through suffering. Curious."
+  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-0r.char": "무수한 원혼이 이곳을 맴돌고 있군...",
+  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-0r.next": "계속",
+  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-1r.ancient": "저주받은 존재여. 너도 이곳에서 잠들리라.",
+  "THE_ARCHITECT.talk.THECURSEDMOD-THE_CURSED_MOD.0-attack": "죽어라.",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-0r.next": "계속",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-0r.char": "[sine]고통스럽게 저주해주마...[/sine]",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-1r.ancient": "[jitter]어디 한번 해 보라구.[/jitter]",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-1r.next": "계속",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-2r.char": "[sine]내 의례의 제물이 되어라![/sine]",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-2r.next": "계속",
+  "THE_ARCHITECT.talk.WATCHER-WATCHER.1-3r.ancient": "[jitter]더 강해져서 와라...[/jitter]"
 }
