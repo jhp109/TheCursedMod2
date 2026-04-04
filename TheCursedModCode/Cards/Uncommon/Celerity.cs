@@ -10,7 +10,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
 /// 축지법(Celerity) - 의례 : 손에 있는 마법진 카드 하나당 민첩을 2 얻습니다. 소멸.
-/// 비용 1. 강화 시 민첩 3.
+/// 비용 1. 강화 시 비용 0.
 /// </summary>
 public sealed class Celerity() : RiteCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.None)
 {
@@ -34,6 +34,6 @@ public sealed class Celerity() : RiteCard(1, CardType.Skill, CardRarity.Uncommon
 
     protected override void OnUpgrade()
     {
-        DynamicVars["Dexterity"].UpgradeValueBy(1m);
+        EnergyCost.UpgradeBy(-1);
     }
 }

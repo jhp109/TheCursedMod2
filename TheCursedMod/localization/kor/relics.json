@@ -8,7 +8,7 @@
   "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.flavor": "금단의 힘과 그 업보에 대한 모든 것.  (초판)",
 
   "THECURSEDMOD-SPIRIT_FUEL_RELIC.title": "영혼 땔감",
-  "THECURSEDMOD-SPIRIT_FUEL_RELIC.description": "내 턴 동안 [gold]의례[/gold]로 [gold]저주[/gold]를 소멸시켰다면, 다음 턴에 카드를 추가로 [blue]1[/blue]장 뽑습니다.",
+  "THECURSEDMOD-SPIRIT_FUEL_RELIC.description": "내 턴 동안 [gold]의례[/gold]의 효과가 한번이라도 발동이 됐다면, 다음 턴에 카드를 추가로 [blue]1[/blue]장 뽑습니다.",
   "THECURSEDMOD-SPIRIT_FUEL_RELIC.flavor": "영혼은 밝게 타오른다 — 잠깐이나마.",
 
   "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.title": "네잎클로버 부적",
@@ -24,7 +24,7 @@
   "THECURSEDMOD-WRAITH_BEADS_RELIC.flavor": "구슬 하나하나에 견뎌낸 상처의 기억이 깃들어 있다.",
 
   "THECURSEDMOD-RITUALISTS_RING_RELIC.title": "제사장의 반지",
-  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "매 턴마다 처음으로 [gold]의례[/gold]로 [gold]저주[/gold]를 소멸시킬 경우, 에너지를 [blue]1[/blue] 얻습니다.",
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "[gold]의례[/gold]의 효과가 6번 발동될 때마다, {Energy:energyIcons()}를 얻습니다.",
   "THECURSEDMOD-RITUALISTS_RING_RELIC.flavor": "제물을... 더... 내놓아라...",
 
   "THECURSEDMOD-DEMONIC_MARK_RELIC.title": "악마의 표식",

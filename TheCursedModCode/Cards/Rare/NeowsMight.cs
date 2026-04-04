@@ -13,6 +13,8 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 /// </summary>
 public sealed class NeowsMight() : TheCursedModCard(1, CardType.Skill, CardRarity.Rare, TargetType.None)
 {
+    public override HashSet<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CardsVar(2),
         new PowerVar<KarmaTurn2Power>("KarmaPower", 13m)

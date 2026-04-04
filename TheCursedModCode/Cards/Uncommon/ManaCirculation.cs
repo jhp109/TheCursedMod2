@@ -8,7 +8,7 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 마나 순환(Mana Circulation) - 매 턴마다 처음으로 저주 카드가 소멸될 경우, 에너지를 1 얻습니다. (강화 시 에너지 2)
+/// 마나 순환(Mana Circulation) - 매 턴마다 처음으로 의례의 효과가 발동된 경우, 에너지를 1 얻습니다. (강화 시 에너지 2)
 /// </summary>
 public sealed class ManaCirculation() : TheCursedModCard(2, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
@@ -17,7 +17,7 @@ public sealed class ManaCirculation() : TheCursedModCard(2, CardType.Power, Card
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromKeyword(CardKeyword.Exhaust),
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
         EnergyHoverTip
     ];
 

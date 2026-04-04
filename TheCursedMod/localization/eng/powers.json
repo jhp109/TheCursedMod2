@@ -36,8 +36,8 @@
   "THECURSEDMOD-KARMA_TURN3_POWER.smartDescription": "At the end of your next next turn, take {Amount} damage.",
 
   "THECURSEDMOD-GRACE_POWER.title": "Grace",
-  "THECURSEDMOD-GRACE_POWER.description": "[gold]Karma[/gold] damage is delayed by an extra turn (cannot be stacked).",
-  "THECURSEDMOD-GRACE_POWER.smartDescription": "[gold]Karma[/gold] damage is delayed by an extra turn (cannot be stacked).",
+  "THECURSEDMOD-GRACE_POWER.description": "[gold]Karma[/gold] damage is delayed by an extra turn.",
+  "THECURSEDMOD-GRACE_POWER.smartDescription": "[gold]Karma[/gold] damage is delayed by an extra turn.",
 
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.title": "Hellfire Breathing",
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {Amount} damage to ALL enemies.",

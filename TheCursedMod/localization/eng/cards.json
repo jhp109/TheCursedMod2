@@ -1,5 +1,5 @@
 {
-  "THECURSEDMOD-RITE.selectionScreenPrompt": "Exhaust. Choosing a Curse Activates the Rite's Effect.",
+  "THECURSEDMOD-RITE.selectionScreenPrompt": "Exhaust. Choosing a Curse Triggers the Rite's Effect.",
 
   "THECURSEDMOD-DREGS.title": "Dregs",
   "THECURSEDMOD-DREGS.description": "",
@@ -100,7 +100,7 @@
   "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.description": "[gold]Circle[/gold] : Whenever you play a Power card, gain {Energy:energyIcons()}.",
 
   "THECURSEDMOD-CIRCLE_OF_RITUAL.title": "Circle of Ritual",
-  "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]Circle[/gold] : Whenever you play a [gold]Rite[/gold] card, gain {Block:diff()} [green]Block[/green] and draw {Cards:diff()} {Cards:plural:card|cards}.",
+  "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]Circle[/gold] : Whenever a [gold]Rite[/gold] effect is triggered, gain {Block:diff()} [gold]Block[/gold] and draw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "THECURSEDMOD-CIRCLE_OF_FOCUS.title": "Circle of Focus",
   "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]Circle[/gold] : Whenever you play a card that costs {CostThreshold:diff()} or more, gain {Energy:energyIcons()}.",
@@ -127,7 +127,7 @@
   "THECURSEDMOD-RESONATING_SHIELD.description": "Cost 1 less {Energy:energyIcons()} for each time a [gold]Circle[/gold] effect has triggered this combat.\nGain {Block:diff()} [gold]Block[/gold].",
 
   "THECURSEDMOD-PREPARE_RITE.title": "Prepare Rite",
-  "THECURSEDMOD-PREPARE_RITE.description": "Transform 1 card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].\nNext turn, draw 2 cards.",
+  "THECURSEDMOD-PREPARE_RITE.description": "Transform a card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].\nNext turn, draw 2 cards.",
   "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt": "Choose a card to transform into Dregs.",
 
   "THECURSEDMOD-TROUBLOUS_MINION.title": "Troublous Minion",
@@ -140,7 +140,7 @@
   "THECURSEDMOD-LUCKY_CHARM.description": "Whenever a [gold]Curse[/gold] card is drawn or [gold]Exhausted[/gold], gain {LuckyCharmPower:diff()} [gold]Block[/gold].",
 
   "THECURSEDMOD-MANA_CIRCULATION.title": "Mana Circulation",
-  "THECURSEDMOD-MANA_CIRCULATION.description": "The first time a [gold]Curse[/gold] card is [gold]Exhausted[/gold] each turn, gain {Energy:energyIcons()}.",
+  "THECURSEDMOD-MANA_CIRCULATION.description": "The first time a [gold]Rite[/gold] effect is triggered each turn, gain {Energy:energyIcons()}.",
 
   "THECURSEDMOD-HELLFIRE_BREATHING.title": "Hellfire Breathing",
   "THECURSEDMOD-HELLFIRE_BREATHING.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {HellfireBreathingPower:diff()} damage to ALL enemies.",
@@ -152,7 +152,7 @@
   "THECURSEDMOD-FATAL_LEAP.description": "Deal {Damage:diff()} damage.\nIf you have [gold]Karma[/gold], gain {Energy:energyIcons()} and draw 1 card.",
 
   "THECURSEDMOD-VITAL_STRIKE.title": "Vital Strike",
-  "THECURSEDMOD-VITAL_STRIKE.description": "Deal {Damage:diff()} damage.\nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-VITAL_STRIKE.description": "Deal {Damage:diff()} damage.\nIf you have [gold]Karma[/gold], apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
 
   "THECURSEDMOD-FORBIDDEN_FLAME.title": "Forbidden Flame",
   "THECURSEDMOD-FORBIDDEN_FLAME.description": "Deal {Damage:diff()} damage to ALL enemies.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
@@ -170,10 +170,10 @@
   "THECURSEDMOD-FORBIDDEN_STRENGTH.description": "Gain {Strength:diff()} [gold]Strength[/gold] for each [gold]Circle[/gold] card in your [gold]Hand[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-WICKED_TEMPERING.title": "Wicked Tempering",
-  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]Karma[/gold] {KarmaPower:diff()}.\n[gold]Rite[/gold] : Next Attack that gains [gold]Karma[/gold] deals {BonusDamage:diff()}% additional damage.",
+  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]Rite[/gold] : Next Attack that gains [gold]Karma[/gold] deals {MultiplyNextKarmaAttackPower:diff()}% additional damage.",
 
   "THECURSEDMOD-SPIRIT_OFFERING.title": "Spirit Offering",
-  "THECURSEDMOD-SPIRIT_OFFERING.description": "The first time you [gold]Exhaust[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] each turn, gain {SpiritOfferingPower:diff()} [gold]Strength[/gold].",
+  "THECURSEDMOD-SPIRIT_OFFERING.description": "The first time a [gold]Rite[/gold] effect is triggered each turn, gain {SpiritOfferingPower:diff()} [gold]Strength[/gold].",
 
   "THECURSEDMOD-IGNORE_PAIN.title": "Ignore Pain",
   "THECURSEDMOD-IGNORE_PAIN.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : You receive 50% less damage from [gold]Karma[/gold] this turn.",
@@ -203,7 +203,7 @@
   "THECURSEDMOD-DOMAIN_EXPANSION.description": "Force all [gold]Circle[/gold] cards in your [gold]Hand[/gold] to trigger {IfUpgraded:show:X+1|X} times, ignoring their conditions.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-GRACE.title": "Grace",
-  "THECURSEDMOD-GRACE.description": "[gold]Karma[/gold] damage is dealt at the end of your second upcoming turn, instead of next turn.",
+  "THECURSEDMOD-GRACE.description": "[gold]Karma[/gold] damage is delayed by an extra turn. This effect cannot be stacked.",
 
   "THECURSEDMOD-ANGER_CONTROL.title": "Anger Control",
   "THECURSEDMOD-ANGER_CONTROL.description": "Deal {Damage:diff()} damage {Repeat:diff()} times.\nIncreases this card's hit count by 1 this combat.\nAdd a [gold]Normality[/gold] into your [gold]Hand[/gold].",
@@ -215,7 +215,7 @@
   "THECURSEDMOD-FREEDOM_AND_BONDAGE.description": "ALL players gain {Energy:energyIcons()} and add a random [gold]Curse[/gold] card to their [gold]Hand[/gold].",
 
   "THECURSEDMOD-FORBIDDEN_FORM.title": "Forbidden Form",
-  "THECURSEDMOD-FORBIDDEN_FORM.description": "Whenever you [gold]Exhaust[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold], next Attack that gains [gold]Karma[/gold] deals {BonusPercent:diff()}% additional damage.",
+  "THECURSEDMOD-FORBIDDEN_FORM.description": "Whenever a [gold]Rite[/gold] effect is triggered, your next Attack that gains [gold]Karma[/gold] deals {ForbiddenFormPower:diff()}% additional damage.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "Forbidden Bludgeon",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
@@ -233,13 +233,13 @@
   "THECURSEDMOD-ANTI_AGING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Raise your max HP by {MaxHp:diff()}.",
 
   "THECURSEDMOD-DEMONIC_BLADE.title": "Demonic Blade",
-  "THECURSEDMOD-DEMONIC_BLADE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each [gold]Curse[/gold] card [gold]Exhausted[/gold] via [gold]Rite[/gold] this combat.",
+  "THECURSEDMOD-DEMONIC_BLADE.description": "Deal {CalculatedDamage:diff()} damage.\nDeals {ExtraDamage:diff()} additional damage for each time a [gold]Rite[/gold] effect is triggered this combat.",
 
   "THECURSEDMOD-CALL_OF_THE_ANCIENT.title": "Call of the Ancient",
-  "THECURSEDMOD-CALL_OF_THE_ANCIENT.description": "This turn, the next {CallOfTheAncientPower:diff()} [gold]Rite[/gold] {CallOfTheAncientPower:plural:card activates its|cards activate their} [gold]Rite[/gold] effect an extra time.",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT.description": "This turn, the next {CallOfTheAncientPower:diff()} [gold]Rite[/gold] {CallOfTheAncientPower:plural:card triggers its|cards trigger their} [gold]Rite[/gold] effect an extra time.",
 
   "THECURSEDMOD-HELP_OF_THE_DEAD.title": "Help of the Dead",
-  "THECURSEDMOD-HELP_OF_THE_DEAD.description": "[gold]Rite[/gold] : Add 1 [gold]Replay[/gold] to a card in your [gold]Hand[/gold].",
+  "THECURSEDMOD-HELP_OF_THE_DEAD.description": "[gold]Rite[/gold] : Add 1 [gold]Replay[/gold] to a card in your [gold]Draw pile[/gold].",
   "THECURSEDMOD-HELP_OF_THE_DEAD.selectionScreenPrompt": "Choose a card to add Replay to.",
 
   "THECURSEDMOD-DUBIOUS_CONTRACT.title": "Dubious Contract",
@@ -255,10 +255,10 @@
   "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "At the start of your turn, gain {Energy:energyIcons()}.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-MANA_BASTION.title": "Mana Bastion",
-  "THECURSEDMOD-MANA_BASTION.description": "Whenever a [gold]Circle[/gold] effect triggers, gain {ManaBastionPower:diff()} [gold]Block[/gold].",
+  "THECURSEDMOD-MANA_BASTION.description": "Whenever a [gold]Circle[/gold] effect is triggered, gain {ManaBastionPower:diff()} [gold]Block[/gold].",
 
   "THECURSEDMOD-BATTLEMAGE.title": "Battlemage",
-  "THECURSEDMOD-BATTLEMAGE.description": "Whenever you activates an effect of [gold]Circle[/gold], gain {BattlemagePower:diff()} [gold]Vigor[/gold].",
+  "THECURSEDMOD-BATTLEMAGE.description": "Whenever a [gold]Circle[/gold] effect is triggered, gain {BattlemagePower:diff()} [gold]Vigor[/gold].",
 
   "THECURSEDMOD-EXODIA_BEAM.title": "Exodia Beam",
   "THECURSEDMOD-EXODIA_BEAM.description": "Can only be played if there are 5+ distinct [gold]Circle[/gold] cards in your [gold]Hand[/gold].\nDeal {Damage:diff()} damage to ALL enemies.",
@@ -267,8 +267,8 @@
   "THECURSEDMOD-WORLDLINE_TWIST.description": "Cost 1 less {Energy:energyIcons()} for each time a [gold]Circle[/gold] effect has triggered this turn.\nTake no damage from [gold]Karma[/gold] this turn.",
 
   "THECURSEDMOD-SPRING_CLEANING.title": "Spring Cleaning",
-  "THECURSEDMOD-SPRING_CLEANING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Gain {Energy:energyIcons()} and draw {Cards:diff()} cards.",
+  "THECURSEDMOD-SPRING_CLEANING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Draw {Cards:diff()} cards.",
 
   "THECURSEDMOD-ARCHDEMON_SWORD.title": "Archdemon Sword",
-  "THECURSEDMOD-ARCHDEMON_SWORD.description": "Deal {Damage:diff()} damage.\nExhaust ALL [gold]Curse[/gold] cards in your [gold]Hand[/gold]. Gain {StrengthPower:diff()} [gold]Strength[/gold] for each.\n[gold]Karma[/gold] {KarmaPower:diff()}."
+  "THECURSEDMOD-ARCHDEMON_SWORD.description": "Deal {Damage:diff()} damage.\nExhaust ALL [gold]Curse[/gold] cards in your [gold]Hand[/gold], and gain {StrengthPower:diff()} [gold]Strength[/gold] for each [gold]Exhausted[/gold] card.\n[gold]Karma[/gold] {KarmaPower:diff()}."
 }

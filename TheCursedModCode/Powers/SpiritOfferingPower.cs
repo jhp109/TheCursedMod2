@@ -40,7 +40,7 @@ public class SpiritOfferingPower : TheCursedModPower
         return Task.CompletedTask;
     }
 
-    public async Task TriggerOnRiteCurse(PlayerChoiceContext choiceContext)
+    public async Task TriggerOnRiteEffect(PlayerChoiceContext choiceContext)
     {
         if (CombatState?.RoundNumber == _lastTriggerRound) return;
         _lastTriggerRound = CombatState?.RoundNumber ?? -1;

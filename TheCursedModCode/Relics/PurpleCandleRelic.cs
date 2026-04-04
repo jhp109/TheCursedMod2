@@ -16,7 +16,7 @@ public sealed class PurpleCandleRelic : TheCursedModRelic
 
     private int _triggersAccumulated;
 
-    public override RelicRarity Rarity => RelicRarity.Common;
+    public override RelicRarity Rarity => RelicRarity.Uncommon;
 
     public override bool ShowCounter => true;
 

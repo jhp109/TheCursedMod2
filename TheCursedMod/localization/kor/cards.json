@@ -100,7 +100,7 @@
   "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.description": "[gold]마법진[/gold] : 파워 카드를 사용할 때마다, {Energy:energyIcons()}를 얻습니다.",
 
   "THECURSEDMOD-CIRCLE_OF_RITUAL.title": "의식의 마법진",
-  "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]마법진[/gold] : [gold]의례[/gold] 카드를 사용할 때마다, 방어도를 {Block:diff()} 얻고 카드를 {Cards:diff()}장 뽑습니다.",
+  "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]마법진[/gold] : [gold]의례[/gold]의 효과가 발동될 때마다, [gold]방어도[/gold]를 {Block:diff()} 얻고 카드를 {Cards:diff()}장 뽑습니다.",
 
   "THECURSEDMOD-CIRCLE_OF_FOCUS.title": "집중의 마법진",
   "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]마법진[/gold] : 비용이 {CostThreshold:diff()} 이상인 카드를 사용할 때마다, {Energy:energyIcons()}를 얻습니다.",
@@ -127,7 +127,7 @@
   "THECURSEDMOD-RESONATING_SHIELD.description": "이번 전투에서 [gold]마법진[/gold]의 효과가 발동된 횟수당 {Energy:energyIcons()} 소모가 1 감소합니다.\n[gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
 
   "THECURSEDMOD-PREPARE_RITE.title": "의례 준비",
-  "THECURSEDMOD-PREPARE_RITE.description": "[gold]뽑을 카드 더미[/gold]의 카드를 1장 [gold]찌꺼기[/gold]로 변화시킵니다.\n다음 턴에, 카드를 2장 더 뽑습니다.",
+  "THECURSEDMOD-PREPARE_RITE.description": "[gold]뽑을 카드 더미[/gold]의 카드를 1장 [gold]찌꺼기[/gold]로 변화시킵니다.\n다음 턴에, 카드를 2장 뽑습니다.",
   "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
 
   "THECURSEDMOD-TROUBLOUS_MINION.title": "골칫덩이 사역마",
@@ -140,7 +140,7 @@
   "THECURSEDMOD-LUCKY_CHARM.description": "[gold]저주[/gold] 카드를 뽑거나 [gold]저주[/gold] 카드가 [gold]소멸[/gold]될 때마다, [gold]방어도[/gold]를 {LuckyCharmPower:diff()} 얻습니다.",
 
   "THECURSEDMOD-MANA_CIRCULATION.title": "마나 순환",
-  "THECURSEDMOD-MANA_CIRCULATION.description": "매 턴마다 처음으로 [gold]저주[/gold] 카드가 [gold]소멸[/gold]될 경우, {Energy:energyIcons()}를 얻습니다.",
+  "THECURSEDMOD-MANA_CIRCULATION.description": "매 턴마다 처음으로 [gold]의례[/gold]의 효과가 발동될 경우, {Energy:energyIcons()}를 얻습니다.",
 
   "THECURSEDMOD-HELLFIRE_BREATHING.title": "지옥불 뿜기",
   "THECURSEDMOD-HELLFIRE_BREATHING.description": "[gold]사용불가[/gold] 카드를 뽑을 때마다 모든 적에게 {HellfireBreathingPower:diff()} 피해를 줍니다.",
@@ -152,7 +152,7 @@
   "THECURSEDMOD-FATAL_LEAP.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold]가 있다면, {Energy:energyIcons()}를 얻고 카드를 1장 뽑습니다.",
 
   "THECURSEDMOD-VITAL_STRIKE.title": "급소 타격",
-  "THECURSEDMOD-VITAL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]취약[/gold]을 {VulnerablePower:diff()} 부여합니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-VITAL_STRIKE.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold]가 있다면, [gold]취약[/gold]을 {VulnerablePower:diff()} 부여합니다.",
 
   "THECURSEDMOD-FORBIDDEN_FLAME.title": "금단의 화염",
   "THECURSEDMOD-FORBIDDEN_FLAME.description": "모든 적에게 피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
@@ -170,10 +170,10 @@
   "THECURSEDMOD-FORBIDDEN_STRENGTH.description": "[gold]손[/gold]에 있는 [gold]마법진[/gold] 카드 하나당 [gold]힘[/gold]을 {Strength:diff()} 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-WICKED_TEMPERING.title": "사악한 담금질",
-  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]업보[/gold] {KarmaPower:diff()}.\n[gold]의례[/gold] : [gold]업보[/gold]를 부여하는 다음 공격 카드의 피해량이 {BonusDamage:diff()}% 증가합니다.",
+  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]의례[/gold] : [gold]업보[/gold]를 부여하는 다음 공격 카드의 피해량이 {MultiplyNextKarmaAttackPower:diff()}% 증가합니다.",
 
   "THECURSEDMOD-SPIRIT_OFFERING.title": "영혼 공물",
-  "THECURSEDMOD-SPIRIT_OFFERING.description": "매 턴마다 처음으로 [gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시킬 경우, [gold]힘[/gold]을 {SpiritOfferingPower:diff()} 얻습니다.",
+  "THECURSEDMOD-SPIRIT_OFFERING.description": "매 턴마다 처음으로 [gold]의례[/gold]의 효과가 발동될 경우, [gold]힘[/gold]을 {SpiritOfferingPower:diff()} 얻습니다.",
 
   "THECURSEDMOD-IGNORE_PAIN.title": "고통 감내",
   "THECURSEDMOD-IGNORE_PAIN.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 이번 턴에 [gold]업보[/gold]로 받는 피해량이 50% 감소합니다.",
@@ -203,7 +203,7 @@
   "THECURSEDMOD-DOMAIN_EXPANSION.description": "손에 있는 모든 [gold]마법진[/gold]의 효과를 조건을 무시하고 강제로 {IfUpgraded:show:X+1|X}번 발동시킵니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-GRACE.title": "유예",
-  "THECURSEDMOD-GRACE.description": "[gold]업보[/gold]로 인한 피해를 다음 턴이 아닌 다다음 턴 종료 시에 받습니다.",
+  "THECURSEDMOD-GRACE.description": "[gold]업보[/gold]로 인한 피해를 1턴 더 늦게 받습니다. 이 효과는 중복되지 않습니다.",
 
   "THECURSEDMOD-ANGER_CONTROL.title": "분노 조절",
   "THECURSEDMOD-ANGER_CONTROL.description": "피해를 {Damage:diff()}씩 {Repeat:diff()}번 줍니다.\n이번 전투동안 이 카드의 피해 횟수가 1 늘어납니다.\n[gold]규칙 준수[/gold]를 얻습니다.",
@@ -215,7 +215,7 @@
   "THECURSEDMOD-FREEDOM_AND_BONDAGE.description": "모든 플레이어들이 {Energy:energyIcons()}를 얻고 무작위 [gold]저주[/gold] 카드를 1장 [gold]손[/gold]으로 가져옵니다.",
 
   "THECURSEDMOD-FORBIDDEN_FORM.title": "금단의 형상",
-  "THECURSEDMOD-FORBIDDEN_FORM.description": "[gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시킬 때마다, [gold]업보[/gold]를 부여하는 다음 공격 카드의 피해량이 {BonusPercent:diff()}% 증가합니다.",
+  "THECURSEDMOD-FORBIDDEN_FORM.description": "[gold]의례[/gold]의 효과가 발동될 때마다, [gold]업보[/gold]를 부여하는 다음 공격 카드의 피해량이 {ForbiddenFormPower:diff()}% 증가합니다.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "금단의 몽둥이질",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
@@ -233,13 +233,13 @@
   "THECURSEDMOD-ANTI_AGING.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 최대 체력을 {MaxHp:diff()} 얻습니다.",
 
   "THECURSEDMOD-DEMONIC_BLADE.title": "악마군주의 칼날",
-  "THECURSEDMOD-DEMONIC_BLADE.description": "피해를 {CalculatedDamage:diff()} 줍니다.\n이번 전투에서 [gold]의례[/gold]로 [gold]소멸[/gold]시킨 [gold]저주[/gold] 카드 하나당 피해량이 {ExtraDamage:diff()} 증가합니다.",
+  "THECURSEDMOD-DEMONIC_BLADE.description": "피해를 {CalculatedDamage:diff()} 줍니다.\n이번 전투에서 [gold]의례[/gold]의 효과가 발동된 횟수당 피해량이 {ExtraDamage:diff()} 증가합니다.",
 
   "THECURSEDMOD-CALL_OF_THE_ANCIENT.title": "고대신의 부름",
   "THECURSEDMOD-CALL_OF_THE_ANCIENT.description": "이번 턴에, 다음에 사용하는 [gold]의례[/gold] 카드 {CallOfTheAncientPower:diff()}장의 [gold]의례[/gold] 효과가 1번 추가로 발동합니다.",
 
   "THECURSEDMOD-HELP_OF_THE_DEAD.title": "망자의 도움",
-  "THECURSEDMOD-HELP_OF_THE_DEAD.description": "[gold]의례[/gold] : [gold]손[/gold]에 있는 카드 1장에 [gold]재사용[/gold]을 1 추가합니다.",
+  "THECURSEDMOD-HELP_OF_THE_DEAD.description": "[gold]의례[/gold] : [gold]뽑을 카드 더미[/gold]에 있는 카드 1장에 [gold]재사용[/gold]을 1 추가합니다.",
   "THECURSEDMOD-HELP_OF_THE_DEAD.selectionScreenPrompt": "재사용을 추가할 카드를 선택하세요.",
 
   "THECURSEDMOD-DUBIOUS_CONTRACT.title": "미심쩍은 계약",
@@ -267,7 +267,7 @@
   "THECURSEDMOD-WORLDLINE_TWIST.description": "이번 턴에 [gold]마법진[/gold]의 효과가 발동된 횟수당 {Energy:energyIcons()} 소모가 1 감소합니다.\n이번 턴에 [gold]업보[/gold]로 인한 피해를 받지 않습니다.",
 
   "THECURSEDMOD-SPRING_CLEANING.title": "공방 대청소",
-  "THECURSEDMOD-SPRING_CLEANING.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : {Energy:energyIcons()}를 얻고 카드를 {Cards:diff()}장 뽑습니다.",
+  "THECURSEDMOD-SPRING_CLEANING.description": "[gold]방어도[/gold]를 {Block:diff()} 얻습니다.\n[gold]의례[/gold] : 카드를 {Cards:diff()}장 뽑습니다.",
 
   "THECURSEDMOD-ARCHDEMON_SWORD.title": "대악마의 검",
   "THECURSEDMOD-ARCHDEMON_SWORD.description": "피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 있는 [gold]저주[/gold] 카드를 전부 [gold]소멸[/gold]시키고, 그 수만큼 [gold]힘[/gold]을 {StrengthPower:diff()} 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}."

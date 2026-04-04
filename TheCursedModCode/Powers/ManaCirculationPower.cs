@@ -17,11 +17,11 @@ public class ManaCirculationPower : TheCursedModPower
     public override PowerStackType StackType => PowerStackType.Counter;
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
-        HoverTipFactory.FromKeyword(CardKeyword.Exhaust),
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
         HoverTipFactory.ForEnergy(this)
     ];
 
-    private bool _triggeredThisTurn;
+    private int _lastTriggerRound = -1;
 
     public override Task AfterApplied(Creature? applier, CardModel? cardSource)
     {
@@ -29,24 +29,19 @@ public class ManaCirculationPower : TheCursedModPower
         return Task.CompletedTask;
     }
 
-    public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
-    {
-        if (card.Owner == base.Owner.Player && card.Type == CardType.Curse && !_triggeredThisTurn)
-        {
-            _triggeredThisTurn = true;
-            StopPulsing();
-            Flash();
-            await PlayerCmd.GainEnergy(Amount, base.Owner.Player!);
-        }
-    }
-
     public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
     {
         if (player == base.Owner.Player)
-        {
-            _triggeredThisTurn = false;
             StartPulsing();
-        }
         return Task.CompletedTask;
+    }
+
+    public async Task TriggerOnRiteEffect(PlayerChoiceContext choiceContext)
+    {
+        if (CombatState?.RoundNumber == _lastTriggerRound) return;
+        _lastTriggerRound = CombatState?.RoundNumber ?? -1;
+        StopPulsing();
+        Flash();
+        await PlayerCmd.GainEnergy(Amount, base.Owner.Player!);
     }
 }

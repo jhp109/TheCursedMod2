@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Relics;
 [Pool(typeof(TheCursedModRelicPool))]
 public sealed class WraithBeadsRelic : TheCursedModRelic
 {
-    public override RelicRarity Rarity => RelicRarity.Rare;
+    public override RelicRarity Rarity => RelicRarity.Uncommon;
 
     public override async Task AfterEnergyReset(Player player)
     {

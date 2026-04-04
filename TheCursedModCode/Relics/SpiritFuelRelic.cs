@@ -16,7 +16,7 @@ public sealed class SpiritFuelRelic : TheCursedModRelic
         if (player != base.Owner)
             return count;
 
-        if (!RiteCard.WasRiteCurseExhaustedLastTurn(player.Creature?.CombatState))
+        if (!RiteCard.WasRiteEffectTriggeredLastTurn(player.Creature?.CombatState))
             return count;
 
         Flash();

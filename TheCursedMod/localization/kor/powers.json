@@ -36,8 +36,8 @@
   "THECURSEDMOD-KARMA_TURN3_POWER.smartDescription": "내 다다음 턴 종료 시 피해를 {Amount} 받습니다.",
 
   "THECURSEDMOD-GRACE_POWER.title": "유예",
-  "THECURSEDMOD-GRACE_POWER.description": "[gold]업보[/gold]로 인한 피해가 1턴 추가로 지연됩니다 (중첩 불가).",
-  "THECURSEDMOD-GRACE_POWER.smartDescription": "[gold]업보[/gold]로 인한 피해가 1턴 추가로 지연됩니다 (중첩 불가).",
+  "THECURSEDMOD-GRACE_POWER.description": "[gold]업보[/gold]로 인한 피해를 1턴 더 늦게 받습니다.",
+  "THECURSEDMOD-GRACE_POWER.smartDescription": "[gold]업보[/gold]로 인한 피해를 1턴 더 늦게 받습니다.",
 
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.title": "지옥불 뿜기",
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.description": "[gold]사용불가[/gold] 카드를 뽑을 때마다 모든 적에게 {Amount} 피해를 줍니다.",

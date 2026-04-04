@@ -42,7 +42,7 @@ public abstract class RiteCard(
     /// <summary>
     /// 이번 턴(현재 CombatState 기준)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
     /// </summary>
-    public static bool WasRiteCurseExhaustedThisTurn(CombatState? combat)
+    public static bool WasRiteEffectTriggeredThisTurn(CombatState? combat)
         => combat != null
            && ReferenceEquals(_riteCurseExhaustedCombat, combat)
            && _riteCurseExhaustedRound == combat.RoundNumber;
@@ -50,7 +50,7 @@ public abstract class RiteCard(
     /// <summary>
     /// 지난 턴(현재 RoundNumber - 1)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
     /// </summary>
-    public static bool WasRiteCurseExhaustedLastTurn(CombatState? combat)
+    public static bool WasRiteEffectTriggeredLastTurn(CombatState? combat)
         => combat != null
            && ReferenceEquals(_riteCurseExhaustedCombat, combat)
            && _riteCurseExhaustedRound == combat.RoundNumber - 1;
@@ -82,14 +82,8 @@ public abstract class RiteCard(
 
                 if (wasCurse)
                 {
-                    bool isFirstRiteThisTurn = !WasRiteCurseExhaustedThisTurn(CombatState);
-
                     _riteCurseExhaustedRound = CombatState!.RoundNumber;
                     _riteCurseExhaustedCombat = CombatState;
-
-                    var ritualistsRing = Owner?.Relics.OfType<Relics.RitualistsRingRelic>().FirstOrDefault();
-                    if (ritualistsRing != null && isFirstRiteThisTurn)
-                        await ritualistsRing.OnFirstRiteCurseThisTurn(choiceContext);
 
                     if (!ReferenceEquals(_riteCombatCountCombat, CombatState))
                     {
@@ -98,25 +92,14 @@ public abstract class RiteCard(
                     }
                     _riteCombatCurseCount++;
 
-                    // 금단의 형상으로 다음 업보 공격 강화
-                    var forbiddenForm = Owner?.Creature.GetPower<ForbiddenFormPower>();
-                    if (forbiddenForm != null)
-                        await PowerCmd.Apply<MultiplyNextKarmaAttackPower>(
-                            Owner!.Creature, forbiddenForm.Amount, Owner.Creature, null);
-
-                    // 영혼 공물 - 매 턴 처음으로 저주 소멸 시 힘 획득
-                    var spiritOffering = Owner?.Creature.GetPower<SpiritOfferingPower>();
-                    if (spiritOffering != null)
-                        await spiritOffering.TriggerOnRiteCurse(choiceContext);
-
-                    await OnRiteEffect(choiceContext, play);
+                    await ExecuteRiteEffect(choiceContext, play);
 
                     // 고대신의 부름으로 의례 효과 한번 더 발동
                     var ancientPower = Owner?.Creature.GetPower<CallOfTheAncientPower>();
                     if (ancientPower != null)
                     {
                         await PowerCmd.Decrement(ancientPower);
-                        await OnRiteEffect(choiceContext, play);
+                        await ExecuteRiteEffect(choiceContext, play);
                     }
                 } else
                 {
@@ -144,4 +127,39 @@ public abstract class RiteCard(
     /// 저주 카드를 소멸시켰을 때 발동하는 의례 효과.
     /// </summary>
     protected abstract Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play);
+
+    /// <summary>
+    /// OnRiteEffect를 호출하고, 이후 의례 효과에 반응하는 모든 사이드 이펙트를 처리합니다.
+    /// (금단의 형상, 영혼 공물, 마나 순환, 의식의 마법진)
+    /// </summary>
+    private async Task ExecuteRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
+    {
+        await OnRiteEffect(choiceContext, play);
+
+        // 금단의 형상으로 다음 업보 공격 강화
+        var forbiddenForm = Owner?.Creature.GetPower<ForbiddenFormPower>();
+        if (forbiddenForm != null)
+            await PowerCmd.Apply<MultiplyNextKarmaAttackPower>(
+                Owner!.Creature, forbiddenForm.Amount, Owner.Creature, null);
+
+        // 영혼 공물 - 매 턴 처음으로 의례 효과 발동 시 힘 획득
+        var spiritOffering = Owner?.Creature.GetPower<SpiritOfferingPower>();
+        if (spiritOffering != null)
+            await spiritOffering.TriggerOnRiteEffect(choiceContext);
+
+        // 마나 순환 - 매 턴 처음으로 의례 효과 발동 시 에너지 획득
+        var manaCirculation = Owner?.Creature.GetPower<ManaCirculationPower>();
+        if (manaCirculation != null)
+            await manaCirculation.TriggerOnRiteEffect(choiceContext);
+
+        // 제사장의 반지 - 의례 효과 6회마다 에너지 획득
+        var ritualistsRing = Owner?.Relics.OfType<Relics.RitualistsRingRelic>().FirstOrDefault();
+        if (ritualistsRing != null)
+            await ritualistsRing.OnRiteEffectTriggered(choiceContext);
+
+        // 의식의 마법진 효과 발동
+        var circles = PileType.Hand.GetPile(Owner!).Cards.OfType<CircleOfRitual>().ToList();
+        foreach (var circle in circles)
+            await circle.ForceTrigger(choiceContext);
+    }
 }

@@ -7,5 +7,5 @@ namespace TheCursedMod.TheCursedModCode.Relics;
 [Pool(typeof(TheCursedModRelicPool))]
 public sealed class FourLeafCloverCharmRelic : TheCursedModRelic
 {
-    public override RelicRarity Rarity => RelicRarity.Uncommon;
+    public override RelicRarity Rarity => RelicRarity.Rare;
 }

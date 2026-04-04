@@ -105,6 +105,7 @@ public abstract class CircleCard(CardRarity rarity)
 
     /// <summary>
     /// 비전 방아쇠 등에서 조건을 무시하고 강제로 마법진 효과를 발동합니다.
+    /// 혹은 카드 사용 이외의 조건(의식의 마법진)을 통해 발동하는 경우.
     /// 이후 AfterCardPlayed에서의 자연 발동을 억제합니다.
     /// </summary>
     public async Task ForceTrigger(PlayerChoiceContext context)

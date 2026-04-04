@@ -8,13 +8,13 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 수호의 마법진(Circle of Ward) - 마법진 : 스킬 카드를 사용할 때 마다 방어도를 4 얻습니다.
-/// 강화 시 방어도 5.
+/// 수호의 마법진(Circle of Ward) - 마법진 : 스킬 카드를 사용할 때 마다 방어도를 3 얻습니다.
+/// 강화 시 방어도 4.
 /// </summary>
 public sealed class CircleOfWard() : CircleCard(CardRarity.Common)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(4, ValueProp.Unpowered)
+        new BlockVar(3, ValueProp.Unpowered)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
