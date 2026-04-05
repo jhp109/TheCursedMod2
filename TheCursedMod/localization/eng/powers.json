@@ -16,8 +16,8 @@
   "THECURSEDMOD-LUCKY_CHARM_POWER.smartDescription": "Whenever a [gold]Curse[/gold] card is drawn or [gold]Exhausted[/gold], gain {Amount} [gold]Block[/gold].",
 
   "THECURSEDMOD-MANA_CIRCULATION_POWER.title": "Mana Circulation",
-  "THECURSEDMOD-MANA_CIRCULATION_POWER.description": "The first time a [gold]Curse[/gold] is [gold]Exhausted[/gold] each turn, gain {energyPrefix}.",
-  "THECURSEDMOD-MANA_CIRCULATION_POWER.smartDescription": "The first time a [gold]Curse[/gold] is [gold]Exhausted[/gold] each turn, gain {Amount:energyIcons()}.",
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.description": "The first time a [gold]Rite[/gold] effect is triggered each turn, gain {energyPrefix}.",
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.smartDescription": "The first time a [gold]Rite[/gold] effect is triggered each turn, gain {Amount:energyIcons()}.",
 
   "THECURSEDMOD-ARCANE_MATRIX_POWER.title": "Arcane Matrix",
   "THECURSEDMOD-ARCANE_MATRIX_POWER.description": "Whenever you draw a [gold]Circle[/gold] card, gain {energyPrefix} and draw 1 card.",
@@ -56,8 +56,8 @@
   "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.smartDescription": "At the start of your turn, gain {Amount:energyIcons()}.",
 
   "THECURSEDMOD-TEAR_GRIMOIRE_POWER.title": "Tear Grimoire",
-  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.description": "Attacks that cost 2 or more are played extra times.",
-  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.smartDescription": "Attacks that cost 2 or more are played {Amount} extra {Amount:plural:time|times}.",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.description": "Attacks that cost {Energy:energyIcons()} or more are played extra times.",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.smartDescription": "Attacks that cost {Energy:energyIcons()} or more are played {Amount} extra {Amount:plural:time|times}.",
 
   "THECURSEDMOD-KARMA_EVERY_TURN_POWER.title": "Recurring Karma",
   "THECURSEDMOD-KARMA_EVERY_TURN_POWER.description": "At the start of your turn, [gold]Karma[/gold].",

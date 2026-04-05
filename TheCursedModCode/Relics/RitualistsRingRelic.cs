@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using TheCursedMod.TheCursedModCode.Character;
 
 namespace TheCursedMod.TheCursedModCode.Relics;
@@ -14,6 +15,8 @@ public sealed class RitualistsRingRelic : TheCursedModRelic
 
     public override bool ShowCounter => true;
     public override int DisplayAmount => _triggerCount;
+
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(1)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),

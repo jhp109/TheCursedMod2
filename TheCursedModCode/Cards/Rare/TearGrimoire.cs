@@ -14,7 +14,8 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 public sealed class TearGrimoire() : TheCursedModCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<KarmaEveryTurnPower>("KarmaPower", 4m)
+        new PowerVar<KarmaEveryTurnPower>("KarmaPower", 4m),
+        new EnergyVar(2)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

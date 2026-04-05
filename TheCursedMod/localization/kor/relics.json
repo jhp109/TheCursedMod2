@@ -12,7 +12,7 @@
   "THECURSEDMOD-SPIRIT_FUEL_RELIC.flavor": "영혼은 밝게 타오른다 — 잠깐이나마.",
 
   "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.title": "네잎클로버 부적",
-  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.description": "전투에서 [gold]커스드[/gold] 카드의 효과로 무작위 [gold]저주[/gold]를 얻을 때마다, 대신 [gold]찌꺼기[/gold]를 얻습니다.",
+  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.description": "전투에서 [purple]커스드[/purple] 카드의 효과로 무작위 [gold]저주[/gold]를 얻을 때마다, 대신 [gold]찌꺼기[/gold]를 얻습니다.",
   "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.flavor": "행운과 행복은 감사로부터 옵니다.",
 
   "THECURSEDMOD-PURPLE_CANDLE_RELIC.title": "보랏빛 양초",
@@ -20,7 +20,7 @@
   "THECURSEDMOD-PURPLE_CANDLE_RELIC.flavor": "불꽃은 메아리마다 희미해지고, 보상마다 밝아진다.",
 
   "THECURSEDMOD-WRAITH_BEADS_RELIC.title": "원혼의 염주",
-  "THECURSEDMOD-WRAITH_BEADS_RELIC.description": "이번 턴에 [gold]업보[/gold]로 인해 체력을 잃었다면, 다음 턴에 에너지를 [blue]1[/blue] 얻고 카드를 [blue]3[/blue]장 추가로 뽑습니다.",
+  "THECURSEDMOD-WRAITH_BEADS_RELIC.description": "이번 턴에 [gold]업보[/gold]로 인해 체력을 잃었다면, 다음 턴에 {Energy:energyIcons()}를 얻고 카드를 추가로 [blue]2[/blue]장 뽑습니다.",
   "THECURSEDMOD-WRAITH_BEADS_RELIC.flavor": "구슬 하나하나에 견뎌낸 상처의 기억이 깃들어 있다.",
 
   "THECURSEDMOD-RITUALISTS_RING_RELIC.title": "제사장의 반지",
@@ -28,10 +28,10 @@
   "THECURSEDMOD-RITUALISTS_RING_RELIC.flavor": "제물을... 더... 내놓아라...",
 
   "THECURSEDMOD-DEMONIC_MARK_RELIC.title": "악마의 표식",
-  "THECURSEDMOD-DEMONIC_MARK_RELIC.description": "한 턴에 [gold]마법진[/gold]이 [blue]4[/blue]번 발동될 때마다, 힘을 [blue]1[/blue] 얻습니다.",
+  "THECURSEDMOD-DEMONIC_MARK_RELIC.description": "한 턴에 [gold]마법진[/gold]이 [blue]4[/blue]번 발동될 때마다, [gold]힘[/gold]을 [blue]1[/blue] 얻습니다.",
   "THECURSEDMOD-DEMONIC_MARK_RELIC.flavor": "이번엔 모양이 좀 달라졌죠?",
 
   "THECURSEDMOD-SOUL_VESSEL_RELIC.title": "영혼 그릇",
-  "THECURSEDMOD-SOUL_VESSEL_RELIC.description": "매 전투가 끝날 때, 이번 전투에서 소멸된 [gold]저주[/gold] 카드 하나당 체력을 2 회복합니다. (최대 [blue]10[/blue] 회복합니다.)",
+  "THECURSEDMOD-SOUL_VESSEL_RELIC.description": "전투가 끝날 때, 이번 전투에서 [gold]의례[/gold]의 효과가 발동된 횟수당 체력을 [blue]2[/blue] 회복합니다. (최대 [blue]10[/blue] 회복합니다.)",
   "THECURSEDMOD-SOUL_VESSEL_RELIC.flavor": "그릇은 집어삼킨 모든 영혼을 기억할 것입니다."
 }

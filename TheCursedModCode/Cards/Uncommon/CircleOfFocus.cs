@@ -14,7 +14,7 @@ public sealed class CircleOfFocus() : CircleCard(CardRarity.Uncommon)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new EnergyVar(1),
-        new DynamicVar("CostThreshold", 3m)
+        new EnergyVar("CostThreshold", 3)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [

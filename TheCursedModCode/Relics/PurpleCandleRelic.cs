@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using TheCursedMod.TheCursedModCode.Character;
@@ -19,6 +20,10 @@ public sealed class PurpleCandleRelic : TheCursedModRelic
     public override RelicRarity Rarity => RelicRarity.Uncommon;
 
     public override bool ShowCounter => true;
+
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Circle),
+    ];
 
     public override int DisplayAmount
     {

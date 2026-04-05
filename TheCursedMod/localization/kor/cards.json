@@ -103,7 +103,7 @@
   "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]마법진[/gold] : [gold]의례[/gold]의 효과가 발동될 때마다, [gold]방어도[/gold]를 {Block:diff()} 얻고 카드를 {Cards:diff()}장 뽑습니다.",
 
   "THECURSEDMOD-CIRCLE_OF_FOCUS.title": "집중의 마법진",
-  "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]마법진[/gold] : 비용이 {CostThreshold:diff()} 이상인 카드를 사용할 때마다, {Energy:energyIcons()}를 얻습니다.",
+  "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]마법진[/gold] : 비용이 {CostThreshold:energyIcons()} 이상인 카드를 사용할 때마다, {Energy:energyIcons()}를 얻습니다.",
 
   "THECURSEDMOD-ARCANE_TRIGGER.title": "비전 방아쇠",
   "THECURSEDMOD-ARCANE_TRIGGER.description": "피해를 {Damage:diff()} 줍니다.\n[gold]손[/gold]에 있는 모든 [gold]마법진[/gold]의 효과를 조건을 무시하고 강제로 발동시킵니다.",
@@ -185,7 +185,7 @@
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "내 턴 시작 시 [gold]업보[/gold]가 있다면, 카드를 {CycleOfDepravityPower:diff()}장 뽑습니다.",
 
   "THECURSEDMOD-TEAR_GRIMOIRE.title": "마도서 찢기",
-  "THECURSEDMOD-TEAR_GRIMOIRE.description": "비용이 2 이상인 공격 카드들이 한번 더 사용됩니다.\n내 턴 시작 시, [gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-TEAR_GRIMOIRE.description": "비용이 {Energy:energyIcons()} 이상인 공격 카드들이 한번 더 사용됩니다.\n내 턴 시작 시, [gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.title": "과전류의 마법진",
   "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.description": "[gold]마법진[/gold] : 스킬 카드를 사용할 때마다, 무작위 적에게 피해를 {Damage:diff()} 주고 이번 전투 동안 이 카드의 피해량이 {DamageIncrement:diff()} 증가합니다.",

@@ -36,8 +36,8 @@ public abstract class RiteCard(
     private static CombatState? _riteCurseExhaustedCombat;
 
     // 이번 전투에서 의례로 소멸시킨 저주 총 횟수 추적
-    private static int _riteCombatCurseCount = 0;
-    private static CombatState? _riteCombatCountCombat;
+    private static int _riteEffectTriggerCount = 0;
+    private static CombatState? _riteEffectTriggerCombat;
 
     /// <summary>
     /// 이번 턴(현재 CombatState 기준)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
@@ -56,11 +56,11 @@ public abstract class RiteCard(
            && _riteCurseExhaustedRound == combat.RoundNumber - 1;
 
     /// <summary>
-    /// 이번 전투에서 의례로 소멸시킨 저주의 총 횟수를 반환합니다.
+    /// 이번 전투에서 의례의 효과가 발동된 총 횟수를 반환합니다.
     /// </summary>
-    public static int GetRiteCurseExhaustedCount(CombatState? combat)
-        => combat != null && ReferenceEquals(_riteCombatCountCombat, combat)
-           ? _riteCombatCurseCount
+    public static int GetRiteEffectTriggerCount(CombatState? combat)
+        => combat != null && ReferenceEquals(_riteEffectTriggerCombat, combat)
+           ? _riteEffectTriggerCount
            : 0;
 
     private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectionScreenPrompt");
@@ -85,12 +85,11 @@ public abstract class RiteCard(
                     _riteCurseExhaustedRound = CombatState!.RoundNumber;
                     _riteCurseExhaustedCombat = CombatState;
 
-                    if (!ReferenceEquals(_riteCombatCountCombat, CombatState))
+                    if (!ReferenceEquals(_riteEffectTriggerCombat, CombatState))
                     {
-                        _riteCombatCurseCount = 0;
-                        _riteCombatCountCombat = CombatState;
+                        _riteEffectTriggerCount = 0;
+                        _riteEffectTriggerCombat = CombatState;
                     }
-                    _riteCombatCurseCount++;
 
                     await ExecuteRiteEffect(choiceContext, play);
 
@@ -134,6 +133,8 @@ public abstract class RiteCard(
     /// </summary>
     private async Task ExecuteRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        _riteEffectTriggerCount++;
+
         await OnRiteEffect(choiceContext, play);
 
         // 금단의 형상으로 다음 업보 공격 강화
@@ -156,6 +157,9 @@ public abstract class RiteCard(
         var ritualistsRing = Owner?.Relics.OfType<Relics.RitualistsRingRelic>().FirstOrDefault();
         if (ritualistsRing != null)
             await ritualistsRing.OnRiteEffectTriggered(choiceContext);
+
+        // 영혼 그릇 - 카운터 UI 갱신
+        Owner?.Relics.OfType<Relics.SoulVesselRelic>().FirstOrDefault()?.OnRiteEffectTriggered();
 
         // 의식의 마법진 효과 발동
         var circles = PileType.Hand.GetPile(Owner!).Cards.OfType<CircleOfRitual>().ToList();

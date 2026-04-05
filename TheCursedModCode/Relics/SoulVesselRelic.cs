@@ -1,10 +1,10 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Relics;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Rooms;
+using TheCursedMod.TheCursedModCode.Cards;
 using TheCursedMod.TheCursedModCode.Character;
 
 namespace TheCursedMod.TheCursedModCode.Relics;
@@ -12,36 +12,48 @@ namespace TheCursedMod.TheCursedModCode.Relics;
 [Pool(typeof(TheCursedModRelicPool))]
 public sealed class SoulVesselRelic : TheCursedModRelic
 {
-    private int _exhaustedCurseCount;
+    private const int HealPerTrigger = 2;
+    private const int MaxHeal = 10;
 
     public override RelicRarity Rarity => RelicRarity.Shop;
 
     public override bool ShowCounter => true;
+    public override int DisplayAmount => Math.Min(TriggersThisCombat * HealPerTrigger, MaxHeal);
 
-    public override int DisplayAmount => _exhaustedCurseCount;
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
+    ];
+
+    // 이번 전투 시작 시점의 누적 카운트를 기록해두고 차이로 이번 전투 발동 횟수를 계산
+    private int _triggerCountAtCombatStart;
+
+    private int TriggersThisCombat =>
+        RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState) - _triggerCountAtCombatStart;
+
+    public void OnRiteEffectTriggered()
+    {
+        InvokeDisplayAmountChanged();
+    }
 
     public override Task BeforeCombatStart()
     {
-        _exhaustedCurseCount = 0;
+        _triggerCountAtCombatStart = RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState);
         InvokeDisplayAmountChanged();
-        return Task.CompletedTask;
-    }
-
-    public override Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
-    {
-        if (card.Owner == base.Owner && card.Type == CardType.Curse)
-        {
-            _exhaustedCurseCount = Math.Min(_exhaustedCurseCount + 2, 10);
-            InvokeDisplayAmountChanged();
-        }
         return Task.CompletedTask;
     }
 
     public override async Task AfterCombatVictory(CombatRoom room)
     {
-        if (_exhaustedCurseCount <= 0) return;
+        int heal = DisplayAmount;
+
+        // heal 후 카운터 초기화: 다음 전투가 0부터 시작하도록 오프셋을 현재 누적값으로 갱신
+        _triggerCountAtCombatStart = RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState);
+        InvokeDisplayAmountChanged();
+
+        if (heal <= 0) return;
 
         Flash();
-        await CreatureCmd.Heal(base.Owner.Creature, _exhaustedCurseCount);
+        if (base.Owner.Creature != null)
+            await CreatureCmd.Heal(base.Owner.Creature, heal);
     }
 }

@@ -1,6 +1,7 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
+using MegaCrit.Sts2.Core.HoverTips;
 using TheCursedMod.TheCursedModCode.Cards;
 using TheCursedMod.TheCursedModCode.Character;
 
@@ -10,6 +11,10 @@ namespace TheCursedMod.TheCursedModCode.Relics;
 public sealed class SpiritFuelRelic : TheCursedModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Uncommon;
+ 
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [
+        HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
+    ];
 
     public override decimal ModifyHandDraw(Player player, decimal count)
     {

@@ -1,6 +1,6 @@
 {
   "THECURSEDMOD-RITE_POTION.title": "의례 포션",
-  "THECURSEDMOD-RITE_POTION.description": "무작위 [gold]의례[/gold] 카드 3장 중 1장을 선택해 [gold]찌꺼기[/gold]와 함께 손으로 가져옵니다. 이번 턴 동안 그 카드를 비용 없이 사용할 수 있습니다.",
+  "THECURSEDMOD-RITE_POTION.description": "무작위 [gold]의례[/gold] 카드 [blue]3[/blue]장 중 [blue]1[/blue]장을 선택해 [gold]찌꺼기[/gold]와 함께 손으로 가져옵니다. 이번 턴 동안 그 카드를 비용 없이 사용할 수 있습니다.",
 
   "THECURSEDMOD-MERCY_POTION.title": "자비 포션",
   "THECURSEDMOD-MERCY_POTION.description": "이번 턴에 [gold]업보[/gold]로 받는 피해량이 100% 감소합니다.",

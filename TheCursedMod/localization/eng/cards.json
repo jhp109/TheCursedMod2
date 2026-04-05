@@ -44,7 +44,7 @@
   "THECURSEDMOD-WIELD.description": "Deal {Damage:diff()} damage.\nDraw cards equal to the number of [gold]Unplayable[/gold] cards in your [gold]Hand[/gold].{InCombat:cond:\n(Draw {CalculatedCards} cards.)|}",
 
   "THECURSEDMOD-OBSCURATION.title": "Obscuration",
-  "THECURSEDMOD-OBSCURATION.description": "Gain {Block:diff()} [gold]Block[/gold].\n{gold}Rite{/gold}: Gain {Block:diff()} [gold]Block[/gold] again.",
+  "THECURSEDMOD-OBSCURATION.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold]: Gain {Block:diff()} [gold]Block[/gold] again.",
 
   "THECURSEDMOD-RAPID_MOVEMENT.title": "Rapid Movement",
   "THECURSEDMOD-RAPID_MOVEMENT.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Draw 2 cards.",
@@ -103,7 +103,7 @@
   "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]Circle[/gold] : Whenever a [gold]Rite[/gold] effect is triggered, gain {Block:diff()} [gold]Block[/gold] and draw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "THECURSEDMOD-CIRCLE_OF_FOCUS.title": "Circle of Focus",
-  "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]Circle[/gold] : Whenever you play a card that costs {CostThreshold:diff()} or more, gain {Energy:energyIcons()}.",
+  "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]Circle[/gold] : Whenever you play a card that costs {CostThreshold:energyIcons()} or more, gain {Energy:energyIcons()}.",
 
   "THECURSEDMOD-ARCANE_TRIGGER.title": "Arcane Trigger",
   "THECURSEDMOD-ARCANE_TRIGGER.description": "Deal {Damage:diff()} damage.\nForce all [gold]Circle[/gold] cards in your [gold]Hand[/gold] to trigger, ignoring their conditions.",
@@ -185,7 +185,7 @@
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "At the start of your turn, draw {CycleOfDepravityPower:diff()} cards if you have [gold]Karma[/gold].",
 
   "THECURSEDMOD-TEAR_GRIMOIRE.title": "Tear Grimoire",
-  "THECURSEDMOD-TEAR_GRIMOIRE.description": "Attacks that cost 2 or more are played an extra time.\nAt the start of your turn, [gold]Karma[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-TEAR_GRIMOIRE.description": "Attacks that cost {Energy:energyIcons()} or more are played an extra time.\nAt the start of your turn, [gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.title": "Circle of Overcurrent",
   "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.description": "[gold]Circle[/gold] : Whenever you play a Skill card, deal {Damage:diff()} damage to a random enemy. Increases this card's damage by {DamageIncrement:diff()} this combat.",
@@ -194,7 +194,7 @@
   "THECURSEDMOD-CIRCLE_OF_WINDFURY.description": "[gold]Circle[/gold] : Whenever you play a 0{Energy:energyIcons()} card, draw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "THECURSEDMOD-ARCANE_MATRIX.title": "Arcane Matrix",
-  "THECURSEDMOD-ARCANE_MATRIX.description": "Whenever you draw a [gold]Circle[/gold] card, gain {Energy:energyIcons()} and draw {ArcaneMatrixPower:diff()} {Cards:plural:card|cards}.",
+  "THECURSEDMOD-ARCANE_MATRIX.description": "Whenever you draw a [gold]Circle[/gold] card, gain {Energy:energyIcons()} and draw {ArcaneMatrixPower:diff()} {ArcaneMatrixPower:plural:card|cards}.",
 
   "THECURSEDMOD-ARCANE_DISCHARGE.title": "Arcane Discharge",
   "THECURSEDMOD-ARCANE_DISCHARGE.description": "Deal damage to ALL enemies equal to {ExtraDamage:diff()} times the number of [gold]Circle[/gold] effects triggered this combat.{InCombat:cond:\n(Deals {CalculatedDamage:diff()} damage.)|}",
@@ -261,7 +261,7 @@
   "THECURSEDMOD-BATTLEMAGE.description": "Whenever a [gold]Circle[/gold] effect is triggered, gain {BattlemagePower:diff()} [gold]Vigor[/gold].",
 
   "THECURSEDMOD-EXODIA_BEAM.title": "Exodia Beam",
-  "THECURSEDMOD-EXODIA_BEAM.description": "Can only be played if there are 5+ distinct [gold]Circle[/gold] cards in your [gold]Hand[/gold].\nDeal {Damage:diff()} damage to ALL enemies.",
+  "THECURSEDMOD-EXODIA_BEAM.description": "Can only be played if there are at least 5 distinct [gold]Circle[/gold] cards in your [gold]Hand[/gold].\nDeal {Damage:diff()} damage to ALL enemies.",
 
   "THECURSEDMOD-WORLDLINE_TWIST.title": "Worldline Twist",
   "THECURSEDMOD-WORLDLINE_TWIST.description": "Cost 1 less {Energy:energyIcons()} for each time a [gold]Circle[/gold] effect has triggered this turn.\nTake no damage from [gold]Karma[/gold] this turn.",

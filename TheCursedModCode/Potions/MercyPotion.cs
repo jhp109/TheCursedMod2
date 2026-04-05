@@ -11,7 +11,7 @@ namespace TheCursedMod.TheCursedModCode.Potions;
 
 public sealed class MercyPotion : TheCursedModPotion
 {
-    public override PotionRarity Rarity => PotionRarity.Uncommon;
+    public override PotionRarity Rarity => PotionRarity.Common;
 
     public override PotionUsage Usage => PotionUsage.CombatOnly;
 

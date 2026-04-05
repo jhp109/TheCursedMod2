@@ -14,7 +14,7 @@ namespace TheCursedMod.TheCursedModCode.Potions;
 
 public sealed class RitePotion : TheCursedModPotion
 {
-    public override PotionRarity Rarity => PotionRarity.Common;
+    public override PotionRarity Rarity => PotionRarity.Uncommon;
 
     public override PotionUsage Usage => PotionUsage.CombatOnly;
 

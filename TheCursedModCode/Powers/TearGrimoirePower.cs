@@ -1,6 +1,7 @@
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
@@ -14,6 +15,8 @@ public class TearGrimoirePower : TheCursedModPower
     public override PowerType Type => PowerType.Buff;
 
     public override PowerStackType StackType => PowerStackType.Counter;
+
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(2)];
 
     public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
     {
