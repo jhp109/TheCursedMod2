@@ -13,7 +13,7 @@ When using a Rite card, choose 1 card to Exhaust. Selecting a Curse card will tr
 ### Circle
 An unplayable card that can be triggered by using other cards while in hand.
 ### Karma
-Some cards with forbidden power bring you Karma as a penalty. Karma deals self-damage the character at the end of the next turn.
+Some cards with forbidden power bring you Karma as a penalty. Karma deals self-damage at the end of the next turn.
 
 ## How to play this mod
 1. In StS2 Steam settings, switch to public-beta branch
