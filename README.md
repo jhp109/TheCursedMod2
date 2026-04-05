@@ -15,8 +15,11 @@ An unplayable card that can be triggered by using other cards while in hand.
 ### Karma
 Some cards with forbidden power bring you Karma as a penalty. Karma deals self-damage the character at the end of the next turn.
 
+## Dependencies
+Requires Slay the Spire 2 public beta branch, and BaseLib.
+
 ## Known Issues
-- Animation is not supported yet...
+- Animation is not supported yet... 
 
 ## Credit (Human)
 Special thanks to 히말군 for character artwork (from the STS1 mod of The Cursed)
