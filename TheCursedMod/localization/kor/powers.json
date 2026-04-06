@@ -80,8 +80,8 @@
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "[gold]의례[/gold]로 [gold]저주[/gold]를 소멸시킬 때마다, [gold]업보[/gold]를 부여하는 다음 공격의 피해량이 {Amount}% 증가합니다.",
 
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.title": "다음 업보 공격 강화",
-  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.description": "[gold]업보[/gold]를 부여하는 다음 공격의 피해량이 증가합니다.",
-  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.smartDescription": "[gold]업보[/gold]를 부여하는 다음 공격의 피해량이 {Amount}% 증가합니다..",
+  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.description": "[gold]업보[/gold]를 얻는 다음 공격의 피해량이 증가합니다.",
+  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.smartDescription": "[gold]업보[/gold]를 얻는 다음 공격의 피해량이 {Amount}% 증가합니다..",
 
   "THECURSEDMOD-CIRCLE_RETAIN_POWER.title": "마법진 보존",
   "THECURSEDMOD-CIRCLE_RETAIN_POWER.description": "이번 턴에 [gold]손[/gold]에 있는 [gold]마법진[/gold]들을 [gold]보존[/gold]합니다.",

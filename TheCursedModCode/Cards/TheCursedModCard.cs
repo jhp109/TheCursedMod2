@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Models.Cards;
 using TheCursedMod.TheCursedModCode.Character;
 using TheCursedMod.TheCursedModCode.Extensions;
 using TheCursedMod.TheCursedModCode.Powers;
@@ -69,9 +70,15 @@ public abstract class TheCursedModCard(
             return;
         }
 
-        var curseCandidates = ModelDb.CardPool<CurseCardPool>()
+        var baseCurses = ModelDb.CardPool<CurseCardPool>()
             .GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint)
-            .Where(c => c.CanBeGeneratedByModifiers)
+            .Where(c => c.CanBeGeneratedByModifiers && c is not Guilty)  // Guilty is meaningless in combat
+            .ToList();
+
+        // Copy baseCurses to lower the chance of getting super bad curses.
+        var curseCandidates = baseCurses.Concat(baseCurses)
+            .Append(ModelDb.Card<Enthralled>())
+            .Append(ModelDb.Card<BadLuck>())
             .ToList();
 
         if (curseCandidates.Count == 0) return;

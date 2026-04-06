@@ -170,7 +170,7 @@
   "THECURSEDMOD-FORBIDDEN_STRENGTH.description": "[gold]손[/gold]에 있는 [gold]마법진[/gold] 카드 하나당 [gold]힘[/gold]을 {Strength:diff()} 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-WICKED_TEMPERING.title": "사악한 담금질",
-  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]의례[/gold] : [gold]업보[/gold]를 부여하는 다음 공격 카드의 피해량이 {MultiplyNextKarmaAttackPower:diff()}% 증가합니다.",
+  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]의례[/gold] : [gold]업보[/gold]를 얻는 다음 공격 카드의 피해량이 {MultiplyNextKarmaAttackPower:diff()}% 증가합니다.",
 
   "THECURSEDMOD-SPIRIT_OFFERING.title": "영혼 공물",
   "THECURSEDMOD-SPIRIT_OFFERING.description": "매 턴마다 처음으로 [gold]의례[/gold]의 효과가 발동될 경우, [gold]힘[/gold]을 {SpiritOfferingPower:diff()} 얻습니다.",
@@ -215,7 +215,7 @@
   "THECURSEDMOD-FREEDOM_AND_BONDAGE.description": "모든 플레이어들이 {Energy:energyIcons()}를 얻고 무작위 [gold]저주[/gold] 카드를 1장 [gold]손[/gold]으로 가져옵니다.",
 
   "THECURSEDMOD-FORBIDDEN_FORM.title": "금단의 형상",
-  "THECURSEDMOD-FORBIDDEN_FORM.description": "[gold]의례[/gold]의 효과가 발동될 때마다, [gold]업보[/gold]를 부여하는 다음 공격 카드의 피해량이 {ForbiddenFormPower:diff()}% 증가합니다.",
+  "THECURSEDMOD-FORBIDDEN_FORM.description": "[gold]의례[/gold]의 효과가 발동될 때마다, [gold]업보[/gold]를 얻는 다음 공격 카드의 피해량이 {ForbiddenFormPower:diff()}% 증가합니다.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "금단의 몽둥이질",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "피해를 {Damage:diff()} 줍니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
