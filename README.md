@@ -16,12 +16,13 @@ An unplayable card that can be triggered by using other cards while in hand.
 Some cards with forbidden power bring you Karma as a penalty. Karma deals self-damage at the end of the next turn.
 
 ## How to play this mod
-1. In StS2 Steam settings, switch to public-beta branch
-2. Open local folder that StS2 game is located, and make mods/ folder if it doesn't exist
-3. (prerequisite) Download [BaseLib](https://www.nexusmods.com/slaythespire2/mods/103?tab=files) and extract files into mods/ folder.
-4. Download the [release](https://github.com/jhp109/TheCursedMod2/releases/tag/release) file of The Cursed and extract files into mods/ folder.
-5. (optional) Since the mods-enabled client has different save location, it'd be great to download [UnifiedSavePath](https://www.nexusmods.com/slaythespire2/mods/6?tab=files).
-6. Enjoy!
+1. Open local folder that StS2 game is located, and make mods/ folder if it doesn't exist
+2. (prerequisite) Download [BaseLib](https://www.nexusmods.com/slaythespire2/mods/103?tab=files) and extract files into mods/ folder.
+3. Download the [release](https://github.com/jhp109/TheCursedMod2/releases/tag/release) file of The Cursed and extract files into mods/ folder.
+4. (optional) Since the mods-enabled client has different save location, it'd be great to download [UnifiedSavePath](https://www.nexusmods.com/slaythespire2/mods/6?tab=files).
+5. Enjoy!
+
+(since v0.1.1, it works on both main branch and public-beta branch)
 
 ## Known Issues
 - Animation is not supported yet...
