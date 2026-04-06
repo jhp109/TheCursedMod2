@@ -9,7 +9,7 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 금단의 연격(Forbidden Combo) - 피해를 11만큼 2번 줍니다. 업보 7. (강화 시 피해 14)
+/// 금단의 연격(Forbidden Combo) - 피해를 11만큼 2번 줍니다. 업보 7. (강화 시 피해 13)
 /// </summary>
 public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy), IKarmaAttack
 {
@@ -31,6 +31,6 @@ public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, Card
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(3m);
+        DynamicVars.Damage.UpgradeValueBy(2m);
     }
 }

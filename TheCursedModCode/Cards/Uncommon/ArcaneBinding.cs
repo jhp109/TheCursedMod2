@@ -10,13 +10,13 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 비전 속박(Arcane Binding) - 방어도를 15 얻습니다. 의례 : 이번 턴에 손에 있는 마법진들을 보존합니다. (강화 시 방어도 20)
+/// 비전 속박(Arcane Binding) - 방어도를 14 얻습니다. 의례 : 이번 턴에 손에 있는 마법진들을 보존합니다. (강화 시 방어도 18)
 /// </summary>
 public sealed class ArcaneBinding() : RiteCard(2, CardType.Skill, CardRarity.Uncommon, TargetType.None)
 {
     public override bool GainsBlock => true;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(15, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(14, ValueProp.Move)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
@@ -35,6 +35,6 @@ public sealed class ArcaneBinding() : RiteCard(2, CardType.Skill, CardRarity.Unc
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(5m);
+        DynamicVars.Block.UpgradeValueBy(4m);
     }
 }

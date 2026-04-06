@@ -75,10 +75,10 @@ public abstract class TheCursedModCard(
             .Where(c => c.CanBeGeneratedByModifiers && c is not Guilty)  // Guilty is meaningless in combat
             .ToList();
 
-        // Copy baseCurses to lower the chance of getting super bad curses.
-        var curseCandidates = baseCurses.Concat(baseCurses)
+        var curseCandidates = baseCurses
             .Append(ModelDb.Card<Enthralled>())
             .Append(ModelDb.Card<BadLuck>())
+            .Append(ModelDb.Card<PoorSleep>())
             .ToList();
 
         if (curseCandidates.Count == 0) return;

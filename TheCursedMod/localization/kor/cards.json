@@ -127,7 +127,7 @@
   "THECURSEDMOD-RESONATING_SHIELD.description": "이번 전투에서 [gold]마법진[/gold]의 효과가 발동된 횟수당 {Energy:energyIcons()} 소모가 1 감소합니다.\n[gold]방어도[/gold]를 {Block:diff()} 얻습니다.",
 
   "THECURSEDMOD-PREPARE_RITE.title": "의례 준비",
-  "THECURSEDMOD-PREPARE_RITE.description": "[gold]뽑을 카드 더미[/gold]의 카드를 1장 [gold]찌꺼기[/gold]로 변화시킵니다.\n다음 턴에, 카드를 2장 뽑습니다.",
+  "THECURSEDMOD-PREPARE_RITE.description": "[gold]뽑을 카드 더미[/gold]의 카드를 1장 [gold]찌꺼기[/gold]로 변화시킵니다.\n다음 턴에, 카드를 {DrawCardsNextTurnPower:diff()}장 뽑습니다.",
   "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt": "찌꺼기로 변화시킬 카드를 선택하세요.",
 
   "THECURSEDMOD-TROUBLOUS_MINION.title": "골칫덩이 사역마",

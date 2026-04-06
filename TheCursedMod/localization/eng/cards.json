@@ -127,7 +127,7 @@
   "THECURSEDMOD-RESONATING_SHIELD.description": "Cost 1 less {Energy:energyIcons()} for each time a [gold]Circle[/gold] effect has triggered this combat.\nGain {Block:diff()} [gold]Block[/gold].",
 
   "THECURSEDMOD-PREPARE_RITE.title": "Prepare Rite",
-  "THECURSEDMOD-PREPARE_RITE.description": "Transform a card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].\nNext turn, draw 2 cards.",
+  "THECURSEDMOD-PREPARE_RITE.description": "Transform a card in your [gold]Draw pile[/gold] into [gold]Dregs[/gold].\nNext turn, draw {DrawCardsNextTurnPower:diff()} {DrawCardsNextTurnPower:plural:card|cards}.",
   "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt": "Choose a card to transform into Dregs.",
 
   "THECURSEDMOD-TROUBLOUS_MINION.title": "Troublous Minion",
