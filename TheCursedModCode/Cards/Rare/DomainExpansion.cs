@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 영역 전개(Domain Expansion) - 손에 있는 모든 마법진의 효과를 조건을 무시하고 강제로 X번 발동시킵니다. 업보 15.
+/// 영역 전개(Domain Expansion) - 손에 있는 모든 마법진의 효과를 조건을 무시하고 강제로 X번 발동시킵니다. 업보 5 X번.
 /// 강화 시 X+1번 발동.
 /// </summary>
 public sealed class DomainExpansion() : TheCursedModCard(0, CardType.Skill, CardRarity.Rare, TargetType.None)
@@ -15,7 +15,7 @@ public sealed class DomainExpansion() : TheCursedModCard(0, CardType.Skill, Card
     protected override bool HasEnergyCostX => true;
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<Powers.KarmaTurn2Power>("KarmaPower", 15m)
+        new PowerVar<Powers.KarmaTurn2Power>("KarmaPower", 5m)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -33,7 +33,7 @@ public sealed class DomainExpansion() : TheCursedModCard(0, CardType.Skill, Card
             foreach (var circle in circles)
                 await circle.ForceTrigger(choiceContext);
 
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(DynamicVars["KarmaPower"].IntValue * triggers);
     }
 
     protected override void OnUpgrade() { }

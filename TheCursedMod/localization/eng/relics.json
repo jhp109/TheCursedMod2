@@ -24,7 +24,7 @@
   "THECURSEDMOD-WRAITH_BEADS_RELIC.flavor": "Each bead holds the memory of a wound endured.",
 
   "THECURSEDMOD-RITUALISTS_RING_RELIC.title": "Ritualist's Ring",
-  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "Every 6 times a [gold]Rite[/gold] effect is triggered, gain {Energy:energyIcons()}.",
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "Every [blue]6[/blue] times a [gold]Rite[/gold] effect is triggered, gain {Energy:energyIcons()}.",
   "THECURSEDMOD-RITUALISTS_RING_RELIC.flavor": "Need... More... Offerings...",
 
   "THECURSEDMOD-DEMONIC_MARK_RELIC.title": "Demonic Mark",

@@ -1,4 +1,4 @@
-using BaseLib.Utils;
+using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -24,7 +24,12 @@ public sealed class HelpOfTheDead() : RiteCard(2, CardType.Skill, CardRarity.Rar
 
     protected override async Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        var target = await CommonActions.SelectSingleCard(this, SelectPrompt, choiceContext, PileType.Draw);
+        var drawCards = PileType.Draw.GetPile(Owner).Cards
+            .Where(c => !IsUnplayableCard(c))
+            .ToList();
+        var prefs = new CardSelectorPrefs(SelectPrompt, 1);
+        var selected = await CardSelectCmd.FromSimpleGrid(choiceContext, drawCards, Owner, prefs);
+        var target = selected.FirstOrDefault();
         if (target != null)
             target.BaseReplayCount++;
     }

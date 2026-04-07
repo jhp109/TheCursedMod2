@@ -24,7 +24,7 @@
   "THECURSEDMOD-WRAITH_BEADS_RELIC.flavor": "구슬 하나하나에 견뎌낸 상처의 기억이 깃들어 있다.",
 
   "THECURSEDMOD-RITUALISTS_RING_RELIC.title": "제사장의 반지",
-  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "[gold]의례[/gold]의 효과가 6번 발동될 때마다, {Energy:energyIcons()}를 얻습니다.",
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "[gold]의례[/gold]의 효과가 [blue]6[/blue]번 발동될 때마다, {Energy:energyIcons()}를 얻습니다.",
   "THECURSEDMOD-RITUALISTS_RING_RELIC.flavor": "제물을... 더... 내놓아라...",
 
   "THECURSEDMOD-DEMONIC_MARK_RELIC.title": "악마의 표식",

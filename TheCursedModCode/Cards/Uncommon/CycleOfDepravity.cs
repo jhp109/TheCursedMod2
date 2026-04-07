@@ -9,7 +9,7 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
 /// 타락의 굴레(Cycle of Depravity) - 내 턴 시작 시, 업보가 있다면 카드를 2장 뽑습니다.
-/// 강화 시 카드 3장.
+/// 강화 시 비용 0.
 /// </summary>
 public sealed class CycleOfDepravity() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {
@@ -29,6 +29,6 @@ public sealed class CycleOfDepravity() : TheCursedModCard(1, CardType.Power, Car
 
     protected override void OnUpgrade()
     {
-        DynamicVars["CycleOfDepravityPower"].UpgradeValueBy(1m);
+        EnergyCost.UpgradeBy(-1);
     }
 }
