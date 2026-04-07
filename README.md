@@ -29,6 +29,7 @@ Some cards with forbidden power bring you Karma as a penalty. Karma deals self-d
 
 ## Supported Languages
 Korean, English
+
 [Localization instruction](https://github.com/jhp109/TheCursedMod2/blob/main/TheCursedMod/localization/README.md)
 
 ## Credit (Human)
