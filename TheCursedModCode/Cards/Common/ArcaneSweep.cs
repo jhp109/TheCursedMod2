@@ -1,3 +1,4 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -28,11 +29,10 @@ public sealed class ArcaneSweep() : TheCursedModCard(1, CardType.Attack, CardRar
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Circle)
     ];
 
-    private Task BuildAndExecuteAttack(PlayerChoiceContext ctx)
+    private Task BuildAndExecuteAttack(PlayerChoiceContext ctx, CardPlay play)
     {
         var combatState = CombatState!;
-        return DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this)
-            .TargetingAllOpponents(combatState)
+        return CommonActions.CardAttack(this, play)
             .BeforeDamage(async delegate
             {
                 List<Creature> targets = [..combatState.HittableEnemies];
@@ -48,10 +48,10 @@ public sealed class ArcaneSweep() : TheCursedModCard(1, CardType.Attack, CardRar
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await BuildAndExecuteAttack(choiceContext);
+        await BuildAndExecuteAttack(choiceContext, play);
 
         if (PileType.Hand.GetPile(Owner).Cards.Any(c => c is CircleCard))
-            await BuildAndExecuteAttack(choiceContext);
+            await BuildAndExecuteAttack(choiceContext, play);
     }
 
     protected override void OnUpgrade()

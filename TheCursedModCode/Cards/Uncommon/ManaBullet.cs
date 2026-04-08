@@ -26,8 +26,8 @@ public sealed class ManaBullet() : TheCursedModCard(1, CardType.Attack, CardRari
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        int circleCount = PileType.Hand.GetPile(Owner).Cards.Count(c => c is CircleCard);
-        await CommonActions.CardAttack(this, play, circleCount + 1, vfx: "vfx/vfx_attack_slash")
+        int attackCount = 1 + (int)((CalculatedVar)DynamicVars["CalculatedRepeat"]).Calculate(null);
+        await CommonActions.CardAttack(this, play, attackCount, vfx: "vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }
 

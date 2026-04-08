@@ -28,7 +28,7 @@ public sealed class Wield() : TheCursedModCard(1, CardType.Attack, CardRarity.Co
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
-        int unplayableCount = CountUnplayableInHand();
+        int unplayableCount = (int)((CalculatedVar)DynamicVars["CalculatedCards"]).Calculate(null);
         if (unplayableCount > 0)
             await CardPileCmd.Draw(choiceContext, unplayableCount, Owner);
     }

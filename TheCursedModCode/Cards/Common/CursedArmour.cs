@@ -7,8 +7,8 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 저주받은 갑옷(Cursed Armour) - 방어도를 18 얻습니다. 무작위 저주 카드 2장을 뽑을 카드 더미에 섞습니다.
-/// (강화 시 방어도 24)
+/// 저주받은 갑옷(Cursed Armour) - 방어도를 22 얻습니다. 무작위 저주 카드 2장을 뽑을 카드 더미에 섞습니다.
+/// (강화 시 방어도 28)
 /// </summary>
 public sealed class CursedArmour() : TheCursedModCard(2, CardType.Skill, CardRarity.Common, TargetType.None)
 {

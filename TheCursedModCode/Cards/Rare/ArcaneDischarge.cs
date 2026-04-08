@@ -1,3 +1,4 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -38,8 +39,7 @@ public sealed class ArcaneDischarge() : TheCursedModCard(3, CardType.Attack, Car
             VfxCmd.PlayOnCreature(enemy, "vfx/vfx_attack_lightning");
         SfxCmd.Play("event:/sfx/characters/defect/defect_lightning_evoke");
 
-        await DamageCmd.Attack(DynamicVars.CalculatedDamage).FromCard(this)
-            .TargetingAllOpponents(CombatState)
+        await CommonActions.CardAttack(this, play)
             .WithAttackerAnim("Cast", 0.5f)
             .Execute(choiceContext);
     }

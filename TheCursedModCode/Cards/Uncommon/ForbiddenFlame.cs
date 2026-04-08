@@ -1,5 +1,4 @@
 using BaseLib.Utils;
-using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
@@ -33,9 +32,7 @@ public sealed class ForbiddenFlame() : TheCursedModCard(2, CardType.Attack, Card
         foreach (var enemy in CombatState!.HittableEnemies)
             NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NGroundFireVfx.Create(enemy));
 
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this)
-            .TargetingAllOpponents(CombatState)
-            .WithHitFx("vfx/vfx_attack_blunt", null, "heavy_attack.mp3")
+        await CommonActions.CardAttack(this, play, vfx: "vfx/vfx_attack_blunt", tmpSfx: "heavy_attack.mp3")
             .Execute(choiceContext);
 
         await ApplyKarma(DynamicVars["KarmaPower"].IntValue);

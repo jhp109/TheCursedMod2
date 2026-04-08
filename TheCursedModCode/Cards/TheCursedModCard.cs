@@ -45,11 +45,6 @@ public abstract class TheCursedModCard(
         return reason.HasFlag(UnplayableReason.HasUnplayableKeyword) || c is CircleCard;
     }
 
-    /// <summary>
-    /// 손에 있는 사용불가 카드의 수를 반환합니다.
-    /// </summary>
-    protected int CountUnplayableInHand() =>
-        PileType.Hand.GetPile(Owner).Cards.Count(IsUnplayableCard);
 
     /// <summary>
     /// 손에 사용불가 카드가 있는지 확인합니다.

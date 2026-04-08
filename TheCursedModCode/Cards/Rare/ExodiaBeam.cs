@@ -1,3 +1,4 @@
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -39,8 +40,7 @@ public sealed class ExodiaBeam() : TheCursedModCard(0, CardType.Attack, CardRari
     {
         var enemies = CombatState!.Enemies.Where(e => e.IsAlive).ToList();
 
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this)
-            .TargetingAllOpponents(CombatState)
+        await CommonActions.CardAttack(this, play)
             .WithAttackerAnim("Cast", 0.5f)
             .BeforeDamage(async delegate
             {
