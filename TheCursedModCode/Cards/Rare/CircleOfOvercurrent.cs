@@ -3,7 +3,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Random;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
@@ -31,7 +30,7 @@ public sealed class CircleOfOvercurrent() : CircleCard(CardRarity.Rare)
 
     protected override async Task OnCircleEffect(PlayerChoiceContext choiceContext)
     {
-        var target = Rng.Chaotic.NextItem(CombatState!.HittableEnemies);
+        var target = Owner.RunState.Rng.CombatTargets.NextItem(CombatState!.HittableEnemies);
         if (target == null) return;
 
         VfxCmd.PlayOnCreature(target, "vfx/vfx_attack_lightning");

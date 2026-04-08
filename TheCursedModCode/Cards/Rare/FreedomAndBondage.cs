@@ -3,8 +3,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.CardPools;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
 
@@ -28,21 +26,10 @@ public sealed class FreedomAndBondage() : TheCursedModCard(0, CardType.Skill, Ca
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        var curseCandidates = ModelDb.CardPool<CurseCardPool>()
-            .GetUnlockedCards(Owner.UnlockState, Owner.RunState.CardMultiplayerConstraint)
-            .Where(c => c.CanBeGeneratedByModifiers)
-            .ToList();
-
         foreach (var player in CombatState!.Players)
         {
             await PlayerCmd.GainEnergy(DynamicVars.Energy.IntValue, player);
-
-            if (curseCandidates.Count > 0)
-            {
-                var randomCurse = Owner.RunState.Rng.Niche.NextItem(curseCandidates)!;
-                var curseCard = CombatState.CreateCard(randomCurse, player);
-                await CardPileCmd.AddGeneratedCardToCombat(curseCard, PileType.Hand, addedByPlayer: false);
-            }
+            await GainRandomCurse(PileType.Hand, player);
         }
     }
 

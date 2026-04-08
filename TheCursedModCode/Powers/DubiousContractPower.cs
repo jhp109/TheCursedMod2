@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
+using MegaCrit.Sts2.Core.Models.Cards;
 using TheCursedMod.TheCursedModCode.Cards;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
@@ -41,7 +42,7 @@ public class DubiousContractPower : TheCursedModPower
 
         for (int i = 0; i < Amount && ritePool.Count > 0; i++)
         {
-            var randomRite = player.RunState.Rng.Niche.NextItem(ritePool)!;
+            var randomRite = player.RunState.Rng.CombatCardGeneration.NextItem(ritePool)!;
 
             if (PermanentBonusRiteCards.Contains(randomRite.GetType()))
             {
@@ -53,14 +54,20 @@ public class DubiousContractPower : TheCursedModPower
             await CardPileCmd.AddGeneratedCardToCombat(riteCard, PileType.Hand, addedByPlayer: true);
         }
 
-        var curseCandidates = ModelDb.CardPool<CurseCardPool>()
+        // if-change-then-change: keep in sync with TheCursedModCard.GainRandomCurse
+        var baseCurses = ModelDb.CardPool<CurseCardPool>()
             .GetUnlockedCards(player.UnlockState, player.RunState.CardMultiplayerConstraint)
-            .Where(c => c.CanBeGeneratedByModifiers)
+            .Where(c => c.CanBeGeneratedByModifiers && c is not Guilty)  // Guilty is meaningless in combat
+            .ToList();
+        var curseCandidates = baseCurses
+            .Append(ModelDb.Card<Enthralled>())
+            .Append(ModelDb.Card<BadLuck>())
+            .Append(ModelDb.Card<PoorSleep>())
             .ToList();
 
         for (int i = 0; i < Amount && curseCandidates.Count > 0; i++)
         {
-            var randomCurse = player.RunState.Rng.Niche.NextItem(curseCandidates)!;
+            var randomCurse = player.RunState.Rng.CombatCardGeneration.NextItem(curseCandidates)!;
             var curseCard = base.CombatState!.CreateCard(randomCurse, player);
             await CardPileCmd.AddGeneratedCardToCombat(curseCard, PileType.Hand, addedByPlayer: true);
         }
