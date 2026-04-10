@@ -19,7 +19,10 @@ public sealed class ForbiddenStrength() : TheCursedModCard(0, CardType.Skill, Ca
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new PowerVar<KarmaTurn2Power>("KarmaPower", 8m),
-        new PowerVar<StrengthPower>("Strength", 2m)
+        new CalculationBaseVar(0m),
+        new CalculationExtraVar(2m),
+        new CalculatedVar("CalculatedStrength").WithMultiplier(static (card, _) =>
+            PileType.Hand.GetPile(card.Owner).Cards.Count(c => c is CircleCard))
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -30,10 +33,10 @@ public sealed class ForbiddenStrength() : TheCursedModCard(0, CardType.Skill, Ca
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        int circleCount = PileType.Hand.GetPile(Owner).Cards.OfType<CircleCard>().Count();
+        int strengthAmount = (int)((CalculatedVar)DynamicVars["CalculatedStrength"]).Calculate(null);
 
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<StrengthPower>(Owner.Creature, circleCount * DynamicVars["Strength"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(Owner.Creature, strengthAmount, Owner.Creature, this);
         await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
     }
 

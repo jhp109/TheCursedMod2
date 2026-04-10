@@ -10,15 +10,15 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 정수 흡수(Essence Drain) - 피해를 4 줍니다. 막히지 않은 피해만큼 체력을 회복합니다. 소멸.
-/// 강화 시 피해량 5.
+/// 정수 흡수(Essence Drain) - 피해를 5 줍니다. 막히지 않은 피해만큼 체력을 회복합니다. 소멸.
+/// 강화 시 피해량 7.
 /// </summary>
 public sealed class EssenceDrain() : TheCursedModCard(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
 {
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(4, ValueProp.Move)
+        new DamageVar(5, ValueProp.Move)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -40,6 +40,6 @@ public sealed class EssenceDrain() : TheCursedModCard(1, CardType.Attack, CardRa
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(1m);
+        DynamicVars.Damage.UpgradeValueBy(2m);
     }
 }

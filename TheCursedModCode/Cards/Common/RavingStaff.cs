@@ -34,6 +34,6 @@ public sealed class RavingStaff() : TheCursedModCard(0, CardType.Attack, CardRar
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(3m);
+        DynamicVars.Damage.UpgradeValueBy(4m);
     }
 }

@@ -17,7 +17,10 @@ public sealed class Celerity() : RiteCard(1, CardType.Skill, CardRarity.Uncommon
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<DexterityPower>("Dexterity", 2m)
+        new CalculationBaseVar(0m),
+        new CalculationExtraVar(2m),
+        new CalculatedVar("CalculatedDexterity").WithMultiplier(static (card, _) =>
+            PileType.Hand.GetPile(card.Owner).Cards.Count(c => c is CircleCard))
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -28,8 +31,8 @@ public sealed class Celerity() : RiteCard(1, CardType.Skill, CardRarity.Uncommon
 
     protected override Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        int circleCount = PileType.Hand.GetPile(Owner).Cards.OfType<CircleCard>().Count();
-        return PowerCmd.Apply<DexterityPower>(Owner.Creature, circleCount * DynamicVars["Dexterity"].IntValue, Owner.Creature, this);
+        int dexterityAmount = (int)((CalculatedVar)DynamicVars["CalculatedDexterity"]).Calculate(null);
+        return PowerCmd.Apply<DexterityPower>(Owner.Creature, dexterityAmount, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

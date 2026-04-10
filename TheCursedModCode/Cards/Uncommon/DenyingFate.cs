@@ -10,14 +10,14 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 운명 거부(Denying Fate) - 피해를 10 줍니다. 이번 턴에 예정된 업보를 1턴 뒤로 미룹니다. 소멸. (강화 시 피해 14)
+/// 운명 거부(Denying Fate) - 피해를 9 줍니다. 이번 턴에 예정된 업보를 1턴 뒤로 미룹니다. 소멸. (강화 시 피해 12)
 /// </summary>
 public sealed class DenyingFate() : TheCursedModCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust, CardKeyword.Retain];
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(10, ValueProp.Move)
+        new DamageVar(9, ValueProp.Move)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
@@ -43,6 +43,6 @@ public sealed class DenyingFate() : TheCursedModCard(1, CardType.Attack, CardRar
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Damage.UpgradeValueBy(4m);
+        DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }

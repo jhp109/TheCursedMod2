@@ -76,8 +76,8 @@
   "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "The first time you [gold]Exhaust[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] each turn, gain {Amount} [gold]Strength[/gold].",
 
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "Forbidden Form",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "Whenever you exhaust a [gold]Curse[/gold] via [gold]Rite[/gold], next Attack that gains [gold]Karma[/gold] deals additional damage.",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "Whenever you exhaust a [gold]Curse[/gold] via [gold]Rite[/gold], next Attack that gains [gold]Karma[/gold] deals {Amount}% additional damage.",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "Whenever you exhaust a [gold]Curse[/gold] via [gold]Rite[/gold], next Attack that brings [gold]Karma[/gold] deals additional damage.",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "Whenever you exhaust a [gold]Curse[/gold] via [gold]Rite[/gold], next Attack that brings [gold]Karma[/gold] deals {Amount}% additional damage.",
 
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.title": "Enhance Next Karma Attack",
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.description": "Next Attack that gains [gold]Karma[/gold] deals additional damage.",
@@ -85,7 +85,7 @@
 
   "THECURSEDMOD-CIRCLE_RETAIN_POWER.title": "Retain Circle",
   "THECURSEDMOD-CIRCLE_RETAIN_POWER.description": "[gold]Circle[/gold] cards in your [gold]Hand[/gold] are [gold]Retained[/gold] this turn.",
-  "THECURSEDMOD-CIRCLE_RETAIN_POWER.smartDescription": "[gold]Circle[/gold] cards in your [gold]Hand[/gold] are [gold]Retained[/gold] this turn.",
+  "THECURSEDMOD-CIRCLE_RETAIN_POWER.smartDescription": "[gold]Circle[/gold] cards in your [gold]Hand[/gold] are [gold]Retained[/gold] for {Amount} {Amount:plural:turn|turns}.",
 
   "THECURSEDMOD-BATTLEMAGE_POWER.title": "Battlemage",
   "THECURSEDMOD-BATTLEMAGE_POWER.description": "Whenever you activates an effect of [gold]Circle[/gold], gain [gold]Vigor[/gold].",

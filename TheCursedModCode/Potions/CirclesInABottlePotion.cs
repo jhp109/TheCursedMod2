@@ -33,7 +33,7 @@ public sealed class CirclesInABottlePotion : TheCursedModPotion
         var cards = CardFactory.GetDistinctForCombat(
             base.Owner,
             circleCardPool,
-            3,
+            2,
             base.Owner.RunState.Rng.CombatCardGeneration).ToList();
 
         foreach (var card in cards)

@@ -17,8 +17,6 @@ public sealed class PrepareRite() : TheCursedModCard(1, CardType.Skill, CardRari
 {
     private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt");
 
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
-
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new PowerVar<DrawCardsNextTurnPower>(1m)
     ];

@@ -88,7 +88,7 @@
   "THECURSEDMOD-FLESH_FROM_BONE.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : Gain {PlatingPower:diff()} [gold]Plating[/gold].",
 
   "THECURSEDMOD-ARCANE_SWEEP.title": "Arcane Sweep",
-  "THECURSEDMOD-ARCANE_SWEEP.description": "Deal {Damage:diff()} damage to ALL enemies.\nIf you have any [gold]Circle[/gold] card in your [gold]Hand[/gold], deal {Damage:diff()} damage to ALL enemies again.",
+  "THECURSEDMOD-ARCANE_SWEEP.description": "Deal {Damage:diff()} damage to ALL enemies. If you have any [gold]Circle[/gold] card in your [gold]Hand[/gold], deal {Damage:diff()} damage to ALL enemies again.",
 
   "THECURSEDMOD-CIRCLE_OF_FLAME.title": "Circle of Flame",
   "THECURSEDMOD-CIRCLE_OF_FLAME.description": "[gold]Circle[/gold] : Whenever you play an Attack card, deal {Damage:diff()} damage to ALL enemies.",
@@ -115,7 +115,7 @@
   "THECURSEDMOD-MALEVOLENCE.description": "Add a random [gold]Rite[/gold] card into your [gold]Hand[/gold].\nIt's free to play this turn.",
 
   "THECURSEDMOD-CELERITY.title": "Celerity",
-  "THECURSEDMOD-CELERITY.description": "[gold]Rite[/gold] : Gain {Dexterity:diff()} [gold]Dexterity[/gold] for each [gold]Circle[/gold] card in [gold]Hand[/gold].",
+  "THECURSEDMOD-CELERITY.description": "[gold]Rite[/gold] : Gain {CalculationExtra:diff()} [gold]Dexterity[/gold] for each [gold]Circle[/gold] card in [gold]Hand[/gold].{InCombat:cond:\n(Gain {CalculatedDexterity} [gold]Dexterity[/gold].)|}",
 
   "THECURSEDMOD-ARCANE_BINDING.title": "Arcane Binding",
   "THECURSEDMOD-ARCANE_BINDING.description": "Gain {Block:diff()} [gold]Block[/gold].\n[gold]Rite[/gold] : [gold]Retain[/gold] [gold]Circle[/gold] cards in your [gold]Hand[/gold] this turn.",
@@ -146,7 +146,7 @@
   "THECURSEDMOD-HELLFIRE_BREATHING.description": "Whenever you draw an [gold]Unplayable[/gold] card, deal {HellfireBreathingPower:diff()} damage to ALL enemies.",
 
   "THECURSEDMOD-DENYING_FATE.title": "Denying Fate",
-  "THECURSEDMOD-DENYING_FATE.description": "Deal {Damage:diff()} damage.\nDelay [gold]Karma[/gold] damage scheduled this turn to the next turn.",
+  "THECURSEDMOD-DENYING_FATE.description": "Deal {Damage:diff()} damage. Delay [gold]Karma[/gold] damage scheduled this turn to the next turn.",
 
   "THECURSEDMOD-FATAL_LEAP.title": "Fatal Leap",
   "THECURSEDMOD-FATAL_LEAP.description": "Deal {Damage:diff()} damage.\nIf you have [gold]Karma[/gold], gain {Energy:energyIcons()} and draw 1 card.",
@@ -167,10 +167,10 @@
   "THECURSEDMOD-FORBIDDEN_RAID.description": "Deal {Damage:diff()} damage.\nDraw 1 card.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_STRENGTH.title": "Forbidden Strength",
-  "THECURSEDMOD-FORBIDDEN_STRENGTH.description": "Gain {Strength:diff()} [gold]Strength[/gold] for each [gold]Circle[/gold] card in your [gold]Hand[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_STRENGTH.description": "Gain {CalculationExtra:diff()} [gold]Strength[/gold] for each [gold]Circle[/gold] card in your [gold]Hand[/gold].\n[gold]Karma[/gold] {KarmaPower:diff()}.{InCombat:cond:\n(Gain {CalculatedStrength} [gold]Strength[/gold].)|}",
 
   "THECURSEDMOD-WICKED_TEMPERING.title": "Wicked Tempering",
-  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]Rite[/gold] : Next Attack that gains [gold]Karma[/gold] deals {MultiplyNextKarmaAttackPower:diff()}% additional damage.",
+  "THECURSEDMOD-WICKED_TEMPERING.description": "[gold]Rite[/gold] : Next Attack that brings [gold]Karma[/gold] deals {MultiplyNextKarmaAttackPower:diff()}% additional damage.",
 
   "THECURSEDMOD-SPIRIT_OFFERING.title": "Spirit Offering",
   "THECURSEDMOD-SPIRIT_OFFERING.description": "The first time a [gold]Rite[/gold] effect is triggered each turn, gain {SpiritOfferingPower:diff()} [gold]Strength[/gold].",
@@ -215,7 +215,7 @@
   "THECURSEDMOD-FREEDOM_AND_BONDAGE.description": "ALL players gain {Energy:energyIcons()} and add a random [gold]Curse[/gold] card to their [gold]Hand[/gold].",
 
   "THECURSEDMOD-FORBIDDEN_FORM.title": "Forbidden Form",
-  "THECURSEDMOD-FORBIDDEN_FORM.description": "Whenever a [gold]Rite[/gold] effect is triggered, your next Attack that gains [gold]Karma[/gold] deals {ForbiddenFormPower:diff()}% additional damage.",
+  "THECURSEDMOD-FORBIDDEN_FORM.description": "Whenever a [gold]Rite[/gold] effect is triggered, your next Attack that brings [gold]Karma[/gold] deals {ForbiddenFormPower:diff()}% additional damage.",
 
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.title": "Forbidden Bludgeon",
   "THECURSEDMOD-FORBIDDEN_BLUDGEON.description": "Deal {Damage:diff()} damage.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
