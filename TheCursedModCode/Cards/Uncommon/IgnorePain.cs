@@ -10,13 +10,13 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 고통 감내(Ignore Pain) - 방어도를 9 얻습니다. 의례 : 이번 턴에 업보로 인한 피해를 절반만 받습니다. (강화 시 방어도 12)
+/// 고통 감내(Ignore Pain) - 방어도를 8 얻습니다. 의례 : 이번 턴에 업보로 받는 피해량이 50% 감소합니다. (강화 시 방어도 11)
 /// </summary>
 public sealed class IgnorePain() : RiteCard(1, CardType.Skill, CardRarity.Uncommon, TargetType.None)
 {
     public override bool GainsBlock => true;
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(9, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new BlockVar(8, ValueProp.Move)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite),
@@ -35,6 +35,6 @@ public sealed class IgnorePain() : RiteCard(1, CardType.Skill, CardRarity.Uncomm
 
     protected override void OnUpgrade()
     {
-        DynamicVars.Block.UpgradeValueBy(4m);
+        DynamicVars.Block.UpgradeValueBy(3m);
     }
 }
