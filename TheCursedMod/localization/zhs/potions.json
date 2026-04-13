@@ -1,0 +1,10 @@
+{
+  "THECURSEDMOD-RITE_POTION.title": "咒仪药水",
+  "THECURSEDMOD-RITE_POTION.description": "从[blue]3[/blue]张随机[gold]咒仪[/gold]牌中选择[blue]1[/blue]张加入你的[gold]手牌[/gold]，它在本回合的耗能变为0。同时将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
+
+  "THECURSEDMOD-MERCY_POTION.title": "慈悲药水",
+  "THECURSEDMOD-MERCY_POTION.description": "本回合你受到的[gold]因果报应[/gold]伤害减少[blue]100%[/blue]。",
+
+  "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.title": "瓶中法阵",
+  "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.description": "将[blue]2[/blue]张随机的[gold]已升级[/gold]的[gold]魔法阵[/gold]牌加入你的[gold]手牌[/gold]，它们均具有[purple]稳定[/purple][gold]附魔[/gold]。"
+}

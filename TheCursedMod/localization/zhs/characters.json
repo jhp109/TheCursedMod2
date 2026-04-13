@@ -1,0 +1,16 @@
+{
+  "THECURSEDMOD-THE_CURSED_MOD.title": "诅咒魔法师",
+  "THECURSEDMOD-THE_CURSED_MOD.titleObject": "诅咒魔法师",
+  "THECURSEDMOD-THE_CURSED_MOD.description": "一位被黑暗侵蚀的流浪者。\n运用[gold]诅咒[/gold]牌、[gold]魔法阵[/gold]牌，以及会带来[gold]因果报应[/gold]的禁忌武器进行战斗。",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounObject": "他",
+  "THECURSEDMOD-THE_CURSED_MOD.possessiveAdjective": "他的",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounPossessive": "他的",
+  "THECURSEDMOD-THE_CURSED_MOD.pronounSubject": "他",
+  "THECURSEDMOD-THE_CURSED_MOD.goldMonologue": "[sine]每一枚硬币都有它的代价。[/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.eventDeathPrevention": "诅咒暂时还不会让我死去。",
+  "THECURSEDMOD-THE_CURSED_MOD.aromaPrinciple": "[sine][purple]别人如何待你是他们的因果，你如何应对是你的修行。[/purple][/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.cardsModifierTitle": "诅咒卡牌",
+  "THECURSEDMOD-THE_CURSED_MOD.cardsModifierDescription": "诅咒卡牌现在会出现在奖励和商店中。",
+  "THECURSEDMOD-THE_CURSED_MOD.banter.alive.endTurnPing": "[sine]仪式完成了……[/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.banter.dead.endTurnPing": "……"
+}

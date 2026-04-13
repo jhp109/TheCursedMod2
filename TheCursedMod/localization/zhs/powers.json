@@ -1,0 +1,101 @@
+{
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.title": "远古呼唤",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.description": "本回合，接下来的[gold]咒仪[/gold]牌会额外触发一次[gold]咒仪[/gold]效果。",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.smartDescription": "本回合，接下来的{Amount}张[gold]咒仪[/gold]{Amount:plural:牌会额外触发一次|牌会额外触发一次}[gold]咒仪[/gold]效果。",
+
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.title": "可疑契约",
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.description": "在你的回合开始时，将一张随机[gold]咒仪[/gold]牌和一张随机[gold]诅咒[/gold]牌加入你的[gold]手牌[/gold]。",
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.smartDescription": "在你的回合开始时，将{Amount}张随机[gold]咒仪[/gold]{Amount:plural:牌|牌}和{Amount}张随机[gold]诅咒[/gold]{Amount:plural:牌|牌}加入你的[gold]手牌[/gold]。",
+
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.title": "可回收废料",
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.description": "所有[gold]残渣[/gold]在本场战斗中获得[gold]保留[/gold]。",
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.smartDescription": "所有[gold]残渣[/gold]在本场战斗中获得[gold]保留[/gold]。",
+
+  "THECURSEDMOD-LUCKY_CHARM_POWER.title": "幸运符咒",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.description": "每当有[gold]诅咒[/gold]牌被抽到或被[gold]消耗[/gold]时，获得[gold]格挡[/gold]。",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.smartDescription": "每当有[gold]诅咒[/gold]牌被抽到或被[gold]消耗[/gold]时，获得{Amount}点[gold]格挡[/gold]。",
+
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.title": "魔力循环",
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.description": "每回合首次触发[gold]咒仪[/gold]效果时，获得{energyPrefix}。",
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.smartDescription": "每回合首次触发[gold]咒仪[/gold]效果时，获得{Amount:energyIcons()}。",
+
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.title": "奥术矩阵",
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.description": "每当你抽到一张[gold]魔法阵[/gold]牌，获得{energyPrefix}并抽1张牌。",
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.smartDescription": "每当你抽到一张[gold]魔法阵[/gold]牌，获得{Amount:energyIcons()}并抽{Amount}张{Amount:plural:牌|牌}。",
+
+  "THECURSEDMOD-KARMA_TURN1_POWER.title": "因果报应",
+  "THECURSEDMOD-KARMA_TURN1_POWER.description": "在本回合结束时，受到伤害。",
+  "THECURSEDMOD-KARMA_TURN1_POWER.smartDescription": "在本回合结束时，受到{Amount}点伤害。",
+
+  "THECURSEDMOD-KARMA_TURN2_POWER.title": "因果报应",
+  "THECURSEDMOD-KARMA_TURN2_POWER.description": "在你的下回合结束时，受到伤害。",
+  "THECURSEDMOD-KARMA_TURN2_POWER.smartDescription": "在你的下回合结束时，受到{Amount}点伤害。",
+
+  "THECURSEDMOD-KARMA_TURN3_POWER.title": "因果报应",
+  "THECURSEDMOD-KARMA_TURN3_POWER.description": "在你的下下回合结束时，受到伤害。",
+  "THECURSEDMOD-KARMA_TURN3_POWER.smartDescription": "在你的下下回合结束时，受到{Amount}点伤害。",
+
+  "THECURSEDMOD-GRACE_POWER.title": "恩典",
+  "THECURSEDMOD-GRACE_POWER.description": "[gold]因果报应[/gold]伤害额外延迟一回合触发。",
+  "THECURSEDMOD-GRACE_POWER.smartDescription": "[gold]因果报应[/gold]伤害额外延迟一回合触发。",
+
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.title": "狱火吐息",
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.description": "每当你抽到一张[gold]无法打出[/gold]的牌，对所有敌人造成{Amount}点伤害。",
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.smartDescription": "每当你抽到一张[gold]无法打出[/gold]的牌，对所有敌人造成{Amount}点伤害。",
+
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.title": "债务展期",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.description": "若你拥有[gold]因果报应[/gold]，在你的回合结束时获得[gold]格挡[/gold]。",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.smartDescription": "若你拥有[gold]因果报应[/gold]，在你的回合结束时获得{Amount}点[gold]格挡[/gold]。",
+
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.title": "堕落循环",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.description": "在你的回合开始时，若你拥有[gold]因果报应[/gold]，抽牌。",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.smartDescription": "在你的回合开始时，若你拥有[gold]因果报应[/gold]，抽{Amount}张牌。",
+
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.title": "禁忌灵药",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.description": "在你的回合开始时，获得{energyPrefix}。",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.smartDescription": "在你的回合开始时，获得{Amount:energyIcons()}。",
+
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.title": "撕裂魔典",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.description": "耗能为{Energy:energyIcons()}或更多的攻击牌额外打出。",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.smartDescription": "耗能为{Energy:energyIcons()}或更多的攻击牌额外打出{Amount}{Amount:plural:次|次}。",
+
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.title": "反复业报",
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.description": "在你的回合开始时，获得[gold]因果报应[/gold]。",
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.smartDescription": "在你的回合开始时，获得{Amount}点[gold]因果报应[/gold]。",
+
+  "THECURSEDMOD-DIE_TOGETHER_POWER.title": "玉石俱焚",
+  "THECURSEDMOD-DIE_TOGETHER_POWER.description": "本场战斗中[gold]因果报应[/gold]伤害同样对所有敌人造成。",
+  "THECURSEDMOD-DIE_TOGETHER_POWER.smartDescription": "本场战斗中[gold]因果报应[/gold]伤害同样对所有敌人造成。",
+
+  "THECURSEDMOD-IGNORE_PAIN_POWER.title": "无视痛苦",
+  "THECURSEDMOD-IGNORE_PAIN_POWER.description": "本回合你受到来自[gold]因果报应[/gold]的伤害减少。",
+  "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "本回合你受到来自[gold]因果报应[/gold]的伤害减少{Amount}%。",
+
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.title": "灵魂献祭",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "每回合首次通过[gold]咒仪[/gold][gold]消耗[/gold]一张[gold]诅咒[/gold]牌时，获得[gold]力量[/gold]。",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "每回合首次通过[gold]咒仪[/gold][gold]消耗[/gold]一张[gold]诅咒[/gold]牌时，获得{Amount}点[gold]力量[/gold]。",
+
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "禁忌形态",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "每当你通过[gold]咒仪[/gold]消耗一张[gold]诅咒[/gold]牌时，下一张带有[gold]因果报应[/gold]的攻击牌造成额外伤害。",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "每当你通过[gold]咒仪[/gold]消耗一张[gold]诅咒[/gold]牌时，下一张带有[gold]因果报应[/gold]的攻击牌造成的伤害增加{Amount}%。",
+
+  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.title": "强化下次业报攻击",
+  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.description": "下一张获得[gold]因果报应[/gold]的攻击牌造成额外伤害。",
+  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.smartDescription": "下一张获得[gold]因果报应[/gold]的攻击牌造成的伤害增加{Amount}%。",
+
+  "THECURSEDMOD-CIRCLE_RETAIN_POWER.title": "保留法阵",
+  "THECURSEDMOD-CIRCLE_RETAIN_POWER.description": "本回合你[gold]手牌[/gold]中的[gold]魔法阵[/gold]牌被[gold]保留[/gold]。",
+  "THECURSEDMOD-CIRCLE_RETAIN_POWER.smartDescription": "你[gold]手牌[/gold]中的[gold]魔法阵[/gold]牌被[gold]保留[/gold]{Amount}{Amount:plural:回合|回合}。",
+
+  "THECURSEDMOD-BATTLEMAGE_POWER.title": "战斗法师",
+  "THECURSEDMOD-BATTLEMAGE_POWER.description": "每当你触发[gold]魔法阵[/gold]的效果，获得[gold]活力[/gold]。",
+  "THECURSEDMOD-BATTLEMAGE_POWER.smartDescription": "每当你触发[gold]魔法阵[/gold]的效果，获得{Amount}点[gold]活力[/gold]。",
+
+  "THECURSEDMOD-MANA_BASTION_POWER.title": "魔力壁垒",
+  "THECURSEDMOD-MANA_BASTION_POWER.description": "每当一个[gold]魔法阵[/gold]效果被触发，获得[gold]格挡[/gold]。",
+  "THECURSEDMOD-MANA_BASTION_POWER.smartDescription": "每当一个[gold]魔法阵[/gold]效果被触发，获得{Amount}点[gold]格挡[/gold]。",
+
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.title": "世界线扭曲",
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.description": "本回合你不会受到[gold]因果报应[/gold]伤害。",
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.smartDescription": "本回合你不会受到[gold]因果报应[/gold]伤害。"
+}

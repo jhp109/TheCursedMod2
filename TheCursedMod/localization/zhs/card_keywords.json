@@ -1,0 +1,10 @@
+{
+  "THECURSEDMOD-RITE.title": "咒仪",
+  "THECURSEDMOD-RITE.description": "使用时，选择1张牌[gold]消耗[/gold]。若选择[gold]诅咒[/gold]牌，则触发[gold]咒仪[/gold]的效果。",
+
+  "THECURSEDMOD-KARMA.title": "因果报应",
+  "THECURSEDMOD-KARMA.description": "在倒计时结束时，受到等量伤害。",
+
+  "THECURSEDMOD-CIRCLE.title": "魔法阵",
+  "THECURSEDMOD-CIRCLE.description": "处于[gold]手牌[/gold]中时，无法被打出，但可通过使用其他牌来触发此牌效果"
+}

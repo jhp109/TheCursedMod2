@@ -1,0 +1,274 @@
+{
+ "THECURSEDMOD-RITE.selectionScreenPrompt":"消耗。选择一张诅咒牌以触发咒仪的效果。",
+
+ "THECURSEDMOD-DREGS.title":"残渣",
+ "THECURSEDMOD-DREGS.description":"",
+
+ "THECURSEDMOD-STRIKE_THE_CURSED.title":"打击",
+ "THECURSEDMOD-STRIKE_THE_CURSED.description":"造成{Damage:diff()}点伤害。",
+
+ "THECURSEDMOD-DEFEND_THE_CURSED.title":"防御",
+ "THECURSEDMOD-DEFEND_THE_CURSED.description":"获得{Block:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-CURSED_WAND.title":"诅咒短杖",
+ "THECURSEDMOD-CURSED_WAND.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n造成{Damage:diff()}点伤害。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-CLEAN_UP_WORKSHOP.title":"清扫工坊",
+ "THECURSEDMOD-CLEAN_UP_WORKSHOP.description":"[gold]咒仪[/gold]:获得{Block:diff()}点[gold]格挡[/gold]并抽{Cards:diff()}张{Cards:plural:牌|牌}。",
+
+ "THECURSEDMOD-CURSED_MACE.title":"诅咒钉锤",
+ "THECURSEDMOD-CURSED_MACE.description":"造成{Damage:diff()}点伤害。\n施加{VulnerablePower:diff()}层[gold]易伤[/gold]。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-CURSED_SHIV.title":"诅咒小刀",
+ "THECURSEDMOD-CURSED_SHIV.description":"造成{Damage:diff()}点伤害。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-CURSED_STAFF.title":"诅咒长杖",
+ "THECURSEDMOD-CURSED_STAFF.description":"造成{Damage:diff()}点伤害。\n将2张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-CURSED_BOOMERANG.title":"诅咒回旋镖",
+ "THECURSEDMOD-CURSED_BOOMERANG.description":"对随机一名敌人造成{Damage:diff()}点伤害{Repeat:diff()}次。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-CURSED_BLADE.title":"诅咒之刃",
+ "THECURSEDMOD-CURSED_BLADE.description":"对所有敌人造成{Damage:diff()}点伤害。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-SPITEFUL_STRIKE.title":"怨忿打击",
+ "THECURSEDMOD-SPITEFUL_STRIKE.description":"造成{Damage:diff()}点伤害。\n若你的[gold]手牌[/gold]中有任何[gold]无法打出[/gold]的牌则获得{Energy:energyIcons()}。",
+
+ "THECURSEDMOD-REAR_STRIKE.title":"背刺",
+ "THECURSEDMOD-REAR_STRIKE.description":"造成{Damage:diff()}点伤害。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-RAVING_STAFF.title":"狂乱法杖",
+ "THECURSEDMOD-RAVING_STAFF.description":"对随机一名敌人造成{Damage:diff()}点伤害X次。\n你[gold]因果报应[/gold]{KarmaPower:diff()}X次。",
+
+ "THECURSEDMOD-WIELD.title":"挥舞",
+ "THECURSEDMOD-WIELD.description":"造成{Damage:diff()}点伤害。\n抽等同于你[gold]手牌[/gold]中[gold]无法打出[/gold]牌数量的牌。{InCombat:cond:\n(抽{CalculatedCards}张牌。)|}",
+
+ "THECURSEDMOD-OBSCURATION.title":"隐匿",
+ "THECURSEDMOD-OBSCURATION.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:再次获得{Block:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-RAPID_MOVEMENT.title":"迅捷行动",
+ "THECURSEDMOD-RAPID_MOVEMENT.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:抽2张牌。",
+
+ "THECURSEDMOD-WEAR_CLOAK.title":"斗篷无形",
+ "THECURSEDMOD-WEAR_CLOAK.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n若你的[gold]手牌[/gold]中有任何[gold]无法打出[/gold]的牌，选择一张牌从你的[gold]弃牌堆[/gold]放入你的[gold]手牌[/gold]。",
+ "THECURSEDMOD-WEAR_CLOAK.selectionScreenPrompt":"选择一张牌放入你的手牌。",
+
+ "THECURSEDMOD-CURSED_ARMOUR.title":"诅咒铠甲",
+ "THECURSEDMOD-CURSED_ARMOUR.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n将2张随机[gold]诅咒[/gold]牌洗入你的[gold]抽牌堆[/gold]。",
+
+ "THECURSEDMOD-DOUBLE_SHIELD.title":"双重护盾",
+ "THECURSEDMOD-DOUBLE_SHIELD.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:下回合获得{Block:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-CURSED_AMULET.title":"诅咒护符",
+ "THECURSEDMOD-CURSED_AMULET.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n抽1张牌。\n将一张随机[gold]诅咒[/gold]牌洗入你的[gold]抽牌堆[/gold]。",
+
+ "THECURSEDMOD-SMOKESCREEN.title":"无力之烟",
+ "THECURSEDMOD-SMOKESCREEN.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:对所有敌人施加{WeakPower:diff()}层[gold]虚弱[/gold]。",
+
+ "THECURSEDMOD-ASHES_TO_ASHES.title":"尘归尘",
+ "THECURSEDMOD-ASHES_TO_ASHES.description":"[gold]咒仪[/gold]:抽{Cards:diff()}张牌。",
+
+ "THECURSEDMOD-REPENTANCE.title":"忏悔之佑",
+ "THECURSEDMOD-REPENTANCE.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n若你拥有[gold]因果报应[/gold]，改为获得{KarmaBlock:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-CURSED_MIRROR.title":"诅咒魔镜",
+ "THECURSEDMOD-CURSED_MIRROR.description":"造成{Damage:diff()}点伤害。\n将一张[gold]执迷[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-SCINTILLA.selectionScreenPrompt":"选择一张牌转化为残渣。",
+ "THECURSEDMOD-SCINTILLA.title":"火花",
+ "THECURSEDMOD-SCINTILLA.description":"造成{Damage:diff()}点伤害。\n将你[gold]弃牌堆[/gold]中的一张牌转化为[gold]残渣[/gold]。",
+
+ "THECURSEDMOD-BLESSING_IN_DISGUISE.title":"清仓行动",
+ "THECURSEDMOD-BLESSING_IN_DISGUISE.description":"[gold]消耗[/gold]你[gold]手牌[/gold]中的所有[gold]诅咒[/gold]牌。\n每张被[gold]消耗[/gold]的牌给予你{Block:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-CURSED_SPELLBOOK.title":"咒文禁书",
+ "THECURSEDMOD-CURSED_SPELLBOOK.description":"抽{Cards:diff()}张牌。\n将一张随机[gold]诅咒[/gold]牌洗入你的[gold]抽牌堆[/gold]。",
+
+ "THECURSEDMOD-FLESH_FROM_BONE.title":"骨肉再生",
+ "THECURSEDMOD-FLESH_FROM_BONE.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:获得{PlatingPower:diff()}层[gold]多层护甲[/gold]。",
+
+ "THECURSEDMOD-ARCANE_SWEEP.title":"奥术横扫",
+ "THECURSEDMOD-ARCANE_SWEEP.description":"对所有敌人造成{Damage:diff()}点伤害。若你的[gold]手牌[/gold]中有任何[gold]魔法阵[/gold]牌，则再对所有敌人造成{Damage:diff()}点伤害。",
+
+ "THECURSEDMOD-CIRCLE_OF_FLAME.title":"火焰法阵",
+ "THECURSEDMOD-CIRCLE_OF_FLAME.description":"[gold]魔法阵[/gold]\n每当你打出一张攻击牌，对所有敌人造成{Damage:diff()}点伤害。",
+
+ "THECURSEDMOD-CIRCLE_OF_WARD.title":"守护法阵",
+ "THECURSEDMOD-CIRCLE_OF_WARD.description":"[gold]魔法阵[/gold]\n每当你打出一张技能牌，获得{Block:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.title":"增幅法阵",
+ "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.description":"[gold]魔法阵[/gold]\n每当你打出一张能力牌，获得{Energy:energyIcons()}。",
+
+ "THECURSEDMOD-CIRCLE_OF_RITUAL.title":"咒仪法阵",
+ "THECURSEDMOD-CIRCLE_OF_RITUAL.description":"[gold]魔法阵[/gold]\n每当一个[gold]咒仪[/gold]效果被触发，获得{Block:diff()}点[gold]格挡[/gold]并抽{Cards:diff()}张{Cards:plural:牌|牌}。",
+
+ "THECURSEDMOD-CIRCLE_OF_FOCUS.title":"专注法阵",
+ "THECURSEDMOD-CIRCLE_OF_FOCUS.description":"[gold]魔法阵[/gold]\n每当你打出一张耗能为{CostThreshold:energyIcons()}或更多的牌，获得{Energy:energyIcons()}。",
+
+ "THECURSEDMOD-ARCANE_TRIGGER.title":"奥术激发",
+ "THECURSEDMOD-ARCANE_TRIGGER.description":"造成{Damage:diff()}点伤害。\n强制触发你[gold]手牌[/gold]中所有[gold]魔法阵[/gold]牌的效果，无视其触发条件。",
+
+ "THECURSEDMOD-MANA_BULLET.title":"魔法流星雨",
+ "THECURSEDMOD-MANA_BULLET.description":"造成{Damage:diff()}点伤害。\n你[gold]手牌[/gold]中每有一张[gold]魔法阵[/gold]牌，便重复一次。{InCombat:cond:\n(重复{CalculatedRepeat}次。)|}",
+
+ "THECURSEDMOD-MALEVOLENCE.title":"咒仪魔瞳",
+ "THECURSEDMOD-MALEVOLENCE.description":"将一张随机[gold]咒仪[/gold]牌加入你的[gold]手牌[/gold]。\n它在本回合的耗能变为0。",
+
+ "THECURSEDMOD-CELERITY.title":"迅捷",
+ "THECURSEDMOD-CELERITY.description":"[gold]咒仪[/gold]:[gold]手牌[/gold]中每有一张[gold]魔法阵[/gold]牌，获得{CalculationExtra:diff()}点[gold]敏捷[/gold]。{InCombat:cond:\n(获得{CalculatedDexterity}点[gold]敏捷[/gold]。)|}",
+
+ "THECURSEDMOD-ARCANE_BINDING.title":"奥术束缚",
+ "THECURSEDMOD-ARCANE_BINDING.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:本回合[gold]保留[/gold]你[gold]手牌[/gold]中的所有[gold]魔法阵[/gold]牌。",
+
+ "THECURSEDMOD-WICKED_WARD.title":"邪恶护罩",
+ "THECURSEDMOD-WICKED_WARD.description":"[gold]咒仪[/gold]:给予所有其他玩家{Block:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-RESONATING_SHIELD.title":"共鸣护盾",
+ "THECURSEDMOD-RESONATING_SHIELD.description":"本场战斗中[gold]魔法阵[/gold]效果每触发过一次，耗能便减少1{Energy:energyIcons()}。\n获得{Block:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-PREPARE_RITE.title":"准备仪式",
+ "THECURSEDMOD-PREPARE_RITE.description":"将你[gold]抽牌堆[/gold]中的一张牌转化为[gold]残渣[/gold]。\n下回合，多抽{DrawCardsNextTurnPower:diff()}张{DrawCardsNextTurnPower:plural:牌|牌}。",
+ "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt":"选择一张牌转化为残渣。",
+
+ "THECURSEDMOD-TROUBLOUS_MINION.title":"恼人仆从",
+ "THECURSEDMOD-TROUBLOUS_MINION.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n将一张随机[gold]诅咒[/gold]牌加入你的[gold]手牌[/gold]。\n将这张牌洗入你的[gold]抽牌堆[/gold]。",
+
+ "THECURSEDMOD-RECYCLABLE_WASTE.title":"可回收废料",
+ "THECURSEDMOD-RECYCLABLE_WASTE.description":"所有[gold]残渣[/gold]在本场战斗中获得[gold]保留[/gold]。\n将2张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-LUCKY_CHARM.title":"幸运符咒",
+ "THECURSEDMOD-LUCKY_CHARM.description":"每当有[gold]诅咒[/gold]牌被抽到或被[gold]消耗[/gold]时，获得{LuckyCharmPower:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-MANA_CIRCULATION.title":"魔力循环",
+ "THECURSEDMOD-MANA_CIRCULATION.description":"每回合首次触发[gold]咒仪[/gold]效果时，获得{Energy:energyIcons()}。",
+
+ "THECURSEDMOD-HELLFIRE_BREATHING.title":"狱火吐息",
+ "THECURSEDMOD-HELLFIRE_BREATHING.description":"每当你抽到一张[gold]无法打出[/gold]的牌，对所有敌人造成{HellfireBreathingPower:diff()}点伤害。",
+
+ "THECURSEDMOD-DENYING_FATE.title":"我命由我",
+ "THECURSEDMOD-DENYING_FATE.description":"造成{Damage:diff()}点伤害。将本回合计划触发的[gold]因果报应[/gold]伤害延迟至下回合。",
+
+ "THECURSEDMOD-FATAL_LEAP.title":"致命飞跃",
+ "THECURSEDMOD-FATAL_LEAP.description":"造成{Damage:diff()}点伤害。\n若你拥有[gold]因果报应[/gold]，获得{Energy:energyIcons()}并抽1张牌。",
+
+ "THECURSEDMOD-VITAL_STRIKE.title":"要害打击",
+ "THECURSEDMOD-VITAL_STRIKE.description":"造成{Damage:diff()}点伤害。\n若你拥有[gold]因果报应[/gold]，施加{VulnerablePower:diff()}层[gold]易伤[/gold]。",
+
+ "THECURSEDMOD-FORBIDDEN_FLAME.title":"禁忌火焰",
+ "THECURSEDMOD-FORBIDDEN_FLAME.description":"对所有敌人造成{Damage:diff()}点伤害。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-FORBIDDEN_COMBO.title":"禁忌连击",
+ "THECURSEDMOD-FORBIDDEN_COMBO.description":"造成{Damage:diff()}点伤害{Repeat:diff()}次。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-FORBIDDEN_WALLOP.title":"禁忌重击",
+ "THECURSEDMOD-FORBIDDEN_WALLOP.description":"造成{Damage:diff()}点伤害。\n获得等同于未被格挡伤害值的[gold]格挡[/gold]。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-FORBIDDEN_RAID.title":"禁忌突袭",
+ "THECURSEDMOD-FORBIDDEN_RAID.description":"造成{Damage:diff()}点伤害。\n抽1张牌。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-FORBIDDEN_STRENGTH.title":"禁忌力量",
+ "THECURSEDMOD-FORBIDDEN_STRENGTH.description":"[gold]手牌[/gold]中每有一张[gold]魔法阵[/gold]牌，获得{CalculationExtra:diff()}点[gold]力量[/gold]。\n[gold]因果报应[/gold]{KarmaPower:diff()}。{InCombat:cond:\n(获得{CalculatedStrength}点[gold]力量[/gold]。)|}",
+
+ "THECURSEDMOD-WICKED_TEMPERING.title":"邪恶淬炼",
+ "THECURSEDMOD-WICKED_TEMPERING.description":"[gold]咒仪[/gold]:下一张带有[gold]因果报应[/gold]的攻击牌造成的伤害增加{MultiplyNextKarmaAttackPower:diff()}%。",
+
+ "THECURSEDMOD-SPIRIT_OFFERING.title":"灵魂献祭",
+ "THECURSEDMOD-SPIRIT_OFFERING.description":"每回合首次触发[gold]咒仪[/gold]效果时，获得{SpiritOfferingPower:diff()}点[gold]力量[/gold]。",
+
+ "THECURSEDMOD-IGNORE_PAIN.title":"无视痛苦",
+ "THECURSEDMOD-IGNORE_PAIN.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:本回合你受到来自[gold]因果报应[/gold]的伤害减少50%。",
+
+ "THECURSEDMOD-ROLLING_OVER_DEBT.title":"债务展期",
+ "THECURSEDMOD-ROLLING_OVER_DEBT.description":"若你拥有[gold]因果报应[/gold]，在你的回合结束时获得{RollingOverDebtPower:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-CYCLE_OF_DEPRAVITY.title":"堕落循环",
+ "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description":"在你的回合开始时，若你拥有[gold]因果报应[/gold]，抽{CycleOfDepravityPower:diff()}张牌。",
+
+ "THECURSEDMOD-TEAR_GRIMOIRE.title":"撕裂魔典",
+ "THECURSEDMOD-TEAR_GRIMOIRE.description":"耗能为{Energy:energyIcons()}或更多的攻击牌额外打出一次。\n在你的回合开始时，[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.title":"过载法阵",
+ "THECURSEDMOD-CIRCLE_OF_OVERCURRENT.description":"[gold]魔法阵[/gold]\n每当你打出一张技能牌，对随机一名敌人造成{Damage:diff()}点伤害。本场战斗中此牌伤害增加{DamageIncrement:diff()}点。",
+
+ "THECURSEDMOD-CIRCLE_OF_WINDFURY.title":"风怒法阵",
+ "THECURSEDMOD-CIRCLE_OF_WINDFURY.description":"[gold]魔法阵[/gold]\n每当你打出一张耗能为0{Energy:energyIcons()}的牌，抽{Cards:diff()}张{Cards:plural:牌|牌}。",
+
+ "THECURSEDMOD-ARCANE_MATRIX.title":"奥术矩阵",
+ "THECURSEDMOD-ARCANE_MATRIX.description":"每当你抽到一张[gold]魔法阵[/gold]牌，获得{Energy:energyIcons()}并抽{ArcaneMatrixPower:diff()}张{ArcaneMatrixPower:plural:牌|牌}。",
+
+ "THECURSEDMOD-ARCANE_DISCHARGE.title":"奥术释放",
+ "THECURSEDMOD-ARCANE_DISCHARGE.description":"对所有敌人造成等同于{ExtraDamage:diff()}乘以本场战斗中[gold]魔法阵[/gold]效果触发次数的伤害。{InCombat:cond:\n(造成{CalculatedDamage:diff()}点伤害。)|}",
+
+ "THECURSEDMOD-DOMAIN_EXPANSION.title":"领域展开",
+ "THECURSEDMOD-DOMAIN_EXPANSION.description":"强制触发你[gold]手牌[/gold]中所有[gold]魔法阵[/gold]牌的效果{IfUpgraded:show:X+1|X}次，无视其触发条件。\n[gold]因果报应[/gold]{KarmaPower:diff()}{IfUpgraded:show:X+1|X}次。",
+
+ "THECURSEDMOD-GRACE.title":"恩典",
+ "THECURSEDMOD-GRACE.description":"[gold]因果报应[/gold]伤害额外延迟一回合触发。此效果无法叠加。",
+
+ "THECURSEDMOD-ANGER_CONTROL.title":"凡庸怒击",
+ "THECURSEDMOD-ANGER_CONTROL.description":"造成{Damage:diff()}点伤害{Repeat:diff()}次。\n本场战斗中此牌的打击次数增加1。\n将一张[gold]凡庸[/gold]加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-DIE_TOGETHER.title":"玉石俱焚",
+ "THECURSEDMOD-DIE_TOGETHER.description":"本场战斗中[gold]因果报应[/gold]伤害同样对所有敌人造成。\n在你的回合开始时，[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-FREEDOM_AND_BONDAGE.title":"自由与束缚",
+ "THECURSEDMOD-FREEDOM_AND_BONDAGE.description":"所有玩家获得{Energy:energyIcons()}并将一张随机[gold]诅咒[/gold]牌加入其[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-FORBIDDEN_FORM.title":"禁忌形态",
+ "THECURSEDMOD-FORBIDDEN_FORM.description":"每当一个[gold]咒仪[/gold]效果被触发，你的下一张带有[gold]因果报应[/gold]的攻击牌造成的伤害增加{ForbiddenFormPower:diff()}%。",
+
+ "THECURSEDMOD-FORBIDDEN_BLUDGEON.title":"禁忌重棍",
+ "THECURSEDMOD-FORBIDDEN_BLUDGEON.description":"造成{Damage:diff()}点伤害。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-ESSENCE_DRAIN.title":"精华吸取",
+ "THECURSEDMOD-ESSENCE_DRAIN.description":"造成{Damage:diff()}点伤害。\n回复等同于未被格挡伤害值的生命。",
+
+ "THECURSEDMOD-DARK_BARRIER.title":"无形咒术",
+ "THECURSEDMOD-DARK_BARRIER.description":"[gold]咒仪[/gold]:获得{IntangiblePower:diff()}层[gold]无实体[/gold]。",
+
+ "THECURSEDMOD-MIRACLE_ALCHEMY.title":"奇迹炼金",
+ "THECURSEDMOD-MIRACLE_ALCHEMY.description":"[gold]咒仪[/gold]:获得一瓶[gold]混沌药水[/gold]。",
+
+ "THECURSEDMOD-ANTI_AGING.title":"逆衰老",
+ "THECURSEDMOD-ANTI_AGING.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:将你的最大生命值提升{MaxHp:diff()}点。",
+
+ "THECURSEDMOD-DEMONIC_BLADE.title":"恶魔之刃",
+ "THECURSEDMOD-DEMONIC_BLADE.description":"造成{CalculatedDamage:diff()}点伤害。\n本场战斗中[gold]咒仪[/gold]效果每触发过一次，便额外造成{ExtraDamage:diff()}点伤害。",
+
+ "THECURSEDMOD-CALL_OF_THE_ANCIENT.title":"远古呼唤",
+ "THECURSEDMOD-CALL_OF_THE_ANCIENT.description":"本回合，接下来{CallOfTheAncientPower:diff()}张[gold]咒仪[/gold]牌的[gold]咒仪[/gold]效果额外触发一次。",
+
+ "THECURSEDMOD-HELP_OF_THE_DEAD.title":"亡者援手",
+ "THECURSEDMOD-HELP_OF_THE_DEAD.description":"[gold]咒仪[/gold]:为你[gold]抽牌堆[/gold]中的一张牌添加1次[gold]重放[/gold]。",
+ "THECURSEDMOD-HELP_OF_THE_DEAD.selectionScreenPrompt":"选择一张牌添加重放。",
+
+ "THECURSEDMOD-DUBIOUS_CONTRACT.title":"可疑契约",
+ "THECURSEDMOD-DUBIOUS_CONTRACT.description":"在你的回合开始时，将一张随机[gold]咒仪[/gold]牌和一张随机[gold]诅咒[/gold]牌加入你的[gold]手牌[/gold]。",
+
+ "THECURSEDMOD-NEOWS_MIGHT.title":"涅奥神力",
+ "THECURSEDMOD-NEOWS_MIGHT.description":"抽{Cards:diff()}张{Cards:plural:牌|牌}。\n本回合你[gold]手牌[/gold]中所有牌的耗能减少1。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-FORBIDDEN_RELIC.title":"禁忌遗物",
+ "THECURSEDMOD-FORBIDDEN_RELIC.description":"每拥有一件[gold]遗物[/gold]造成{ExtraDamage:diff()}点伤害。\n获得等同于你[gold]遗物[/gold]数量的[gold]因果报应[/gold]。{InCombat:cond:\n(造成{CalculatedDamage:diff()}点伤害。)|}",
+
+ "THECURSEDMOD-FORBIDDEN_ELIXIR.title":"禁忌灵药",
+ "THECURSEDMOD-FORBIDDEN_ELIXIR.description":"在你的回合开始时\n获得{Energy:energyIcons()}。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
+
+ "THECURSEDMOD-MANA_BASTION.title":"魔力壁垒",
+ "THECURSEDMOD-MANA_BASTION.description":"每当一个[gold]魔法阵[/gold]效果被触发，获得{ManaBastionPower:diff()}点[gold]格挡[/gold]。",
+
+ "THECURSEDMOD-BATTLEMAGE.title":"战斗法师",
+ "THECURSEDMOD-BATTLEMAGE.description":"每当一个[gold]魔法阵[/gold]效果被触发，获得{BattlemagePower:diff()}点[gold]活力[/gold]。",
+
+ "THECURSEDMOD-EXODIA_BEAM.title":"艾克佐迪亚光束",
+ "THECURSEDMOD-EXODIA_BEAM.description":"仅当你[gold]手牌[/gold]中至少有5张不同名称的[gold]魔法阵[/gold]牌时才能被打出。\n对所有敌人造成{Damage:diff()}点伤害。",
+
+ "THECURSEDMOD-WORLDLINE_TWIST.title":"世界线扭曲",
+ "THECURSEDMOD-WORLDLINE_TWIST.description":"本回合[gold]魔法阵[/gold]效果每触发过一次，耗能便减少1{Energy:energyIcons()}。\n本回合你不会受到[gold]因果报应[/gold]伤害。",
+
+ "THECURSEDMOD-SPRING_CLEANING.title":"春季大扫除",
+ "THECURSEDMOD-SPRING_CLEANING.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:抽{Cards:diff()}张牌。",
+
+ "THECURSEDMOD-ARCHDEMON_SWORD.title":"大恶魔之剑",
+ "THECURSEDMOD-ARCHDEMON_SWORD.description":"造成{Damage:diff()}点伤害。\n消耗你[gold]手牌[/gold]中的所有[gold]诅咒[/gold]牌，每张被[gold]消耗[/gold]的牌使你获得{StrengthPower:diff()}点[gold]力量[/gold]。\n[gold]因果报应[/gold]{KarmaPower:diff()}。"
+}

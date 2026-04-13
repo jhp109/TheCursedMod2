@@ -17,7 +17,6 @@ public sealed class DemonicMarkRelic : TheCursedModRelic
 {
     private bool _isActivating;
     private int _triggersThisTurn;
-    private int _lastTrackedRound = -1;
 
     public override RelicRarity Rarity => RelicRarity.Rare;
 
@@ -32,9 +31,9 @@ public sealed class DemonicMarkRelic : TheCursedModRelic
     {
         get
         {
-            if (_isActivating)
+            if (IsActivating)
                 return base.DynamicVars.Cards.IntValue;
-            return _triggersThisTurn;
+            return TriggersThisTurn;
         }
     }
 
@@ -42,45 +41,62 @@ public sealed class DemonicMarkRelic : TheCursedModRelic
 
     private int Threshold => base.DynamicVars.Cards.IntValue;
 
+    private bool IsActivating
+    {
+        get => _isActivating;
+        set
+        {
+            AssertMutable();
+            _isActivating = value;
+            UpdateDisplay();
+        }
+    }
+
+    private int TriggersThisTurn
+    {
+        get => _triggersThisTurn;
+        set
+        {
+            AssertMutable();
+            _triggersThisTurn = value;
+            UpdateDisplay();
+        }
+    }
+
+    private void UpdateDisplay()
+    {
+        base.Status = (!IsActivating && TriggersThisTurn % Threshold == Threshold - 1)
+            ? RelicStatus.Active
+            : RelicStatus.Normal;
+        InvokeDisplayAmountChanged();
+    }
+
     public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
     {
         if (player == base.Owner)
         {
-            _triggersThisTurn = 0;
-            _lastTrackedRound = combatState.RoundNumber;
-            InvokeDisplayAmountChanged();
+            TriggersThisTurn = 0;
+            base.Status = RelicStatus.Normal;
         }
         return Task.CompletedTask;
     }
 
     public async Task OnCircleTrigger(PlayerChoiceContext context)
     {
-        var currentRound = base.Owner.Creature?.CombatState?.RoundNumber ?? -1;
-        if (_lastTrackedRound != currentRound)
-        {
-            _triggersThisTurn = 0;
-            _lastTrackedRound = currentRound;
-            InvokeDisplayAmountChanged();
-        }
+        TriggersThisTurn++;
 
-        _triggersThisTurn++;
-        InvokeDisplayAmountChanged();
+        if (TriggersThisTurn % Threshold != 0) return;
 
-        if (_triggersThisTurn % Threshold != 0) return;
-
-        _triggersThisTurn = 0;
-        InvokeDisplayAmountChanged();
-        await TaskHelper.RunSafely(DoActivateVisuals());
+        TriggersThisTurn -= Threshold;
+        _ = TaskHelper.RunSafely(DoActivateVisuals());
         await PowerCmd.Apply<StrengthPower>(base.Owner.Creature!, 1, base.Owner.Creature, null);
     }
 
     private async Task DoActivateVisuals()
     {
-        _isActivating = true;
-        InvokeDisplayAmountChanged();
+        IsActivating = true;
         Flash();
         await Cmd.Wait(1f);
-        _isActivating = false;
-        InvokeDisplayAmountChanged();
+        IsActivating = false;
     }
 }

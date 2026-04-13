@@ -26,6 +26,8 @@ public sealed class HelpOfTheDead() : RiteCard(2, CardType.Skill, CardRarity.Rar
     {
         var drawCards = PileType.Draw.GetPile(Owner).Cards
             .Where(c => !IsUnplayableCard(c))
+            .OrderBy(c => c.Rarity)
+            .ThenBy(c => c.Id)
             .ToList();
         var prefs = new CardSelectorPrefs(SelectPrompt, 1);
         var selected = await CardSelectCmd.FromSimpleGrid(choiceContext, drawCards, Owner, prefs);

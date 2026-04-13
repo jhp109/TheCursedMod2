@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Saves.Runs;
 using TheCursedMod.TheCursedModCode.Character;
 
 namespace TheCursedMod.TheCursedModCode.Relics;
@@ -14,7 +15,7 @@ public sealed class RitualistsRingRelic : TheCursedModRelic
     public override RelicRarity Rarity => RelicRarity.Common;
 
     public override bool ShowCounter => true;
-    public override int DisplayAmount => _triggerCount;
+    public override int DisplayAmount => TriggerCount;
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(1)];
 
@@ -25,14 +26,27 @@ public sealed class RitualistsRingRelic : TheCursedModRelic
     private const int Threshold = 6;
     private int _triggerCount;
 
+    [SavedProperty]
+    public int TriggerCount
+    {
+        get => _triggerCount;
+        private set
+        {
+            AssertMutable();
+            if (_triggerCount != value)
+            {
+                _triggerCount = value;
+                InvokeDisplayAmountChanged();
+            }
+        }
+    }
+
     public async Task OnRiteEffectTriggered(PlayerChoiceContext choiceContext)
     {
-        _triggerCount++;
-        InvokeDisplayAmountChanged();
+        TriggerCount++;
 
-        if (_triggerCount % Threshold != 0) return;
-        _triggerCount = 0;
-        InvokeDisplayAmountChanged();
+        if (TriggerCount % Threshold != 0) return;
+        TriggerCount = 0;
 
         Flash();
         await PlayerCmd.GainEnergy(1, base.Owner);
