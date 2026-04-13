@@ -34,6 +34,7 @@ Korean, English, Simplified Chinese
 
 ## Credit (Human)
 Special thanks to 히말군 for character artwork (from the [STS1 mod of The Cursed](https://github.com/jhp109/TheCursedMod))
+
 Simplified Chinese translation by 璨
 
 ## Credit (AI)

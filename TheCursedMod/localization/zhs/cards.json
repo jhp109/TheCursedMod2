@@ -14,7 +14,7 @@
  "THECURSEDMOD-CURSED_WAND.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n造成{Damage:diff()}点伤害。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
 
  "THECURSEDMOD-CLEAN_UP_WORKSHOP.title":"清扫工坊",
- "THECURSEDMOD-CLEAN_UP_WORKSHOP.description":"[gold]咒仪[/gold]:获得{Block:diff()}点[gold]格挡[/gold]并抽{Cards:diff()}张{Cards:plural:牌|牌}。",
+ "THECURSEDMOD-CLEAN_UP_WORKSHOP.description":"[gold]咒仪[/gold]:获得{Block:diff()}点[gold]格挡[/gold]\n并抽{Cards:diff()}张{Cards:plural:牌|牌}。",
 
  "THECURSEDMOD-CURSED_MACE.title":"诅咒钉锤",
  "THECURSEDMOD-CURSED_MACE.description":"造成{Damage:diff()}点伤害。\n施加{VulnerablePower:diff()}层[gold]易伤[/gold]。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
@@ -28,13 +28,13 @@
  "THECURSEDMOD-CURSED_BOOMERANG.title":"诅咒回旋镖",
  "THECURSEDMOD-CURSED_BOOMERANG.description":"对随机一名敌人造成{Damage:diff()}点伤害{Repeat:diff()}次。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
 
- "THECURSEDMOD-CURSED_BLADE.title":"诅咒之刃",
+ "THECURSEDMOD-CURSED_BLADE.title":"诅咒之剑",
  "THECURSEDMOD-CURSED_BLADE.description":"对所有敌人造成{Damage:diff()}点伤害。\n将一张[gold]残渣[/gold]加入你的[gold]手牌[/gold]。",
 
  "THECURSEDMOD-SPITEFUL_STRIKE.title":"怨忿打击",
  "THECURSEDMOD-SPITEFUL_STRIKE.description":"造成{Damage:diff()}点伤害。\n若你的[gold]手牌[/gold]中有任何[gold]无法打出[/gold]的牌则获得{Energy:energyIcons()}。",
 
- "THECURSEDMOD-REAR_STRIKE.title":"背刺",
+ "THECURSEDMOD-REAR_STRIKE.title":"不守咔德",
  "THECURSEDMOD-REAR_STRIKE.description":"造成{Damage:diff()}点伤害。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
 
  "THECURSEDMOD-RAVING_STAFF.title":"狂乱法杖",
@@ -46,7 +46,7 @@
  "THECURSEDMOD-OBSCURATION.title":"隐匿",
  "THECURSEDMOD-OBSCURATION.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:再次获得{Block:diff()}点[gold]格挡[/gold]。",
 
- "THECURSEDMOD-RAPID_MOVEMENT.title":"迅捷行动",
+ "THECURSEDMOD-RAPID_MOVEMENT.title":"走为上计",
  "THECURSEDMOD-RAPID_MOVEMENT.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:抽2张牌。",
 
  "THECURSEDMOD-WEAR_CLOAK.title":"斗篷无形",
@@ -62,7 +62,7 @@
  "THECURSEDMOD-CURSED_AMULET.title":"诅咒护符",
  "THECURSEDMOD-CURSED_AMULET.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n抽1张牌。\n将一张随机[gold]诅咒[/gold]牌洗入你的[gold]抽牌堆[/gold]。",
 
- "THECURSEDMOD-SMOKESCREEN.title":"无力之烟",
+ "THECURSEDMOD-SMOKESCREEN.title":"弱化烟雾",
  "THECURSEDMOD-SMOKESCREEN.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:对所有敌人施加{WeakPower:diff()}层[gold]虚弱[/gold]。",
 
  "THECURSEDMOD-ASHES_TO_ASHES.title":"尘归尘",
@@ -78,7 +78,7 @@
  "THECURSEDMOD-SCINTILLA.title":"火花",
  "THECURSEDMOD-SCINTILLA.description":"造成{Damage:diff()}点伤害。\n将你[gold]弃牌堆[/gold]中的一张牌转化为[gold]残渣[/gold]。",
 
- "THECURSEDMOD-BLESSING_IN_DISGUISE.title":"清仓行动",
+ "THECURSEDMOD-BLESSING_IN_DISGUISE.title":"咒尽福来",
  "THECURSEDMOD-BLESSING_IN_DISGUISE.description":"[gold]消耗[/gold]你[gold]手牌[/gold]中的所有[gold]诅咒[/gold]牌。\n每张被[gold]消耗[/gold]的牌给予你{Block:diff()}点[gold]格挡[/gold]。",
 
  "THECURSEDMOD-CURSED_SPELLBOOK.title":"咒文禁书",
@@ -169,7 +169,7 @@
  "THECURSEDMOD-FORBIDDEN_STRENGTH.title":"禁忌力量",
  "THECURSEDMOD-FORBIDDEN_STRENGTH.description":"[gold]手牌[/gold]中每有一张[gold]魔法阵[/gold]牌，获得{CalculationExtra:diff()}点[gold]力量[/gold]。\n[gold]因果报应[/gold]{KarmaPower:diff()}。{InCombat:cond:\n(获得{CalculatedStrength}点[gold]力量[/gold]。)|}",
 
- "THECURSEDMOD-WICKED_TEMPERING.title":"邪恶淬炼",
+ "THECURSEDMOD-WICKED_TEMPERING.title":"百因必有果",
  "THECURSEDMOD-WICKED_TEMPERING.description":"[gold]咒仪[/gold]:下一张带有[gold]因果报应[/gold]的攻击牌造成的伤害增加{MultiplyNextKarmaAttackPower:diff()}%。",
 
  "THECURSEDMOD-SPIRIT_OFFERING.title":"灵魂献祭",
@@ -211,7 +211,7 @@
  "THECURSEDMOD-DIE_TOGETHER.title":"玉石俱焚",
  "THECURSEDMOD-DIE_TOGETHER.description":"本场战斗中[gold]因果报应[/gold]伤害同样对所有敌人造成。\n在你的回合开始时，[gold]因果报应[/gold]{KarmaPower:diff()}。",
 
- "THECURSEDMOD-FREEDOM_AND_BONDAGE.title":"自由与束缚",
+ "THECURSEDMOD-FREEDOM_AND_BONDAGE.title":"福祸相依",
  "THECURSEDMOD-FREEDOM_AND_BONDAGE.description":"所有玩家获得{Energy:energyIcons()}并将一张随机[gold]诅咒[/gold]牌加入其[gold]手牌[/gold]。",
 
  "THECURSEDMOD-FORBIDDEN_FORM.title":"禁忌形态",
@@ -229,7 +229,7 @@
  "THECURSEDMOD-MIRACLE_ALCHEMY.title":"奇迹炼金",
  "THECURSEDMOD-MIRACLE_ALCHEMY.description":"[gold]咒仪[/gold]:获得一瓶[gold]混沌药水[/gold]。",
 
- "THECURSEDMOD-ANTI_AGING.title":"逆衰老",
+ "THECURSEDMOD-ANTI_AGING.title":"生命灌注",
  "THECURSEDMOD-ANTI_AGING.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:将你的最大生命值提升{MaxHp:diff()}点。",
 
  "THECURSEDMOD-DEMONIC_BLADE.title":"恶魔之刃",
@@ -254,19 +254,19 @@
  "THECURSEDMOD-FORBIDDEN_ELIXIR.title":"禁忌灵药",
  "THECURSEDMOD-FORBIDDEN_ELIXIR.description":"在你的回合开始时\n获得{Energy:energyIcons()}。\n[gold]因果报应[/gold]{KarmaPower:diff()}。",
 
- "THECURSEDMOD-MANA_BASTION.title":"魔力壁垒",
+ "THECURSEDMOD-MANA_BASTION.title":"奥术防护",
  "THECURSEDMOD-MANA_BASTION.description":"每当一个[gold]魔法阵[/gold]效果被触发，获得{ManaBastionPower:diff()}点[gold]格挡[/gold]。",
 
  "THECURSEDMOD-BATTLEMAGE.title":"战斗法师",
  "THECURSEDMOD-BATTLEMAGE.description":"每当一个[gold]魔法阵[/gold]效果被触发，获得{BattlemagePower:diff()}点[gold]活力[/gold]。",
 
- "THECURSEDMOD-EXODIA_BEAM.title":"艾克佐迪亚光束",
+ "THECURSEDMOD-EXODIA_BEAM.title":"五灵光束",
  "THECURSEDMOD-EXODIA_BEAM.description":"仅当你[gold]手牌[/gold]中至少有5张不同名称的[gold]魔法阵[/gold]牌时才能被打出。\n对所有敌人造成{Damage:diff()}点伤害。",
 
- "THECURSEDMOD-WORLDLINE_TWIST.title":"世界线扭曲",
+ "THECURSEDMOD-WORLDLINE_TWIST.title":"因果扭曲",
  "THECURSEDMOD-WORLDLINE_TWIST.description":"本回合[gold]魔法阵[/gold]效果每触发过一次，耗能便减少1{Energy:energyIcons()}。\n本回合你不会受到[gold]因果报应[/gold]伤害。",
 
- "THECURSEDMOD-SPRING_CLEANING.title":"春季大扫除",
+ "THECURSEDMOD-SPRING_CLEANING.title":"涤尘净心",
  "THECURSEDMOD-SPRING_CLEANING.description":"获得{Block:diff()}点[gold]格挡[/gold]。\n[gold]咒仪[/gold]:抽{Cards:diff()}张牌。",
 
  "THECURSEDMOD-ARCHDEMON_SWORD.title":"大恶魔之剑",
