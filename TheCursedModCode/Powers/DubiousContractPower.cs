@@ -1,13 +1,10 @@
-using System.Linq;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.CardPools;
-using MegaCrit.Sts2.Core.Models.Cards;
 using TheCursedMod.TheCursedModCode.Cards;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
@@ -30,7 +27,7 @@ public class DubiousContractPower : TheCursedModPower
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite)
     ];
 
-    public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
+    public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
     {
         if (player != base.Owner.Player || base.AmountOnTurnStart < 1) return;
 
@@ -50,26 +47,11 @@ public class DubiousContractPower : TheCursedModPower
                 ritePool.RemoveAll(c => PermanentBonusRiteCards.Contains(c.GetType()));
             }
 
-            var riteCard = base.CombatState!.CreateCard(randomRite, player);
+            var riteCard = combatState.CreateCard(randomRite, player);
             await CardPileCmd.AddGeneratedCardToCombat(riteCard, PileType.Hand, addedByPlayer: true);
         }
 
-        // if-change-then-change: keep in sync with TheCursedModCard.GainRandomCurse
-        var baseCurses = ModelDb.CardPool<CurseCardPool>()
-            .GetUnlockedCards(player.UnlockState, player.RunState.CardMultiplayerConstraint)
-            .Where(c => c.CanBeGeneratedByModifiers && c is not Guilty)  // Guilty is meaningless in combat
-            .ToList();
-        var curseCandidates = baseCurses
-            .Append(ModelDb.Card<Enthralled>())
-            .Append(ModelDb.Card<BadLuck>())
-            .Append(ModelDb.Card<PoorSleep>())
-            .ToList();
-
-        for (int i = 0; i < Amount && curseCandidates.Count > 0; i++)
-        {
-            var randomCurse = player.RunState.Rng.CombatCardGeneration.NextItem(curseCandidates)!;
-            var curseCard = base.CombatState!.CreateCard(randomCurse, player);
-            await CardPileCmd.AddGeneratedCardToCombat(curseCard, PileType.Hand, addedByPlayer: true);
-        }
+        for (int i = 0; i < Amount; i++)
+            await TheCursedModCard.GainRandomCurse(player, player, combatState, PileType.Hand, addedByPlayer: true);
     }
 }

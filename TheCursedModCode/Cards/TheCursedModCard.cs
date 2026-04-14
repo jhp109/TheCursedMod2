@@ -5,6 +5,7 @@ using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.CardPools;
@@ -56,9 +57,15 @@ public abstract class TheCursedModCard(
     /// 무작위 저주 카드를 지정한 파일에 추가합니다.
     /// 네잎클로버 부적이 있다면 대신 찌꺼기를 패에 추가합니다.
     /// </summary>
-    protected async Task GainRandomCurse(PileType pile, Player? targetPlayer = null)
+    protected Task GainRandomCurse(PileType pile, Player? targetPlayer = null)
+        => GainRandomCurse(targetPlayer ?? Owner, Owner, CombatState, pile, addedByPlayer: false);
+
+    /// <summary>
+    /// 무작위 저주 카드를 지정한 파일에 추가합니다. (카드 외부에서도 호출 가능한 static 버전)
+    /// 네잎클로버 부적이 있다면 대신 찌꺼기를 패에 추가합니다.
+    /// </summary>
+    public static async Task GainRandomCurse(Player target, Player rngSource, CombatState? combatState, PileType pile, bool addedByPlayer = false)
     {
-        var target = targetPlayer ?? Owner;
         var cloverRelic = target.Relics.OfType<FourLeafCloverCharmRelic>().FirstOrDefault();
         if (cloverRelic != null)
         {
@@ -67,7 +74,6 @@ public abstract class TheCursedModCard(
             return;
         }
 
-        // if-change-then-change: keep in sync with DubiousContractPower.AfterPlayerTurnStart
         var baseCurses = ModelDb.CardPool<CurseCardPool>()
             .GetUnlockedCards(target.UnlockState, target.RunState.CardMultiplayerConstraint)
             .Where(c => c.CanBeGeneratedByModifiers && c is not Guilty)  // Guilty is meaningless in combat
@@ -80,18 +86,18 @@ public abstract class TheCursedModCard(
 
         if (curseCandidates.Count == 0) return;
 
-        var randomCurse = Owner.RunState.Rng.CombatCardGeneration.NextItem(curseCandidates)!;
-        var curseCard = CombatState!.CreateCard(randomCurse, target);
+        var randomCurse = rngSource.RunState.Rng.CombatCardGeneration.NextItem(curseCandidates)!;
+        var curseCard = combatState!.CreateCard(randomCurse, target);
         if (pile == PileType.Draw)
         {
             CardCmd.PreviewCardPileAdd(
                 await CardPileCmd.AddGeneratedCardToCombat(
-                    curseCard, pile, addedByPlayer: false, position: CardPilePosition.Random));
+                    curseCard, pile, addedByPlayer: addedByPlayer, position: CardPilePosition.Random));
             await Cmd.Wait(0.5f);
         }
         else
         {
-            await CardPileCmd.AddGeneratedCardToCombat(curseCard, pile, addedByPlayer: false);
+            await CardPileCmd.AddGeneratedCardToCombat(curseCard, pile, addedByPlayer: addedByPlayer);
         }
     }
 
