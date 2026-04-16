@@ -27,16 +27,15 @@ public class RollingOverDebtPower : TheCursedModPower
         return Task.CompletedTask;
     }
     
-    public override Task BeforeTurnEndVeryEarly(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task BeforeTurnEndVeryEarly(PlayerChoiceContext choiceContext, CombatSide side)
     {
-        if (side != base.Owner.Side) return Task.CompletedTask;
+        if (side != base.Owner.Side) return;
         if (HasKarma())
         {
             Flash();
-            CreatureCmd.GainBlock(base.Owner, Amount, ValueProp.Unpowered, null);
-            Cmd.Wait(0.5f);
+            await CreatureCmd.GainBlock(base.Owner, Amount, ValueProp.Unpowered, null);
+            await Cmd.Wait(0.5f);
         }
-        return Task.CompletedTask;
     }
 
     private bool HasKarma()

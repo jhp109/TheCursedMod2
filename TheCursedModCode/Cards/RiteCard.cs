@@ -32,8 +32,9 @@ public abstract class RiteCard(
             .ToList());
 
     /// <summary>
-    /// 전투별 의례 추적 상태. CombatState를 weak key로 사용하여 전투 종료 시 자동 GC됩니다.
-    /// static이지만 CombatState 단위로 격리되므로 플레이어 간 상태 오염이 없습니다.
+    /// 전투 + 플레이어별 의례 추적 상태.
+    /// CombatState를 weak key로 사용하여 전투 종료 시 자동 GC됩니다.
+    /// 내부 Dictionary를 플레이어별로 격리하여 Co-op에서 플레이어 간 상태 오염을 방지합니다.
     /// </summary>
     private sealed class RiteState
     {
@@ -41,27 +42,36 @@ public abstract class RiteCard(
         public int RiteEffectTriggerCount = 0;
     }
 
-    private static readonly ConditionalWeakTable<CombatState, RiteState> _stateTable = new();
+    private static readonly ConditionalWeakTable<CombatState, Dictionary<Player, RiteState>> _stateTable = new();
 
-    private static RiteState GetState(CombatState combat) => _stateTable.GetOrCreateValue(combat);
-
-    /// <summary>
-    /// 이번 턴(현재 CombatState 기준)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
-    /// </summary>
-    public static bool WasRiteEffectTriggeredThisTurn(CombatState? combat)
-        => combat != null && GetState(combat).RiteCurseExhaustedRound == combat.RoundNumber;
-
-    /// <summary>
-    /// 지난 턴(현재 RoundNumber - 1)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
-    /// </summary>
-    public static bool WasRiteEffectTriggeredLastTurn(CombatState? combat)
-        => combat != null && GetState(combat).RiteCurseExhaustedRound == combat.RoundNumber - 1;
+    private static RiteState GetState(CombatState combat, Player player)
+    {
+        var dict = _stateTable.GetOrCreateValue(combat);
+        if (!dict.TryGetValue(player, out var state))
+        {
+            state = new RiteState();
+            dict[player] = state;
+        }
+        return state;
+    }
 
     /// <summary>
-    /// 이번 전투에서 의례의 효과가 발동된 총 횟수를 반환합니다.
+    /// 이번 턴에 해당 플레이어가 의례로 저주를 소멸시켰으면 true를 반환합니다.
     /// </summary>
-    public static int GetRiteEffectTriggerCount(CombatState? combat)
-        => combat == null ? 0 : GetState(combat).RiteEffectTriggerCount;
+    public static bool WasRiteEffectTriggeredThisTurn(CombatState? combat, Player? player)
+        => combat != null && player != null && GetState(combat, player).RiteCurseExhaustedRound == combat.RoundNumber;
+
+    /// <summary>
+    /// 지난 턴에 해당 플레이어가 의례로 저주를 소멸시켰으면 true를 반환합니다.
+    /// </summary>
+    public static bool WasRiteEffectTriggeredLastTurn(CombatState? combat, Player? player)
+        => combat != null && player != null && GetState(combat, player).RiteCurseExhaustedRound == combat.RoundNumber - 1;
+
+    /// <summary>
+    /// 이번 전투에서 해당 플레이어의 의례 효과가 발동된 총 횟수를 반환합니다.
+    /// </summary>
+    public static int GetRiteEffectTriggerCount(CombatState? combat, Player? player)
+        => combat == null || player == null ? 0 : GetState(combat, player).RiteEffectTriggerCount;
 
     private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectionScreenPrompt");
 
@@ -82,7 +92,7 @@ public abstract class RiteCard(
 
                 if (wasCurse)
                 {
-                    GetState(CombatState!).RiteCurseExhaustedRound = CombatState!.RoundNumber;
+                    GetState(CombatState!, Owner!).RiteCurseExhaustedRound = CombatState!.RoundNumber;
 
                     await ExecuteRiteEffect(choiceContext, play);
 
@@ -126,7 +136,7 @@ public abstract class RiteCard(
     /// </summary>
     private async Task ExecuteRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        GetState(CombatState!).RiteEffectTriggerCount++;
+        GetState(CombatState!, Owner!).RiteEffectTriggerCount++;
 
         await OnRiteEffect(choiceContext, play);
 

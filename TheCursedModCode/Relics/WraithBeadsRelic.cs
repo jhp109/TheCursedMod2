@@ -33,7 +33,7 @@ public sealed class WraithBeadsRelic : TheCursedModRelic
             || Owner.Creature.CombatState.RoundNumber <= 1)
             return;
 
-        if (!KarmaTurn1Power.WasKarmaHitLastTurn(Owner.Creature.CombatState))
+        if (!KarmaTurn1Power.WasKarmaHitLastTurn(Owner.Creature.CombatState, Owner))
             return;
 
         Flash();
@@ -45,7 +45,7 @@ public sealed class WraithBeadsRelic : TheCursedModRelic
         if (player != Owner)
             return count;
 
-        if (!KarmaTurn1Power.WasKarmaHitLastTurn(player.Creature?.CombatState))
+        if (!KarmaTurn1Power.WasKarmaHitLastTurn(player.Creature?.CombatState, player))
             return count;
 
         return count + DynamicVars.Cards.IntValue;

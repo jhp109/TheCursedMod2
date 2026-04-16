@@ -25,15 +25,24 @@ public class KarmaTurn1Power : TheCursedModPower
         public int KarmaDamageRound = -1;
     }
 
-    private static readonly ConditionalWeakTable<CombatState, KarmaState> _stateTable = new();
+    private static readonly ConditionalWeakTable<CombatState, Dictionary<Player, KarmaState>> _stateTable = new();
 
-    private static KarmaState GetState(CombatState combat) => _stateTable.GetOrCreateValue(combat);
+    private static KarmaState GetState(CombatState combat, Player player)
+    {
+        var dict = _stateTable.GetOrCreateValue(combat);
+        if (!dict.TryGetValue(player, out var state))
+        {
+            state = new KarmaState();
+            dict[player] = state;
+        }
+        return state;
+    }
 
     /// <summary>
-    /// 지난 턴에 업보 피해가 발생했는지 여부를 반환합니다.
+    /// 지난 턴에 해당 플레이어에게 업보 피해가 발생했는지 여부를 반환합니다.
     /// </summary>
-    public static bool WasKarmaHitLastTurn(CombatState? combat)
-        => combat != null && GetState(combat).KarmaDamageRound == combat.RoundNumber - 1;
+    public static bool WasKarmaHitLastTurn(CombatState? combat, Player? player)
+        => combat != null && player != null && GetState(combat, player).KarmaDamageRound == combat.RoundNumber - 1;
 
     public override PowerType Type => PowerType.Debuff;
 
@@ -88,7 +97,7 @@ public class KarmaTurn1Power : TheCursedModPower
     {
         if (target == Owner && dealer == Owner && result.UnblockedDamage > 0)
         {
-            GetState(CombatState).KarmaDamageRound = CombatState.RoundNumber;
+            GetState(CombatState, Owner.Player!).KarmaDamageRound = CombatState.RoundNumber;
         }
         return Task.CompletedTask;
     }

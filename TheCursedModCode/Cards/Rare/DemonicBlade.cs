@@ -27,7 +27,7 @@ public sealed class DemonicBlade() : TheCursedModCard(2, CardType.Attack, CardRa
         new CalculationBaseVar(14),
         new ExtraDamageVar(7),
         new CalculatedDamageVar(ValueProp.Move)
-            .WithMultiplier(static (card, _) => RiteCard.GetRiteEffectTriggerCount(card.CombatState))
+            .WithMultiplier(static (card, _) => RiteCard.GetRiteEffectTriggerCount(card.CombatState, card.Owner))
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)

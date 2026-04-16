@@ -28,7 +28,7 @@ public sealed class SoulVesselRelic : TheCursedModRelic
     private int _triggerCountAtCombatStart;
 
     private int TriggersThisCombat =>
-        RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState) - _triggerCountAtCombatStart;
+        RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState, base.Owner) - _triggerCountAtCombatStart;
 
     public void OnRiteEffectTriggered()
     {
@@ -37,7 +37,7 @@ public sealed class SoulVesselRelic : TheCursedModRelic
 
     public override Task BeforeCombatStart()
     {
-        _triggerCountAtCombatStart = RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState);
+        _triggerCountAtCombatStart = RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState, base.Owner);
         InvokeDisplayAmountChanged();
         return Task.CompletedTask;
     }
@@ -47,7 +47,7 @@ public sealed class SoulVesselRelic : TheCursedModRelic
         int heal = DisplayAmount;
 
         // heal 후 카운터 초기화: 다음 전투가 0부터 시작하도록 오프셋을 현재 누적값으로 갱신
-        _triggerCountAtCombatStart = RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState);
+        _triggerCountAtCombatStart = RiteCard.GetRiteEffectTriggerCount(base.Owner.Creature?.CombatState, base.Owner);
         InvokeDisplayAmountChanged();
 
         if (heal <= 0) return;
