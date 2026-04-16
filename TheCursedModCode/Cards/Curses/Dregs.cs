@@ -35,7 +35,7 @@ public sealed class Dregs() : CustomCardModel(-1, CardType.Curse, CardRarity.Cur
     {
         var power = source.Owner?.Creature.GetPower<RecyclableWastePower>();
         var newDregs = target.CombatState!.CreateCard<Dregs>(target.Owner);
-        if (power != null) newDregs.AddKeyword(CardKeyword.Retain);
+        if (power != null) CardCmd.ApplyKeyword(newDregs, CardKeyword.Retain);
         await CardCmd.Transform(target, newDregs);
         power?.OnDregsCreated();
     }
@@ -53,7 +53,7 @@ public sealed class Dregs() : CustomCardModel(-1, CardType.Curse, CardRarity.Cur
         for (int i = 0; i < numCards; i++)
         {
             var dregs = combatState.CreateCard<Dregs>(owner);
-            if (power != null) dregs.AddKeyword(CardKeyword.Retain);
+            if (power != null) CardCmd.ApplyKeyword(dregs, CardKeyword.Retain);
             await CardPileCmd.AddGeneratedCardToCombat(dregs, PileType.Hand, addedByPlayer: true);
         }
         power?.OnDregsCreated();

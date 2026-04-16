@@ -6,7 +6,6 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Enchantments;
-using MegaCrit.Sts2.Core.Models.Powers;
 using TheCursedMod.TheCursedModCode.Cards;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
@@ -28,15 +27,15 @@ public class CircleRetainPower : TheCursedModPower
         var hand = Owner.Player?.PlayerCombatState?.Hand;
         if (hand != null)
             foreach (var card in hand.Cards.OfType<CircleCard>())
-                card.AddKeyword(CardKeyword.Retain);
+                CardCmd.ApplyKeyword(card, CardKeyword.Retain);
 
         return Task.CompletedTask;
     }
 
     public override Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
     {
-        if (card.Owner == Owner.Player && card is CircleCard)
-            card.AddKeyword(CardKeyword.Retain);
+        if (card.Owner.Creature == Owner && card is CircleCard)
+            CardCmd.ApplyKeyword(card, CardKeyword.Retain);
 
         return Task.CompletedTask;
     }
@@ -53,7 +52,7 @@ public class CircleRetainPower : TheCursedModPower
             if (pcs != null)
                 foreach (var card in pcs.AllCards.OfType<CircleCard>())
                     if (card.Enchantment is not Steady)
-                        card.RemoveKeyword(CardKeyword.Retain);
+                        CardCmd.RemoveKeyword(card, CardKeyword.Retain);
         }
 
         await PowerCmd.Decrement(this);

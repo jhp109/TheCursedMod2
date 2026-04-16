@@ -66,14 +66,6 @@ public abstract class TheCursedModCard(
     /// </summary>
     public static async Task GainRandomCurse(Player target, Player rngSource, CombatState? combatState, PileType pile, bool addedByPlayer = false)
     {
-        var cloverRelic = target.Relics.OfType<FourLeafCloverCharmRelic>().FirstOrDefault();
-        if (cloverRelic != null)
-        {
-            cloverRelic.Flash();
-            await Dregs.CreateAndAddToHand(target, 1);
-            return;
-        }
-
         var baseCurses = ModelDb.CardPool<CurseCardPool>()
             .GetUnlockedCards(target.UnlockState, target.RunState.CardMultiplayerConstraint)
             .Where(c => c.CanBeGeneratedByModifiers && c is not Guilty)  // Guilty is meaningless in combat
@@ -86,7 +78,17 @@ public abstract class TheCursedModCard(
 
         if (curseCandidates.Count == 0) return;
 
+        // RNG는 relic 여부와 무관하게 항상 소비하여 multiplayer desync 방지
         var randomCurse = rngSource.RunState.Rng.CombatCardGeneration.NextItem(curseCandidates)!;
+
+        var cloverRelic = target.Relics.OfType<FourLeafCloverCharmRelic>().FirstOrDefault();
+        if (cloverRelic != null)
+        {
+            cloverRelic.Flash();
+            await Dregs.CreateAndAddToHand(target, 1);
+            return;
+        }
+
         var curseCard = combatState!.CreateCard(randomCurse, target);
         if (pile == PileType.Draw)
         {

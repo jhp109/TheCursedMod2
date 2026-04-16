@@ -1,3 +1,4 @@
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -29,7 +30,7 @@ public class RecyclableWastePower : TheCursedModPower
         foreach (var card in pcs.AllCards)
         {
             if (card is Dregs)
-                card.AddKeyword(CardKeyword.Retain);
+                CardCmd.ApplyKeyword(card, CardKeyword.Retain);
         }
 
         return Task.CompletedTask;

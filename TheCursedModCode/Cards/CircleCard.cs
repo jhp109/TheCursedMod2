@@ -22,7 +22,7 @@ public abstract class CircleCard(CardRarity rarity)
     private bool _suppressNextTrigger;
 
     /// <summary>
-    /// 이번 전투에서 이 마법진이 발동된 총 횟수. 비전 방출 등에서 참조합니다.
+    /// 이번 전투에서 이 마법진이 발동된 총 횟수. 비전 방출 (Arcane Discharge) 등에서 참조합니다.
     /// </summary>
     public int TriggerCount { get; private set; }
 

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -19,49 +20,48 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 public abstract class RiteCard(
     int cost, CardType type, CardRarity rarity, TargetType target) : TheCursedModCard(cost, type, rarity, target)
 { 
-    // 의례 카드 풀 캐시 (최초 1회만 계산)
-    private static IReadOnlyList<CardModel>? _riteCardPool;
+    private static readonly ConditionalWeakTable<Player, IReadOnlyList<CardModel>> _riteCardPoolTable = new();
 
     /// <summary>
-    /// 이 캐릭터의 카드 풀에서 RiteCard를 상속한 카드 목록을 반환합니다. 최초 1회만 계산됩니다.
+    /// 이 캐릭터의 카드 풀에서 RiteCard를 상속한 카드 목록을 반환합니다. Player별로 캐시됩니다.
     /// </summary>
     public static IReadOnlyList<CardModel> GetRiteCardPool(Player owner)
-        => _riteCardPool ??= owner.Character.CardPool
-            .GetUnlockedCards(owner.UnlockState, owner.RunState.CardMultiplayerConstraint)
+        => _riteCardPoolTable.GetValue(owner, p => p.Character.CardPool
+            .GetUnlockedCards(p.UnlockState, p.RunState.CardMultiplayerConstraint)
             .Where(c => c is RiteCard)
-            .ToList();
+            .ToList());
 
-    // 이번 턴에 의례로 저주를 소멸시켰는지 추적
-    private static int _riteCurseExhaustedRound = -1;
-    private static CombatState? _riteCurseExhaustedCombat;
+    /// <summary>
+    /// 전투별 의례 추적 상태. CombatState를 weak key로 사용하여 전투 종료 시 자동 GC됩니다.
+    /// static이지만 CombatState 단위로 격리되므로 플레이어 간 상태 오염이 없습니다.
+    /// </summary>
+    private sealed class RiteState
+    {
+        public int RiteCurseExhaustedRound = -1;
+        public int RiteEffectTriggerCount = 0;
+    }
 
-    // 이번 전투에서 의례로 소멸시킨 저주 총 횟수 추적
-    private static int _riteEffectTriggerCount = 0;
-    private static CombatState? _riteEffectTriggerCombat;
+    private static readonly ConditionalWeakTable<CombatState, RiteState> _stateTable = new();
+
+    private static RiteState GetState(CombatState combat) => _stateTable.GetOrCreateValue(combat);
 
     /// <summary>
     /// 이번 턴(현재 CombatState 기준)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
     /// </summary>
     public static bool WasRiteEffectTriggeredThisTurn(CombatState? combat)
-        => combat != null
-           && ReferenceEquals(_riteCurseExhaustedCombat, combat)
-           && _riteCurseExhaustedRound == combat.RoundNumber;
+        => combat != null && GetState(combat).RiteCurseExhaustedRound == combat.RoundNumber;
 
     /// <summary>
     /// 지난 턴(현재 RoundNumber - 1)에 의례로 저주를 소멸시켰으면 true를 반환합니다.
     /// </summary>
     public static bool WasRiteEffectTriggeredLastTurn(CombatState? combat)
-        => combat != null
-           && ReferenceEquals(_riteCurseExhaustedCombat, combat)
-           && _riteCurseExhaustedRound == combat.RoundNumber - 1;
+        => combat != null && GetState(combat).RiteCurseExhaustedRound == combat.RoundNumber - 1;
 
     /// <summary>
     /// 이번 전투에서 의례의 효과가 발동된 총 횟수를 반환합니다.
     /// </summary>
     public static int GetRiteEffectTriggerCount(CombatState? combat)
-        => combat != null && ReferenceEquals(_riteEffectTriggerCombat, combat)
-           ? _riteEffectTriggerCount
-           : 0;
+        => combat == null ? 0 : GetState(combat).RiteEffectTriggerCount;
 
     private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectionScreenPrompt");
 
@@ -82,14 +82,7 @@ public abstract class RiteCard(
 
                 if (wasCurse)
                 {
-                    _riteCurseExhaustedRound = CombatState!.RoundNumber;
-                    _riteCurseExhaustedCombat = CombatState;
-
-                    if (!ReferenceEquals(_riteEffectTriggerCombat, CombatState))
-                    {
-                        _riteEffectTriggerCount = 0;
-                        _riteEffectTriggerCombat = CombatState;
-                    }
+                    GetState(CombatState!).RiteCurseExhaustedRound = CombatState!.RoundNumber;
 
                     await ExecuteRiteEffect(choiceContext, play);
 
@@ -133,7 +126,7 @@ public abstract class RiteCard(
     /// </summary>
     private async Task ExecuteRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        _riteEffectTriggerCount++;
+        GetState(CombatState!).RiteEffectTriggerCount++;
 
         await OnRiteEffect(choiceContext, play);
 

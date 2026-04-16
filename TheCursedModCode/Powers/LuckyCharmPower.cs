@@ -21,7 +21,7 @@ public class LuckyCharmPower : TheCursedModPower
 
     public override async Task AfterCardDrawn(PlayerChoiceContext choiceContext, CardModel card, bool fromHandDraw)
     {
-        if (card.Owner == base.Owner.Player && card.Type == CardType.Curse)
+        if (card.Owner.Creature == base.Owner && card.Type == CardType.Curse)
         {
             Flash();
             await CreatureCmd.GainBlock(base.Owner, Amount, ValueProp.Unpowered, null);
@@ -30,7 +30,7 @@ public class LuckyCharmPower : TheCursedModPower
 
     public override async Task AfterCardExhausted(PlayerChoiceContext choiceContext, CardModel card, bool causedByEthereal)
     {
-        if (card.Owner == base.Owner.Player && card.Type == CardType.Curse)
+        if (card.Owner.Creature == base.Owner && card.Type == CardType.Curse)
         {
             Flash();
             await CreatureCmd.GainBlock(base.Owner, Amount, ValueProp.Unpowered, null);

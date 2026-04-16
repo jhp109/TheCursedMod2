@@ -21,7 +21,8 @@ public sealed class ArcaneDischarge() : TheCursedModCard(3, CardType.Attack, Car
         new ExtraDamageVar(3),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier(static (CardModel card, Creature? _) =>
         {
-            var piles = new[] { PileType.Hand, PileType.Draw, PileType.Discard };
+            if (card.Owner == null) return 0;
+            var piles = new[] { PileType.Hand, PileType.Draw, PileType.Discard, PileType.Exhaust };
             int triggers = piles.Sum(pt => pt.GetPile(card.Owner).Cards.OfType<CircleCard>().Sum(c => c.TriggerCount));
             return triggers;
         })

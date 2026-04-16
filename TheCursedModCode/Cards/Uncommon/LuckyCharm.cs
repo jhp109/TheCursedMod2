@@ -8,7 +8,7 @@ using TheCursedMod.TheCursedModCode.Powers;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 액땜 부적(Lucky Charm) - 저주 카드가 소멸될 때 마다, 방어도를 3 얻습니다. (강화 시 방어도 4)
+/// 액땜 부적(Lucky Charm) - 저주 카드를 뽑거나 저주 카드가 소멸될 때 마다, 방어도를 3 얻습니다. (강화 시 방어도 4)
 /// </summary>
 public sealed class LuckyCharm() : TheCursedModCard(1, CardType.Power, CardRarity.Uncommon, TargetType.Self)
 {

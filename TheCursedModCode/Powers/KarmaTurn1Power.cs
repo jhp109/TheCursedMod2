@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Runtime.CompilerServices;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -19,16 +20,20 @@ namespace TheCursedMod.TheCursedModCode.Powers;
 /// </summary>
 public class KarmaTurn1Power : TheCursedModPower
 {
-    private static CombatState? _karmaDamageCombat;
-    private static int _karmaDamageRound;
+    private sealed class KarmaState
+    {
+        public int KarmaDamageRound = -1;
+    }
+
+    private static readonly ConditionalWeakTable<CombatState, KarmaState> _stateTable = new();
+
+    private static KarmaState GetState(CombatState combat) => _stateTable.GetOrCreateValue(combat);
 
     /// <summary>
     /// 지난 턴에 업보 피해가 발생했는지 여부를 반환합니다.
     /// </summary>
     public static bool WasKarmaHitLastTurn(CombatState? combat)
-        => combat != null
-           && ReferenceEquals(_karmaDamageCombat, combat)
-           && _karmaDamageRound == combat.RoundNumber - 1;
+        => combat != null && GetState(combat).KarmaDamageRound == combat.RoundNumber - 1;
 
     public override PowerType Type => PowerType.Debuff;
 
@@ -83,8 +88,7 @@ public class KarmaTurn1Power : TheCursedModPower
     {
         if (target == Owner && dealer == Owner && result.UnblockedDamage > 0)
         {
-            _karmaDamageCombat = CombatState;
-            _karmaDamageRound = CombatState.RoundNumber;
+            GetState(CombatState).KarmaDamageRound = CombatState.RoundNumber;
         }
         return Task.CompletedTask;
     }

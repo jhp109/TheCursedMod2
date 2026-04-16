@@ -1,4 +1,4 @@
-using MegaCrit.Sts2.Core.CardSelection;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -28,12 +28,7 @@ public sealed class PrepareRite() : TheCursedModCard(1, CardType.Skill, CardRari
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        var drawCards = PileType.Draw.GetPile(Owner).Cards
-            .OrderBy(c => c.Rarity)
-            .ThenBy(c => c.Id)
-            .ToList();
-        var prefs = new CardSelectorPrefs(SelectPrompt, 1);
-        var target = (await CardSelectCmd.FromSimpleGrid(choiceContext, drawCards, Owner, prefs)).FirstOrDefault();
+        var target = await CommonActions.SelectSingleCard(this, SelectPrompt, choiceContext, PileType.Draw);
         if (target != null)
             await Dregs.TransformToDregs(this, target);
         await PowerCmd.Apply<DrawCardsNextTurnPower>(
