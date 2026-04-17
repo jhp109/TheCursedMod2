@@ -252,7 +252,7 @@
   "THECURSEDMOD-FORBIDDEN_RELIC.description": "[gold]유물[/gold] 수의 {ExtraDamage:diff()}배만큼 피해를 줍니다.\n[gold]유물[/gold] 수 만큼 [gold]업보[/gold].{InCombat:cond:\n(피해를 {CalculatedDamage:diff()} 줍니다.)|}",
 
   "THECURSEDMOD-FORBIDDEN_ELIXIR.title": "금단의 영약",
-  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "내 턴 시작 시, {Energy:energyIcons()}를 얻습니다.\n[gold]업보[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "내 턴 시작 시,\n{Energy:energyIcons()}를 얻고 [gold]업보[/gold] {KarmaEveryTurn:diff()}.",
 
   "THECURSEDMOD-MANA_BASTION.title": "마나 요새",
   "THECURSEDMOD-MANA_BASTION.description": "[gold]마법진[/gold]의 효과가 발동될 때마다, [gold]방어도[/gold]를 {ManaBastionPower:diff()} 얻습니다.",

@@ -15,7 +15,7 @@ public sealed class RitualistsRingRelic : TheCursedModRelic
     public override RelicRarity Rarity => RelicRarity.Common;
 
     public override bool ShowCounter => true;
-    public override int DisplayAmount => TriggerCount;
+    public override int DisplayAmount => TheCursedMod_TriggerCount;
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(1)];
 
@@ -27,7 +27,7 @@ public sealed class RitualistsRingRelic : TheCursedModRelic
     private int _triggerCount;
 
     [SavedProperty]
-    public int TriggerCount
+    public int TheCursedMod_TriggerCount
     {
         get => _triggerCount;
         private set
@@ -43,10 +43,10 @@ public sealed class RitualistsRingRelic : TheCursedModRelic
 
     public async Task OnRiteEffectTriggered(PlayerChoiceContext choiceContext)
     {
-        TriggerCount++;
+        TheCursedMod_TriggerCount++;
 
-        if (TriggerCount % Threshold != 0) return;
-        TriggerCount = 0;
+        if (TheCursedMod_TriggerCount % Threshold != 0) return;
+        TheCursedMod_TriggerCount = 0;
 
         Flash();
         await PlayerCmd.GainEnergy(1, base.Owner);

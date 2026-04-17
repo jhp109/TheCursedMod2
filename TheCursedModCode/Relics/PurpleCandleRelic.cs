@@ -31,14 +31,14 @@ public sealed class PurpleCandleRelic : TheCursedModRelic
         {
             if (_isActivating)
                 return base.DynamicVars.Cards.IntValue;
-            return TriggersAccumulated;
+            return TheCursedMod_TriggersAccumulated;
         }
     }
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(10)];
 
     [SavedProperty]
-    public int TriggersAccumulated
+    public int TheCursedMod_TriggersAccumulated
     {
         get => _triggersAccumulated;
         private set
@@ -56,10 +56,10 @@ public sealed class PurpleCandleRelic : TheCursedModRelic
 
     public async Task OnCircleTrigger(PlayerChoiceContext context)
     {
-        TriggersAccumulated++;
-        if (TriggersAccumulated < Threshold) return;
+        TheCursedMod_TriggersAccumulated++;
+        if (TheCursedMod_TriggersAccumulated < Threshold) return;
 
-        TriggersAccumulated -= Threshold;
+        TheCursedMod_TriggersAccumulated -= Threshold;
         await TaskHelper.RunSafely(DoActivateVisuals());
         await CardPileCmd.Draw(context, 1, base.Owner);
     }

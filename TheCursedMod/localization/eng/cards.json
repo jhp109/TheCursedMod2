@@ -252,7 +252,7 @@
   "THECURSEDMOD-FORBIDDEN_RELIC.description": "Deal {ExtraDamage:diff()} damage per [gold]Relic[/gold].\n[gold]Karma[/gold] equal to your [gold]Relic[/gold] count.{InCombat:cond:\n(Deals {CalculatedDamage:diff()} damage.)|}",
 
   "THECURSEDMOD-FORBIDDEN_ELIXIR.title": "Forbidden Elixir",
-  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "At the start of your turn, gain {Energy:energyIcons()}.\n[gold]Karma[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "At the start of your turn,\ngain {Energy:energyIcons()} and [gold]Karma[/gold] {KarmaEveryTurn:diff()}.",
 
   "THECURSEDMOD-MANA_BASTION.title": "Mana Bastion",
   "THECURSEDMOD-MANA_BASTION.description": "Whenever a [gold]Circle[/gold] effect is triggered, gain {ManaBastionPower:diff()} [gold]Block[/gold].",

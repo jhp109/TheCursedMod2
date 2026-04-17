@@ -1,4 +1,3 @@
-using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
 using MegaCrit.Sts2.Core.Models;
@@ -6,7 +5,7 @@ using MegaCrit.Sts2.Core.Models;
 namespace TheCursedMod;
 
 [ModInitializer(nameof(Initialize))]
-public partial class MainFile : Node
+public static class MainFile
 {
     public const string ModId = "TheCursedMod"; //Used for resource filepath
 
