@@ -12,8 +12,8 @@
   "THECURSEDMOD-RECYCLABLE_WASTE_POWER.smartDescription": "Все [gold]Осадки[/gold] сохраняются [gold]Оставляется[/gold] в этом бою.",
 
   "THECURSEDMOD-LUCKY_CHARM_POWER.title": "Счастливый талисман",
-  "THECURSEDMOD-LUCKY_CHARM_POWER.description": "Каждый раз, когда карта [gold]Проклятие[/gold] вытягивается или [gold]Сжигается[/gold], получайте [gold]Блок[/gold].",
-  "THECURSEDMOD-LUCKY_CHARM_POWER.smartDescription": "Каждый раз, когда карта [gold]Проклятие[/gold] вытягивается или [gold]Сжигается[/gold], получайте {Amount} [gold]Блок[/gold].",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.description": "Каждый раз, когда карта [gold]Проклятие[/gold] вытягивается или [gold]Сжигается[/gold], получайте [gold]защиты[/gold].",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.smartDescription": "Каждый раз, когда карта [gold]Проклятие[/gold] вытягивается или [gold]Сжигается[/gold], получайте {Amount} [gold]защиты[/gold].",
 
   "THECURSEDMOD-MANA_CIRCULATION_POWER.title": "Циркуляция маны",
   "THECURSEDMOD-MANA_CIRCULATION_POWER.description": "В первый раз, когда эффект [gold]Обряд[/gold] срабатывает каждый ход, получайте {energyPrefix}.",
@@ -44,8 +44,8 @@
   "THECURSEDMOD-HELLFIRE_BREATHING_POWER.smartDescription": "Каждый раз, когда вы вытягиваете карту [gold]Неиграбельная[/gold], наносите {Amount} урона ВСЕМ врагам.",
 
   "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.title": "Перекатывание долга",
-  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.description": "Если у вас есть [gold]Карма[/gold], получайте [gold]Блок[/gold] в конце вашего хода.",
-  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.smartDescription": "Если у вас есть [gold]Карма[/gold], получайте {Amount} [gold]Блок[/gold] в конце вашего хода.",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.description": "Если у вас есть [gold]Карма[/gold], получайте [gold]защиты[/gold] в конце вашего хода.",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.smartDescription": "Если у вас есть [gold]Карма[/gold], получайте {Amount} [gold]защиты[/gold] в конце вашего хода.",
 
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.title": "Цикл порочности",
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.description": "В начале вашего хода берите карты, если у вас есть [gold]Карма[/gold].",
@@ -92,8 +92,8 @@
   "THECURSEDMOD-BATTLEMAGE_POWER.smartDescription": "Каждый раз, когда вы активируете эффект [gold]Круг[/gold], получайте {Amount} [gold]Бодрость[/gold].",
 
   "THECURSEDMOD-MANA_BASTION_POWER.title": "Бастион маны",
-  "THECURSEDMOD-MANA_BASTION_POWER.description": "Каждый раз, когда срабатывает эффект [gold]Круг[/gold], получайте [gold]Блок[/gold].",
-  "THECURSEDMOD-MANA_BASTION_POWER.smartDescription": "Каждый раз, когда срабатывает эффект [gold]Круг[/gold], получайте {Amount} [gold]Блок[/gold].",
+  "THECURSEDMOD-MANA_BASTION_POWER.description": "Каждый раз, когда срабатывает эффект [gold]Круг[/gold], получайте [gold]защиты[/gold].",
+  "THECURSEDMOD-MANA_BASTION_POWER.smartDescription": "Каждый раз, когда срабатывает эффект [gold]Круг[/gold], получайте {Amount} [gold]защиты[/gold].",
 
   "THECURSEDMOD-WORLDLINE_TWIST_POWER.title": "Искажение линии времени",
   "THECURSEDMOD-WORLDLINE_TWIST_POWER.description": "В этот ход не получайте урон от [gold]Карма[/gold].",

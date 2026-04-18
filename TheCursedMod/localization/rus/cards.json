@@ -8,13 +8,13 @@
   "THECURSEDMOD-STRIKE_THE_CURSED.description": "Наносит {Damage:diff()} урона.",
 
   "THECURSEDMOD-DEFEND_THE_CURSED.title": "Защита",
-  "THECURSEDMOD-DEFEND_THE_CURSED.description": "Получает {Block:diff()} [gold]Блок[/gold].",
+  "THECURSEDMOD-DEFEND_THE_CURSED.description": "Дает {Block:diff()} [gold]защиты[/gold].",
 
   "THECURSEDMOD-CURSED_WAND.title": "Проклятая палочка",
-  "THECURSEDMOD-CURSED_WAND.description": "Получает {Block:diff()} [gold]Блок[/gold].\nНаносит {Damage:diff()} урона.\nДобавляет [gold]Осадки[/gold] в вашу [gold]Руку[/gold].",
+  "THECURSEDMOD-CURSED_WAND.description": "Дает {Block:diff()} [gold]защиты[/gold].\nНаносит {Damage:diff()} урона.\nДобавляет [gold]Осадки[/gold] в вашу [gold]Руку[/gold].",
 
   "THECURSEDMOD-CLEAN_UP_WORKSHOP.title": "Очистить мастерскую",
-  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]Обряд[/gold] : Получает {Block:diff()} [gold]Блок[/gold] и тянет {Cards:diff()} {Cards:plural:карту|карты}.",
+  "THECURSEDMOD-CLEAN_UP_WORKSHOP.description": "[gold]Обряд[/gold] : Дает {Block:diff()} [gold]защиты[/gold] и тянет {Cards:diff()} {Cards:plural:карту|карты}.",
 
   "THECURSEDMOD-CURSED_MACE.title": "Проклятая булава",
   "THECURSEDMOD-CURSED_MACE.description": "Наносит {Damage:diff()} урона.\nНакладывает {VulnerablePower:diff()} [gold]Уязвимость[/gold].\nДобавляет [gold]Осадки[/gold] в вашу [gold]Руку[/gold].",
@@ -44,48 +44,48 @@
   "THECURSEDMOD-WIELD.description": "Наносит {Damage:diff()} урона.\nТянет карты, равное количеству [gold]Неприменимых[/gold] карт в вашей [gold]Руки[/gold].{InCombat:cond:\n(Тянуть {CalculatedCards} карт.)|}",
 
   "THECURSEDMOD-OBSCURATION.title": "Затемнение",
-  "THECURSEDMOD-OBSCURATION.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : Получает {Block:diff()} [gold]Блок[/gold] снова.",
+  "THECURSEDMOD-OBSCURATION.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : Дает {Block:diff()} [gold]защиты[/gold] снова.",
 
   "THECURSEDMOD-RAPID_MOVEMENT.title": "Быстрое движение",
-  "THECURSEDMOD-RAPID_MOVEMENT.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : Тянет 2 карты.",
+  "THECURSEDMOD-RAPID_MOVEMENT.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : Тянет 2 карты.",
 
   "THECURSEDMOD-WEAR_CLOAK.title": "Надеть плащ",
-  "THECURSEDMOD-WEAR_CLOAK.description": "Получает {Block:diff()} [gold]Блок[/gold].\nЕсли у вас есть любая [gold]Неприменимая[/gold] карта в вашей [gold]Руки[/gold], переместите карту из вашей [gold]Колоды сброса[/gold] в вашу [gold]Руку[/gold].",
+  "THECURSEDMOD-WEAR_CLOAK.description": "Дает {Block:diff()} [gold]защиты[/gold].\nЕсли у вас есть любая [gold]Неприменимая[/gold] карта в вашей [gold]Руки[/gold], переместите карту из вашей [gold]Колоды сброса[/gold] в вашу [gold]Руку[/gold].",
   "THECURSEDMOD-WEAR_CLOAK.selectionScreenPrompt": "Выберите карту, чтобы вернуть её в вашу Руку.",
 
   "THECURSEDMOD-CURSED_ARMOUR.title": "Проклятая броня",
-  "THECURSEDMOD-CURSED_ARMOUR.description": "Получает {Block:diff()} [gold]Блок[/gold].\nПеретасовывает 2 случайные [gold]Проклятия[/gold] карты в вашу [gold]Колоду[/gold].",
+  "THECURSEDMOD-CURSED_ARMOUR.description": "Дает {Block:diff()} [gold]защиты[/gold].\nПеретасовывает 2 случайные [gold]Проклятия[/gold] карты в вашу [gold]Колоду[/gold].",
 
   "THECURSEDMOD-DOUBLE_SHIELD.title": "Двойной щит",
-  "THECURSEDMOD-DOUBLE_SHIELD.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : Получает {Block:diff()} [gold]Блок[/gold] в следующий ход.",
+  "THECURSEDMOD-DOUBLE_SHIELD.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : Дает {Block:diff()} [gold]защиты[/gold] в следующий ход.",
 
   "THECURSEDMOD-CURSED_AMULET.title": "Проклятый амулет",
-  "THECURSEDMOD-CURSED_AMULET.description": "Получает {Block:diff()} [gold]Блок[/gold].\nТянет 1 карту.\nПеретасовывает случайную [gold]Проклятие[/gold] карту в вашу [gold]Колоду[/gold].",
+  "THECURSEDMOD-CURSED_AMULET.description": "Дает {Block:diff()} [gold]защиты[/gold].\nТянет 1 карту.\nПеретасовывает случайную [gold]Проклятие[/gold] карту в вашу [gold]Колоду[/gold].",
 
   "THECURSEDMOD-SMOKESCREEN.title": "Дымовая завеса",
-  "THECURSEDMOD-SMOKESCREEN.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : Накладывает {WeakPower:diff()} [gold]Слабость[/gold] на ВСЕХ противников.",
+  "THECURSEDMOD-SMOKESCREEN.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : Накладывает {WeakPower:diff()} [gold]Слабость[/gold] на ВСЕХ противников.",
 
   "THECURSEDMOD-ASHES_TO_ASHES.title": "Пепел к пеплу",
   "THECURSEDMOD-ASHES_TO_ASHES.description": "[gold]Обряд[/gold] : Тянет {Cards:diff()} карт.",
 
   "THECURSEDMOD-REPENTANCE.title": "Покаяние",
-  "THECURSEDMOD-REPENTANCE.description": "Получает {Block:diff()} [gold]Блок[/gold].\nЕсли у вас есть [gold]Карма[/gold], получает {KarmaBlock:diff()} [gold]Блок[/gold] вместо этого.",
+  "THECURSEDMOD-REPENTANCE.description": "Дает {Block:diff()} [gold]защиты[/gold].\nЕсли у вас есть [gold]Карма[/gold], дает {KarmaBlock:diff()} [gold]защиты[/gold] вместо этого.",
 
   "THECURSEDMOD-CURSED_MIRROR.title": "Проклятое зеркало",
-  "THECURSEDMOD-CURSED_MIRROR.description": "Наносит {Damage:diff()} урона.\nДобавляет [gold]Очарованный[/gold] в вашу [gold]Руку[/gold].",
+  "THECURSEDMOD-CURSED_MIRROR.description": "Наносит {Damage:diff()} урона.\nДобавляет [gold]Порабощение[/gold] в вашу [gold]Руку[/gold].",
 
   "THECURSEDMOD-SCINTILLA.selectionScreenPrompt": "Выберите карту, чтобы превратить её в Осадки.",
   "THECURSEDMOD-SCINTILLA.title": "Искра",
   "THECURSEDMOD-SCINTILLA.description": "Наносит {Damage:diff()} урона.\nПреобразует карту из вашей [gold]Колоды сброса[/gold] в [gold]Осадки[/gold].",
 
   "THECURSEDMOD-BLESSING_IN_DISGUISE.title": "Благословение в маскировке",
-  "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "[gold]Сжигает[/gold] все карты [gold]Проклятие[/gold] в вашей [gold]Руке[/gold].\nПолучает {Block:diff()} [gold]Блок[/gold] за каждую сожжённую карту.",
+  "THECURSEDMOD-BLESSING_IN_DISGUISE.description": "[gold]Сжигает[/gold] все карты [gold]Проклятие[/gold] в вашей [gold]Руке[/gold].\nДает {Block:diff()} [gold]защиты[/gold] за каждую сожжённую карту.",
 
   "THECURSEDMOD-CURSED_SPELLBOOK.title": "Проклятая книга заклинаний",
   "THECURSEDMOD-CURSED_SPELLBOOK.description": "Тянет {Cards:diff()} карт.\nПеретасовывает случайную [gold]Проклятие[/gold] карту в вашу [gold]Колоду[/gold].",
 
   "THECURSEDMOD-FLESH_FROM_BONE.title": "Плоть из кости",
-  "THECURSEDMOD-FLESH_FROM_BONE.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : Получает {PlatingPower:diff()} [gold]Покрытие[/gold].",
+  "THECURSEDMOD-FLESH_FROM_BONE.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : Получает {PlatingPower:diff()} [gold]Покрытие[/gold].",
 
   "THECURSEDMOD-ARCANE_SWEEP.title": "Мистический взмах",
   "THECURSEDMOD-ARCANE_SWEEP.description": "Наносит {Damage:diff()} урона ВСЕМ противникам. Если у вас есть любая [gold]Круг[/gold] карта в вашей [gold]Руки[/gold], наносит {Damage:diff()} урона ВСЕМ противникам снова.",
@@ -94,13 +94,13 @@
   "THECURSEDMOD-CIRCLE_OF_FLAME.description": "[gold]Круг[/gold] : Каждый раз, когда вы разыгрываете карту Атаки, наносите {Damage:diff()} урона ВСЕМ противникам.",
 
   "THECURSEDMOD-CIRCLE_OF_WARD.title": "Круг охраны",
-  "THECURSEDMOD-CIRCLE_OF_WARD.description": "[gold]Круг[/gold] : Каждый раз, когда вы разыгрываете карту Умения, получаете {Block:diff()} [gold]Блок[/gold].",
+  "THECURSEDMOD-CIRCLE_OF_WARD.description": "[gold]Круг[/gold] : Каждый раз, когда вы разыгрываете карту Умения, получаете {Block:diff()} [gold]защиты[/gold].",
 
   "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.title": "Круг усиления",
   "THECURSEDMOD-CIRCLE_OF_AMPLIFICATION.description": "[gold]Круг[/gold] : Каждый раз, когда вы разыгрываете карту Силы, получаете {Energy:energyIcons()}.",
 
   "THECURSEDMOD-CIRCLE_OF_RITUAL.title": "Круг ритуала",
-  "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]Круг[/gold] : Каждый раз, когда срабатывает эффект [gold]Обряда[/gold], получаете {Block:diff()} [gold]Блок[/gold] и тянете {Cards:diff()} {Cards:plural:карту|карты}.",
+  "THECURSEDMOD-CIRCLE_OF_RITUAL.description": "[gold]Круг[/gold] : Каждый раз, когда срабатывает эффект [gold]Обряда[/gold], получаете {Block:diff()} [gold]защиты[/gold] и тянете {Cards:diff()} {Cards:plural:карту|карты}.",
 
   "THECURSEDMOD-CIRCLE_OF_FOCUS.title": "Круг сосредоточения",
   "THECURSEDMOD-CIRCLE_OF_FOCUS.description": "[gold]Круг[/gold] : Каждый раз, когда вы разыгрываете карту, стоимость которой {CostThreshold:energyIcons()} или выше, получаете {Energy:energyIcons()}.",
@@ -118,26 +118,26 @@
   "THECURSEDMOD-CELERITY.description": "[gold]Обряд[/gold] : Получает {CalculationExtra:diff()} [gold]Ловкость[/gold] за каждую [gold]Круг[/gold] карту в [gold]Руки[/gold].{InCombat:cond:\n(Получает {CalculatedDexterity} [gold]Ловкость[/gold].)|}",
 
   "THECURSEDMOD-ARCANE_BINDING.title": "Мистическое связывание",
-  "THECURSEDMOD-ARCANE_BINDING.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : [gold]Оставляется[/gold] [gold]Круг[/gold] карты в вашей [gold]Руки[/gold] в этом ходу.",
+  "THECURSEDMOD-ARCANE_BINDING.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : [gold]Оставляется[/gold] [gold]Круг[/gold] карты в вашей [gold]Руки[/gold] в этом ходу.",
 
   "THECURSEDMOD-WICKED_WARD.title": "Злобный барьер",
-  "THECURSEDMOD-WICKED_WARD.description": "[gold]Обряд[/gold] : Даёт ВСЕМ другим игрокам {Block:diff()} [gold]Блок[/gold].",
+  "THECURSEDMOD-WICKED_WARD.description": "[gold]Обряд[/gold] : Даёт ВСЕМ другим игрокам {Block:diff()} [gold]защиты[/gold].",
 
   "THECURSEDMOD-RESONATING_SHIELD.title": "Резонирующий щит",
-  "THECURSEDMOD-RESONATING_SHIELD.description": "Стоимость уменьшается на 1 {Energy:energyIcons()} за каждый раз, когда эффект [gold]Круг[/gold] сработал в этом бою.\nПолучает {Block:diff()} [gold]Блок[/gold].",
+  "THECURSEDMOD-RESONATING_SHIELD.description": "Стоимость уменьшается на 1 {Energy:energyIcons()} за каждый раз, когда эффект [gold]Круг[/gold] сработал в этом бою.\nДает {Block:diff()} [gold]защиты[/gold].",
 
   "THECURSEDMOD-PREPARE_RITE.title": "Подготовить обряд",
   "THECURSEDMOD-PREPARE_RITE.description": "Преобразует карту в вашей [gold]Колоде[/gold] в [gold]Осадки[/gold].\nВ следующем ходу, тянет {DrawCardsNextTurnPower:diff()} {DrawCardsNextTurnPower:plural:карту|карты}.",
   "THECURSEDMOD-PREPARE_RITE.selectionScreenPrompt": "Выберите карту, чтобы превратить её в Осадки.",
 
   "THECURSEDMOD-TROUBLOUS_MINION.title": "Проблемный прислужник",
-  "THECURSEDMOD-TROUBLOUS_MINION.description": "Получает {Block:diff()} [gold]Блок[/gold].\nДобавляет случайную [gold]Проклятие[/gold] карту в вашу [gold]Руку[/gold].\nПеретасовывает эту карту в вашу [gold]Колоду[/gold].",
+  "THECURSEDMOD-TROUBLOUS_MINION.description": "Дает {Block:diff()} [gold]защиты[/gold].\nДобавляет случайную [gold]Проклятие[/gold] карту в вашу [gold]Руку[/gold].\nПеретасовывает эту карту в вашу [gold]Колоду[/gold].",
 
   "THECURSEDMOD-RECYCLABLE_WASTE.title": "Перерабатываемый мусор",
   "THECURSEDMOD-RECYCLABLE_WASTE.description": "Все [gold]Осадки[/gold] имеют [gold]Оставляется[/gold] в этом бою.\nДобавляет 2 [gold]Осадки[/gold] в вашу [gold]Руку[/gold].",
 
   "THECURSEDMOD-LUCKY_CHARM.title": "Счастливый амулет",
-  "THECURSEDMOD-LUCKY_CHARM.description": "Каждый раз, когда карта [gold]Проклятие[/gold] тянется или [gold]Сжигается[/gold], получаете {LuckyCharmPower:diff()} [gold]Блок[/gold].",
+  "THECURSEDMOD-LUCKY_CHARM.description": "Каждый раз, когда карта [gold]Проклятие[/gold] тянется или [gold]Сжигается[/gold], получаете {LuckyCharmPower:diff()} [gold]защиты[/gold].",
 
   "THECURSEDMOD-MANA_CIRCULATION.title": "Циркуляция маны",
   "THECURSEDMOD-MANA_CIRCULATION.description": "В первый раз, когда эффект [gold]Обряда[/gold] срабатывает каждый ход, получаете {Energy:energyIcons()}.",
@@ -161,7 +161,7 @@
   "THECURSEDMOD-FORBIDDEN_COMBO.description": "Наносит {Damage:diff()} урона {Repeat:diff()} раз.\n[gold]Карма[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_WALLOP.title": "Запретный удар",
-  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Наносит {Damage:diff()} урона.\nПолучает [gold]Блок[/gold] равный непоглощенному урону.\n[gold]Карма[/gold] {KarmaPower:diff()}.",
+  "THECURSEDMOD-FORBIDDEN_WALLOP.description": "Наносит {Damage:diff()} урона.\nДает [gold]защиту[/gold], равную непоглощенному урону.\n[gold]Карма[/gold] {KarmaPower:diff()}.",
 
   "THECURSEDMOD-FORBIDDEN_RAID.title": "Запретный налет",
   "THECURSEDMOD-FORBIDDEN_RAID.description": "Наносит {Damage:diff()} урона.\nТянет 1 карту.\n[gold]Карма[/gold] {KarmaPower:diff()}.",
@@ -176,10 +176,10 @@
   "THECURSEDMOD-SPIRIT_OFFERING.description": "В первый раз, когда эффект [gold]Обряда[/gold] срабатывает каждый ход, получаете {SpiritOfferingPower:diff()} [gold]Сила[/gold].",
 
   "THECURSEDMOD-IGNORE_PAIN.title": "Игнорировать боль",
-  "THECURSEDMOD-IGNORE_PAIN.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : Вы получаете на 50% меньше урона от [gold]Карма[/gold] в этом ходу.",
+  "THECURSEDMOD-IGNORE_PAIN.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : Вы получаете на 50% меньше урона от [gold]Карма[/gold] в этом ходу.",
 
   "THECURSEDMOD-ROLLING_OVER_DEBT.title": "Перекат долга",
-  "THECURSEDMOD-ROLLING_OVER_DEBT.description": "Если у вас есть [gold]Карма[/gold], получаете {RollingOverDebtPower:diff()} [gold]Блок[/gold] в конце вашего хода.",
+  "THECURSEDMOD-ROLLING_OVER_DEBT.description": "Если у вас есть [gold]Карма[/gold], получаете {RollingOverDebtPower:diff()} [gold]защиты[/gold] в конце вашего хода.",
 
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.title": "Цикл порока",
   "THECURSEDMOD-CYCLE_OF_DEPRAVITY.description": "В начале вашего хода тянете {CycleOfDepravityPower:diff()} карт, если у вас есть [gold]Карма[/gold].",
@@ -206,7 +206,7 @@
   "THECURSEDMOD-GRACE.description": "Урон от [gold]Карма[/gold] откладывается на дополнительный ход. Этот эффект нельзя наложить несколько раз.",
 
   "THECURSEDMOD-ANGER_CONTROL.title": "Контроль гнева",
-  "THECURSEDMOD-ANGER_CONTROL.description": "Наносит {Damage:diff()} урона {Repeat:diff()} раз.\nУвеличивает количество ударов этой карты на 1 в этом бою.\nДобавляет [gold]Нормальность[/gold] в вашу [gold]Руку[/gold].",
+  "THECURSEDMOD-ANGER_CONTROL.description": "Наносит {Damage:diff()} урона {Repeat:diff()} раз.\nУвеличивает количество ударов этой карты на 1 в этом бою.\nДобавляет [gold]Обыденность[/gold] в вашу [gold]Руку[/gold].",
 
   "THECURSEDMOD-DIE_TOGETHER.title": "Умрите вместе",
   "THECURSEDMOD-DIE_TOGETHER.description": "Урон от [gold]Карма[/gold] также наносится ВСЕМ противникам в этом бою.\nВ начале вашего хода, [gold]Карма[/gold] {KarmaPower:diff()}.",
@@ -230,7 +230,7 @@
   "THECURSEDMOD-MIRACLE_ALCHEMY.description": "[gold]Обряд[/gold] : Получает [gold]Энтропийный настой[/gold].",
 
   "THECURSEDMOD-ANTI_AGING.title": "Антистарение",
-  "THECURSEDMOD-ANTI_AGING.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : Увеличивает ваш максимум HP на {MaxHp:diff()}.",
+  "THECURSEDMOD-ANTI_AGING.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : Увеличивает ваш максимум HP на {MaxHp:diff()}.",
 
   "THECURSEDMOD-DEMONIC_BLADE.title": "Демонический клинок",
   "THECURSEDMOD-DEMONIC_BLADE.description": "Наносит {CalculatedDamage:diff()} урона.\nНаносит {ExtraDamage:diff()} дополнительного урона за каждый раз, когда эффект [gold]Обряда[/gold] сработал в этом бою.",
@@ -255,7 +255,7 @@
   "THECURSEDMOD-FORBIDDEN_ELIXIR.description": "В начале вашего хода,\nполучаете {Energy:energyIcons()} и [gold]Карма[/gold] {KarmaEveryTurn:diff()}.",
 
   "THECURSEDMOD-MANA_BASTION.title": "Бастион маны",
-  "THECURSEDMOD-MANA_BASTION.description": "Каждый раз, когда эффект [gold]Круг[/gold] срабатывает, получает {ManaBastionPower:diff()} [gold]Блок[/gold].",
+  "THECURSEDMOD-MANA_BASTION.description": "Каждый раз, когда эффект [gold]Круг[/gold] срабатывает, получает {ManaBastionPower:diff()} [gold]защиты[/gold].",
 
   "THECURSEDMOD-BATTLEMAGE.title": "Боевой маг",
   "THECURSEDMOD-BATTLEMAGE.description": "Каждый раз, когда эффект [gold]Круг[/gold] срабатывает, получает {BattlemagePower:diff()} [gold]Бодрость[/gold].",
@@ -267,7 +267,7 @@
   "THECURSEDMOD-WORLDLINE_TWIST.description": "Стоимость уменьшается на 1 {Energy:energyIcons()} за каждый раз, когда эффект [gold]Круг[/gold] сработал в этом ходу.\nНе получаете урон от [gold]Карма[/gold] в этом ходу.",
 
   "THECURSEDMOD-SPRING_CLEANING.title": "Весенняя уборка",
-  "THECURSEDMOD-SPRING_CLEANING.description": "Получает {Block:diff()} [gold]Блок[/gold].\n[gold]Обряд[/gold] : Тянет {Cards:diff()} карт.",
+  "THECURSEDMOD-SPRING_CLEANING.description": "Дает {Block:diff()} [gold]защиты[/gold].\n[gold]Обряд[/gold] : Тянет {Cards:diff()} карт.",
 
   "THECURSEDMOD-ARCHDEMON_SWORD.title": "Меч архдемона",
   "THECURSEDMOD-ARCHDEMON_SWORD.description": "Наносит {Damage:diff()} урона.\n[gold]Сжигает[/gold] ВСЕ карты [gold]Проклятие[/gold] в вашей [gold]Руке[/gold], и получает {StrengthPower:diff()} [gold]Сила[/gold] за каждую сожжённую карту.\n[gold]Карма[/gold] {KarmaPower:diff()}."

@@ -1,6 +1,6 @@
 # Slay the Spire 2 Mod - The Cursed
 
-Adds a new character "The Cursed" to Slay the Spire 2 game.
+Adds a new character "The Cursed" to Slay the Spire 2 game. This is not just porting [The Cursed in StS1](https://github.com/jhp109/TheCursedMod), this version includes reworked mechanics & cards for StS2.
 
 ![The Cursed gameplay screenshot](the_cursed_2_gameplay.png)
 
@@ -33,7 +33,7 @@ Korean, English, Simplified Chinese
 [Localization instruction](https://github.com/jhp109/TheCursedMod2/blob/main/TheCursedMod/localization/README.md)
 
 ## Credit (Human)
-Special thanks to 히말군 for character artwork (from the [STS1 mod of The Cursed](https://github.com/jhp109/TheCursedMod))
+Special thanks to 히말군 for character artwork (from the [StS1 mod of The Cursed](https://github.com/jhp109/TheCursedMod))
 
 Simplified Chinese translation by 璨
 
