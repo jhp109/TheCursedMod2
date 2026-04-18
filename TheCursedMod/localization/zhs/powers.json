@@ -72,12 +72,12 @@
   "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "本回合你受到来自[gold]因果报应[/gold]的伤害减少{Amount}%。",
 
   "THECURSEDMOD-SPIRIT_OFFERING_POWER.title": "灵魂献祭",
-  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "每回合首次通过[gold]咒仪[/gold][gold]消耗[/gold]一张[gold]诅咒[/gold]牌时，获得[gold]力量[/gold]。",
-  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "每回合首次通过[gold]咒仪[/gold][gold]消耗[/gold]一张[gold]诅咒[/gold]牌时，获得{Amount}点[gold]力量[/gold]。",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "每回合首次触发[gold]咒仪[/gold]效果时，获得[gold]力量[/gold]。",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "每回合首次触发[gold]咒仪[/gold]效果时，获得{Amount}点[gold]力量[/gold]。",
 
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "禁忌形态",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "每当你通过[gold]咒仪[/gold]消耗一张[gold]诅咒[/gold]牌时，下一张带有[gold]因果报应[/gold]的攻击牌造成额外伤害。",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "每当你通过[gold]咒仪[/gold]消耗一张[gold]诅咒[/gold]牌时，下一张带有[gold]因果报应[/gold]的攻击牌造成的伤害增加{Amount}%。",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "每当[gold]咒仪[/gold]效果被触发时，下一张带有[gold]因果报应[/gold]的攻击牌造成额外伤害。",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "每当[gold]咒仪[/gold]效果被触发时，下一张带有[gold]因果报应[/gold]的攻击牌造成的伤害增加{Amount}%。",
 
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.title": "强化下次业报攻击",
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.description": "下一张获得[gold]因果报应[/gold]的攻击牌造成额外伤害。",

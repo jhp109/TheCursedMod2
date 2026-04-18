@@ -72,12 +72,12 @@
   "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "이번 턴에 [gold]업보[/gold]로 받는 피해량이 {Amount}% 감소합니다.",
 
   "THECURSEDMOD-SPIRIT_OFFERING_POWER.title": "영혼 공물",
-  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "매 턴마다 처음으로 [gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시킬 경우, [gold]힘[/gold]을 얻습니다.",
-  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "매 턴마다 처음으로 [gold]의례[/gold]로 [gold]저주[/gold] 카드를 [gold]소멸[/gold]시킬 경우, [gold]힘[/gold]을 {Amount} 얻습니다.",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "매 턴마다 처음으로 [gold]의례[/gold]의 효과가 발동될 경우, [gold]힘[/gold]을 얻습니다.",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "매 턴마다 처음으로 [gold]의례[/gold]의 효과가 발동될 경우, [gold]힘[/gold]을 {Amount} 얻습니다.",
 
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "금단의 형상",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "[gold]의례[/gold]로 [gold]저주[/gold]를 소멸시킬 때마다, [gold]업보[/gold]를 부여하는 다음 공격의 피해량이 증가합니다.",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "[gold]의례[/gold]로 [gold]저주[/gold]를 소멸시킬 때마다, [gold]업보[/gold]를 부여하는 다음 공격의 피해량이 {Amount}% 증가합니다.",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "[gold]의례[/gold]의 효과가 발동될 때마다, [gold]업보[/gold]를 부여하는 다음 공격의 피해량이 증가합니다.",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "[gold]의례[/gold]의 효과가 발동될 때마다, [gold]업보[/gold]를 부여하는 다음 공격의 피해량이 {Amount}% 증가합니다.",
 
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.title": "다음 업보 공격 강화",
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.description": "[gold]업보[/gold]를 부르는 다음 공격의 피해량이 증가합니다.",

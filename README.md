@@ -37,6 +37,8 @@ Special thanks to 히말군 for character artwork (from the [STS1 mod of The Cur
 
 Simplified Chinese translation by 璨
 
+Russian translation by Kassia
+
 ## Credit (AI)
 Grok Imagine (card images)
 

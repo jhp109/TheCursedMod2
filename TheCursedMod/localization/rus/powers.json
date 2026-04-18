@@ -1,0 +1,101 @@
+{
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.title": "Зов Древнего",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.description": "В этот ход следующие [gold]Обряд[/gold] карты активируют их эффект [gold]Обряд[/gold] один раз дополнительно.",
+  "THECURSEDMOD-CALL_OF_THE_ANCIENT_POWER.smartDescription": "В этот ход, следующие {Amount} [gold]Обряд[/gold] {Amount:plural:карта активирует её|карты активируют их} [gold]Обряд[/gold] эффект один раз дополнительно.",
+
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.title": "Сомнительный контракт",
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.description": "В начале вашего хода добавьте случайную карту [gold]Обряд[/gold] и случайную карту [gold]Проклятие[/gold] в вашу [gold]Рука[/gold].",
+  "THECURSEDMOD-DUBIOUS_CONTRACT_POWER.smartDescription": "В начале вашего хода добавьте {Amount} случайную [gold]Обряд[/gold] {Amount:plural:карту|карты} и {Amount} случайную [gold]Проклятие[/gold] {Amount:plural:карту|карты} в вашу [gold]Рука[/gold].",
+
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.title": "Перерабатываемый мусор",
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.description": "Все [gold]Осадки[/gold] сохраняются [gold]Оставляется[/gold] в этом бою.",
+  "THECURSEDMOD-RECYCLABLE_WASTE_POWER.smartDescription": "Все [gold]Осадки[/gold] сохраняются [gold]Оставляется[/gold] в этом бою.",
+
+  "THECURSEDMOD-LUCKY_CHARM_POWER.title": "Счастливый талисман",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.description": "Каждый раз, когда карта [gold]Проклятие[/gold] вытягивается или [gold]Сжигается[/gold], получайте [gold]Блок[/gold].",
+  "THECURSEDMOD-LUCKY_CHARM_POWER.smartDescription": "Каждый раз, когда карта [gold]Проклятие[/gold] вытягивается или [gold]Сжигается[/gold], получайте {Amount} [gold]Блок[/gold].",
+
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.title": "Циркуляция маны",
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.description": "В первый раз, когда эффект [gold]Обряд[/gold] срабатывает каждый ход, получайте {energyPrefix}.",
+  "THECURSEDMOD-MANA_CIRCULATION_POWER.smartDescription": "В первый раз, когда эффект [gold]Обряд[/gold] срабатывает каждый ход, получайте {Amount:energyIcons()}.",
+
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.title": "Тайная матрица",
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.description": "Каждый раз, когда вы вытягиваете карту [gold]Круг[/gold], получайте {energyPrefix} и берете 1 карту.",
+  "THECURSEDMOD-ARCANE_MATRIX_POWER.smartDescription": "Каждый раз, когда вы вытягиваете карту [gold]Круг[/gold], получайте {Amount:energyIcons()} и берете {Amount} {Amount:plural:карту|карты}.",
+
+  "THECURSEDMOD-KARMA_TURN1_POWER.title": "Карма",
+  "THECURSEDMOD-KARMA_TURN1_POWER.description": "В конце этого хода получайте урон.",
+  "THECURSEDMOD-KARMA_TURN1_POWER.smartDescription": "В конце этого хода получайте {Amount} урона.",
+
+  "THECURSEDMOD-KARMA_TURN2_POWER.title": "Карма",
+  "THECURSEDMOD-KARMA_TURN2_POWER.description": "В конце вашего следующего хода получайте урон.",
+  "THECURSEDMOD-KARMA_TURN2_POWER.smartDescription": "В конце вашего следующего хода получайте {Amount} урона.",
+
+  "THECURSEDMOD-KARMA_TURN3_POWER.title": "Карма",
+  "THECURSEDMOD-KARMA_TURN3_POWER.description": "В конце вашего хода через один получайте урон.",
+  "THECURSEDMOD-KARMA_TURN3_POWER.smartDescription": "В конце вашего хода через один получайте {Amount} урона.",
+
+  "THECURSEDMOD-GRACE_POWER.title": "Благодать",
+  "THECURSEDMOD-GRACE_POWER.description": "Урон от [gold]Карма[/gold] откладывается на один дополнительный ход.",
+  "THECURSEDMOD-GRACE_POWER.smartDescription": "Урон от [gold]Карма[/gold] откладывается на один дополнительный ход.",
+
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.title": "Дыхание адского пламени",
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.description": "Каждый раз, когда вы вытягиваете карту [gold]Неиграбельная[/gold], наносите {Amount} урона ВСЕМ врагам.",
+  "THECURSEDMOD-HELLFIRE_BREATHING_POWER.smartDescription": "Каждый раз, когда вы вытягиваете карту [gold]Неиграбельная[/gold], наносите {Amount} урона ВСЕМ врагам.",
+
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.title": "Перекатывание долга",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.description": "Если у вас есть [gold]Карма[/gold], получайте [gold]Блок[/gold] в конце вашего хода.",
+  "THECURSEDMOD-ROLLING_OVER_DEBT_POWER.smartDescription": "Если у вас есть [gold]Карма[/gold], получайте {Amount} [gold]Блок[/gold] в конце вашего хода.",
+
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.title": "Цикл порочности",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.description": "В начале вашего хода берите карты, если у вас есть [gold]Карма[/gold].",
+  "THECURSEDMOD-CYCLE_OF_DEPRAVITY_POWER.smartDescription": "В начале вашего хода берите {Amount} карт, если у вас есть [gold]Карма[/gold].",
+
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.title": "Запретный эликсир",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.description": "В начале вашего хода получайте {energyPrefix}.",
+  "THECURSEDMOD-FORBIDDEN_ELIXIR_POWER.smartDescription": "В начале вашего хода получайте {Amount:energyIcons()}.",
+
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.title": "Разорвать гримуар",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.description": "Атаки, стоимость которых {Energy:energyIcons()} или более, воспроизводятся дополнительное количество раз.",
+  "THECURSEDMOD-TEAR_GRIMOIRE_POWER.smartDescription": "Атаки, стоимость которых {Energy:energyIcons()} или более, воспроизводятся {Amount} дополнительных {Amount:plural:раз|раза}.",
+
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.title": "Повторяющаяся карма",
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.description": "В начале вашего хода, [gold]Карма[/gold].",
+  "THECURSEDMOD-KARMA_EVERY_TURN_POWER.smartDescription": "В начале вашего хода, [gold]Карма[/gold] {Amount}.",
+
+  "THECURSEDMOD-DIE_TOGETHER_POWER.title": "Умри вместе",
+  "THECURSEDMOD-DIE_TOGETHER_POWER.description": "Урон от [gold]Карма[/gold] также наносится ВСЕМ врагам в этом бою.",
+  "THECURSEDMOD-DIE_TOGETHER_POWER.smartDescription": "Урон от [gold]Карма[/gold] также наносится ВСЕМ врагам в этом бою.",
+
+  "THECURSEDMOD-IGNORE_PAIN_POWER.title": "Игнорировать боль",
+  "THECURSEDMOD-IGNORE_PAIN_POWER.description": "В этот ход вы получаете меньше урона от [gold]Карма[/gold].",
+  "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "В этот ход вы получаете на {Amount}% меньше урона от [gold]Карма[/gold].",
+
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.title": "Духовный дар",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "В первый раз, когда эффект [gold]Обряда[/gold] срабатывает каждый ход, получайте [gold]Силу[/gold].",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "В первый раз, когда эффект [gold]Обряда[/gold] срабатывает каждый ход, получайте {Amount} [gold]Силу[/gold].",
+
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "Запретная форма",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "Каждый раз, когда срабатывает эффект [gold]Обряда[/gold], следующая атака, приносящая [gold]Карма[/gold], наносит дополнительный урон.",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "Каждый раз, когда срабатывает эффект [gold]Обряда[/gold], следующая атака, приносящая [gold]Карма[/gold], наносит на {Amount}% дополнительного урона.",
+
+  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.title": "Усилить следующую атаку Кармы",
+  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.description": "Следующая атака, получающая [gold]Карма[/gold], наносит дополнительный урон.",
+  "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.smartDescription": "Следующая атака, получающая [gold]Карма[/gold], наносит на {Amount}% дополнительного урона.",
+
+  "THECURSEDMOD-CIRCLE_RETAIN_POWER.title": "Сохранить круг",
+  "THECURSEDMOD-CIRCLE_RETAIN_POWER.description": "Карты [gold]Круг[/gold] в вашей [gold]Рука[/gold] сохраняются [gold]Оставляется[/gold] в этот ход.",
+  "THECURSEDMOD-CIRCLE_RETAIN_POWER.smartDescription": "Карты [gold]Круг[/gold] в вашей [gold]Рука[/gold] сохраняются [gold]Оставляется[/gold] в течение {Amount} {Amount:plural:хода|ходов}.",
+
+  "THECURSEDMOD-BATTLEMAGE_POWER.title": "Боевой маг",
+  "THECURSEDMOD-BATTLEMAGE_POWER.description": "Каждый раз, когда вы активируете эффект [gold]Круг[/gold], получайте [gold]Бодрость[/gold].",
+  "THECURSEDMOD-BATTLEMAGE_POWER.smartDescription": "Каждый раз, когда вы активируете эффект [gold]Круг[/gold], получайте {Amount} [gold]Бодрость[/gold].",
+
+  "THECURSEDMOD-MANA_BASTION_POWER.title": "Бастион маны",
+  "THECURSEDMOD-MANA_BASTION_POWER.description": "Каждый раз, когда срабатывает эффект [gold]Круг[/gold], получайте [gold]Блок[/gold].",
+  "THECURSEDMOD-MANA_BASTION_POWER.smartDescription": "Каждый раз, когда срабатывает эффект [gold]Круг[/gold], получайте {Amount} [gold]Блок[/gold].",
+
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.title": "Искажение линии времени",
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.description": "В этот ход не получайте урон от [gold]Карма[/gold].",
+  "THECURSEDMOD-WORLDLINE_TWIST_POWER.smartDescription": "В этот ход не получайте урон от [gold]Карма[/gold]."
+}

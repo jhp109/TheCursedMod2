@@ -1,0 +1,10 @@
+{
+  "THECURSEDMOD-RITE_POTION.title": "Зелье Обряда",
+  "THECURSEDMOD-RITE_POTION.description": "Выберите [blue]1[/blue] из [blue]3[/blue] случайных карт [gold]Обряд[/gold], чтобы добавить их в вашу [gold]Руку[/gold]. Вы можете сыграть их бесплатно в этом ходу. Также добавьте [gold]Осадки[/gold] в вашу [gold]Руку[/gold].",
+
+  "THECURSEDMOD-MERCY_POTION.title": "Зелье Милосердия",
+  "THECURSEDMOD-MERCY_POTION.description": "Урон от [gold]Карма[/gold], получаемый вами в этом ходу, снижен на [blue]100%[/blue].",
+
+  "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.title": "Круги в бутылке",
+  "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.description": "Добавьте [blue]2[/blue] случайные карты [gold]Улучшенных[/gold] [gold]Круг[/gold] с [purple]Устойчивый[/purple] [gold]Зачарована[/gold] в вашу [gold]Руку[/gold]."
+}

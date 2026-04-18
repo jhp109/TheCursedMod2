@@ -72,12 +72,12 @@
   "THECURSEDMOD-IGNORE_PAIN_POWER.smartDescription": "You receive {Amount}% less damage from [gold]Karma[/gold] this turn.",
 
   "THECURSEDMOD-SPIRIT_OFFERING_POWER.title": "Spirit Offering",
-  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "The first time you [gold]Exhaust[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] each turn, gain [gold]Strength[/gold].",
-  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "The first time you [gold]Exhaust[/gold] a [gold]Curse[/gold] card via [gold]Rite[/gold] each turn, gain {Amount} [gold]Strength[/gold].",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.description": "The first time a [gold]Rite[/gold] effect is triggered each turn, gain [gold]Strength[/gold].",
+  "THECURSEDMOD-SPIRIT_OFFERING_POWER.smartDescription": "The first time a [gold]Rite[/gold] effect is triggered each turn, gain {Amount} [gold]Strength[/gold].",
 
   "THECURSEDMOD-FORBIDDEN_FORM_POWER.title": "Forbidden Form",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "Whenever you exhaust a [gold]Curse[/gold] via [gold]Rite[/gold], next Attack that brings [gold]Karma[/gold] deals additional damage.",
-  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "Whenever you exhaust a [gold]Curse[/gold] via [gold]Rite[/gold], next Attack that brings [gold]Karma[/gold] deals {Amount}% additional damage.",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.description": "Whenever a [gold]Rite[/gold] effect is triggered, next Attack that brings [gold]Karma[/gold] deals additional damage.",
+  "THECURSEDMOD-FORBIDDEN_FORM_POWER.smartDescription": "Whenever a [gold]Rite[/gold] effect is triggered, next Attack that brings [gold]Karma[/gold] deals {Amount}% additional damage.",
 
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.title": "Enhance Next Karma Attack",
   "THECURSEDMOD-MULTIPLY_NEXT_KARMA_ATTACK_POWER.description": "Next Attack that gains [gold]Karma[/gold] deals additional damage.",
