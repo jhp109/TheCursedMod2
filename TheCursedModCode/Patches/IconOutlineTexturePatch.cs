@@ -13,7 +13,7 @@ public static class IconOutlineTexturePatch
     {
         if (__instance is not TheCursedCharacter)
             return true;
-        __result = $"res://{MainFile.ModId}/images/ui/top_panel/character_icon_the_cursed_outline.png";
+        __result = $"res://{TheCursedModMainFile.ModId}/images/ui/top_panel/character_icon_the_cursed_outline.png";
         return false;
     }
 }

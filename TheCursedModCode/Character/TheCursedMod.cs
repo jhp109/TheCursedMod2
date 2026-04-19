@@ -57,18 +57,18 @@ public class TheCursedMod : PlaceholderCharacterModel
     public override string CustomRestSiteAnimPath => "res://TheCursedMod/scenes/the_cursed_rest_site.tscn";
     public override string CustomMerchantAnimPath => "res://TheCursedMod/scenes/the_cursed_merchant.tscn";
     public override string CustomCharacterSelectBg => "char_select_bg_the_cursed.tscn".ScenePath();
-    public override string CustomIconTexturePath => $"res://{MainFile.ModId}/images/ui/top_panel/character_icon_the_cursed.png";
+    public override string CustomIconTexturePath => $"res://{TheCursedModMainFile.ModId}/images/ui/top_panel/character_icon_the_cursed.png";
     public override string CustomIconPath => "res://TheCursedMod/scenes/the_cursed_icon.tscn";
     public override string CustomCharacterSelectIconPath => "char_select_the_cursed.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_the_cursed_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_the_cursed.png".CharacterUiPath();
 
     public override string CustomArmPointingTexturePath =>
-        $"res://{MainFile.ModId}/images/thecursed/hands/multiplayer_hand_the_cursed_point.png";
+        $"res://{TheCursedModMainFile.ModId}/images/thecursed/hands/multiplayer_hand_the_cursed_point.png";
     public override string CustomArmRockTexturePath =>
-        $"res://{MainFile.ModId}/images/thecursed/hands/multiplayer_hand_the_cursed_rock.png";
+        $"res://{TheCursedModMainFile.ModId}/images/thecursed/hands/multiplayer_hand_the_cursed_rock.png";
     public override string CustomArmPaperTexturePath =>
-        $"res://{MainFile.ModId}/images/thecursed/hands/multiplayer_hand_the_cursed_paper.png";
+        $"res://{TheCursedModMainFile.ModId}/images/thecursed/hands/multiplayer_hand_the_cursed_paper.png";
     public override string CustomArmScissorsTexturePath =>
-        $"res://{MainFile.ModId}/images/thecursed/hands/multiplayer_hand_the_cursed_scissor.png";
+        $"res://{TheCursedModMainFile.ModId}/images/thecursed/hands/multiplayer_hand_the_cursed_scissor.png";
 }
