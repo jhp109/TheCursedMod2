@@ -28,13 +28,19 @@ public sealed class ForbiddenWallop() : TheCursedModCard(3, CardType.Attack, Car
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma)
     ];
 
+    private int _pendingBlock;
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
+        _pendingBlock = 0;
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
+        if (_pendingBlock > 0)
+            await CreatureCmd.GainBlock(Owner.Creature, _pendingBlock, ValueProp.Move, play);
+        _pendingBlock = 0;
         await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
     }
 
-    public override async Task AfterDamageGiven(
+    public override Task AfterDamageGiven(
         PlayerChoiceContext choiceContext,
         Creature? dealer,
         DamageResult result,
@@ -43,7 +49,8 @@ public sealed class ForbiddenWallop() : TheCursedModCard(3, CardType.Attack, Car
         CardModel? cardSource)
     {
         if (dealer == Owner.Creature && cardSource == this && result.UnblockedDamage > 0)
-            await CreatureCmd.GainBlock(Owner.Creature, result.UnblockedDamage, ValueProp.Move, this);
+            _pendingBlock += result.UnblockedDamage;
+        return Task.CompletedTask;
     }
 
     protected override void OnUpgrade()
