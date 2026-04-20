@@ -43,7 +43,7 @@ public sealed class ForbiddenWallop() : TheCursedModCard(3, CardType.Attack, Car
         CardModel? cardSource)
     {
         if (dealer == Owner.Creature && cardSource == this && result.UnblockedDamage > 0)
-            await CreatureCmd.GainBlock(Owner.Creature, result.UnblockedDamage, ValueProp.Move, null);
+            await CreatureCmd.GainBlock(Owner.Creature, result.UnblockedDamage, ValueProp.Move, this);
     }
 
     protected override void OnUpgrade()
