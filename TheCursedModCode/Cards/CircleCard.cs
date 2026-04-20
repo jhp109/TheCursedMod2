@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Nodes.Cards;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
+using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using TheCursedMod.TheCursedModCode.Powers;
 using TheCursedMod.TheCursedModCode.Relics;
@@ -21,10 +22,24 @@ public abstract class CircleCard(CardRarity rarity)
 {
     private bool _suppressNextTrigger;
 
+    [SavedProperty]
+    public bool TheCursedMod_SuppressNextTrigger
+    {
+        get => _suppressNextTrigger;
+        private set { AssertMutable(); _suppressNextTrigger = value; }
+    }
+
+    private int _triggerCount;
+
     /// <summary>
     /// 이번 전투에서 이 마법진이 발동된 총 횟수. 비전 방출 (Arcane Discharge) 등에서 참조합니다.
     /// </summary>
-    public int TriggerCount { get; private set; }
+    [SavedProperty]
+    public int TheCursedMod_CircleTriggerCount
+    {
+        get => _triggerCount;
+        private set { AssertMutable(); _triggerCount = value; }
+    }
 
     protected override bool IsPlayable => false;
 
@@ -66,7 +81,7 @@ public abstract class CircleCard(CardRarity rarity)
 
     private async Task TriggerEffect(PlayerChoiceContext context)
     {
-        TriggerCount++;
+        TheCursedMod_CircleTriggerCount++;
         NPowerUpVfx.CreateGhostly(Owner.Creature);
         FlashCardInHand();
         await OnCircleEffect(context);
@@ -113,15 +128,15 @@ public abstract class CircleCard(CardRarity rarity)
         var hand = PileType.Hand.GetPile(Owner);
         if (!hand.Cards.Contains(this)) return;
 
-        _suppressNextTrigger = true;
+        TheCursedMod_SuppressNextTrigger = true;
         await TriggerEffect(context);
     }
 
     public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
-        if (_suppressNextTrigger)
+        if (TheCursedMod_SuppressNextTrigger)
         {
-            _suppressNextTrigger = false;
+            TheCursedMod_SuppressNextTrigger = false;
             return;
         }
 

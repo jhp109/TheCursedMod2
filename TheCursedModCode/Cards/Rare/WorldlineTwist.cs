@@ -3,6 +3,8 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Nodes.Cards;
 using TheCursedMod.TheCursedModCode.Powers;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
@@ -24,6 +26,19 @@ public sealed class WorldlineTwist() : TheCursedModCard(4, CardType.Skill, CardR
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma)
     ];
 
+    public override Task AfterCardEnteredCombat(CardModel card)
+    {
+        if (card != this) return Task.CompletedTask;
+        if (Owner == null) return Task.CompletedTask;
+        int pastTriggers = 0;
+        foreach (var pile in new[] { PileType.Hand, PileType.Draw, PileType.Discard, PileType.Exhaust })
+            foreach (var circle in pile.GetPile(Owner).Cards.OfType<CircleCard>())
+                pastTriggers += circle.TheCursedMod_CircleTriggerCount;
+        for (int i = 0; i < pastTriggers; i++)
+            EnergyCost.AddThisTurn(-1);
+        return Task.CompletedTask;
+    }
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await PowerCmd.Apply<WorldlineTwistPower>(Owner.Creature, 1, Owner.Creature, this);
@@ -35,6 +50,7 @@ public sealed class WorldlineTwist() : TheCursedModCard(4, CardType.Skill, CardR
     public void OnCircleTrigger()
     {
         EnergyCost.AddThisTurn(-1);
+        NCard.FindOnTable(this)?.UpdateVisuals(PileType.Hand, CardPreviewMode.Normal);
     }
 
     protected override void OnUpgrade()

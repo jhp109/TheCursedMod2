@@ -1,8 +1,10 @@
 using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Nodes.Cards;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace TheCursedMod.TheCursedModCode.Cards;
@@ -25,6 +27,19 @@ public sealed class ResonatingShield() : TheCursedModCard(5, CardType.Skill, Car
         EnergyHoverTip
     ];
 
+    public override Task AfterCardEnteredCombat(CardModel card)
+    {
+        if (card != this) return Task.CompletedTask;
+        if (Owner == null) return Task.CompletedTask;
+        int pastTriggers = 0;
+        foreach (var pile in new[] { PileType.Hand, PileType.Draw, PileType.Discard, PileType.Exhaust })
+            foreach (var circle in pile.GetPile(Owner).Cards.OfType<CircleCard>())
+                pastTriggers += circle.TheCursedMod_CircleTriggerCount;
+        for (int i = 0; i < pastTriggers; i++)
+            EnergyCost.AddThisCombat(-1);
+        return Task.CompletedTask;
+    }
+
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardBlock(this, play);
@@ -36,6 +51,7 @@ public sealed class ResonatingShield() : TheCursedModCard(5, CardType.Skill, Car
     public void OnCircleTrigger()
     {
         EnergyCost.AddThisCombat(-1);
+        NCard.FindOnTable(this)?.UpdateVisuals(PileType.Hand, CardPreviewMode.Normal);
     }
 
     protected override void OnUpgrade()

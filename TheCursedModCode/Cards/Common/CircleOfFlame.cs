@@ -30,11 +30,12 @@ public sealed class CircleOfFlame() : CircleCard(CardRarity.Common)
 
     protected override async Task OnCircleEffect(PlayerChoiceContext choiceContext)
     {
-        foreach (var enemy in CombatState!.HittableEnemies)
+        var enemies = CombatState!.HittableEnemies;
+        foreach (var enemy in enemies)
         {
             NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NFireBurstVfx.Create(enemy, 0.75f));
         }
-        await CreatureCmd.Damage(choiceContext, CombatState!.HittableEnemies,
+        await CreatureCmd.Damage(choiceContext, enemies,
             DynamicVars.Damage.IntValue, ValueProp.Unpowered, Owner.Creature, this);
     }
 

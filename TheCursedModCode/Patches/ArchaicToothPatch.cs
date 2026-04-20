@@ -9,8 +9,9 @@ namespace TheCursedMod.TheCursedModCode.Patches;
 public static class ArchaicToothPatch
 {
     [HarmonyPostfix]
-    private static void AddTheCursedTranscendence(ref Dictionary<ModelId, CardModel> __result)
+    private static void AddTheCursedTranscendence(ArchaicTooth __instance, ref Dictionary<ModelId, CardModel> __result)
     {
-        __result[ModelDb.Card<CleanUpWorkshop>().Id] = ModelDb.Card<SpringCleaning>();
+        if (__instance.Owner?.Character is Character.TheCursedMod)
+            __result[ModelDb.Card<CleanUpWorkshop>().Id] = ModelDb.Card<SpringCleaning>();
     }
 }

@@ -23,7 +23,7 @@ public sealed class ArcaneDischarge() : TheCursedModCard(3, CardType.Attack, Car
         {
             if (card.Owner == null) return 0;
             var piles = new[] { PileType.Hand, PileType.Draw, PileType.Discard, PileType.Exhaust };
-            int triggers = piles.Sum(pt => pt.GetPile(card.Owner).Cards.OfType<CircleCard>().Sum(c => c.TriggerCount));
+            int triggers = piles.Sum(pt => pt.GetPile(card.Owner).Cards.OfType<CircleCard>().Sum(c => c.TheCursedMod_CircleTriggerCount));
             return triggers;
         })
     ];
