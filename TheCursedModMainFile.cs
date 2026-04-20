@@ -1,7 +1,6 @@
 using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
-using MegaCrit.Sts2.Core.Models;
 
 namespace TheCursedMod;
 
@@ -21,9 +20,5 @@ public partial class TheCursedModMainFile : Node
         Harmony harmony = new(ModId);
         harmony.PatchAll();
     }
-    static bool MockCardPoolFix(ref CardModel[] __result)
-    {
-        __result = [];
-        return false;
-    }
+
 }
