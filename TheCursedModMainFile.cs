@@ -1,10 +1,12 @@
+using Godot;
 using HarmonyLib;
 using MegaCrit.Sts2.Core.Modding;
+using MegaCrit.Sts2.Core.Models;
 
 namespace TheCursedMod;
 
 [ModInitializer(nameof(Initialize))]
-public static class TheCursedModMainFile
+public partial class TheCursedModMainFile : Node
 {
     public const string ModId = "TheCursedMod"; //Used for resource filepath
 
@@ -18,5 +20,10 @@ public static class TheCursedModMainFile
 
         Harmony harmony = new(ModId);
         harmony.PatchAll();
+    }
+    static bool MockCardPoolFix(ref CardModel[] __result)
+    {
+        __result = [];
+        return false;
     }
 }

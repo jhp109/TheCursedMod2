@@ -5,7 +5,6 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Nodes.Cards;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
-using MegaCrit.Sts2.Core.Saves.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using TheCursedMod.TheCursedModCode.Powers;
 using TheCursedMod.TheCursedModCode.Relics;
@@ -20,26 +19,10 @@ namespace TheCursedMod.TheCursedModCode.Cards;
 public abstract class CircleCard(CardRarity rarity)
     : TheCursedModCard(-1, CardType.Skill, rarity, TargetType.None)
 {
-    private bool _suppressNextTrigger;
-
-    [SavedProperty]
-    public bool TheCursedMod_SuppressNextTrigger
-    {
-        get => _suppressNextTrigger;
-        private set { AssertMutable(); _suppressNextTrigger = value; }
-    }
-
-    private int _triggerCount;
-
     /// <summary>
     /// 이번 전투에서 이 마법진이 발동된 총 횟수. 비전 방출 (Arcane Discharge) 등에서 참조합니다.
     /// </summary>
-    [SavedProperty]
-    public int TheCursedMod_CircleTriggerCount
-    {
-        get => _triggerCount;
-        private set { AssertMutable(); _triggerCount = value; }
-    }
+    public int TheCursedMod_CircleTriggerCount { get; private set; }
 
     protected override bool IsPlayable => false;
 
@@ -121,25 +104,17 @@ public abstract class CircleCard(CardRarity rarity)
     /// <summary>
     /// 비전 방아쇠 등에서 조건을 무시하고 강제로 마법진 효과를 발동합니다.
     /// 혹은 카드 사용 이외의 조건(의식의 마법진)을 통해 발동하는 경우.
-    /// 이후 AfterCardPlayed에서의 자연 발동을 억제합니다.
     /// </summary>
     public async Task ForceTrigger(PlayerChoiceContext context)
     {
         var hand = PileType.Hand.GetPile(Owner);
         if (!hand.Cards.Contains(this)) return;
 
-        TheCursedMod_SuppressNextTrigger = true;
         await TriggerEffect(context);
     }
 
     public override async Task AfterCardPlayed(PlayerChoiceContext context, CardPlay cardPlay)
     {
-        if (TheCursedMod_SuppressNextTrigger)
-        {
-            TheCursedMod_SuppressNextTrigger = false;
-            return;
-        }
-
         if (!WillTrigger(cardPlay)) return;
 
         await TriggerEffect(context);

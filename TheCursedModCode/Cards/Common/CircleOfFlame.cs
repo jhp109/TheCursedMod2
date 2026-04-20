@@ -1,3 +1,4 @@
+using Godot;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -31,9 +32,11 @@ public sealed class CircleOfFlame() : CircleCard(CardRarity.Common)
     protected override async Task OnCircleEffect(PlayerChoiceContext choiceContext)
     {
         var enemies = CombatState!.HittableEnemies;
-        foreach (var enemy in enemies)
+        var combatRoom = NCombatRoom.Instance;
+        if (combatRoom != null && GodotObject.IsInstanceValid(combatRoom))
         {
-            NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NFireBurstVfx.Create(enemy, 0.75f));
+            foreach (var enemy in enemies)
+                combatRoom.CombatVfxContainer?.AddChildSafely(NFireBurstVfx.Create(enemy, 0.75f));
         }
         await CreatureCmd.Damage(choiceContext, enemies,
             DynamicVars.Damage.IntValue, ValueProp.Unpowered, Owner.Creature, this);

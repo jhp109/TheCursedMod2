@@ -9,8 +9,8 @@ using MegaCrit.Sts2.Core.ValueProps;
 namespace TheCursedMod.TheCursedModCode.Cards;
 
 /// <summary>
-/// 공방 대청소(Spring Cleaning) - 방어도를 8 얻습니다. 의례 : 카드를 2장 뽑습니다.
-/// 비용 0, Ancient, Skill. 강화 시 방어도 12, 카드 3장 뽑음.
+/// 공방 대청소(Spring Cleaning) - 방어도를 8 얻습니다. 의례 : 카드를 4장 뽑습니다.
+/// 비용 0, Ancient, Skill. 강화 시 방어도 12, 카드 5장 뽑음.
 /// </summary>
 public sealed class SpringCleaning() : RiteCard(0, CardType.Skill, CardRarity.Ancient, TargetType.None)
 {
@@ -20,7 +20,7 @@ public sealed class SpringCleaning() : RiteCard(0, CardType.Skill, CardRarity.An
     ];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(8, ValueProp.Move),
-        new CardsVar(2)
+        new CardsVar(4)
     ];
 
     protected override async Task OnBaseEffect(PlayerChoiceContext choiceContext, CardPlay play)
