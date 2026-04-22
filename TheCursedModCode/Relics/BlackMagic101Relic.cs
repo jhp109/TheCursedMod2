@@ -12,6 +12,9 @@ public sealed class BlackMagic101Relic : TheCursedModRelic
 {
     public override RelicRarity Rarity => RelicRarity.Starter;
 
+    public override RelicModel? GetUpgradeReplacement()
+        => ModelDb.Relic<BlackMagicAdvancedRelic>();
+
     public override decimal ModifyHandDraw(Player player, decimal count)
     {
         if (player != base.Owner)

@@ -14,11 +14,8 @@ public class TheCursedMod : PlaceholderCharacterModel
     
     public static readonly Color Color = new("5757d4");
 
-    public override CustomEnergyCounter? CustomEnergyCounter =>
-        new CustomEnergyCounter(
-            i => $"res://TheCursedMod/images/ui/combat/energy_counters/the_cursed_orb_layer_{i}.png",
-            new Color("8080ff"),
-            new Color("5757d4"));
+    public override string? CustomEnergyCounterPath =>
+        "res://TheCursedMod/scenes/the_cursed_energy_counter.tscn";
 
     public override Color NameColor => Color;
     public override Color MapDrawingColor => Color;
