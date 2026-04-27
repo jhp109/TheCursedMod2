@@ -1,7 +1,7 @@
 {
   "THECURSEDMOD-THE_CURSED_MOD.title": "Проклятый",
-  "THECURSEDMOD-THE_CURSED_MOD.titleObject": "проклятый",
-  "THECURSEDMOD-THE_CURSED_MOD.description": "Блуждающий, испорченный тьмой.\nИспользует [gold]Проклятия[/gold], [gold]Круги[/gold] и иногда запрещённое оружие, которое приносит [gold]Карму[/gold].",
+  "THECURSEDMOD-THE_CURSED_MOD.titleObject": "Проклятого",
+  "THECURSEDMOD-THE_CURSED_MOD.description": "Блуждающий странник, испорченный тьмой.\nИспользует [red]Проклятия[/red], ритуальные [gold]Круги[/gold] и запретные знания, что влекут за собой [gold]Карму[/gold].",
   "THECURSEDMOD-THE_CURSED_MOD.pronounObject": "его",
   "THECURSEDMOD-THE_CURSED_MOD.possessiveAdjective": "его",
   "THECURSEDMOD-THE_CURSED_MOD.pronounPossessive": "его",
@@ -10,7 +10,7 @@
   "THECURSEDMOD-THE_CURSED_MOD.eventDeathPrevention": "Проклятие пока не позволит мне умереть.",
   "THECURSEDMOD-THE_CURSED_MOD.aromaPrinciple": "[sine][purple]То, как люди относятся к вам, — их карма; то, как вы реагируете, — ваша.[/purple][/sine]",
   "THECURSEDMOD-THE_CURSED_MOD.cardsModifierTitle": "Проклятые карты",
-  "THECURSEDMOD-THE_CURSED_MOD.cardsModifierDescription": "Проклятые карты теперь будут появляться в наградах и магазинах.",
-  "THECURSEDMOD-THE_CURSED_MOD.banter.alive.endTurnPing": "[sine]Обряд завершён...[/sine]",
+  "THECURSEDMOD-THE_CURSED_MOD.cardsModifierDescription": "Проклятые карты теперь появляются в наградах и магазинах.",
+  "THECURSEDMOD-THE_CURSED_MOD.banter.alive.endTurnPing": "[sine]Обряд завершен...[/sine]",
   "THECURSEDMOD-THE_CURSED_MOD.banter.dead.endTurnPing": "..."
 }

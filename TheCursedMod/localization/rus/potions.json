@@ -1,10 +1,10 @@
 {
-  "THECURSEDMOD-RITE_POTION.title": "Зелье Обряда",
-  "THECURSEDMOD-RITE_POTION.description": "Выберите [blue]1[/blue] из [blue]3[/blue] случайных карт [gold]Обряд[/gold], чтобы добавить их в вашу [gold]Руку[/gold]. Вы можете сыграть их бесплатно в этом ходу. Также добавьте [gold]Осадки[/gold] в вашу [gold]Руку[/gold].",
+  "THECURSEDMOD-RITE_POTION.title": "Зелье обряда",
+  "THECURSEDMOD-RITE_POTION.description": "Вы выбираете [blue]1[/blue] из [blue]3[/blue] случайных карт с эффектом [gold]Обряда[/gold] и добавляете ее в [gold]руку[/gold]. В этом ходу она разыгрывается бесплатно. Также добавляет в [gold]руку[/gold] [gold]«Осадок»[/gold].",
 
-  "THECURSEDMOD-MERCY_POTION.title": "Зелье Милосердия",
-  "THECURSEDMOD-MERCY_POTION.description": "Урон от [gold]Карма[/gold], получаемый вами в этом ходу, снижен на [blue]100%[/blue].",
+  "THECURSEDMOD-MERCY_POTION.title": "Зелье милосердия",
+  "THECURSEDMOD-MERCY_POTION.description": "Снижает урон от [gold]Кармы[/gold] в конце этого хода на [blue]100%[/blue].",
 
   "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.title": "Круги в бутылке",
-  "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.description": "Добавьте [blue]2[/blue] случайные карты [gold]Улучшенных[/gold] [gold]Круг[/gold] с [purple]Надежность[/purple] [gold]Зачарована[/gold] в вашу [gold]Руку[/gold]."
+  "THECURSEDMOD-CIRCLES_IN_A_BOTTLE_POTION.description": "Добавляет в [gold]руку[/gold] [blue]2[/blue] случайные [gold]улучшенные[/gold] карты с эффектом [gold]Круга[/gold] и чарами [purple]Надежности[/purple]."
 }
