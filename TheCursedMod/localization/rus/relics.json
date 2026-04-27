@@ -1,37 +1,37 @@
 {
-  "THECURSEDMOD-BLACK_MAGIC101_RELIC.title": "Черная магия 101",
-  "THECURSEDMOD-BLACK_MAGIC101_RELIC.description": "Если в вашей [gold]Колоде розыгрыша[/gold] есть любая карта [gold]Проклятие[/gold] в начале хода, возьмите [blue]1[/blue] дополнительную карту.",
-  "THECURSEDMOD-BLACK_MAGIC101_RELIC.flavor": "Узнайте о черной магии сейчас!!!  (5-е издание)",
+  "THECURSEDMOD-BLACK_MAGIC101_RELIC.title": "Путеводитель по черной магии",
+  "THECURSEDMOD-BLACK_MAGIC101_RELIC.description": "Вы добираете [blue]1[/blue] доп. карту в начале хода, если в вашей [gold]стопке добора[/gold] есть [red]Проклятие[/gold].",
+  "THECURSEDMOD-BLACK_MAGIC101_RELIC.flavor": "Узнайте все о черной магии прямо сейчас!!!  (5-е издание)",
 
-  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.title": "Черная магия продвинутая",
-  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.description": "Если в вашей [gold]Колоде розыгрыша[/gold] есть любая карта [gold]Проклятие[/gold] в начале хода, возьмите [blue]2[/blue] дополнительные карты.",
-  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.flavor": "Все о запрещенной силе и её Карме.  (Первое издание)",
+  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.title": "Продвинутая черная магия",
+  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.description": "Вы добираете [blue]2[/blue] доп. карты в начале хода, если в вашей [gold]стопке добора[/gold] есть [red]Проклятие[/gold].",
+  "THECURSEDMOD-BLACK_MAGIC_ADVANCED_RELIC.flavor": "Все о запретной силе и неизбежной Карме.  (Первое издание)",
 
-  "THECURSEDMOD-SPIRIT_FUEL_RELIC.title": "Топливо Духа",
-  "THECURSEDMOD-SPIRIT_FUEL_RELIC.description": "Если эффект [gold]Обряда[/gold] срабатывает хотя бы один раз в течение вашего хода, возьмите [blue]1[/blue] дополнительную карту в следующем ходу.",
+  "THECURSEDMOD-SPIRIT_FUEL_RELIC.title": "Духовное топливо",
+  "THECURSEDMOD-SPIRIT_FUEL_RELIC.description": "Вы возьмете [blue]1[/blue] доп. карту в начале следующего хода, если эффект [gold]Обряда[/gold] сработал хотя бы один раз в текущем.",
   "THECURSEDMOD-SPIRIT_FUEL_RELIC.flavor": "Душа горит ярко — хоть и на мгновение.",
 
-  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.title": "Талисман четырёхлистного клевера",
-  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.description": "Каждый раз, когда вы получаете случайную карту [gold]Проклятие[/gold] эффектом карты [purple]Проклятого[/purple] в бою, вместо неё получаете [gold]Осадки[/gold].",
+  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.title": "Четырехлистный клевер",
+  "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.description": "Каждый раз, когда карты [purple]Проклятого[/purple] должны добавить в [gold]руку[/gold] случайное [red]Проклятие[/gold] в бою, вместо этого они добавляют [gold]«Осадок»[/gold].",
   "THECURSEDMOD-FOUR_LEAF_CLOVER_CHARM_RELIC.flavor": "Удача и счастье приходят из благодарности.",
 
   "THECURSEDMOD-PURPLE_CANDLE_RELIC.title": "Фиолетовая свеча",
-  "THECURSEDMOD-PURPLE_CANDLE_RELIC.description": "Каждые [blue]10[/blue] раз, когда срабатывает эффект [gold]Круга[/gold], возьмите [blue]1[/blue] карту.",
-  "THECURSEDMOD-PURPLE_CANDLE_RELIC.flavor": "Её пламя гаснет с каждым эхом и ярче загорается с каждой наградой.",
+  "THECURSEDMOD-PURPLE_CANDLE_RELIC.description": "Вы берете карту за каждые [blue]10[/blue] раз, когда срабатывает эффект [gold]Круга[/gold].",
+  "THECURSEDMOD-PURPLE_CANDLE_RELIC.flavor": "Ее пламя гаснет с каждым эхом и загорается ярче с каждой наградой.",
 
-  "THECURSEDMOD-WRAITH_BEADS_RELIC.title": "Бусы Призрака",
-  "THECURSEDMOD-WRAITH_BEADS_RELIC.description": "Если вы потеряли ОЗ от [gold]Кармы[/gold] в этом ходу, получите {Energy:energyIcons()} и возьмите [blue]2[/blue] дополнительные карты в следующем ходу.",
-  "THECURSEDMOD-WRAITH_BEADS_RELIC.flavor": "Каждая бусина хранит память о перенесённой ране.",
+  "THECURSEDMOD-WRAITH_BEADS_RELIC.title": "Бусы призрака",
+  "THECURSEDMOD-WRAITH_BEADS_RELIC.description": "Вы получите {Energy:energyIcons()} и возьмете [blue]2[/blue] доп. карты в начале следующего хода, при потере ОЗ от [gold]Кармы[/gold] в текущем.",
+  "THECURSEDMOD-WRAITH_BEADS_RELIC.flavor": "Каждая бусина хранит память о пережитых ранах.",
 
-  "THECURSEDMOD-RITUALISTS_RING_RELIC.title": "Кольцо Ритуалиста",
-  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "Каждые [blue]6[/blue] раз, когда срабатывает эффект [gold]Обряда[/gold], получайте {Energy:energyIcons()}.",
-  "THECURSEDMOD-RITUALISTS_RING_RELIC.flavor": "Нужен... Больше... Жертвоприношений...",
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.title": "Кольцо ритуалиста",
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.description": "Дает {Energy:energyIcons()} за каждые [blue]6[/blue] раз, когда срабатывает эффект [gold]Обряда[/gold].",
+  "THECURSEDMOD-RITUALISTS_RING_RELIC.flavor": "Нужно... Больше... Жертвоприношений...",
 
-  "THECURSEDMOD-DEMONIC_MARK_RELIC.title": "Демонический знак",
-  "THECURSEDMOD-DEMONIC_MARK_RELIC.description": "Каждые [blue]4[/blue] раза, когда в одном ходу срабатывает эффект [gold]Круга[/gold], получайте [blue]1[/blue] [gold]Силы[/gold].",
+  "THECURSEDMOD-DEMONIC_MARK_RELIC.title": "Демоническая метка",
+  "THECURSEDMOD-DEMONIC_MARK_RELIC.description": "Дает [blue]1[/blue] [gold]силы[/gold], когда эффект [gold]Круга[/gold] срабатывает [blue]4[/blue] раза за ход.",
   "THECURSEDMOD-DEMONIC_MARK_RELIC.flavor": "В этот раз он выглядит иначе, не так ли?",
 
-  "THECURSEDMOD-SOUL_VESSEL_RELIC.title": "Сосуд Души",
-  "THECURSEDMOD-SOUL_VESSEL_RELIC.description": "В конце боя исцеляйте [blue]2[/blue] ОЗ за каждый эффект [gold]Обряд[/gold], сработавший в этом бою. (Максимум [blue]10[/blue] ОЗ.)",
+  "THECURSEDMOD-SOUL_VESSEL_RELIC.title": "Сосуд души",
+  "THECURSEDMOD-SOUL_VESSEL_RELIC.description": "Восполняет [blue]2[/blue] ОЗ в конце боя за каждый сработавший эффект [gold]Обряда[/gold]. (Максимум [blue]10[/blue] ОЗ.)",
   "THECURSEDMOD-SOUL_VESSEL_RELIC.flavor": "Сосуд помнит каждую душу, которую он поглотил."
 }

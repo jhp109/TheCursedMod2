@@ -1,10 +1,10 @@
 {
   "THECURSEDMOD-RITE.title": "Обряд",
-  "THECURSEDMOD-RITE.description": "При использовании выберите 1 карту. [gold]Сжигает[/gold] её. Выбор карты [gold]Проклятие[/gold] активирует эффект [gold]Обряда[/gold].",
+  "THECURSEDMOD-RITE.description": "При разыгрывании, выберите [blue]1[/blue] карту и [gold]сожгите[/gold] ее. Эффект [gold]Обряда[/gold] срабатывает, если вы [gold]сожгли[/gold] [red]Проклятие[/red].",
 
   "THECURSEDMOD-KARMA.title": "Карма",
-  "THECURSEDMOD-KARMA.description": "В конце вашего следующего хода получите столько же урона.",
+  "THECURSEDMOD-KARMA.description": "Вы получите урон, равный [gold]Карме[/gold], в конце вашего следующего хода.",
 
   "THECURSEDMOD-CIRCLE.title": "Круг",
-  "THECURSEDMOD-CIRCLE.description": "Карточка, которую можно активировать, используя другие карты, пока она находится в [gold]Руке[/gold]."
+  "THECURSEDMOD-CIRCLE.description": "Эффекты этой карты срабатывают при разыгрывании других карт, пока она находится в [gold]руке[/gold]."
 }
