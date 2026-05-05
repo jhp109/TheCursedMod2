@@ -36,7 +36,7 @@ public sealed class Smokescreen() : RiteCard(2, CardType.Skill, CardRarity.Commo
     {
         foreach (var enemy in CombatState!.HittableEnemies)
         {
-            await PowerCmd.Apply<WeakPower>(enemy, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
+            await PowerCmd.Apply<WeakPower>(choiceContext, enemy, DynamicVars["WeakPower"].BaseValue, Owner.Creature, this);
         }
     }
 

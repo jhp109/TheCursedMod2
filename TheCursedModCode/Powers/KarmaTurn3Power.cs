@@ -21,7 +21,7 @@ public class KarmaTurn3Power : TheCursedModPower
         {
             int amount = Amount;
             await PowerCmd.Remove(this);
-            await PowerCmd.Apply<KarmaTurn2Power>(base.Owner, amount, base.Owner, null);
+            await PowerCmd.Apply<KarmaTurn2Power>(choiceContext, base.Owner, amount, base.Owner, null);
         }
     }
 }

@@ -42,9 +42,9 @@ public abstract class RiteCard(
         public int RiteEffectTriggerCount = 0;
     }
 
-    private static readonly ConditionalWeakTable<CombatState, Dictionary<Player, RiteState>> _stateTable = new();
+    private static readonly ConditionalWeakTable<ICombatState, Dictionary<Player, RiteState>> _stateTable = new();
 
-    private static RiteState GetState(CombatState combat, Player player)
+    private static RiteState GetState(ICombatState combat, Player player)
     {
         var dict = _stateTable.GetOrCreateValue(combat);
         if (!dict.TryGetValue(player, out var state))
@@ -58,19 +58,19 @@ public abstract class RiteCard(
     /// <summary>
     /// 이번 턴에 해당 플레이어가 의례로 저주를 소멸시켰으면 true를 반환합니다.
     /// </summary>
-    public static bool WasRiteEffectTriggeredThisTurn(CombatState? combat, Player? player)
+    public static bool WasRiteEffectTriggeredThisTurn(ICombatState? combat, Player? player)
         => combat != null && player != null && GetState(combat, player).RiteCurseExhaustedRound == combat.RoundNumber;
 
     /// <summary>
     /// 지난 턴에 해당 플레이어가 의례로 저주를 소멸시켰으면 true를 반환합니다.
     /// </summary>
-    public static bool WasRiteEffectTriggeredLastTurn(CombatState? combat, Player? player)
+    public static bool WasRiteEffectTriggeredLastTurn(ICombatState? combat, Player? player)
         => combat != null && player != null && GetState(combat, player).RiteCurseExhaustedRound == combat.RoundNumber - 1;
 
     /// <summary>
     /// 이번 전투에서 해당 플레이어의 의례 효과가 발동된 총 횟수를 반환합니다.
     /// </summary>
-    public static int GetRiteEffectTriggerCount(CombatState? combat, Player? player)
+    public static int GetRiteEffectTriggerCount(ICombatState? combat, Player? player)
         => combat == null || player == null ? 0 : GetState(combat, player).RiteEffectTriggerCount;
 
     private static readonly LocString SelectPrompt = new("cards", "THECURSEDMOD-RITE.selectionScreenPrompt");
@@ -144,7 +144,7 @@ public abstract class RiteCard(
         var forbiddenForm = Owner?.Creature.GetPower<ForbiddenFormPower>();
         if (forbiddenForm != null)
             await PowerCmd.Apply<MultiplyNextKarmaAttackPower>(
-                Owner!.Creature, forbiddenForm.Amount, Owner.Creature, null);
+                choiceContext, Owner!.Creature, forbiddenForm.Amount, Owner.Creature, null);
 
         // 영혼 공물 - 매 턴 처음으로 의례 효과 발동 시 힘 획득
         var spiritOffering = Owner?.Creature.GetPower<SpiritOfferingPower>();

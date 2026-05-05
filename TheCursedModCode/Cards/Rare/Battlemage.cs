@@ -26,7 +26,7 @@ public sealed class Battlemage() : TheCursedModCard(2, CardType.Power, CardRarit
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<BattlemagePower>(Owner.Creature, DynamicVars["BattlemagePower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<BattlemagePower>(choiceContext, Owner.Creature, DynamicVars["BattlemagePower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

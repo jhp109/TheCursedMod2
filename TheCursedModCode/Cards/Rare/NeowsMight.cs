@@ -34,7 +34,7 @@ public sealed class NeowsMight() : TheCursedModCard(1, CardType.Skill, CardRarit
             if (card.EnergyCost.CostsX) continue;
             card.EnergyCost.AddThisTurnOrUntilPlayed(-1);
         }
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

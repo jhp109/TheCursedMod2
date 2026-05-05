@@ -24,7 +24,7 @@ public sealed class CycleOfDepravity() : TheCursedModCard(0, CardType.Power, Car
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner!.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<CycleOfDepravityPower>(Owner.Creature, DynamicVars["CycleOfDepravityPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<CycleOfDepravityPower>(choiceContext, Owner.Creature, DynamicVars["CycleOfDepravityPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -29,7 +29,7 @@ public sealed class DarkBarrier() : RiteCard(3, CardType.Skill, CardRarity.Rare,
 
     protected override async Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<IntangiblePower>(Owner.Creature, DynamicVars["IntangiblePower"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<IntangiblePower>(choiceContext, Owner.Creature, DynamicVars["IntangiblePower"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -25,7 +25,7 @@ public sealed class RollingOverDebt() : TheCursedModCard(1, CardType.Power, Card
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner!.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<RollingOverDebtPower>(Owner.Creature, DynamicVars["RollingOverDebtPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<RollingOverDebtPower>(choiceContext, Owner.Creature, DynamicVars["RollingOverDebtPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

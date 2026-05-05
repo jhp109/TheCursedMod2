@@ -30,7 +30,7 @@ public sealed class IgnorePain() : RiteCard(1, CardType.Skill, CardRarity.Uncomm
 
     protected override async Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<IgnorePainPower>(Owner!.Creature, 50, Owner.Creature, this);
+        await PowerCmd.Apply<IgnorePainPower>(choiceContext, Owner!.Creature, 50, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

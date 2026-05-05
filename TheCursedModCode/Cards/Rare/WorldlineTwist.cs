@@ -41,7 +41,7 @@ public sealed class WorldlineTwist() : TheCursedModCard(4, CardType.Skill, CardR
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<WorldlineTwistPower>(Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<WorldlineTwistPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
     }
 
     /// <summary>

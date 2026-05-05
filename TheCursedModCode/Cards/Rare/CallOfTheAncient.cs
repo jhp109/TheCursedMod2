@@ -24,7 +24,7 @@ public sealed class CallOfTheAncient() : TheCursedModCard(1, CardType.Skill, Car
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await PowerCmd.Apply<CallOfTheAncientPower>(
-            Owner!.Creature, DynamicVars["CallOfTheAncientPower"].BaseValue, Owner.Creature, this);
+            choiceContext, Owner!.Creature, DynamicVars["CallOfTheAncientPower"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

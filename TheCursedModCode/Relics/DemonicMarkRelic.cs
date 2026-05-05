@@ -71,7 +71,7 @@ public sealed class DemonicMarkRelic : TheCursedModRelic
         InvokeDisplayAmountChanged();
     }
 
-    public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
+    public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {
         if (player == base.Owner)
         {
@@ -89,7 +89,7 @@ public sealed class DemonicMarkRelic : TheCursedModRelic
 
         TriggersThisTurn -= Threshold;
         _ = TaskHelper.RunSafely(DoActivateVisuals());
-        await PowerCmd.Apply<StrengthPower>(base.Owner.Creature!, 1, base.Owner.Creature, null);
+        await PowerCmd.Apply<StrengthPower>(context, base.Owner.Creature!, 1, base.Owner.Creature, null);
     }
 
     private async Task DoActivateVisuals()

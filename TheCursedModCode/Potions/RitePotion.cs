@@ -40,7 +40,7 @@ public sealed class RitePotion : TheCursedModPotion
         if (selected != null)
         {
             selected.SetToFreeThisTurn();
-            await CardPileCmd.AddGeneratedCardToCombat(selected, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(selected, PileType.Hand, creator: base.Owner);
         }
 
         await Dregs.CreateAndAddToHand(base.Owner, 1);

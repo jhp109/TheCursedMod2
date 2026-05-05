@@ -32,7 +32,7 @@ public sealed class Celerity() : RiteCard(1, CardType.Skill, CardRarity.Uncommon
     protected override Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
         int dexterityAmount = (int)((CalculatedVar)DynamicVars["CalculatedDexterity"]).Calculate(null);
-        return PowerCmd.Apply<DexterityPower>(Owner.Creature, dexterityAmount, Owner.Creature, this);
+        return PowerCmd.Apply<DexterityPower>(choiceContext, Owner.Creature, dexterityAmount, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -18,7 +18,7 @@ public sealed class DubiousContract() : TheCursedModCard(3, CardType.Power, Card
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<DubiousContractPower>(Owner!.Creature, 1m, Owner.Creature, this);
+        await PowerCmd.Apply<DubiousContractPower>(choiceContext, Owner!.Creature, 1m, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -25,7 +25,7 @@ public sealed class WickedTempering() : RiteCard(1, CardType.Skill, CardRarity.U
     protected override async Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await PowerCmd.Apply<MultiplyNextKarmaAttackPower>(
-            Owner.Creature, DynamicVars["MultiplyNextKarmaAttackPower"].IntValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["MultiplyNextKarmaAttackPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
