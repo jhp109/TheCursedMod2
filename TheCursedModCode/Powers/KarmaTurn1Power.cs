@@ -54,7 +54,7 @@ public class KarmaTurn1Power : TheCursedModPower
         return Task.CompletedTask;
     }
 
-    public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task BeforeSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (side == base.Owner.Side)
         {
