@@ -44,11 +44,11 @@ public sealed class Dregs() : CustomCardModel(-1, CardType.Curse, CardRarity.Cur
     /// 이미 생성된 Dregs 카드를 패에 추가합니다.
     /// RecyclableWastePower가 활성화된 경우 Retain을 부여하고 OnDregsCreated를 호출합니다.
     /// </summary>
-    public async Task AddToHand(bool addedByPlayer = false)
+    public async Task AddToHand(Player? creator = null)
     {
         var power = Owner?.Creature?.GetPower<RecyclableWastePower>();
         if (power != null) CardCmd.ApplyKeyword(this, CardKeyword.Retain);
-        await CardPileCmd.AddGeneratedCardToCombat(this, PileType.Hand, addedByPlayer: addedByPlayer);
+        await CardPileCmd.AddGeneratedCardToCombat(this, PileType.Hand, creator: creator);
         power?.OnDregsCreated();
     }
 
@@ -64,7 +64,7 @@ public sealed class Dregs() : CustomCardModel(-1, CardType.Curse, CardRarity.Cur
         for (int i = 0; i < numCards; i++)
         {
             var dregs = combatState.CreateCard<Dregs>(owner);
-            await dregs.AddToHand(addedByPlayer: true);
+            await dregs.AddToHand(creator: owner);
         }
     }
 }

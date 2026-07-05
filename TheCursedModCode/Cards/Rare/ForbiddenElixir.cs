@@ -26,8 +26,8 @@ public sealed class ForbiddenElixir() : TheCursedModCard(0, CardType.Power, Card
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<ForbiddenElixirPower>(Owner.Creature, 1, Owner.Creature, this);
-        await PowerCmd.Apply<KarmaEveryTurnPower>(Owner.Creature, DynamicVars["KarmaEveryTurn"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<ForbiddenElixirPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<KarmaEveryTurnPower>(choiceContext, Owner.Creature, DynamicVars["KarmaEveryTurn"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

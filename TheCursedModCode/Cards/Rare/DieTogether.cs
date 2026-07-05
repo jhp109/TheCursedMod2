@@ -24,8 +24,8 @@ public sealed class DieTogether() : TheCursedModCard(1, CardType.Power, CardRari
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<DieTogetherPower>(Owner.Creature, 1, Owner.Creature, this);
-        await PowerCmd.Apply<KarmaEveryTurnPower>(Owner.Creature, DynamicVars["KarmaPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<DieTogetherPower>(choiceContext, Owner.Creature, 1, Owner.Creature, this);
+        await PowerCmd.Apply<KarmaEveryTurnPower>(choiceContext, Owner.Creature, DynamicVars["KarmaPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -26,7 +26,7 @@ public sealed class SpiritOffering() : TheCursedModCard(1, CardType.Power, CardR
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<SpiritOfferingPower>(Owner.Creature, DynamicVars["SpiritOfferingPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<SpiritOfferingPower>(choiceContext, Owner.Creature, DynamicVars["SpiritOfferingPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

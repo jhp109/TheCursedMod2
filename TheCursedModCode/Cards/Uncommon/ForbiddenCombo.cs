@@ -26,7 +26,7 @@ public sealed class ForbiddenCombo() : TheCursedModCard(1, CardType.Attack, Card
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CommonActions.CardAttack(this, play, DynamicVars.Repeat.IntValue).Execute(choiceContext);
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

@@ -40,7 +40,7 @@ public sealed class CirclesInABottlePotion : TheCursedModPotion
         {
             CardCmd.Upgrade(card);
             CardCmd.Enchant<Steady>(card, 1m);
-            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, creator: base.Owner);
         }
     }
 }

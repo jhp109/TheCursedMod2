@@ -33,7 +33,7 @@ public class SpiritOfferingPower : TheCursedModPower
         return Task.CompletedTask;
     }
 
-    public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
+    public override Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {
         if (player == Owner.Player)
             StartPulsing();
@@ -46,6 +46,6 @@ public class SpiritOfferingPower : TheCursedModPower
         _lastTriggerRound = CombatState?.RoundNumber ?? -1;
         StopPulsing();
         Flash();
-        await PowerCmd.Apply<StrengthPower>(Owner, Amount, Owner, null);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, Owner, Amount, Owner, null);
     }
 }

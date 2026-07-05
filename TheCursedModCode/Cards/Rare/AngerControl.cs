@@ -37,7 +37,7 @@ public sealed class AngerControl() : TheCursedModCard(2, CardType.Attack, CardRa
         if (CombatState != null)
         {
             var normality = CombatState.CreateCard<Normality>(Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(normality, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(normality, PileType.Hand, creator: Owner);
         }
     }
 

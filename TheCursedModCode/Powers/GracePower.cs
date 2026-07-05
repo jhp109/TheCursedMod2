@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Context;
 
 namespace TheCursedMod.TheCursedModCode.Powers;
 
@@ -39,20 +40,21 @@ public class GracePower : TheCursedModPower
             await PowerCmd.Remove(k2);
 
             // K2, K3 순으로 얻음 (그래야 2가 왼쪽으로 감)
-            await PowerCmd.Apply<KarmaTurn2Power>(base.Owner, k1Amount, base.Owner, null);
-            await PowerCmd.Apply<KarmaTurn3Power>(base.Owner, k2Amount, base.Owner, null);
+            var ctx = new ThrowingPlayerChoiceContext();
+            await PowerCmd.Apply<KarmaTurn2Power>(ctx, base.Owner, k1Amount, base.Owner, null);
+            await PowerCmd.Apply<KarmaTurn3Power>(ctx, base.Owner, k2Amount, base.Owner, null);
         }
         else if (k1 != null) {
             // K1→K2 처리
             int k1Amount = k1.Amount;
             await PowerCmd.Remove(k1);
-            await PowerCmd.Apply<KarmaTurn2Power>(base.Owner, k1Amount, base.Owner, null);
+            await PowerCmd.Apply<KarmaTurn2Power>(new ThrowingPlayerChoiceContext(), base.Owner, k1Amount, base.Owner, null);
         }
         else if (k2 != null) {
             // K2->K3
             int k2Amount = k2.Amount;
             await PowerCmd.Remove(k2);
-            await PowerCmd.Apply<KarmaTurn3Power>(base.Owner, k2Amount, base.Owner, null);
+            await PowerCmd.Apply<KarmaTurn3Power>(new ThrowingPlayerChoiceContext(), base.Owner, k2Amount, base.Owner, null);
         }
     }
 }

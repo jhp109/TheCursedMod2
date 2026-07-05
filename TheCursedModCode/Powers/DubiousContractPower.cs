@@ -25,7 +25,7 @@ public class DubiousContractPower : TheCursedModPower
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Rite)
     ];
 
-    public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, CombatState combatState)
+    public override async Task BeforeHandDraw(Player player, PlayerChoiceContext choiceContext, ICombatState combatState)
     {
         if (player != base.Owner.Player || base.AmountOnTurnStart < 1) return;
 
@@ -39,10 +39,10 @@ public class DubiousContractPower : TheCursedModPower
         {
             var randomRite = player.RunState.Rng.CombatCardGeneration.NextItem(ritePool)!;
             var riteCard = combatState.CreateCard(randomRite, player);
-            await CardPileCmd.AddGeneratedCardToCombat(riteCard, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(riteCard, PileType.Hand, creator: player);
         }
 
         for (int i = 0; i < Amount; i++)
-            await TheCursedModCard.GainRandomCurse(player, player, combatState, PileType.Hand, addedByPlayer: true);
+            await TheCursedModCard.GainRandomCurse(player, player, combatState, PileType.Hand, creator: player);
     }
 }

@@ -19,7 +19,7 @@ public sealed class RecyclableWaste() : TheCursedModCard(1, CardType.Power, Card
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<RecyclableWastePower>(Owner!.Creature, 1m, Owner.Creature, this);
+        await PowerCmd.Apply<RecyclableWastePower>(choiceContext, Owner!.Creature, 1m, Owner.Creature, this);
 
         await Dregs.CreateAndAddToHand(Owner!, 2);
     }

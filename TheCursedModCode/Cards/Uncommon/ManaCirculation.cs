@@ -23,7 +23,7 @@ public sealed class ManaCirculation() : TheCursedModCard(2, CardType.Power, Card
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<ManaCirculationPower>(Owner!.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<ManaCirculationPower>(choiceContext, Owner!.Creature, DynamicVars.Energy.BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

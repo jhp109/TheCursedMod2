@@ -32,7 +32,7 @@ public sealed class DoubleShield() : RiteCard(2, CardType.Skill, CardRarity.Comm
 
     protected override async Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<BlockNextTurnPower>(Owner.Creature, DynamicVars.Block.IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<BlockNextTurnPower>(choiceContext, Owner.Creature, DynamicVars.Block.IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

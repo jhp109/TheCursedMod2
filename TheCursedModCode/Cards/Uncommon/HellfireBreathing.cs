@@ -25,7 +25,7 @@ public sealed class HellfireBreathing() : TheCursedModCard(1, CardType.Power, Ca
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<HellfireBreathingPower>(Owner!.Creature, DynamicVars["HellfireBreathingPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<HellfireBreathingPower>(choiceContext, Owner!.Creature, DynamicVars["HellfireBreathingPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

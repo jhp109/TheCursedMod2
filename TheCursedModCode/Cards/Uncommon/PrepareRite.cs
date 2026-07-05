@@ -32,7 +32,7 @@ public sealed class PrepareRite() : TheCursedModCard(1, CardType.Skill, CardRari
         if (target != null)
             await Dregs.TransformToDregs(this, target);
         await PowerCmd.Apply<DrawCardsNextTurnPower>(
-            Owner.Creature, DynamicVars["DrawCardsNextTurnPower"].IntValue, Owner.Creature, this);
+            choiceContext, Owner.Creature, DynamicVars["DrawCardsNextTurnPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

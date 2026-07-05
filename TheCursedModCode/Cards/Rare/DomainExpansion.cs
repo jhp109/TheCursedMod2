@@ -33,7 +33,7 @@ public sealed class DomainExpansion() : TheCursedModCard(0, CardType.Skill, Card
             foreach (var circle in circles)
                 await circle.ForceTrigger(choiceContext);
 
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue * triggers);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue * triggers);
     }
 
     protected override void OnUpgrade() { }

@@ -23,7 +23,7 @@ public sealed class LuckyCharm() : TheCursedModCard(1, CardType.Power, CardRarit
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<LuckyCharmPower>(Owner!.Creature, DynamicVars["LuckyCharmPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<LuckyCharmPower>(choiceContext, Owner!.Creature, DynamicVars["LuckyCharmPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

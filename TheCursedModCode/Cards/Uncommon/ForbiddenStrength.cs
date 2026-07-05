@@ -36,8 +36,8 @@ public sealed class ForbiddenStrength() : TheCursedModCard(0, CardType.Skill, Ca
         int strengthAmount = (int)((CalculatedVar)DynamicVars["CalculatedStrength"]).Calculate(null);
 
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<StrengthPower>(Owner.Creature, strengthAmount, Owner.Creature, this);
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, Owner.Creature, strengthAmount, Owner.Creature, this);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

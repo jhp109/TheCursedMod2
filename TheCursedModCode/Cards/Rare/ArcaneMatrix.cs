@@ -27,7 +27,7 @@ public sealed class ArcaneMatrix() : TheCursedModCard(2, CardType.Power, CardRar
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
         await PowerCmd.Apply<ArcaneMatrixPower>
-            (Owner.Creature, DynamicVars["ArcaneMatrixPower"].IntValue, Owner.Creature, this);
+            (choiceContext, Owner.Creature, DynamicVars["ArcaneMatrixPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

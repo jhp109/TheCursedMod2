@@ -27,7 +27,7 @@ public sealed class Malevolence() : TheCursedModCard(1, CardType.Skill, CardRari
         if (card != null)
         {
             card.SetToFreeThisTurn();
-            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(card, PileType.Hand, creator: Owner);
         }
     }
 

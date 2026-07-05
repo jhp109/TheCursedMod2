@@ -37,7 +37,7 @@ public sealed class DenyingFate() : TheCursedModCard(1, CardType.Attack, CardRar
             int k1Amount = k1.Amount;
             await PowerCmd.Remove(k1);
             // Set null to CardModel because it's just delaying the Karma, not applying the new Karma.
-            await PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, k1Amount, Owner.Creature, null);
+            await PowerCmd.Apply<KarmaTurn2Power>(choiceContext, Owner.Creature, k1Amount, Owner.Creature, null);
         }
     }
 

@@ -34,7 +34,7 @@ public sealed class ArcaneBinding() : RiteCard(2, CardType.Skill, CardRarity.Unc
 
     protected override async Task OnRiteEffect(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        await PowerCmd.Apply<CircleRetainPower>(Owner.Creature, DynamicVars["CircleRetainPower"].BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<CircleRetainPower>(choiceContext, Owner.Creature, DynamicVars["CircleRetainPower"].BaseValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

@@ -25,7 +25,7 @@ public sealed class ManaBastion() : TheCursedModCard(1, CardType.Power, CardRari
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         await CreatureCmd.TriggerAnim(Owner.Creature, "Cast", Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<ManaBastionPower>(Owner.Creature, DynamicVars["ManaBastionPower"].IntValue, Owner.Creature, this);
+        await PowerCmd.Apply<ManaBastionPower>(choiceContext, Owner.Creature, DynamicVars["ManaBastionPower"].IntValue, Owner.Creature, this);
     }
 
     protected override void OnUpgrade()

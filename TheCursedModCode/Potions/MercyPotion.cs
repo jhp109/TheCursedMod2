@@ -24,6 +24,6 @@ public sealed class MercyPotion : TheCursedModPotion
 
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
     {
-        await PowerCmd.Apply<IgnorePainPower>(base.Owner.Creature, 100m, base.Owner.Creature, null);
+        await PowerCmd.Apply<IgnorePainPower>(choiceContext, base.Owner.Creature, 100m, base.Owner.Creature, null);
     }
 }

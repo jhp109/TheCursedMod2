@@ -37,7 +37,7 @@ public sealed class ForbiddenWallop() : TheCursedModCard(3, CardType.Attack, Car
         if (_pendingBlock > 0)
             await CreatureCmd.GainBlock(Owner.Creature, _pendingBlock, ValueProp.Move, play);
         _pendingBlock = 0;
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     public override Task AfterDamageGiven(

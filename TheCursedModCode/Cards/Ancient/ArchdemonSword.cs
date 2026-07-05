@@ -44,7 +44,7 @@ public sealed class ArchdemonSword() : TheCursedModCard(1, CardType.Attack, Card
             await CommonActions.Apply<StrengthPower>(choiceContext, Owner!.Creature, this, DynamicVars["StrengthPower"].IntValue);
         }
 
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

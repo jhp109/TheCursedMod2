@@ -55,13 +55,13 @@ public abstract class TheCursedModCard(
     /// 네잎클로버 부적이 있다면 대신 찌꺼기를 패에 추가합니다.
     /// </summary>
     protected Task GainRandomCurse(PileType pile, Player? targetPlayer = null)
-        => GainRandomCurse(targetPlayer ?? Owner, Owner, CombatState, pile, addedByPlayer: false);
+        => GainRandomCurse(targetPlayer ?? Owner, Owner, CombatState, pile, creator: Owner);
 
     /// <summary>
     /// 무작위 저주 카드를 지정한 파일에 추가합니다. (카드 외부에서도 호출 가능한 static 버전)
     /// 네잎클로버 부적이 있다면 대신 찌꺼기를 패에 추가합니다.
     /// </summary>
-    public static async Task GainRandomCurse(Player target, Player rngSource, CombatState? combatState, PileType pile, bool addedByPlayer = false)
+    public static async Task GainRandomCurse(Player target, Player rngSource, ICombatState? combatState, PileType pile, Player? creator = null)
     {
         var baseCurses = ModelDb.CardPool<CurseCardPool>()
             .GetUnlockedCards(target.UnlockState, target.RunState.CardMultiplayerConstraint)
@@ -95,30 +95,30 @@ public abstract class TheCursedModCard(
         // Dregs가 Hand에 생성될 시 RecyclableWastePower 여부에 따라 특별한 처리가 필요.
         if (card is Dregs dregs && pile == PileType.Hand)
         {
-            await dregs.AddToHand(addedByPlayer: addedByPlayer);
+            await dregs.AddToHand(creator: creator);
         }
         else if (pile == PileType.Draw)
         {
             CardCmd.PreviewCardPileAdd(
                 await CardPileCmd.AddGeneratedCardToCombat(
-                    card, pile, addedByPlayer: addedByPlayer, position: CardPilePosition.Random));
+                    card, pile, creator: creator, position: CardPilePosition.Random));
             await Cmd.Wait(0.5f);
         }
         else
         {
-            await CardPileCmd.AddGeneratedCardToCombat(card, pile, addedByPlayer: addedByPlayer);
+            await CardPileCmd.AddGeneratedCardToCombat(card, pile, creator: creator);
         }
     }
 
     /// <summary>
     /// GracePower가 활성화된 경우 KarmaTurn3Power를, 그렇지 않으면 KarmaTurn2Power를 적용합니다.
     /// </summary>
-    protected Task ApplyKarma(decimal amount)
+    protected Task ApplyKarma(PlayerChoiceContext choiceContext, decimal amount)
     {
         if (Owner.Creature.HasPower<GracePower>()) {
             Owner.Creature.GetPower<GracePower>()!.TriggerFlash();
-            return PowerCmd.Apply<KarmaTurn3Power>(Owner.Creature, amount, Owner.Creature, this);
+            return PowerCmd.Apply<KarmaTurn3Power>(choiceContext, Owner.Creature, amount, Owner.Creature, this);
         }
-        return PowerCmd.Apply<KarmaTurn2Power>(Owner.Creature, amount, Owner.Creature, this);
+        return PowerCmd.Apply<KarmaTurn2Power>(choiceContext, Owner.Creature, amount, Owner.Creature, this);
     }
 }

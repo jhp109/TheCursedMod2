@@ -30,7 +30,7 @@ public sealed class CursedMirror() : TheCursedModCard(0, CardType.Attack, CardRa
         if (CombatState != null)
         {
             var enthralled = CombatState.CreateCard<Enthralled>(Owner);
-            await CardPileCmd.AddGeneratedCardToCombat(enthralled, PileType.Hand, addedByPlayer: true);
+            await CardPileCmd.AddGeneratedCardToCombat(enthralled, PileType.Hand, creator: Owner);
         }
     }
 

@@ -29,7 +29,7 @@ public sealed class ForbiddenRelic() : TheCursedModCard(2, CardType.Attack, Card
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
         int relicCount = Owner.Relics.Count;
         if (relicCount > 0)
-            await ApplyKarma(relicCount);
+            await ApplyKarma(choiceContext, relicCount);
     }
 
     protected override void OnUpgrade()

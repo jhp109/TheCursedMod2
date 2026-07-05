@@ -31,7 +31,7 @@ public sealed class ForbiddenRaid() : TheCursedModCard(0, CardType.Attack, CardR
     {
         await CommonActions.CardAttack(this, play).Execute(choiceContext);
         await CardPileCmd.Draw(choiceContext, 1, Owner);
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

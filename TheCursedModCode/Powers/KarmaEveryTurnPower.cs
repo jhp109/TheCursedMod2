@@ -25,8 +25,8 @@ public class KarmaEveryTurnPower : TheCursedModPower
         if (player != base.Owner.Player) return;
         Flash();
         if (base.Owner.HasPower<GracePower>())
-            await PowerCmd.Apply<KarmaTurn3Power>(base.Owner, Amount, base.Owner, null);
+            await PowerCmd.Apply<KarmaTurn3Power>(choiceContext, base.Owner, Amount, base.Owner, null);
         else
-            await PowerCmd.Apply<KarmaTurn2Power>(base.Owner, Amount, base.Owner, null);
+            await PowerCmd.Apply<KarmaTurn2Power>(choiceContext, base.Owner, Amount, base.Owner, null);
     }
 }

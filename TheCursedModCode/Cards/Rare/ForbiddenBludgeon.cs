@@ -27,7 +27,7 @@ public sealed class ForbiddenBludgeon() : TheCursedModCard(3, CardType.Attack, C
         await CommonActions
             .CardAttack(this, play, vfx: "vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
-        await ApplyKarma(DynamicVars["KarmaPower"].IntValue);
+        await ApplyKarma(choiceContext, DynamicVars["KarmaPower"].IntValue);
     }
 
     protected override void OnUpgrade()

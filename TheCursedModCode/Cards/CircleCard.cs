@@ -71,7 +71,7 @@ public abstract class CircleCard(CardRarity rarity)
         if (battlemage != null)
         {
             battlemage.TriggerFlash();
-            await PowerCmd.Apply<VigorPower>(Owner.Creature, battlemage.Amount, Owner.Creature, null);
+            await PowerCmd.Apply<VigorPower>(context, Owner.Creature, battlemage.Amount, Owner.Creature, null);
         }
 
         var manaBastion = Owner.Creature.GetPower<ManaBastionPower>();

@@ -1,7 +1,8 @@
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Models;
@@ -40,7 +41,7 @@ public class CircleRetainPower : TheCursedModPower
         return Task.CompletedTask;
     }
 
-    public override Task AfterCardGeneratedForCombat(CardModel card, bool addedByPlayer)
+    public override Task AfterCardGeneratedForCombat(CardModel card, Player? creator)
     {
         if (card.Owner != Owner.Player) return Task.CompletedTask;
         if (card is not CircleCard) return Task.CompletedTask;
@@ -49,7 +50,7 @@ public class CircleRetainPower : TheCursedModPower
         return Task.CompletedTask;
     }
 
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task AfterSideTurnEnd(PlayerChoiceContext choiceContext, CombatSide side, IEnumerable<Creature> participants)
     {
         if (side != Owner.Side) return;
 
