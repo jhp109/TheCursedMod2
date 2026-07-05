@@ -26,7 +26,7 @@ public class MultiplyNextKarmaAttackPower : TheCursedModPower
     ];
 
     public override decimal ModifyDamageMultiplicative(
-        Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
+        Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource, CardPlay? cardPlay)
     {
         if (Amount > 0 && cardSource is IKarmaAttack && cardSource.Owner?.Creature == Owner)
             return 1m + Amount / 100m;

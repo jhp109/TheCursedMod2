@@ -76,11 +76,11 @@ public class KarmaTurn1Power : TheCursedModPower
                     var enemyVfx = NGroundFireVfx.Create(enemy);
                     if (enemyVfx != null) NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(enemyVfx);
                 }
-                await CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies.Append(base.Owner), Amount, ValueProp.Unpowered, base.Owner, null);
+                await CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies.Append(base.Owner), Amount, ValueProp.Unpowered, base.Owner, null, null);
             }
             else
             {
-                await CreatureCmd.Damage(choiceContext, base.Owner, Amount, ValueProp.Unpowered, base.Owner, null);
+                await CreatureCmd.Damage(choiceContext, base.Owner, Amount, ValueProp.Unpowered, base.Owner, null, null);
             }
 
             await PowerCmd.Remove(this);

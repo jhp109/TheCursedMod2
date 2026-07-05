@@ -35,7 +35,8 @@ public class HellfireBreathingPower : TheCursedModPower
                     NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(vfx);
             }
             SfxCmd.Play("event:/sfx/characters/attack_fire");
-            await CreatureCmd.Damage(choiceContext, base.CombatState.HittableEnemies, Amount, ValueProp.Unpowered, base.Owner, null);
+            await CreatureCmd.Damage(
+                choiceContext, base.CombatState.HittableEnemies, Amount, ValueProp.Unpowered, base.Owner, null, null);
         }
     }
 }

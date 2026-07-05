@@ -24,7 +24,8 @@ public class IgnorePainPower : TheCursedModPower
         HoverTipFactory.FromKeyword(TheCursedModCode.Keywords.Karma)
     ];
 
-    public override decimal ModifyDamageMultiplicative(Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource)
+    public override decimal ModifyDamageMultiplicative(
+        Creature? target, decimal amount, ValueProp props, Creature? dealer, CardModel? cardSource, CardPlay? cardPlay)
     {
         // Karma 피해의 특징: target == dealer (자기 자신), cardSource 없음, props == Unpowered 단독
         if (target != base.Owner) return 1m;

@@ -1,3 +1,4 @@
+using System.Reflection;
 using Godot;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
@@ -40,7 +41,7 @@ public sealed class CircleOfFlame() : CircleCard(CardRarity.Common)
                 combatRoom.CombatVfxContainer?.AddChildSafely(NFireBurstVfx.Create(enemy, 0.75f));
         }
         await CreatureCmd.Damage(choiceContext, enemies,
-            DynamicVars.Damage.IntValue, ValueProp.Unpowered, Owner.Creature, this);
+            DynamicVars.Damage.IntValue, ValueProp.Unpowered, Owner.Creature, this, null);
     }
 
     protected override void OnUpgrade()

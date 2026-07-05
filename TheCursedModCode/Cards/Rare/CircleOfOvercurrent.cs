@@ -36,7 +36,7 @@ public sealed class CircleOfOvercurrent() : CircleCard(CardRarity.Rare)
 
         VfxCmd.PlayOnCreature(target, "vfx/vfx_attack_lightning");
         SfxCmd.Play("event:/sfx/characters/defect/defect_lightning_evoke");
-        await CreatureCmd.Damage(choiceContext, target, DynamicVars.Damage.IntValue, ValueProp.Unpowered, Owner.Creature, this);
+        await CreatureCmd.Damage(choiceContext, target, DynamicVars.Damage.IntValue, ValueProp.Unpowered, Owner.Creature, this, null);
         var increment = DynamicVars["DamageIncrement"].BaseValue;
         DynamicVars.Damage.BaseValue += increment;
         _extraDamageFromTriggers += increment;
